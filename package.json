@@ -9,6 +9,10 @@
   "author": "Vitaliy Harchenko",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0"
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-scss": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.0"
   }
 }
