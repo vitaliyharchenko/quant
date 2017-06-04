@@ -1,5 +1,8 @@
 'use strict';
 
+// https://github.com/nmihalyov/gulp-pure-start/blob/master/gulpfile.js
+// http://george.webb.uno/posts/gulp-and-npm-for-front-end-web-development
+
 var gulp 				= require('gulp'),
 	sass 				= require('gulp-sass'),
 	concat 				= require('gulp-concat'),
@@ -19,12 +22,12 @@ var gulp 				= require('gulp'),
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 // NODE_ENV=production gulp styles
 
-// TODO: задать пути для сборки и node_modules
-var
-    source = 'frontend/',
-    dest = 'dest/';
-
-var node_modules = './node_modules';
+/* ===== */
+/* PATHS */
+/* ===== */
+var source = 'frontend/',
+    dest = 'dest/',
+    node_modules = './node_modules';
 
 // Third-party libs
 var libs = {
@@ -35,41 +38,52 @@ var libs = {
         	scss: node_modules + '/bootstrap/scss',
         	js: node_modules + '/bootstrap/dist/js/bootstrap.js'
         },
+        fontawesome: {
+        	scss: node_modules + '/font-awesome/scss/font-awesome.scss',
+        	fonts: node_modules + '/font-awesome/fonts/**'
+    	},
         jquery: node_modules + '/jquery/dist/jquery.js',
         tether: node_modules + '/tether/dist/js/tether.js'
     };
 
 var styles = {
-    in: source + 'styles/main.scss',
-    out: dest,
-    watch: source + 'styles/**/*.*',
-    // clean: dest + 'css/',
-    sassOpts: {
-        outputStyle: 'nested',
-        precison: 3,
-        errLogToConsole: true,
-        includePaths: [libs.bootstrap.scss]
-    }
+	    in: [
+	    	source + 'styles/main.scss',
+	    	libs.fontawesome.scss
+	    ],
+	    out: dest + 'css/',
+	    watch: source + 'styles/**/*.*',
+	    // clean: dest + 'css/',
+	    sassOpts: {
+	        outputStyle: 'nested',
+	        precison: 3,
+	        errLogToConsole: true,
+	        includePaths: [libs.bootstrap.scss]
+	    }
 };
 
 var assets = {
-    in: source + 'assets/**',
-    out: dest,
-    watch: source + 'assets/**/*.*',
+	    in: source + 'assets/**',
+	    out: dest,
+	    watch: source + 'assets/**/*.*',
+};
+
+var fonts = {
+	    in: source + 'fonts/**',
+	    outvendors: source + 'fonts/',
+	    out: dest + 'fonts/',
+	    watch: source + 'fonts/**',
 };
 
 var js = {
-    in: source + 'js/main.js',
-    out: dest,
-    watch: source + 'js/**/*.*'
+	    in: source + 'js/main.js',
+	    out: dest+ 'js/',
+	    watch: source + 'js/**/*.*'
 };
 
-// var img = {
-//     in: source + 'images/**/*',
-//     out: dest + 'images/',
-//     watch: source + 'images/**/*',
-//     clean: dest + 'images/'
-// };
+/* ====== */
+/* STYLES */
+/* ====== */
 
 // Собираем стили
 gulp.task('styles', function() {
@@ -84,6 +98,27 @@ gulp.task('styles', function() {
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
+/* ===== */
+/* FONTS */
+/* ===== */
+
+// Собираем сторонние шрифты
+gulp.task('fonts:load', function() {
+    return gulp.src(libs.fontawesome.fonts)
+        .pipe(gulp.dest(fonts.outvendors));
+});
+
+// Отправляем все шрифты куда нужно
+gulp.task('fonts:build', function() {
+    return gulp.src(fonts.in)
+        .pipe(gulp.dest(fonts.out));
+});
+
+gulp.task('fonts', gulp.parallel('fonts:load', 'fonts:build'));
+
+/* ===== */
+/* HTML */
+/* ===== */
 
 // Собибраем html файлы
 gulp.task('assets', function() {
@@ -93,6 +128,10 @@ gulp.task('assets', function() {
 		gulp.dest(assets.out) // Выгружаем результаты в папку
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
+
+/* ========== */
+/* JavaScript */
+/* ========== */
 
 // Собираем сторонние JS в папку libs для хранения актуальной версии сторонней библиотеки на случай поломки
 gulp.task('libs:copy', function() {
@@ -135,15 +174,28 @@ gulp.task('js', function() {
     ).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
+/* ===== */
+/* CLEAN */
+/* ===== */
+
 gulp.task('clean', function() {
 	return del('dest');
 });
 
+/* ===== */
+/* WATCH */
+/* ===== */
+
 gulp.task('watch', function() {
 	gulp.watch(styles.watch, gulp.series('styles'));
+	gulp.watch(fonts.watch, gulp.series('fonts'));
 	gulp.watch(assets.watch, gulp.series('assets'));
 	gulp.watch(js.watch, gulp.series('libs', 'js'));
 });
+
+/* =========== */
+/* BROWSERSYNC */
+/* =========== */
 
 gulp.task('server', function() {
 	browserSync.init({
@@ -153,7 +205,11 @@ gulp.task('server', function() {
     browserSync.watch(dest + '**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('build', gulp.series('clean', 'styles', 'assets', 'libs', 'js'));
+/* ==== */
+/* MAIN */
+/* ==== */
+
+gulp.task('build', gulp.series('clean', 'styles', 'assets', 'fonts', 'libs', 'js'));
 
 gulp.task('dev',
 	gulp.series('build', 
