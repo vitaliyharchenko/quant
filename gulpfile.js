@@ -16,7 +16,9 @@ var gulp 				= require('gulp'),
 	browserSync 		= require('browser-sync').create(),
 	customizeBootstrap 	= require('gulp-customize-bootstrap'),
 	autoprefixer 		= require('gulp-autoprefixer'), // Подключаем библиотеку для автоматического добавления префиксов
-	uglify 				= require('gulp-uglify'); // Сжимает JS
+	uglify 				= require('gulp-uglify'), // Сжимает JS
+	imagemin    		= require('gulp-imagemin'), // Пакет минификации изображений (в зависимостях также идут дополнительные пакеты)
+	cache        		= require('gulp-cache'); // Работа с кэшом
 
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
@@ -81,6 +83,12 @@ var js = {
 	    watch: source + 'js/**/*.*'
 };
 
+var images = {
+	    in: source + 'images/**/*.*',
+	    out: dest+ 'images/',
+	    watch: source + 'images/**/*.*'
+};
+
 /* ====== */
 /* STYLES */
 /* ====== */
@@ -133,21 +141,8 @@ gulp.task('assets', function() {
 /* JavaScript */
 /* ========== */
 
-// Собираем сторонние JS в папку libs для хранения актуальной версии сторонней библиотеки на случай поломки
-gulp.task('libs:copy', function() {
-    return combiner(
-    	gulp.src([ // Берем все необходимые библиотеки
-        	libs.jquery, // Берем jQuery
-        	libs.tether, // Берем Tether
-        	libs.bootstrap.js // Берем Bootstrap
-        ]),
-        newer(libs.out), // не позволяет перекопировать уже существующие файлы
-        gulp.dest(libs.out) // Выгружаем в папку
-    ).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
-});
-
 // Собираем сторонние JS в один файл
-gulp.task('libs:concat', function() {
+gulp.task('libs', function() {
     return combiner(
     	gulp.src([ // Берем все необходимые библиотеки
         	libs.jquery, // Берем jQuery
@@ -158,8 +153,6 @@ gulp.task('libs:concat', function() {
         gulp.dest(libs.outAll) // Выгружаем в файл
     ).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
-
-gulp.task('libs', gulp.parallel('libs:copy', 'libs:concat'));
 
 // Собираем весь js в один файл
 gulp.task('js', function() {
@@ -172,6 +165,19 @@ gulp.task('js', function() {
         concat('all.js'), // Собираем их в кучу в новом файле
         gulp.dest(js.out) // Выгружаем в папку
     ).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
+});
+
+/* ====== */
+/* IMAGES */
+/* ====== */
+
+// Минифицируем изображения и кидаем их в кэш
+gulp.task('images', () => {
+    return combiner(
+    	gulp.src(images.in),
+    	cache(imagemin([imagemin.gifsicle(), imagemin.jpegtran(), imagemin.optipng()])),
+    	gulp.dest(images.out)
+	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
 /* ===== */
@@ -209,7 +215,7 @@ gulp.task('server', function() {
 /* MAIN */
 /* ==== */
 
-gulp.task('build', gulp.series('clean', 'styles', 'assets', 'fonts', 'libs', 'js'));
+gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js'));
 
 gulp.task('dev',
 	gulp.series('build', 

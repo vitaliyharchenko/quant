@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Slab');
+
+@import 'bootstrap';
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab', serif;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", 
+    "Fira Sans", "Droid Sans", "Helvetica Neue", 
+    sans-serif;
+}
+
+img {
+
+}
+
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.20;
+    opacity: 1.00;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    letter-spacing: -0.72px;
+    word-spacing: 0.00px;
+    text-transform: none;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.20;
+    opacity: 1.00;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    letter-spacing: -0.72px;
+    word-spacing: 0.00px;
+    text-transform: none;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.20;
+    opacity: 1.00;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    letter-spacing: 0.00px;
+    word-spacing: 0.00px;
+    text-transform: none;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.60;
+    opacity: 0.70;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    letter-spacing: -0.30px;
+    word-spacing: -0.10px;
+    text-transform: none;
+}
+
+$orange1: #F99679;
+
+header {
+	background: $orange1;
+	padding-top: 50px;
+
+	.phone {
+		font-family: "Roboto Slab", serif;
+		font-size: 40px;
+		font-weight: bold;
+		color: #373A3C;
+		opacity: 1;
+	}
+}
+
+#promo {
+	background: $orange1;
+	padding-top: 100px;
+	padding-bottom: 200px;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+	.main-text {
+		margin-bottom: 80px;
+
+		h1 {
+			font-size: 40px;
+		}
+	}
+
+	.main-form {
+		margin-bottom: 30px;
+	}
+
+	.main-form-button {
+		margin-bottom: 30px;
+
+		.btn {
+			background: #5ED2B5;
+			border: none;
+			color: #000;
+			cursor: pointer;
+		}
+	}
+}
+
+#where {
+	padding-top: 50px;
+
+	.map-row {
+		margin-top: 50px;
+	}
+}
+
+#what {
+	padding-top: 50px;
+
+	.map-row {
+		margin-top: 50px;
+	}
+}
