@@ -18,6 +18,7 @@ var gulp 				= require('gulp'),
 	autoprefixer 		= require('gulp-autoprefixer'), // Подключаем библиотеку для автоматического добавления префиксов
 	uglify 				= require('gulp-uglify'), // Сжимает JS
 	imagemin    		= require('gulp-imagemin'), // Пакет минификации изображений (в зависимостях также идут дополнительные пакеты)
+	spawn               = require('child_process').spawn, // Для запуска консольных команд, в частности для Django
 	cache        		= require('gulp-cache'); // Работа с кэшом
 
 
@@ -27,8 +28,8 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
 /* ===== */
 /* PATHS */
 /* ===== */
-var source = 'frontend/',
-    dest = 'dest/',
+var source = 'src/',
+    dest = 'dist/',
     node_modules = './node_modules';
 
 // Third-party libs
@@ -205,10 +206,26 @@ gulp.task('watch', function() {
 
 gulp.task('server', function() {
 	browserSync.init({
-        server: dest // Директория файлов сервера
+        // Для работы без Django
+        // server: dest // Директория файлов сервера
+        proxy: "localhost:8000"
     });
 
     browserSync.watch(dest + '**/*.*').on('change', browserSync.reload);
+});
+
+/* ====== */
+/* DJANGO */
+/* ====== */
+
+// Run django server
+// https://github.com/pydanny/cookiecutter-django/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/gulpfile.js
+gulp.task('django', function(cb) {
+  	var cmd = spawn('python', ['manage.py', 'runserver'], {stdio: 'inherit'});
+  	cmd.on('close', function(code) {
+    	console.log('django exited with code ' + code);
+    	cb(code);
+  	});
 });
 
 /* ==== */
