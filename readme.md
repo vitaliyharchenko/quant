@@ -25,3 +25,9 @@ quant
 ├─ logs
 └─ docker-compose.py (сборка и запуск docker-контейнеров)
 ```
+
+Для начала работы запустить:
+```
+python django/manage.py runserver
+django/assets/gulp dev
+```

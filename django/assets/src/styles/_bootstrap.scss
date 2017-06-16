@@ -6,9 +6,9 @@
  */
 
 // Core variables and mixins
-@import "variables";
+// @import "variables";
 @import "mixins";
-@import "custom";
+@import "bootstrap-variables";
 
 // Reset and dependencies
 @import "normalize";
@@ -52,3 +52,6 @@
 
 // Utility classes
 @import "utilities";
+
+// Theme
+@import "theme/theme";

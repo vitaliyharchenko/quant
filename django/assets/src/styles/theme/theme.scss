@@ -1,0 +1,5 @@
+@import "typography";
+
+.btn-green-light {
+  @include button-variant($black, $green-light, $green-light);
+}
