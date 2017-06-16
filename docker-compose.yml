@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  manage:
+    build:
+      context: .
+      dockerfile: docker/development/Dockerfile.web
+
+    entrypoint: python backend/manage.py
+
+    volumes:
+      - ./backend/:/code/
+
+  web:
+    extends:
+      service: manage
+    command: runserver
+    ports:
+      - "8000:8000"
+    # links:
+    #   - db
+    #   - cache
+    #   - assets
