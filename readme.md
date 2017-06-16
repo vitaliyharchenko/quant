@@ -1,5 +1,6 @@
 Структура проекта
 
+```
 quant
 ├─ django
 │  ├─ apps (custom django apps)
@@ -23,3 +24,4 @@ quant
 ├─ docs (документация проекта)
 ├─ logs
 └─ docker-compose.py (сборка и запуск docker-контейнеров)
+```
