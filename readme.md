@@ -20,6 +20,6 @@ quant
 ├─ docker
 │  ├─ development
 │  └─ production
+├─ docs (документация проекта)
 ├─ logs
-├─ .gitignore
-└─ docker-compose.py
+└─ docker-compose.py (сборка и запуск docker-контейнеров)
