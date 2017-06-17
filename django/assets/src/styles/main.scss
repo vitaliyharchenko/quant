@@ -15,31 +15,30 @@ body {
 }
 
 header {
-	padding-top: 50px;
+	&.promo {
+		padding-top: 50px;
+		padding-bottom: 200px;
 
-	.phone {
-		color: $gray-dark;
-	}
-}
+		.phone {
+			color: $gray-dark;
+		}
 
-#promo {
-	padding-top: 100px;
-	padding-bottom: 200px;
+		h1 {
+	        margin-bottom: 30px;
+	    }
 
-    h1 {
-        margin-bottom: 30px;
-    }
+		.main-text {
+			margin-top: 100px;
+			margin-bottom: 80px;
+		}
 
-	.main-text {
-		margin-bottom: 80px;
-	}
+		.main-form {
+			margin-bottom: 30px;
+		}
 
-	.main-form {
-		margin-bottom: 30px;
-	}
-
-	.main-form-button {
-		margin-bottom: 30px;
+		.main-form-button {
+			margin-bottom: 30px;
+		}
 	}
 }
 

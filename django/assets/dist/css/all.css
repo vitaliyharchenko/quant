@@ -7317,6 +7317,18 @@ p {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%); }
 
+.corner-bottom-left {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+
+.trapezium-right {
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%); }
+
+.trapezium-left {
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%); }
+
 body.with-nav {
   min-height: 75rem;
   padding-top: 3.5rem; }
@@ -7324,21 +7336,19 @@ body.with-nav {
 body nav {
   background-color: #375a7f; }
 
-header {
-  padding-top: 50px; }
-  header .phone {
-    color: #373A3C; }
-
-#promo {
-  padding-top: 100px;
+header.promo {
+  padding-top: 50px;
   padding-bottom: 200px; }
-  #promo h1 {
+  header.promo .phone {
+    color: #373A3C; }
+  header.promo h1 {
     margin-bottom: 30px; }
-  #promo .main-text {
+  header.promo .main-text {
+    margin-top: 100px;
     margin-bottom: 80px; }
-  #promo .main-form {
+  header.promo .main-form {
     margin-bottom: 30px; }
-  #promo .main-form-button {
+  header.promo .main-form-button {
     margin-bottom: 30px; }
 
 #where .map-row {
