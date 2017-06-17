@@ -1,59 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Document</title>
-	<link rel="stylesheet" href="static/css/all.css" type="text/css" rel="stylesheet"/>
-</head>
-<body>
-	<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
-		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<a class="navbar-brand" href="#">
-			<img src="static/images/logo-white.svg" alt="Logo" height="30" width="120">
-		</a>
+{% extends "_base.html" %}
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Мои задания <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Виталий Харченко
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="/profile/1">Моя страница</a>
-						<a class="dropdown-item" href="/settings">Настройки</a>
-						<div role="separator" class="dropdown-divider"></div>
-						<a class="dropdown-item" href="/auth/logout/?next=/">Выйти</a>
-						<div role="separator" class="dropdown-divider"></div>
-						<a class="dropdown-item" href="/admin">Админка</a>
-						<a class="dropdown-item" href="/styleguide">Styleguide</a>
-						<a class="dropdown-item" href="/email_styleguide">Email Styleguide</a>
-						<div role="separator" class="dropdown-divider"></div>
-						<a class="dropdown-item" href="/graph">Graph</a>
-						<a class="dropdown-item" href="/groups">Мои группы</a>
-					</div>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="text" placeholder="Поиск">
-				<button class="btn btn-success my-2 my-sm-0" type="submit">Найти</button>
-			</form>
-		</div>
-	</nav>
+{% load staticfiles %}
 
+{% block body %}
 	<header class="section-red">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-dark.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
-					<p class="h1 phone">+7 (343) 288 52 76</p>
+					<a href="tel:+73432885276">
+						<p class="h1 phone">+7 (343) 288 52 76</p>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -91,10 +50,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-dark.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
-					<p class="h1 phone">+7 (343) 288 52 76</p>
+					<a href="tel:+73432885276">
+						<p class="h1 phone">+7 (343) 288 52 76</p>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -131,10 +92,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-dark.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
-					<p class="h1 phone">+7 (343) 288 52 76</p>
+					<a href="tel:+73432885276">
+						<p class="h1 phone">+7 (343) 288 52 76</p>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -171,10 +134,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-white.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
-					<p class="h1 phone text-white">+7 (343) 288 52 76</p>
+					<a href="tel:+73432885276">
+						<p class="h1 phone">+7 (343) 288 52 76</p>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -211,10 +176,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-white.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
-					<p class="h1 phone text-white">+7 (343) 288 52 76</p>
+					<a href="tel:+73432885276">
+						<p class="h1 phone">+7 (343) 288 52 76</p>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -250,10 +217,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-dark.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
-					<p class="h1 phone">+7 (343) 288 52 76</p>
+					<a href="tel:+73432885276">
+						<p class="h1 phone">+7 (343) 288 52 76</p>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -332,32 +301,4 @@
 			</div>
 		</div>
 	</section>
-
-	<div class="container">
-		<br><br>
-		<h1>Typography</h1>
-		<p class="lead">Bootstrap includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the textual utility classes.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In temporibus, dolorem totam harum, doloremque eligendi sed saepe delectus! Aspernatur fugiat quod impedit voluptas ipsum! Eaque vel mollitia deserunt nisi facilis!</p>
-		<h2>Typography</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In temporibus, dolorem totam harum, doloremque eligendi sed saepe delectus! Aspernatur fugiat quod impedit voluptas ipsum! Eaque vel mollitia deserunt nisi facilis!</p>
-		<h3>Typography</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In temporibus, dolorem totam harum, doloremque eligendi sed saepe delectus! Aspernatur fugiat quod impedit voluptas ipsum! Eaque vel mollitia deserunt nisi facilis!</p>
-		<h4>Typography</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In temporibus, dolorem totam harum, doloremque eligendi sed saepe delectus! Aspernatur fugiat quod impedit voluptas ipsum! Eaque vel mollitia deserunt nisi facilis!</p>
-		<hr>
-		<div class="card">
-			<div class="card-block">
-				<p>fdgdfsg <i class="fa fa-road" aria-hidden="true"></i> <i class="fa fa-address-book" aria-hidden="true"></i></p>
-			</div>
-		</div>
-	</div>
-
-	<footer class="footer">
-		<div class="container">
-			<span class="text-muted">Quant, 2016 &copy;</span>
-		</div>
-	</footer>
-
-	<script src="static/js/all.js"></script>
-</body>
-</html>
+{% endblock %}

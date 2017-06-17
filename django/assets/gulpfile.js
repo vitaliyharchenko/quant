@@ -65,11 +65,11 @@ var styles = {
 	    }
 };
 
-var assets = {
-	    in: source + 'assets/**',
-	    out: dest,
-	    watch: source + 'assets/**/*.*',
-};
+// var assets = {
+// 	    in: source + 'assets/**',
+// 	    out: dest,
+// 	    watch: source + 'assets/**/*.*',
+// };
 
 var fonts = {
 	    in: source + 'fonts/**',
@@ -130,13 +130,13 @@ gulp.task('fonts', gulp.parallel('fonts:load', 'fonts:build'));
 /* ===== */
 
 // Собибраем html файлы
-gulp.task('assets', function() {
-	return combiner(
-		gulp.src(assets.in, {since: gulp.lastRun('assets')}), // выбираем только модифицированные файлы
-		newer(assets.out), // не позволяет перекопировать уже существующие файлы
-		gulp.dest(assets.out) // Выгружаем результаты в папку
-	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
-});
+// gulp.task('assets', function() {
+// 	return combiner(
+// 		gulp.src(assets.in, {since: gulp.lastRun('assets')}), // выбираем только модифицированные файлы
+// 		newer(assets.out), // не позволяет перекопировать уже существующие файлы
+// 		gulp.dest(assets.out) // Выгружаем результаты в папку
+// 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
+// });
 
 /* ========== */
 /* JavaScript */
@@ -196,7 +196,6 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
 	gulp.watch(styles.watch, gulp.series('styles'));
 	gulp.watch(fonts.watch, gulp.series('fonts'));
-	gulp.watch(assets.watch, gulp.series('assets'));
 	gulp.watch(images.watch, gulp.series('images'));
 	gulp.watch(js.watch, gulp.series('libs', 'js'));
 });
@@ -235,7 +234,7 @@ gulp.task('django', function(cb) {
 /* MAIN */
 /* ==== */
 
-gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js'));
+gulp.task('build', gulp.series('clean', 'styles', 'images', 'fonts', 'libs', 'js'));
 
 gulp.task('dev',
 	gulp.series('build', 

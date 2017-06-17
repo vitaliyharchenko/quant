@@ -1,10 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Document</title>
-	<link rel="stylesheet" href="static/css/all.css" type="text/css" rel="stylesheet"/>
+	<link rel="stylesheet" href="{% static '/css/all.css' %}" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 	<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
@@ -12,7 +14,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<a class="navbar-brand" href="#">
-			<img src="static/images/logo-white.svg" alt="Logo" height="30" width="120">
+			<img src="{% static '/images/logo-white.svg' %}" alt="Logo" height="30" width="120">
 		</a>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,7 +52,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-dark.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
 					<p class="h1 phone">+7 (343) 288 52 76</p>
@@ -91,7 +93,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-dark.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
 					<p class="h1 phone">+7 (343) 288 52 76</p>
@@ -131,7 +133,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-dark.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
 					<p class="h1 phone">+7 (343) 288 52 76</p>
@@ -171,7 +173,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-white.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
 					<p class="h1 phone text-white">+7 (343) 288 52 76</p>
@@ -211,7 +213,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-white.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
 					<p class="h1 phone text-white">+7 (343) 288 52 76</p>
@@ -250,7 +252,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 text-center text-md-left">
-					<img src="static/images/logo-dark.svg" alt="Logo" height="50" width="200">
+					<img src="{% static '/images/logo-dark.svg' %}" alt="Logo" height="50" width="200">
 				</div>
 				<div class="col-md-6 text-center text-md-right">
 					<p class="h1 phone">+7 (343) 288 52 76</p>
@@ -333,31 +335,12 @@
 		</div>
 	</section>
 
-	<div class="container">
-		<br><br>
-		<h1>Typography</h1>
-		<p class="lead">Bootstrap includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the textual utility classes.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In temporibus, dolorem totam harum, doloremque eligendi sed saepe delectus! Aspernatur fugiat quod impedit voluptas ipsum! Eaque vel mollitia deserunt nisi facilis!</p>
-		<h2>Typography</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In temporibus, dolorem totam harum, doloremque eligendi sed saepe delectus! Aspernatur fugiat quod impedit voluptas ipsum! Eaque vel mollitia deserunt nisi facilis!</p>
-		<h3>Typography</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In temporibus, dolorem totam harum, doloremque eligendi sed saepe delectus! Aspernatur fugiat quod impedit voluptas ipsum! Eaque vel mollitia deserunt nisi facilis!</p>
-		<h4>Typography</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In temporibus, dolorem totam harum, doloremque eligendi sed saepe delectus! Aspernatur fugiat quod impedit voluptas ipsum! Eaque vel mollitia deserunt nisi facilis!</p>
-		<hr>
-		<div class="card">
-			<div class="card-block">
-				<p>fdgdfsg <i class="fa fa-road" aria-hidden="true"></i> <i class="fa fa-address-book" aria-hidden="true"></i></p>
-			</div>
-		</div>
-	</div>
-
 	<footer class="footer">
 		<div class="container">
 			<span class="text-muted">Quant, 2016 &copy;</span>
 		</div>
 	</footer>
 
-	<script src="static/js/all.js"></script>
+	<script src="{% static '/js/all.js' %}"></script>
 </body>
 </html>

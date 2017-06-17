@@ -4,19 +4,21 @@
 
 // for navbar
 body {
-	min-height: 75rem;
-	padding-top: 3.5rem;
-}
+	&.with-nav {
+		min-height: 75rem;
+		padding-top: 3.5rem;
+	}
 
-nav {
-	background-color: #48596D;
+	nav {
+		background-color: $blue-dark;
+	}
 }
 
 header {
 	padding-top: 50px;
 
 	.phone {
-		// font-weight: bold;
+		color: $gray-dark;
 	}
 }
 
