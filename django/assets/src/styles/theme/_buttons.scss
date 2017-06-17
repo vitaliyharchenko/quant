@@ -7,7 +7,7 @@
 }
 
 .btn-green {
-  @include button-variant($black, $green, $green);
+  @include button-variant($white, $green, $green);
 }
 
 .btn-red-light {
@@ -16,6 +16,10 @@
 
 .btn-blue-light {
   @include button-variant($black, $blue-light, $blue-light);
+}
+
+.btn-blue-dark {
+  @include button-variant($white, $blue-dark, $blue-dark);
 }
 
 .btn-purple-light {
