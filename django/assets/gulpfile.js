@@ -65,11 +65,9 @@ var styles = {
 	    }
 };
 
-// var assets = {
-// 	    in: source + 'assets/**',
-// 	    out: dest,
-// 	    watch: source + 'assets/**/*.*',
-// };
+var assets = {
+	    watch: '../templates/**/*.*',
+};
 
 var fonts = {
 	    in: source + 'fonts/**',
@@ -197,6 +195,7 @@ gulp.task('watch', function() {
 	gulp.watch(styles.watch, gulp.series('styles'));
 	gulp.watch(fonts.watch, gulp.series('fonts'));
 	gulp.watch(images.watch, gulp.series('images'));
+	gulp.watch(assets.watch, browserSync.reload);
 	gulp.watch(js.watch, gulp.series('libs', 'js'));
 });
 
