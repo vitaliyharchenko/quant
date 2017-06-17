@@ -7351,12 +7351,13 @@ header.promo {
   header.promo .main-form-button {
     margin-bottom: 30px; }
 
-#where .map-row {
-  margin-top: 50px; }
+#where {
+  padding-top: 50px; }
+  #where .map-row {
+    margin-top: 50px; }
 
 #what {
-  padding-top: 50px;
-  padding-bottom: 100px; }
+  padding-top: 50px; }
   #what .cards-row {
     margin-top: 50px; }
     #what .cards-row .cards-img {
