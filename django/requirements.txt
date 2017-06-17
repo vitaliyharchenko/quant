@@ -1,2 +1,5 @@
 certifi==2017.4.17
+Django==1.11.2
+django-split-settings==0.2.5
+pytz==2017.2
 virtualenv==15.1.0

@@ -15,7 +15,8 @@
 			[
 				".gulp-scss-cache",
 				".sass-cache",
-				"django/__pycache__"
+				"django/__pycache__",
+				"django/conf/__pycache__"
 			],
 			"path": "."
 		}
