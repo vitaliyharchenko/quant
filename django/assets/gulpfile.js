@@ -195,7 +195,6 @@ gulp.task('watch', function() {
 	gulp.watch(styles.watch, gulp.series('styles'));
 	gulp.watch(fonts.watch, gulp.series('fonts'));
 	gulp.watch(images.watch, gulp.series('images'));
-	gulp.watch(assets.watch, browserSync.reload);
 	gulp.watch(js.watch, gulp.series('libs', 'js'));
 });
 
@@ -213,6 +212,7 @@ gulp.task('server', function() {
     });
 
     browserSync.watch(dest + '**/*.*').on('change', browserSync.reload);
+    browserSync.watch(assets.watch).on('change', browserSync.reload);
 });
 
 /* ====== */
