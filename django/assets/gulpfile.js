@@ -98,9 +98,9 @@ var images = {
 gulp.task('styles', function() {
 	return combiner( // Создаем комбайнер потоков для применения общего фильтра onError
 		gulp.src(styles.in), // Берем источник
-		gulpIf(isDevelopment, sourcemaps.init()), // Если идет процесс разработки, то инициализируем sourcemaps
+		// gulpIf(isDevelopment, sourcemaps.init()), // Если идет процесс разработки, то инициализируем sourcemaps
 		sass(styles.sassOpts), // Преобразуем Sass в CSS посредством gulp-sass
-		gulpIf(isDevelopment, sourcemaps.write()), // Если идет процесс разработки, то записываем sourcemaps
+		// gulpIf(isDevelopment, sourcemaps.write()), // Если идет процесс разработки, то записываем sourcemaps
 		autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }), // Создаем префиксы
 		concat('all.css'), // Объединяем все в единый файл
 		gulp.dest(styles.out) // Выгружаем результаты в папку
@@ -197,6 +197,7 @@ gulp.task('watch', function() {
 	gulp.watch(styles.watch, gulp.series('styles'));
 	gulp.watch(fonts.watch, gulp.series('fonts'));
 	gulp.watch(assets.watch, gulp.series('assets'));
+	gulp.watch(images.watch, gulp.series('images'));
 	gulp.watch(js.watch, gulp.series('libs', 'js'));
 });
 

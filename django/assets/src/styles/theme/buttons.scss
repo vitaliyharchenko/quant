@@ -1,0 +1,23 @@
+.btn {
+	font-family: $font-family-roboto-slab;
+}
+
+.btn-green-light {
+  @include button-variant($black, $green-light, $green-light);
+}
+
+.btn-green {
+  @include button-variant($black, $green, $green);
+}
+
+.btn-red-light {
+  @include button-variant($black, $red-light, $red-light);
+}
+
+.btn-blue-light {
+  @include button-variant($black, $blue-light, $blue-light);
+}
+
+.btn-purple-light {
+  @include button-variant($white, $purple, $purple);
+}  

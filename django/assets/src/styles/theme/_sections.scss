@@ -1,0 +1,30 @@
+// Background
+
+.section-red {
+	background: $red-light;
+}
+
+.section-orange {
+	background: $orange-light;
+}
+
+.section-yellow {
+	background: $yellow-light;
+}
+
+.section-green {
+	background: $green-light;
+}
+
+.section-blue {
+	background: $blue-light;
+}
+
+.section-purple {
+	background: $purple-light;
+}
+
+// Shapes
+.corner-bottom-right {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
