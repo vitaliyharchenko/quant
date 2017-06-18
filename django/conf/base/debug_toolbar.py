@@ -20,10 +20,8 @@ DEBUG_TOOLBAR_PANELS = [
 ]
 
 if DEBUG:
-    # noinspection PyUnboundLocalVariable
     INSTALLED_APPS += ['debug_toolbar']
-
-    # noinspection PyUnboundLocalVariable
     MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
-
+    
+    # Важно! Нужно перечислить адреса разработчиков для показа на боевом сервере
     INTERNAL_IPS = ('79.135.64.37', '127.0.0.1', 'localhost',)
