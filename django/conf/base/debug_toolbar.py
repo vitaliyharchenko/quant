@@ -1,7 +1,11 @@
+def show_toolbar(request):
+    return True if DEBUG else False
+
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TEMPLATE_CONTEXT': True,
     'ENABLE_STACKTRACES': True,
     'INTERCEPT_REDIRECTS': False,
+    'SHOW_TOOLBAR_CALLBACK': show_toolbar,
 }
 
 DEBUG_TOOLBAR_PANELS = [
@@ -24,4 +28,4 @@ if DEBUG:
     MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware']
     
     # Важно! Нужно перечислить адреса разработчиков для показа на боевом сервере
-    INTERNAL_IPS = ('79.135.64.37', '127.0.0.1', 'localhost',)
+    INTERNAL_IPS = ()

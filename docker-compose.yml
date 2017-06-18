@@ -3,16 +3,9 @@ version: '3'
 services:
   db:
     image: postgres
-  
-  assets:
-    build:
-      dockerfile: docker/development/Dockerfile.gulp
-      context: .
 
-    volumes:
-      - ./django/assets:/app/project/assets/
-
-    command: npm run watch
+  cache:
+    image: memcached
 
   web:
     build:
