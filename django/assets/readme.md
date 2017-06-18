@@ -5,8 +5,8 @@
 1. Install NodeJS
 2. `npm install -g gulp gulp-cli`
 3. `npm install`
-4. `echo $PATH`
-5. `export PATH=./node_modules/.bin:../node_modules/.bin:../../node_modules/.bin:$PATH`
+4. Добавить путь до Node в PATH
+	* На OSX - `export PATH=./node_modules/.bin:../node_modules/.bin:../../node_modules/.bin:$PATH`
 
 ## Как запустить сборку фронтенда
 
