@@ -2,3 +2,6 @@
 .gulp-scss-cache
 .sass-cache
 quant.sublime-workspace
+
+*.pyc
+*.pyo
