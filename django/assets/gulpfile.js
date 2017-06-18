@@ -208,7 +208,7 @@ gulp.task('server', function() {
         // server: dest // Директория файлов сервера
 
         // Для работы с Django
-        proxy: "localhost:8000"
+        proxy: "0.0.0.0:8000"
     });
 
     browserSync.watch(dest + '**/*.*').on('change', browserSync.reload);

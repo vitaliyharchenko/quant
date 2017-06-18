@@ -1,23 +1,31 @@
-version: '2'
+version: '3'
 
 services:
-  manage:
+  db:
+    image: postgres
+  
+  assets:
     build:
+      dockerfile: docker/development/Dockerfile.gulp
       context: .
-      dockerfile: docker/development/Dockerfile.web
-
-    entrypoint: python backend/manage.py
 
     volumes:
-      - ./backend/:/code/
+      - ./django/assets:/app/project/assets/
+
+    command: npm run watch
 
   web:
-    extends:
-      service: manage
-    command: runserver
+    build:
+      context: .
+      dockerfile: docker/dev/Dockerfile.web
+    entrypoint: python3 django/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./:/code/
     ports:
       - "8000:8000"
-    # links:
-    #   - db
-    #   - cache
-    #   - assets
+    depends_on:
+      - db
+    links:
+      - db
+      # - cache
+      # - assets

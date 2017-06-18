@@ -26,8 +26,6 @@ quant
 └─ docker-compose.py (сборка и запуск docker-контейнеров)
 ```
 
-Для начала работы запустить:
-```
-python django/manage.py runserver
-django/assets/gulp dev
-```
+Для начала работы запустить в разных консолях:
+1. `docker-compose up`
+2. `cd django/assets` && `gulp dev`
