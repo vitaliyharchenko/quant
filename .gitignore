@@ -3,5 +3,8 @@
 .sass-cache
 quant.sublime-workspace
 
-*.pyc
-*.pyo
+*.egg-info
+*.pot
+*.py[co]
+.tox/
+__pycache__
