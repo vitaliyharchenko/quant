@@ -2,3 +2,8 @@
 .gulp-scss-cache
 .sass-cache
 quant.sublime-workspace
+
+// Recomended for python projects
+
+*.pyc
+*.pyo
