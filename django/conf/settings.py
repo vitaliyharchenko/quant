@@ -9,7 +9,7 @@ include(
     'base/paths.py',
     'base/apps.py',
     'base/middleware.py',
-    # 'base/debug_toolbar.py',
+    'base/debug_toolbar.py',
 
     # Load all other settings
     'base/*.py',

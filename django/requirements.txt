@@ -1,5 +1,7 @@
 certifi==2017.4.17
 Django==1.11.2
+django-debug-toolbar==1.8
 django-split-settings==0.2.5
 pytz==2017.2
+sqlparse==0.2.3
 virtualenv==15.1.0
