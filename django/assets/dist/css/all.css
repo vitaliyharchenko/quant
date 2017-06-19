@@ -7149,12 +7149,12 @@ h1 {
 
 h2 {
   margin-top: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: 500; }
 
 h3 {
   margin-top: 30px;
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
 
 p {
   font-family: "Open Sans", sans-serif;
@@ -7369,6 +7369,9 @@ header.promo {
   line-height: 60px;
   /* Vertically center the text there */
   background-color: #f7f7f9; }
+
+figure, .embed-responsive {
+  margin: 30px 0; }
 
 @charset "UTF-8";
 /*!

@@ -7,3 +7,11 @@ def example(request):
 
 def styleguide(request):
     return render(request, 'styleguide.html')
+
+
+def text_block(request):
+    return render(request, 'text_block.html')
+
+
+def choice_block(request):
+    return render(request, 'choice_block.html')
