@@ -7,6 +7,10 @@ body {
 	&.with-nav {
 		min-height: 75rem;
 		padding-top: 3.5rem;
+
+		> .container {
+			margin-top: 50px;
+		}
 	}
 
 	nav {
@@ -71,4 +75,8 @@ header {
 
 figure, .embed-responsive {
 	margin: 30px 0;
+}
+
+.text-block-card {
+	margin-top: 30px; 
 }
