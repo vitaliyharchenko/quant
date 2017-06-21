@@ -1,7 +1,7 @@
 .DS_Store
 .gulp-scss-cache
 .sass-cache
-quant.sublime-workspace
+.sublime-workspace
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
