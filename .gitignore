@@ -2,6 +2,8 @@
 .gulp-scss-cache
 .sass-cache
 .sublime-workspace
+frontend/node_modules
+postgres-data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

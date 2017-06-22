@@ -16,12 +16,9 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
-from apps.example import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^styleguide$', views.styleguide),
-    url(r'^block/', include('apps.example.urls')),
 ]
 
 # django-debug-toolbar
@@ -33,5 +30,5 @@ if settings.DEBUG:
 
 # Only at the end, resolve flatpages
 urlpatterns += [
-    url(r'^$', include('django.contrib.flatpages.urls')),
+    url(r'^', include('django.contrib.flatpages.urls')),
 ]
