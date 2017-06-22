@@ -20,7 +20,6 @@ from apps.example import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.example),
     url(r'^styleguide$', views.styleguide),
     url(r'^block/', include('apps.example.urls')),
 ]
@@ -31,3 +30,8 @@ if settings.DEBUG:
     urlpatterns += [
         url(r'^__debug__/', include(debug_toolbar.urls)),
     ]
+
+# Only at the end, resolve flatpages
+urlpatterns += [
+    url(r'^$', include('django.contrib.flatpages.urls')),
+]

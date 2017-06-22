@@ -11,7 +11,8 @@ services:
     build:
       context: .
       dockerfile: docker/dev/Dockerfile.web
-    entrypoint: python3 django/manage.py runserver 0.0.0.0:8000
+    entrypoint: python3 django/manage.py
+    command: runserver 0.0.0.0:8000
     volumes:
       - ./:/code/
     ports:
