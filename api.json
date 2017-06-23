@@ -172,3 +172,64 @@
         }
     }
 }
+
+// Попытка 4
+
+{
+    "api": {
+        "version": "1.0"
+    },
+    "meta": {
+        "url": "/api/v1.0/blocks/1",
+        "loading": true
+    },
+    "data": [
+        // объект без детализации, инфа достанется из "blocks" ниже
+        // специфичные поля вроде ссылок должны прилететь здесь
+        {
+            "id": "1",
+            "type": "blocks",
+            "relationships": {
+                "author": {
+                    "data": {
+                        "type": "user",
+                        "id": "1"
+                    },
+                    "links": {
+                        "self": "/blocks/1/relationships/author",
+                        "related": "/blocks/1/author"
+                    }
+                }
+            }
+        }
+    ],
+    "included": {
+        // остальные данные
+        "blocks": {
+            // объект продублирован, так как данные нужно накапливать в React state
+            "1": {
+                "attributes": {
+                    "id": "1",
+                    "block_type": "text",
+                    "title": "WIF with physics??",
+                    "text_url": "/api/v1.0/blocks/text/1",
+                },
+                "relationships": {
+                    "author": {
+                        "type": "user",
+                        "id": "1"
+                    }
+                }
+            }
+        },
+        // связанные данные
+        "user": {
+            "1": {
+                "attributes": {
+                    "name": "Awesome teacher",
+                    "id": "1"
+                }
+            }
+        }
+    }
+}
