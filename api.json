@@ -1,0 +1,174 @@
+// Попытка 1
+// http://jsonapi.org
+// http://jsonapi.org/format/
+
+{
+    "links": {
+	    "self": "/api/v1.0/blocks/1",
+	},
+    "api": {
+        "version": "1.0"
+    },
+    "data": [
+        {
+            "type": "TextBlock",
+            "id": "1",
+            "attributes": {
+            	"id": "1",
+                "title": "TextBlock title"
+            },
+            "relationships": {
+		      	"author": {
+		      		"links": {
+				        "self": "/blocks/1/relationships/author",
+				        "related": "/blocks/1/author"
+			        },
+		        	"data": {
+		        		"type": "user",
+		        		"id": "1"
+		        	}
+		      	}
+		    },
+	        "links": {
+	          	"text": "/api/v1.0/blocks/text/1",
+	          	"self": "/api/v1.0/blocks/id"
+	        }
+        }
+    ]
+},
+
+// Попытка 2
+// json-api-normalizer on habrahabr https://habrahabr.ru/post/318958/
+// https://yury-dymov.github.io/json-api-react-redux-example/
+
+{
+    "api": {
+        "version": "1.0"
+    },
+    "links": {
+	    "self": "/api/v1.0/question/1",
+	},
+    "data": {
+    	// ответ на конкретный запрос
+    	"meta": {
+    		"/test": {
+    			"loading": true,
+    			"data": [
+    				{
+    					"id": 1,
+    					"type": "question",
+    					"relationships": {
+    						"posts": {
+    							"type": "post",
+    							"id": 1
+    						}
+    					}
+    				}
+    			]
+    		}
+    	},
+    	// остальные данные
+    	"question": {
+    		"1": {
+    			"attributes": {
+    				"text": "How are you today?",
+    				"id": 1
+    			},
+    			"relationships": {
+    				"posts": {
+						"type": "post",
+						"id": 1
+					}
+    			}
+    		}
+    	},
+    	"post": {
+    		"1": {
+    			"attributes": {
+    				"text": "I am fine",
+    				"id": 1
+    			},
+    			"relationships": {
+    				"author": {
+						"type": "user",
+						"id": 1
+					}
+    			}
+    		}
+    	},
+    	"user": {
+    		"1": {
+    			"attributes": {
+    				"name": "Bob",
+    				"id": 1
+    			}
+    		}
+    	}
+    }
+},
+
+// Попытка 3
+
+{
+    "api": {
+        "version": "1.0"
+    },
+    "data": {
+    	// ответ на конкретный запрос
+    	"meta": {
+    		// url запроса
+    		"/api/v1.0/blocks/1": {
+    			// статус загрузки
+    			"loading": true,
+    			// полученные данные
+    			"data": [
+    				// объект без детализации, инфа достанется из "blocks" ниже
+    				// специфичные поля вроде ссылок должны прилететь здесь
+    				{
+    					"id": "1",
+    					"type": "blocks",
+    					"relationships": {
+    						"author": {
+    							"data": {
+						        	"type": "user",
+						        	"id": "1"
+					        	},
+					        	"links": {
+							        "self": "/blocks/1/relationships/author",
+							        "related": "/blocks/1/author"
+						        }
+					      	}
+    					}
+    				}
+    			]
+    		}
+    	},
+    	// остальные данные
+    	"blocks": {
+    		// объект продублирован, так как данные нужно накапливать в React state
+    		"1": {
+    			"attributes": {
+    				"id": "1",
+    				"block_type": "text",
+    				"title": "WIF with physics??",
+    				"text_url": "/api/v1.0/blocks/text/1",
+    			},
+    			"relationships": {
+    				"author": {
+			        	"type": "user",
+			        	"id": "1"
+			      	}
+    			}
+    		}
+    	},
+    	// связанные данные
+    	"user": {
+    		"1": {
+    			"attributes": {
+    				"name": "Awesome teacher",
+    				"id": "1"
+    			}
+    		}
+    	}
+    }
+}
