@@ -1,8 +1,10 @@
 .DS_Store
-.gulp-scss-cache
-.sass-cache
 .sublime-workspace
+
+# Node.js modules ignore
 frontend/node_modules
+
+# Postgres local data copy ignore
 postgres-data
 
 # Byte-compiled / optimized / DLL files

@@ -2,10 +2,15 @@
 
 @import 'bootstrap';
 
-// for navbar
+// for sticky footer
+html {
+  	position: relative;
+  	min-height: 100%;
+}
+
 body {
+	// for fixed navbar
 	&.with-nav {
-		min-height: 75rem;
 		padding-top: 3.5rem;
 
 		> .container {
@@ -15,6 +20,20 @@ body {
 
 	nav {
 		background-color: $blue-dark;
+	}
+
+	// for sticky footer
+  	margin-bottom: 60px; /* Margin bottom by footer height */
+
+	.footer {
+		margin-top: 50px;
+		height: 60px;
+		line-height: 60px; /* Vertically center the text there */
+		background-color: $gray-lightest;
+		
+		position: absolute;
+	  	bottom: 0;
+	  	width: 100%;
 	}
 }
 
@@ -64,13 +83,6 @@ header {
             margin-bottom: 25px;
         }
 	}
-}
-
-.footer {
-	margin-top: 50px;
-	height: 60px;
-	line-height: 60px; /* Vertically center the text there */
-	background-color: $gray-lightest;
 }
 
 figure, .embed-responsive {

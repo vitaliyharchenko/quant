@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
+from apps.react import views as react_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^react$', react_views.react),
 ]
 
 # django-debug-toolbar
