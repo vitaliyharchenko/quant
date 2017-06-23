@@ -13,3 +13,7 @@
 1. `gulp dev`
 2. Turn off browser cache
 3. Magic
+
+## Осваиваем React
+
+1. https://www.twilio.com/blog/2015/08/setting-up-react-for-es6-with-webpack-and-babel-2.html
