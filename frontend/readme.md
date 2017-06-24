@@ -17,5 +17,9 @@
 ## Осваиваем React
 
 1. https://www.twilio.com/blog/2015/08/setting-up-react-for-es6-with-webpack-and-babel-2.html
-2. Webpack dev server: `webpack-dev-server --content-base react/ --progress --colors`
-3. Create bundle `./node_modules/.bin/webpack` or `npm run webpack`
+	* Webpack dev server: `webpack-dev-server --content-base react/ --progress --colors`
+	* Create bundle `./node_modules/.bin/webpack` or `npm run webpack`
+2. [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
+	* Создаем иерархию компонентов. Можно начать с готовой схемы, а можно начать с самых простых элементов
+	* Наш план:
+		* BlockComponent - TextBlockComponent - ContentComponent + ButtonComponent

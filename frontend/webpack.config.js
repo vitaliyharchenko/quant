@@ -5,7 +5,7 @@ module.exports = {
     entry: './react/main.js',
     output: {
         filename: 'bundle.js',
-        path: __dirname + '/react'
+        path: __dirname + '/../django/assets/react'
     },
     module: {
         loaders: [
