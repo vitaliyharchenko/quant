@@ -27,7 +27,7 @@ quant
 
 Для начала работы запустить в разных консолях:
 1. `docker-compose up`
-2. `cd frontend/django_assets` && `gulp dev`
+2. `cd frontend` && `gulp dev`
 
 Для передачи команд для django:
 1. `docker-compose run web [command]` - выполнит `python3 manage.py [command]`
