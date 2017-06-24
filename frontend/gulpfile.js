@@ -28,7 +28,7 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
 /* ===== */
 /* PATHS */
 /* ===== */
-var source = 'django_assets/src/',
+var source = 'src/',
     dest = '../django/assets/', // for django assets
     node_modules = './node_modules';
 
