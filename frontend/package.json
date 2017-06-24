@@ -45,7 +45,8 @@
     "stream-combiner2": "^1.1.1",
     "style-loader": "^0.18.2",
     "tether": "^1.4.0",
-    "webpack": "^2.2.0"
+    "webpack": "^2.2.0",
+    "webpack-stream": "^3.2.0"
   },
   "dependencies": {
     "react": "^15.6.1",

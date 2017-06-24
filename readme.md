@@ -29,9 +29,10 @@ quant
 1. `docker-compose up`
 2. `docker-coppose run web migrate`
 3. ```
-	docker-coppose run web shell
+	docker-compose run web shell
 	>>> from django.contrib.sites.models import Site
 	>>> Site.objects.create(name='Localhost', domain='0.0.0.0:8000')
+	>>> quit() [Enter]
 	```
 4. `cd frontend` && `gulp dev`
 
