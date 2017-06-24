@@ -3,14 +3,15 @@
 ## Как установить и наладить все
 
 1. Install NodeJS
-2. `npm install -g gulp gulp-cli`
-3. `npm install`
+2. `npm install -g gulp gulp-cli` - устанавливаем глобально основные зависимости
+3. `npm install` - устанавиливаем остальные зависимости из package.json
 4. Добавить путь до Node в PATH
 	* На OSX - `export PATH=./node_modules/.bin:../node_modules/.bin:../../node_modules/.bin:$PATH`
 
 ## Как запустить сборку фронтенда
 
-1. `gulp dev`
+1. `npm run dev` - запустится gulp, webpack, browsersync и откроется страница, которая берет данные от django через proxy
+	* не забудьте запустить docker - контейнеры
 2. Turn off browser cache
 3. Magic
 
