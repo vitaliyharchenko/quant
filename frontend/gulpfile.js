@@ -19,6 +19,7 @@ var gulp 				= require('gulp'),
 	uglify 				= require('gulp-uglify'), // Сжимает JS
 	imagemin    		= require('gulp-imagemin'), // Пакет минификации изображений (в зависимостях также идут дополнительные пакеты)
 	spawn               = require('child_process').spawn, // Для запуска консольных команд, в частности для Django
+	webpack             = require('webpack-stream'), // для запуска webpack
 	cache        		= require('gulp-cache'); // Работа с кэшом
 
 
@@ -82,6 +83,14 @@ var js = {
 	    in: source + 'js/main.js',
 	    out: dest+ 'js/',
 	    watch: source + 'js/**/*.*'
+};
+
+var react = {
+	    in: 'react/**/*.*',
+	    bundlesOut: source + 'react/',
+	    bundlesIn: source + 'react/**/*.*',
+	    out: dest + 'react/',
+	    watch: source + 'react/**/*.*'
 };
 
 var images = {
@@ -168,6 +177,21 @@ gulp.task('js', function() {
     ).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
+// Собираем jsx для react при помощи webpack
+gulp.task('webpack', function() {
+  return gulp.src(react.in)
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(gulp.dest(react.bundlesOut));
+});
+
+// Собибраем react bundle's
+gulp.task('react', function() {
+	return combiner(
+		gulp.src(react.bundlesIn, {since: gulp.lastRun('react')}), // выбираем только модифицированные файлы
+		gulp.dest(react.out) // Выгружаем результаты в папку
+	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
+});
+
 /* ====== */
 /* IMAGES */
 /* ====== */
@@ -186,7 +210,7 @@ gulp.task('images', () => {
 /* ===== */
 
 gulp.task('clean', function() {
-	return del('django_assets/dist');
+	return del(dest, {'force': true});
 });
 
 /* ===== */
@@ -199,6 +223,7 @@ gulp.task('watch', function() {
 	gulp.watch(assets.watch, gulp.series('assets'));
 	gulp.watch(images.watch, gulp.series('images'));
 	gulp.watch(js.watch, gulp.series('libs', 'js'));
+	gulp.watch(react.watch, gulp.series('webpack', 'react'));
 });
 
 /* =========== */
@@ -236,7 +261,7 @@ gulp.task('docker', function(cb) {
 /* MAIN */
 /* ==== */
 
-gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js'));
+gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js', 'webpack'));
 
 gulp.task('dev',
 	gulp.series('build', 

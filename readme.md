@@ -27,7 +27,13 @@ quant
 
 Для начала работы запустить в разных консолях:
 1. `docker-compose up`
-2. `cd frontend` && `gulp dev`
+2. `docker-coppose run web migrate`
+3. ```
+	docker-coppose run web shell
+	>>> from django.contrib.sites.models import Site
+	>>> Site.objects.create(name='Localhost', domain='0.0.0.0:8000')
+	```
+4. `cd frontend` && `gulp dev`
 
 Для передачи команд для django:
 1. `docker-compose run web [command]` - выполнит `python3 manage.py [command]`
