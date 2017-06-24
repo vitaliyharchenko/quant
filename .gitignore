@@ -3,6 +3,7 @@
 
 # Node.js modules ignore
 frontend/node_modules
+npm-debug.log
 
 # Postgres local data copy ignore
 postgres-data

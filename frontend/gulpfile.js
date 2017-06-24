@@ -261,7 +261,7 @@ gulp.task('docker', function(cb) {
 /* MAIN */
 /* ==== */
 
-gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js', 'webpack'));
+gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js', 'webpack', 'react'));
 
 gulp.task('dev',
 	gulp.series('build', 
