@@ -921,12 +921,6 @@
 	                            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
 	                        Popover on left
 	                    </button>
-
-	                    <script>
-	                        $(function () {
-	                            $('[data-toggle="popover"]').popover()
-	                        })
-	                    </script>
 	                </div>
 	            </div>
 	            <br>
@@ -978,12 +972,6 @@
 	                            title="Tooltip on left">
 	                        Tooltip on left
 	                    </button>
-
-	                    <script>
-	                        $(function () {
-	                            $('[data-toggle="tooltip"]').tooltip();
-	                        })
-	                    </script>
 	                </div>
 	            </div>
 	            <br>
@@ -1008,4 +996,17 @@
 	        </div>
 	    </div>
 	</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip();
+	})
+</script>
+<script>
+	$(function () {
+		$('[data-toggle="popover"]').popover();
+	})
+</script>
 {% endblock %}

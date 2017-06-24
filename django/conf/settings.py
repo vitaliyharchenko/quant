@@ -21,4 +21,4 @@ include(
 # TODO: add caches.py
 # TODO: add emails.py
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/  
+# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/ 

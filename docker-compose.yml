@@ -21,8 +21,6 @@ services:
     volumes:
       # копируем весь django код
       - ./django:/code
-      # кидаем сборку стилей и шаблонов в папку assets
-      - ./frontend/django_assets/dist:/code/assets
     ports:
       - "8000:8000"
     depends_on:

@@ -29,7 +29,7 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
 /* PATHS */
 /* ===== */
 var source = 'django_assets/src/',
-    dest = 'django_assets/dist/',
+    dest = '../django/assets/', // for django assets
     node_modules = './node_modules';
 
 // Third-party libs
@@ -68,7 +68,7 @@ var styles = {
 var assets = {
 		in: source + 'html/**/*.*',
 	    out: dest + 'html/',
-	    watch: dest + 'html/**/*.*',
+	    watch: source + 'html/**/*.*',
 };
 
 var fonts = {
@@ -195,7 +195,7 @@ gulp.task('clean', function() {
 
 gulp.task('watch', function() {
 	gulp.watch(styles.watch, gulp.series('styles'));
-	gulp.watch(fonts.watch, gulp.series('fonts'));
+	gulp.watch(fonts.watch, gulp.series('fonts:build'));
 	gulp.watch(assets.watch, gulp.series('assets'));
 	gulp.watch(images.watch, gulp.series('images'));
 	gulp.watch(js.watch, gulp.series('libs', 'js'));
