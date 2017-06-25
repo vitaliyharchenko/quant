@@ -90,7 +90,7 @@ var react = {
 	    bundlesOut: source + 'react/',
 	    bundlesIn: source + 'react/**/*.*',
 	    out: dest + 'react/',
-	    watch: source + 'react/**/*.*'
+	    watch: 'react/**/*.*'
 };
 
 var images = {

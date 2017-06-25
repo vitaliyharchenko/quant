@@ -64,182 +64,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var ProductCategoryRow = function (_React$Component) {
-		_inherits(ProductCategoryRow, _React$Component);
-
-		function ProductCategoryRow() {
-			_classCallCheck(this, ProductCategoryRow);
-
-			return _possibleConstructorReturn(this, (ProductCategoryRow.__proto__ || Object.getPrototypeOf(ProductCategoryRow)).apply(this, arguments));
-		}
-
-		_createClass(ProductCategoryRow, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'tr',
-					null,
-					_react2.default.createElement(
-						'th',
-						{ colSpan: '2' },
-						this.props.category
-					)
-				);
-			}
-		}]);
-
-		return ProductCategoryRow;
-	}(_react2.default.Component);
-
-	var ProductRow = function (_React$Component2) {
-		_inherits(ProductRow, _React$Component2);
-
-		function ProductRow() {
-			_classCallCheck(this, ProductRow);
-
-			return _possibleConstructorReturn(this, (ProductRow.__proto__ || Object.getPrototypeOf(ProductRow)).apply(this, arguments));
-		}
-
-		_createClass(ProductRow, [{
-			key: 'render',
-			value: function render() {
-				var name = this.props.product.stocked ? this.props.product.name : _react2.default.createElement(
-					'span',
-					{ style: { color: 'red' } },
-					this.props.product.name
-				);
-				return _react2.default.createElement(
-					'tr',
-					null,
-					_react2.default.createElement(
-						'td',
-						null,
-						name
-					),
-					_react2.default.createElement(
-						'td',
-						null,
-						this.props.product.price
-					)
-				);
-			}
-		}]);
-
-		return ProductRow;
-	}(_react2.default.Component);
-
-	var ProductTable = function (_React$Component3) {
-		_inherits(ProductTable, _React$Component3);
-
-		function ProductTable() {
-			_classCallCheck(this, ProductTable);
-
-			return _possibleConstructorReturn(this, (ProductTable.__proto__ || Object.getPrototypeOf(ProductTable)).apply(this, arguments));
-		}
-
-		_createClass(ProductTable, [{
-			key: 'render',
-			value: function render() {
-				var rows = [];
-				var lastCategory = null;
-				this.props.products.forEach(function (product) {
-					if (product.category !== lastCategory) {
-						rows.push(_react2.default.createElement(ProductCategoryRow, { category: product.category, key: product.category }));
-					}
-					rows.push(_react2.default.createElement(ProductRow, { product: product, key: product.name }));
-					lastCategory = product.category;
-				});
-				return _react2.default.createElement(
-					'table',
-					null,
-					_react2.default.createElement(
-						'thead',
-						null,
-						_react2.default.createElement(
-							'tr',
-							null,
-							_react2.default.createElement(
-								'th',
-								null,
-								'Name'
-							),
-							_react2.default.createElement(
-								'th',
-								null,
-								'Price'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'tbody',
-						null,
-						rows
-					)
-				);
-			}
-		}]);
-
-		return ProductTable;
-	}(_react2.default.Component);
-
-	var SearchBar = function (_React$Component4) {
-		_inherits(SearchBar, _React$Component4);
-
-		function SearchBar() {
-			_classCallCheck(this, SearchBar);
-
-			return _possibleConstructorReturn(this, (SearchBar.__proto__ || Object.getPrototypeOf(SearchBar)).apply(this, arguments));
-		}
-
-		_createClass(SearchBar, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'form',
-					null,
-					_react2.default.createElement('input', { type: 'text', placeholder: 'Search...' }),
-					_react2.default.createElement(
-						'p',
-						null,
-						_react2.default.createElement('input', { type: 'checkbox' }),
-						' ',
-						'Only show products in stock'
-					)
-				);
-			}
-		}]);
-
-		return SearchBar;
-	}(_react2.default.Component);
-
-	var FilterableProductTable = function (_React$Component5) {
-		_inherits(FilterableProductTable, _React$Component5);
-
-		function FilterableProductTable() {
-			_classCallCheck(this, FilterableProductTable);
-
-			return _possibleConstructorReturn(this, (FilterableProductTable.__proto__ || Object.getPrototypeOf(FilterableProductTable)).apply(this, arguments));
-		}
-
-		_createClass(FilterableProductTable, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(SearchBar, null),
-					_react2.default.createElement(ProductTable, { products: this.props.products })
-				);
-			}
-		}]);
-
-		return FilterableProductTable;
-	}(_react2.default.Component);
-
-	// My Code
-
-	var TextBlockComponent = function (_React$Component6) {
-		_inherits(TextBlockComponent, _React$Component6);
+	var TextBlockComponent = function (_React$Component) {
+		_inherits(TextBlockComponent, _React$Component);
 
 		function TextBlockComponent() {
 			_classCallCheck(this, TextBlockComponent);
@@ -256,12 +82,7 @@
 					_react2.default.createElement(
 						'p',
 						null,
-						this.props.block.title
-					),
-					_react2.default.createElement(
-						'p',
-						null,
-						this.props.block.text_url
+						this.props.block.content
 					)
 				);
 			}
@@ -270,8 +91,8 @@
 		return TextBlockComponent;
 	}(_react2.default.Component);
 
-	var BlockComponent = function (_React$Component7) {
-		_inherits(BlockComponent, _React$Component7);
+	var BlockComponent = function (_React$Component2) {
+		_inherits(BlockComponent, _React$Component2);
 
 		function BlockComponent() {
 			_classCallCheck(this, BlockComponent);
@@ -282,10 +103,15 @@
 		_createClass(BlockComponent, [{
 			key: 'render',
 			value: function render() {
-				if (this.props.block.block_type == "text") {
+				if (this.props.block.type == "text") {
 					return _react2.default.createElement(
 						'div',
-						null,
+						{ className: 'card card-block' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'lead' },
+							'BlockComponent Heading'
+						),
 						_react2.default.createElement(TextBlockComponent, { block: this.props.block })
 					);
 				}
@@ -295,19 +121,208 @@
 		return BlockComponent;
 	}(_react2.default.Component);
 
-	var PRODUCTS = [{ category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' }, { category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' }, { category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball' }, { category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch' }, { category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' }, { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' }];
+	var NodeComponent = function (_React$Component3) {
+		_inherits(NodeComponent, _React$Component3);
 
-	var BLOCK = {
-		"id": "1",
-		"block_type": "text",
-		"title": "WIF with physics??",
-		"text_url": "/api/v1.0/blocks/text/1"
+		function NodeComponent() {
+			_classCallCheck(this, NodeComponent);
+
+			return _possibleConstructorReturn(this, (NodeComponent.__proto__ || Object.getPrototypeOf(NodeComponent)).apply(this, arguments));
+		}
+
+		_createClass(NodeComponent, [{
+			key: 'render',
+			value: function render() {
+				var node = this.props.node;
+				var blocks = [];
+				node.blocks.forEach(function (block) {
+					blocks.push(_react2.default.createElement(BlockComponent, { block: block }));
+				});
+				return _react2.default.createElement(
+					'div',
+					{ className: 'card card-block' },
+					_react2.default.createElement(
+						'p',
+						{ className: 'lead' },
+						'NodeComponent Heading'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Node id: ',
+						node.id
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						blocks
+					)
+				);
+			}
+		}]);
+
+		return NodeComponent;
+	}(_react2.default.Component);
+
+	var LessonComponent = function (_React$Component4) {
+		_inherits(LessonComponent, _React$Component4);
+
+		function LessonComponent() {
+			_classCallCheck(this, LessonComponent);
+
+			return _possibleConstructorReturn(this, (LessonComponent.__proto__ || Object.getPrototypeOf(LessonComponent)).apply(this, arguments));
+		}
+
+		_createClass(LessonComponent, [{
+			key: 'render',
+			value: function render() {
+				var lesson = this.props.lesson;
+				var nodes = [];
+				lesson.nodes.forEach(function (node) {
+					nodes.push(_react2.default.createElement(NodeComponent, { node: node }));
+				});
+				return _react2.default.createElement(
+					'div',
+					{ className: 'card card-block' },
+					_react2.default.createElement(
+						'p',
+						{ className: 'lead' },
+						'LessonComponent Heading'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Lesson name: ',
+						lesson.name
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						nodes
+					)
+				);
+			}
+		}]);
+
+		return LessonComponent;
+	}(_react2.default.Component);
+
+	var TaskComponent = function (_React$Component5) {
+		_inherits(TaskComponent, _React$Component5);
+
+		function TaskComponent() {
+			_classCallCheck(this, TaskComponent);
+
+			return _possibleConstructorReturn(this, (TaskComponent.__proto__ || Object.getPrototypeOf(TaskComponent)).apply(this, arguments));
+		}
+
+		_createClass(TaskComponent, [{
+			key: 'render',
+			value: function render() {
+				var task = this.props.task;
+				var lessons = [];
+				task.lessons.forEach(function (lesson) {
+					lessons.push(_react2.default.createElement(LessonComponent, { lesson: lesson }));
+				});
+				return _react2.default.createElement(
+					'div',
+					{ className: 'card card-block' },
+					_react2.default.createElement(
+						'p',
+						{ className: 'lead' },
+						'TaskComponent Heading'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Task id/until: ',
+						task.id,
+						'/',
+						task.date_until
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Task teacher: ',
+						task.teacher.name
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Task group: ',
+						task.group.name
+					),
+					lessons
+				);
+			}
+		}]);
+
+		return TaskComponent;
+	}(_react2.default.Component);
+
+	var RESPONCE = {
+		"api": {
+			"version": "1.0"
+		},
+		"data": {
+			"task": {
+				"id": "1",
+				"date_until": "21.12.2092",
+				"student": {
+					"name": "Awesome student",
+					"id": "1"
+				},
+				"teacher": {
+					"name": "Awesome teacher",
+					"id": "2"
+				},
+				"group": {
+					"name": "Awesome group on Mondays",
+					"id": "1"
+				},
+				"lessons": [{
+					"name": "Awesome lesson",
+					"id": "1",
+					"nodes": [{
+						"id": "1",
+						"blocks": [{
+							"id": "1",
+							"type": "text",
+							"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis harum, officiis quas ab tempora corporis. Repudiandae maiores, ducimus debitis minima."
+						}, {
+							"id": "2",
+							"type": "text",
+							"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, porro."
+						}, {
+							"id": "3",
+							"type": "text",
+							"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat minus, impedit sit culpa, consectetur ducimus!"
+						}]
+					}, {
+						"id": "2",
+						"blocks": [{
+							"id": "4",
+							"type": "text",
+							"content": "Lorem ipsum dolor."
+						}, {
+							"id": "5",
+							"type": "text",
+							"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, assumenda facere nemo."
+						}, {
+							"id": "6",
+							"type": "text",
+							"content": "Lorem ipsum dolor sit amet, consectetur adipisicing."
+						}]
+					}]
+				}]
+			}
+		}
 	};
 
 	_reactDom2.default.render(_react2.default.createElement(
 		'div',
 		null,
-		_react2.default.createElement(BlockComponent, { block: BLOCK })
+		_react2.default.createElement(TaskComponent, { task: RESPONCE.data.task })
 	), document.getElementById('react'));
 
 /***/ }),
