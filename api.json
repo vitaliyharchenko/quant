@@ -232,4 +232,71 @@
             }
         }
     }
+},
+
+// Определяем оптимальный state для React приложения (task)
+{
+    "api": {
+        "version": "1.0"
+    },
+    "data": {
+        "task": {
+            "id": "1",
+            "date_until": "21.12.2092",
+            "student": {
+                "name": "Awesome student",
+                "id": "1"
+            },
+            "teacher": {
+                "name": "Awesome teacher",
+                "id": "2",
+            },
+            "group": {
+                "name": "Awesome group on Mondays",
+                "id": "1"
+            },
+            "nodes": [
+                {
+                    "id": "1",
+                    "blocks": [
+                        {
+                            "id": "1",
+                            "type": "text",
+                            "content": "Block Text Content"
+                        },
+                        {
+                            "id": "2",
+                            "type": "text",
+                            "content": "Block Text Content"
+                        },
+                        {
+                            "id": "3",
+                            "type": "text",
+                            "content": "Block Text Content"
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "blocks": [
+                        {
+                            "id": "4",
+                            "type": "text",
+                            "content": "Block Text Content"
+                        },
+                        {
+                            "id": "5",
+                            "type": "text",
+                            "content": "Block Text Content"
+                        },
+                        {
+                            "id": "6",
+                            "type": "text",
+                            "content": "Block Text Content"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
 }
