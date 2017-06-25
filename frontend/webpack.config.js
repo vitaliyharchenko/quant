@@ -2,9 +2,12 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './react/main.js',
+    entry: {
+        'main': './react/main.js',
+        'task': './react/task.js'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: __dirname + '/src/react/'
     },
     module: {
