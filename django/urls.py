@@ -16,13 +16,17 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
-from apps.example import views
+from apps.react import views as react_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+<<<<<<< HEAD
     url(r'^$', views.example),
     url(r'^styleguide$', views.styleguide),
     url(r'^', include('apps.users.urls')),
+=======
+    url(r'^react', include('apps.react.urls', namespace='react')),
+>>>>>>> vitaliy
 ]
 
 # django-debug-toolbar
@@ -31,3 +35,8 @@ if settings.DEBUG:
     urlpatterns += [
         url(r'^__debug__/', include(debug_toolbar.urls)),
     ]
+
+# Only at the end, resolve flatpages
+urlpatterns += [
+    url(r'^', include('django.contrib.flatpages.urls')),
+]

@@ -1,10 +1,46 @@
 .DS_Store
-.gulp-scss-cache
-.sass-cache
-quant.sublime-workspace
+.sublime-workspace
 
-*.egg-info
-*.pot
-*.py[co]
+# Node.js modules ignore
+frontend/node_modules
+frontend/npm-debug.log
+npm-debug.log
+
+# Postgres local data copy ignore
+postgres-data
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Pytho
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
 .tox/
-__pycache__
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+django/conf/local/

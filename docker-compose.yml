@@ -3,6 +3,11 @@ version: '3'
 services:
   db:
     image: postgres
+    ports:
+      - "5433:5432"
+    # https://stackoverflow.com/questions/41637505/how-to-persist-data-in-a-dockerized-postgres-database-using-volumes
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
 
   cache:
     image: memcached
@@ -11,14 +16,16 @@ services:
     build:
       context: .
       dockerfile: docker/dev/Dockerfile.web
-    entrypoint: python3 django/manage.py runserver 0.0.0.0:8000
+    entrypoint: python3 manage.py
+    command: runserver 0.0.0.0:8000
     volumes:
-      - ./:/code/
+      # копируем весь django код
+      - ./django:/code
     ports:
       - "8000:8000"
     depends_on:
       - db
-    links:
-      - db
+    # links:
+    #   - db
       # - cache
       # - assets

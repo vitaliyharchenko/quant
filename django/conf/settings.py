@@ -15,4 +15,14 @@ include(
     'base/*.py',
 
     optional('local/*.py'),  # we can load any other settings from local folder
+<<<<<<< HEAD
 )
+=======
+)
+
+# https://github.com/phpdude/docker-django-webpack-skeleton/blob/master/project/settings/base/
+# TODO: add caches.py
+# TODO: add emails.py
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/ 
+>>>>>>> vitaliy

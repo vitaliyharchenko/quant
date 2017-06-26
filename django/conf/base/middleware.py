@@ -6,5 +6,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+<<<<<<< HEAD
     'debug_toolbar.middleware.DebugToolbarMiddleware'
+=======
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+>>>>>>> vitaliy
 ]
