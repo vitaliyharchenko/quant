@@ -10,6 +10,5 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Custom apps
-    'apps.example',
     'apps.users'
 ]
