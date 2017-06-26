@@ -10,9 +10,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Custom apps
-<<<<<<< HEAD
     'apps.example',
     'apps.users'
-=======
->>>>>>> vitaliy
 ]
