@@ -234,7 +234,7 @@
     }
 },
 
-// Определяем оптимальный state для React приложения (task)
+// Первоначальный набор данных для React приложения (task)
 {
     "api": {
         "version": "1.0"
@@ -255,48 +255,69 @@
                 "name": "Awesome group on Mondays",
                 "id": "1"
             },
-            "nodes": [
+            "lessons": [
                 {
+                    "name": "Awesome lesson",
                     "id": "1",
-                    "blocks": [
+                    "where": "Second Audithory, Lenina st. 2",
+                    "nodes": [
                         {
                             "id": "1",
-                            "type": "text",
-                            "content": "Block Text Content"
+                            "title": "Gauss theoreme",
+                            "blocks": [
+                                {
+                                    "id": "1",
+                                    "type": "text",
+                                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis harum, officiis quas ab tempora corporis. Repudiandae maiores, ducimus debitis minima."
+                                },
+                                {
+                                    "id": "2",
+                                    "type": "text",
+                                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, porro."
+                                },
+                                {
+                                    "id": "3",
+                                    "type": "text",
+                                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat minus, impedit sit culpa, consectetur ducimus!"
+                                }
+                            ]
                         },
                         {
                             "id": "2",
-                            "type": "text",
-                            "content": "Block Text Content"
-                        },
-                        {
-                            "id": "3",
-                            "type": "text",
-                            "content": "Block Text Content"
-                        }
-                    ]
-                },
-                {
-                    "id": "2",
-                    "blocks": [
-                        {
-                            "id": "4",
-                            "type": "text",
-                            "content": "Block Text Content"
-                        },
-                        {
-                            "id": "5",
-                            "type": "text",
-                            "content": "Block Text Content"
-                        },
-                        {
-                            "id": "6",
-                            "type": "text",
-                            "content": "Block Text Content"
+                            "title": "Physics and plyometrics",
+                            "blocks": [
+                                {
+                                    "id": "4",
+                                    "type": "text",
+                                    "content": "Lorem ipsum dolor."
+                                },
+                                {
+                                    "id": "5",
+                                    "type": "text",
+                                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, assumenda facere nemo."
+                                },
+                                {
+                                    "id": "6",
+                                    "type": "text",
+                                    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing."
+                                }
+                            ]
                         }
                     ]
                 }
             ]
         }
+    }
+},
+
+// Определяем оптимальный state для React приложения (task)
+
+{
+    "tasks": {
+        "1: {
+            "id": "4",
+            "type": "text",
+            "content": "Lorem ipsum dolor."
+        },
     }
 }
