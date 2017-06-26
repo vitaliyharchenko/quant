@@ -6,7 +6,7 @@ phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
                              message="Телефон должен быть заполнен в формате: '+999999999'. Максимум 15 цифр.")
 
 # Model, contains extra info about user.
-class User(models.Model):
+class Profile(models.Model):
 
     STUDENT = 'ST'
     TEACHER = 'TH'

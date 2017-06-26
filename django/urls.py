@@ -19,8 +19,9 @@ from django.contrib import admin
 from apps.react import views as react_views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('apps.users.urls')),
+    url(r'^admin', admin.site.urls),
+    url(r'^users', include('apps.users.urls', namespace='users')),
+    url(r'^tasks/', include('apps.tasks.urls', namespace='tasks')),
     url(r'^react', include('apps.react.urls', namespace='react')),
 ]
 

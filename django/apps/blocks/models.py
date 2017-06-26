@@ -1,11 +1,11 @@
 from django.core.urlresolvers import reverse
 from django.db import models
-from django_markdown.models import MarkdownField
+#from django_markdown.models import MarkdownField
 
 
 # All lessons contains blocks (text, chioce, question with float answer)
 class Block(models.Model):
-	time = models.IntegerField('Время в минутах на выполнение блока', blank=True)
+    time = models.IntegerField('Время в минутах на выполнение блока', blank=True)
 
     def __str__(self):
         title = None
@@ -36,7 +36,8 @@ class Block(models.Model):
 
 class TextBlock(Block):
     title = models.CharField(max_length=200, unique=True)
-    body = MarkdownField()
+    #body = MarkdownField()
+    body = models.CharField(max_length=600)
 
     class Meta:
         verbose_name = 'текстовая статья'
@@ -47,7 +48,8 @@ class TextBlock(Block):
 
 
 class ChoiceBlock(Block):
-    question_text = MarkdownField('Текст вопроса')
+    #question_text = MarkdownField('Текст вопроса')
+    question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='choice_blocks/', null=True, blank=True)
 
     class Meta:
@@ -74,7 +76,8 @@ class ChoiceBlockOption(models.Model):
 
 
 class FloatBlock(Block):
-    question_text = MarkdownField('Текст вопроса')
+    #question_text = MarkdownField('Текст вопроса')
+    question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='float_questions/', null=True, blank=True)
     answer = models.FloatField('Ответ')
 
@@ -86,9 +89,10 @@ class FloatBlock(Block):
         return self.question_text
 
 class TextAnswerBlock(Block):
-    question_text = MarkdownField('Текст вопроса')
+    #question_text = MarkdownField('Текст вопроса')
+    question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='float_questions/', null=True, blank=True)
-    answer = models.CharField('Ответ')
+    answer = models.CharField('Ответ', max_length=600)
 
     class Meta:
         verbose_name = 'задача с текстовым ответом'

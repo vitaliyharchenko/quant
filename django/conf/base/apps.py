@@ -10,5 +10,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Custom apps
-    'apps.users'
+    'apps.users',
+    'apps.blocks',
+    'apps.nodes',
+    'apps.tasks',
+    'apps.results',
+    'apps.lessons',
+    'apps.subjects'
 ]

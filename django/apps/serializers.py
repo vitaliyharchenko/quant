@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from .users.models import Profile
 
 class ObjectSerializer(serializers.BaseSerializer):
     """
@@ -16,7 +17,7 @@ class ObjectSerializer(serializers.BaseSerializer):
     """
     def to_representation(self, obj):
         _id = obj.pk
-        _type = obj.app_label, # может что-то другое
+        _type = obj._meta.app_label, # может что-то другое
 
         output = {"api" : {"version": "1.0"},  # захардкодить и подтягивать версию откуда-нибудь из настроек
                   "data" : {
@@ -43,10 +44,10 @@ class ObjectSerializer(serializers.BaseSerializer):
 
         for attribute_name in dir(obj):
             attribute = getattr(obj, attribute_name)
-            if attribute_name('_'):
-                # Ignore private attributes.
-                pass
-            elif hasattr(attribute, '__call__'):
+            # if attribute_name('_'):
+            #     # Ignore private attributes.
+            #     pass
+            if hasattr(attribute, '__call__'):
                 # Ignore methods and other callables.
                 pass
             elif isinstance(attribute, (str, int, bool, float, type(None))):

@@ -2,7 +2,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from .models import User
+from .models import Profile
 from .serializers import UserSerializer
 
 # Create your views here.
@@ -12,8 +12,8 @@ def user_list(request):
     List all users or create new user
     """
     if request.method == 'GET':
-        users = User.objects.all()
-        serializer = UserSerializer(uers, many=True)
+        users = Profile.objects.all()
+        serializer = UserSerializer(users, many=True)
         return JsonResponse(serializer.data, safe=False)
 
     elif request.method == 'POST':
@@ -30,7 +30,7 @@ def user_detail(request, pk):
     Retrieve, update or delete a user.
     """
     try:
-        user = User.objects.get(pk=pk)
+        user = Profile.objects.get(pk=pk)
     except user.DoesNotExist:
         return HttpResponse(status=404)
 
