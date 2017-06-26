@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.example),
     url(r'^styleguide$', views.styleguide),
+    url(r'^', include('apps.users.urls')),
 ]
 
 # django-debug-toolbar

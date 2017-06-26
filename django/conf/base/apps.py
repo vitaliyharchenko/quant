@@ -9,4 +9,5 @@ INSTALLED_APPS = [
 
     # Custom apps
     'apps.example',
+    'apps.users'
 ]
