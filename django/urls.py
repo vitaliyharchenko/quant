@@ -1,4 +1,4 @@
-"""quant URL Configuration
+"""
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -21,7 +21,7 @@ from apps.react import views as react_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('apps.users.urls')),
-    url(r'^react', include('apps.react.urls', namespace='react')),
+    url(r'^react/', include('apps.react.urls', namespace='react')),
 ]
 
 # django-debug-toolbar
@@ -33,5 +33,5 @@ if settings.DEBUG:
 
 # Only at the end, resolve flatpages
 urlpatterns += [
-    url(r'^', include('django.contrib.flatpages.urls')),
+    url(r'^pages/', include('django.contrib.flatpages.urls')),
 ]
