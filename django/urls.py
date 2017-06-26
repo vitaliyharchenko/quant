@@ -20,13 +20,8 @@ from apps.react import views as react_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-<<<<<<< HEAD
-    url(r'^$', views.example),
-    url(r'^styleguide$', views.styleguide),
     url(r'^', include('apps.users.urls')),
-=======
     url(r'^react', include('apps.react.urls', namespace='react')),
->>>>>>> vitaliy
 ]
 
 # django-debug-toolbar
