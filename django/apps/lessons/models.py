@@ -2,7 +2,7 @@ from django.db import models
 
 from django.core.urlresolvers import reverse
 from django.db import models
-from apps.subjects.models import SubjectTag
+from apps.tags.models import SubjectTag
 from apps.nodes.models import Node
 
 # Nodes - nodes of learning graph
