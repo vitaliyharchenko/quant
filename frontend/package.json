@@ -41,6 +41,7 @@
     "gulp-uglify": "^3.0.0",
     "jquery": "^3.2.1",
     "json-api-normalizer": "^0.4.1",
+    "redux-devtools": "^3.4.0",
     "resolve-url-loader": "^2.0.3",
     "sass-loader": "^6.0.6",
     "stream-combiner2": "^1.1.1",
@@ -51,6 +52,8 @@
   },
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1"
   }
 }

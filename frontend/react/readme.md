@@ -20,3 +20,5 @@ It is sufficient to use React + Redux + API Normalizer
 3. ☆ [Руководство по Redux для React](https://habrahabr.ru/company/mailru/blog/303456/)
 
 4. На очереди [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/)
+
+5. [Awesome React](https://github.com/xgrommx/awesome-redux)

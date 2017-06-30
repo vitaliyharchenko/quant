@@ -3,8 +3,10 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        'main': './react/main.js',
-        'task': './react/task.js'
+        'counter': './react/counter.js',
+        'task': './react/task.js',
+        'block': './react/block/index.js',
+        'block1': './react/blocks/index.js'
     },
     output: {
         filename: '[name].js',
