@@ -22,3 +22,12 @@ It is sufficient to use React + Redux + API Normalizer
 4. На очереди [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/)
 
 5. [Awesome React](https://github.com/xgrommx/awesome-redux)
+
+Попытки:
+
+1. v0.1 - попытка объединить react-quiz-app, react-examples/real-world+react-examples/async - закончилась неудачей
+
+2. v0.2 - начинаем исключительно с представления
+	* folowing [official tutorial by FB](https://facebook.github.io/react/tutorial/tutorial.html)
+
+3. v0.3 - попытака сделать статическую версию task
