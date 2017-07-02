@@ -1,9 +1,63 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux'
+import { connect } from 'react-redux'
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+// action
+const NEXT_BLOCK = 'NEXT_BLOCK'
+
+// action creator
+function nextBlock() {
+  return {
+    type: NEXT_BLOCK
+  }
+}
+
+const initialState = {
+  	task: {
+		datetime_to: "21/12/1992",
+	    teacher: "МарьИванна",
+	    group: "Супер группа Ф11",
+	    blocks: ["1", "2"],
+	},
+	currentBlockNumber: 1,
+	blocks: {
+	  	"1": {
+		  	id: '1',
+		  	type: 'text',
+		  	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maiores odit, accusantium minima tempora asperiores. Mollitia error officiis impedit quis quam magni est alias illo culpa nemo. Excepturi odio accusantium officia non, earum, natus id, itaque cum dolor perferendis vitae sapiente. Distinctio veniam commodi libero velit minus aperiam itaque eaque?',
+	  	},
+	  	"2": {
+		  	id: '2',
+		  	type: 'text',
+		  	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem voluptas, omnis?',
+	  	}
+	},
+}
+
+// reducer
+function todoApp(state = initialState, action) {
+  switch (action.type) {
+    case NEXT_BLOCK:
+      return Object.assign({}, state, {
+        blockNumber: state.blockNumber + 1
+      })
+    default:
+      return state
+  }
+}
+
+// create store
+let store = createStore(todoApp)
+
 class TextBlock extends Component {
+
+	handleClick() {
+		store.dispatch(nextBlock());
+	}
+
 	render() {
 		return (
 			<div className="card block-card">
@@ -11,7 +65,7 @@ class TextBlock extends Component {
 					{this.props.block.content}
 				</div>
 			    <div className="card-footer">
-					<button className="btn btn-primary btn-block" onClick={() => alert("Click")}>
+					<button className="btn btn-primary btn-block" onClick={this.handleClick}>
 						Я прочитал
 				    </button>
 				</div>
@@ -21,13 +75,10 @@ class TextBlock extends Component {
 }
 
 function Block(props) {
-	if (props.visible) {
-		if (props.block.type === 'text') {
-			return <TextBlock block={props.block} />
-		}
-		return <div className="card card-block"><b>Неизвестный тип блока</b></div>
+	if (props.block.type === 'text') {
+		return <TextBlock block={props.block} />
 	}
-	return false;
+	return <div className="card card-block"><b>Неизвестный тип блока</b></div>
 }
 
 class Task extends Component {
@@ -36,8 +87,9 @@ class Task extends Component {
 
 		var rows = [];
 		this.props.task.blocks.forEach(function(block_pk, i) {
-			var visible = (i < API.blockNumber) ? true : false
-			rows.push(<Block block={API.blocks[block_pk]} key={block_pk} visible={visible}/>);
+			if (i < API.blockNumber) {
+				rows.push(<Block block={API.blocks[block_pk]} key={i}/>);
+			}
 		});
 
 		return (
