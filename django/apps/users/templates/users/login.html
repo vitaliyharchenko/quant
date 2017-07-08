@@ -1,0 +1,73 @@
+{% extends "_base-with-nav.html" %}
+{% load staticfiles %}
+{% load form_extras %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4 class="modal-title">
+                            Вход
+                        </h4>
+                    </div>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {% if form.non_field_errors %}
+                                    {% for error in form.non_field_errors %}
+                                        <div class="alert alert-warning alert-dismissible fade show"
+                                             role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <strong>{{ error }}</strong>
+                                        </div>
+                                    {% endfor %}
+                                    <script type="text/javascript">
+                                        setInterval(function () {
+                                            $(".alert").alert('close')
+                                        }, 5000);
+                                    </script>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-md-6">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {% text_input field=form.username placeholder='Email, никнейм или телефон' no_label=True %}
+                                    {% text_input field=form.password placeholder=form.password.label no_label=True type='password' %}
+                                    <button class="btn btn-outline-primary" type="submit">Войти</button>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <a href="{% url 'users:social_auth_begin' 'vk' %}" class="btn btn-primary btn-block">
+                                            VK
+                                        </a>
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="{% url 'users:social_auth_begin' 'fb' %}" class="btn btn-primary btn-block">
+                                            Facebook
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="{% url 'users:password_reset' %}">Забыли пароль?</a>
+                            </div>
+                            <div class="col-6 text-right">
+                                <a href="{% url 'users:signup' %}">Я не зарегистрирован</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
