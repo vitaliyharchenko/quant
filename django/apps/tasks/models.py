@@ -16,8 +16,8 @@ class Task(models.Model):
     is_finished = models.BooleanField('Закончил?', default=False)
     
     class Meta:
-        verbose_name = 'Задание для ученика'
-        verbose_name_plural = 'Задание для ученика'
+        verbose_name = 'задание для ученика'
+        verbose_name_plural = 'задания для ученика'
 
     def __str__(self):
         return u'For {}, "{}"'.format(self.student, self.lesson)

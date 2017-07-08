@@ -38,6 +38,6 @@ class Profile(models.Model):
         return reverse('users', args=[self.id])
 
     def __str__(self):
-        return "{}".format(self.pk)
+        return "Pk: {}, name: {}".format(self.pk, self.user.name)
 
 

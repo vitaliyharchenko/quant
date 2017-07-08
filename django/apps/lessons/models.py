@@ -15,8 +15,8 @@ class Lesson(models.Model):
     time = models.PositiveSmallIntegerField('Время на урок', default=20) # нужно подумать над этим
 
     class Meta:
-        verbose_name = 'Урок'
-        verbose_name_plural = 'Уроки'
+        verbose_name = 'урок'
+        verbose_name_plural = 'уроки'
 
     def get_absolute_url(self):
         return reverse('lessons', args=[self.id])

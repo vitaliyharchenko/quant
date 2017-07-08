@@ -30,6 +30,10 @@ class Block(models.Model):
         else:
             return u'Block #{}'.format(self.id)
 
+    class Meta:
+        verbose_name = 'блок'
+        verbose_name_plural = 'блоки'
+
     def get_absolute_url(self):
         return reverse('blocks', args=[self.id])
 
@@ -68,8 +72,8 @@ class ChoiceBlockOption(models.Model):
     is_true = models.BooleanField('Правильный?')
 
     class Meta:
-        verbose_name = 'Вариант ответа на тестовый вопрос'
-        verbose_name_plural = 'Варианты ответа на тестовые вопросы'
+        verbose_name = 'вариант ответа на тестовый вопрос'
+        verbose_name_plural = 'варианты ответа на тестовые вопросы'
 
     def __str__(self):
         return self.option_text

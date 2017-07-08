@@ -8,5 +8,9 @@ from django.db import models
 class SubjectTag(models.Model):
     title = models.CharField('Название объекта', max_length=300)
 
+    class Meta:
+        verbose_name = 'предмет'
+        verbose_name_plural = 'предметы'
+
     def __str__(self):
         return self.title
