@@ -11,5 +11,11 @@ INSTALLED_APPS = [
 
     # Custom apps
     'apps.users',
-    'utils'
+    'utils',
+    'apps.blocks',
+    'apps.nodes',
+    'apps.tasks',
+    'apps.results',
+    'apps.lessons',
+    'apps.tags'
 ]

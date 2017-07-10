@@ -1,11 +1,11 @@
 from django.core.urlresolvers import reverse
 from django.db import models
-from django_markdown.models import MarkdownField
+#from django_markdown.models import MarkdownField
 
 
 # All lessons contains blocks (text, chioce, question with float answer)
 class Block(models.Model):
-	time = models.IntegerField('Время в минутах на выполнение блока', blank=True)
+    time = models.IntegerField('Время в минутах на выполнение блока', blank=True)
 
     def __str__(self):
         title = None
@@ -30,13 +30,18 @@ class Block(models.Model):
         else:
             return u'Block #{}'.format(self.id)
 
+    class Meta:
+        verbose_name = 'блок'
+        verbose_name_plural = 'блоки'
+
     def get_absolute_url(self):
         return reverse('blocks', args=[self.id])
 
 
 class TextBlock(Block):
     title = models.CharField(max_length=200, unique=True)
-    body = MarkdownField()
+    #body = MarkdownField()
+    body = models.CharField(max_length=600)
 
     class Meta:
         verbose_name = 'текстовая статья'
@@ -47,7 +52,8 @@ class TextBlock(Block):
 
 
 class ChoiceBlock(Block):
-    question_text = MarkdownField('Текст вопроса')
+    #question_text = MarkdownField('Текст вопроса')
+    question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='choice_blocks/', null=True, blank=True)
 
     class Meta:
@@ -66,15 +72,16 @@ class ChoiceBlockOption(models.Model):
     is_true = models.BooleanField('Правильный?')
 
     class Meta:
-        verbose_name = 'Вариант ответа на тестовый вопрос'
-        verbose_name_plural = 'Варианты ответа на тестовые вопросы'
+        verbose_name = 'вариант ответа на тестовый вопрос'
+        verbose_name_plural = 'варианты ответа на тестовые вопросы'
 
     def __str__(self):
         return self.option_text
 
 
 class FloatBlock(Block):
-    question_text = MarkdownField('Текст вопроса')
+    #question_text = MarkdownField('Текст вопроса')
+    question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='float_questions/', null=True, blank=True)
     answer = models.FloatField('Ответ')
 
@@ -86,9 +93,10 @@ class FloatBlock(Block):
         return self.question_text
 
 class TextAnswerBlock(Block):
-    question_text = MarkdownField('Текст вопроса')
+    #question_text = MarkdownField('Текст вопроса')
+    question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='float_questions/', null=True, blank=True)
-    answer = models.CharField('Ответ')
+    answer = models.CharField('Ответ', max_length=600)
 
     class Meta:
         verbose_name = 'задача с текстовым ответом'

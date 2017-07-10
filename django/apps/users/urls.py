@@ -3,8 +3,6 @@ from django.contrib.auth.views import login as login_view
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.user_list),
-    url(r'^(?P<pk>[0-9]+)/$', views.user_detail),
 
     url(r'^profile/(?P<user_id>[0-9]+)$', views.user, name='profile'),
     url(r'^settings$', views.settings, name='settings'),
@@ -32,4 +30,7 @@ urlpatterns = [
     url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         views.password_reset_confirm, name='password_reset_confirm'),
     url(r'^reset/done/$', views.password_reset_complete, name='password_reset_complete'),
+
+    url(r'^$', views.user_list, name="main"),
+    url(r'^(?P<pk>[0-9]+)$', views.user_detail, name="user"),
 ]

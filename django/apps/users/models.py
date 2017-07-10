@@ -75,7 +75,7 @@ class UserSocialAuth(models.Model):
         unique_together = ('provider', 'uid')
 
     def __str__(self):
-        return str(self.user)
+        return "Pk: {}, name: {}".format(self.pk, self.user.name)
 
 
 class EmailConfirmation(models.Model):

@@ -1,11 +1,9 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.utils import timezone
-from nodes.models import Lesson
-from testing.models import Test
-from users.models import User
-
-from blocks.models import Block
+from apps.tasks.models import Task
+from apps.users.models import User
+from apps.blocks.models import Block
 
 
 class Result(models.Model):
@@ -15,34 +13,24 @@ class Result(models.Model):
     max_score = models.IntegerField()
 
     class Meta:
-        verbose_name = 'Результат'
-        verbose_name_plural = 'Результаты'
+        verbose_name = 'результат'
+        verbose_name_plural = 'результаты'
 
 
-class LessonResult(Result):
-    lesson = models.ForeignKey(Lesson, verbose_name=u'Урок')
+class TaskResult(Result):
+    task = models.ForeignKey(Task, verbose_name=u'Урок')
 
     class Meta:
-        verbose_name = 'Результат урока'
-        verbose_name_plural = 'Результаты уроков'
+        verbose_name = 'результат задания'
+        verbose_name_plural = 'результаты заданий'
 
     def __str__(self):
-        return u'{}, {}, {}'.format(self.student, self.lesson, self.date)
+        return u'{}, {}, {}'.format(self.student, self.task, self.date)
 
     @property
-    def lesson_result_block_result_relations(self):
-        return LessonResultBlockResultRelation.objects.filter(lesson_result=self)
+    def task_result_block_result_relations(self):
+        return TaskResultBlockResultRelation.objects.filter(lesson_result=self)
 
-
-class TestResult(Result):
-    test = models.ForeignKey(Test, verbose_name=u'Тест')
-
-    class Meta:
-        verbose_name = 'Результат теста'
-        verbose_name_plural = 'Результаты тестов'
-
-    def __str__(self):
-        return u'{}, {}, {}'.format(self.student, self.test, self.date)
 
 
 # =================
@@ -52,8 +40,8 @@ class BlockResult(Result):
     block = models.ForeignKey(Block)
 
     class Meta:
-        verbose_name = 'Результат ответа на блок'
-        verbose_name_plural = 'Результаты ответов на блоки'
+        verbose_name = 'результат ответа на блок'
+        verbose_name_plural = 'результаты ответов на блоки'
 
     def __str__(self):
         return u'{}, {}, {}'.format(self.student, self.block, self.date)
@@ -63,22 +51,22 @@ class ChoiceBlockResult(BlockResult):
     choices = ArrayField(models.IntegerField())
 
     class Meta:
-        verbose_name = 'Результат ответа на тестовый вопрос'
-        verbose_name_plural = 'Результаты ответов на тестовые вопросы'
+        verbose_name = 'результат ответа на тестовый вопрос'
+        verbose_name_plural = 'результаты ответов на тестовые вопросы'
 
 
 class FloatBlockResult(BlockResult):
     answer = models.FloatField('Ответ')
 
     class Meta:
-        verbose_name = 'Результат ответа на задачу'
-        verbose_name_plural = 'Результаты ответов на задачи'
+        verbose_name = 'результат ответа на задачу'
+        verbose_name_plural = 'результаты ответов на задачи'
 
 class TextAnswerBlockResult(BlockResult):
-	correct_answers = models.ArrayField(models.CharField())
-	class Meta:
-        verbose_name = 'Результат ответа на задание с текстовым ответом'
-        verbose_name_plural = 'Результаты ответов на задание с текстовым ответом'
+    correct_answers = ArrayField(models.CharField(max_length=100))
+    class Meta:
+        verbose_name = 'результат ответа на задание с текстовым ответом'
+        verbose_name_plural = 'результаты ответов на задание с текстовым ответом'
 
 # ========================
 # Relation between results
@@ -88,4 +76,4 @@ class TaskResultBlockResultRelation(models.Model):
     block_result = models.ForeignKey(BlockResult)
 
     class Meta:
-        verbose_name = 'Связь результата здания с результатом блока'
+        verbose_name = 'связь результата задания с результатом блока'
