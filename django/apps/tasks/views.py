@@ -27,7 +27,7 @@ def task_list(request):
 def task_detail(request, pk):
     try:
         task = Task.objects.get(pk=pk)
-    except task.DoesNotExist:
+    except Exception:
         return HttpResponse(status=404)
 
     if request.method == 'GET':

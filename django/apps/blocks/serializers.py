@@ -2,14 +2,22 @@ from rest_framework import serializers
 from .models import TextBlock, ChoiceBlock, FloatBlock
 
 class BlockSerializerFactory:
-	def get_serializer(self, obj):
-		serializer = None
-		try:
-			serializer = TextBlockSerializer(obj)
-		except Exception as e:
-			raise e
-		if serializer:
-			return serializer
+    def get_serializer(self, obj):
+        serializer = None
+        try:
+            serializer = TextBlockSerializer(obj)
+        except Exception as e:
+            pass
+        try:
+            serializer = FloatBlockSerializer(obj)
+        except Exception as e:
+            pass
+        try:
+            serializer = ChoiseBlockSerializer(obj)
+        except Exception as e:
+            pass
+        if serializer:
+            return serializer
 
 
 class TextBlockSerializer(serializers.ModelSerializer):
