@@ -27,5 +27,3 @@
 1. Установка - `pip3 install [pkg_name]`
 2. Сохранить зависимости в файл - `pip3 freeze > requirements.txt`
 3. Установить все зависимости из файла - `pip3 install -r requirements.txt`
-
-### 
