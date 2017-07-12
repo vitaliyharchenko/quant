@@ -6,7 +6,7 @@ from .models import Task
 from .serializers import TaskSerializer
 from apps.lessons.models import LessonNodeRelation
 from apps.blocks.models import NodeBlockRelation
-from apps.blocks.serializers import BlockSerializerFactory
+from apps.blocks.serializers import BlockSerializer
 
 @csrf_exempt
 def task_list(request):
@@ -43,7 +43,7 @@ def task_detail(request, pk):
             node_block_relations = NodeBlockRelation.objects.filter(node=relation.node)
             nodes[relation.node.pk]["blocks"] = [block.pk for block in node_block_relations]
             for entry in node_block_relations:
-                blocks[entry.block.pk] = BlockSerializerFactory().get_serializer(entry.block).data
+                blocks[entry.block.pk] = BlockSerializer(entry.block).data
         data["task"] = task_data
         data["nodes"] = nodes
         data["blocks"] = blocks
