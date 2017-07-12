@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         'counter': './react/counter.js',
         'task': './react/task.js',
+        'task1': './react/task/index.js',
         'block': './react/block/index.js',
         'block1': './react/blocks/index.js',
         'v0.1': './react/v0.1/src/index.jsx',
@@ -22,6 +23,10 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'react', 'stage-1']
                 }
+            },
+            {   
+                test: /\.css$/,
+                loader: "style-loader!css-loader?importLoaders=1"
             }
         ]
     },
