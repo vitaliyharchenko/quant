@@ -1,10 +1,11 @@
 from django.core.urlresolvers import reverse
 from django.db import models
+from polymorphic.models import PolymorphicModel
 #from django_markdown.models import MarkdownField
 
 
 # All lessons contains blocks (text, chioce, question with float answer)
-class Block(models.Model):
+class Block(PolymorphicModel):
     time = models.IntegerField('Время в минутах на выполнение блока', blank=True)
 
     def __str__(self):
@@ -21,7 +22,7 @@ class Block(models.Model):
             pass
 
         try:
-            title = self.floatquestion.question_text[:100]
+            title = self.floatblock.question_text[:100]
         except AttributeError:
             pass
 
