@@ -16,35 +16,34 @@ function nextBlock() {
   }
 }
 
-// const persistedState = {
-//   	task: {
-// 		datetime_to: "21/12/1992",
-// 	    teacher: "МарьИванна",
-// 	    group: "Супер группа Ф11",
-// 	    blocks: ["1", "2", "3"],
-// 	},
-// 	currentBlockNumber: 1,
-// 	blocks: {
-// 	  	"1": {
-// 		  	id: '1',
-// 		  	type: 'text',
-// 		  	content: '<h1 className="mt-0">Основное утверждение динамики</h1><h2>Базовые вещи</h2><p className="card-text">Динамика рассматривает ваимное действие тел друг на друга, являющееся причиной изменения их движения.</p><p className="card-text">Так как движение рассматривается относительно других тел, то выбор системы отсчета является важным вопросом динамики.</p><blockquote className="blockquote">Наблюдение за природой говорит нам о том, что изменение скорости тела всегда вызывается воздействием других тел.</blockquote><h3>Еще более базовые вещи</h3><p className="card-text">Приведем пример из жизни. Пусть вы захотите резко побежать. Что позволяет вам резко ускориться? Если бы вы находились на гладком льду, вряд ли у вас получилось бы быстро набрать скорость, скорее вы бы упали. Так что ходим и бегаем мы благодаря взаимодействию с дорогой, трению подошвы обуви о поверхность контакта.</p><figure className="figure"><img className="figure-img img-fluid rounded" src="http://static.probusiness.by/n/0a/c/e-gorlovka_com_ua_1.jpg" /><figcaption className="figure-caption text-right">На улице бывает охренеть как скользко.</figcaption></figure><p className="card-text">В древней Греции ученые считали, что для поддержания скорости тела необходимо, чтобы кто-то или что-то постоянно воздействовало на него. Таким образом, единственным естественным состоянием тела считался покой. </p><p className="card-text">В действительности же <strong>свободное тело</strong> (тело, которое не взаимодействует с другими телами) может сохранять свою скорость сколь угодно долго, подобно кометам, рассекающим космическое пространство, или же оставаться в покое.</p><div className="embed-responsive embed-responsive-16by9 rounded"><iframe className="embed-responsive-item" src="https://www.youtube.com/embed/E6VIH5_H1yo?feature=oembed" allowfullscreen=""></iframe></div><p className="card-text">Автомобиль, набравший скорость и выключивший двигатель останавливается лишь благодаря воздействию сопротивления воздуха и трению механизмов трансмиссии друг о друга. Без трения скорость автомобиля оставалась бы постоянной.</p>',
-// 	  	},
-// 	  	"2": {
-// 		  	id: '2',
-// 		  	type: 'text',
-// 		  	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem voluptas, omnis?',
-// 	  	},
-// 	  	"3": {
-// 		  	id: '3',
-// 		  	type: 'text',
-// 		  	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus provident distinctio placeat, aspernatur non alias odit vero. Tempora quod sed, doloremque optio quis cum qui atque porro dignissimos architecto sequi earum necessitatibus at quidem, ad praesentium, ducimus magnam aliquid nobis. Et, quam.',
-// 	  	}
-// 	},
-// 	results: {
+const initialState = {
+  	task: {
+		datetime_to: "21/12/1992",
+	    teacher: "МарьИванна",
+	    group: "Супер группа Ф11",
+	    blocks: ["1", "2", "3"],
+	},
+	currentBlockNumber: 1,
+	blocks: {
+	  	"1": {
+		  	id: '1',
+		  	type: 'text',
+		  	content: '<h1 class="mt-0">Основное утверждение динамики</h1><h2>Базовые вещи</h2> <p class="card-text">Динамика рассматривает ваимное действие тел друг на друга, являющееся причиной изменения их движения.</p> <p class="card-text">Так как движение рассматривается относительно других тел, то выбор системы отсчета является важным вопросом динамики.</p> <blockquote class="blockquote">Наблюдение за природой говорит нам о том, что изменение скорости тела всегда вызывается воздействием других тел. </blockquote> <h3>Еще более базовые вещи</h3> <p class="card-text">Приведем пример из жизни. Пусть вы захотите резко побежать. Что позволяет вам резко ускориться? Если бы вы находились на гладком льду, вряд ли у вас получилось бы быстро набрать скорость, скорее вы бы упали. Так что ходим и бегаем мы благодаря взаимодействию с дорогой, трению подошвы обуви о поверхность контакта.</p> <figure class="figure"> <img class="figure-img img-fluid rounded" src="http://static.probusiness.by/n/0a/c/e-gorlovka_com_ua_1.jpg"> <figcaption class="figure-caption text-right">На улице бывает охренеть как скользко.</figcaption> </figure> <p class="card-text">В древней Греции ученые считали, что для поддержания скорости тела необходимо, чтобы кто-то или что-то постоянно воздействовало на него. Таким образом, единственным естественным состоянием тела считался покой. </p> <p class="card-text">В действительности же <strong>свободное тело</strong> (тело, которое не взаимодействует с другими телами) может сохранять свою скорость сколь угодно долго, подобно кометам, рассекающим космическое пространство, или же оставаться в покое.</p> <div class="embed-responsive embed-responsive-16by9 rounded"> <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E6VIH5_H1yo?feature=oembed" allowfullscreen=""></iframe> </div> <p class="card-text">Автомобиль, набравший скорость и выключивший двигатель останавливается лишь благодаря воздействию сопротивления воздуха и трению механизмов трансмиссии друг о друга. Без трения скорость автомобиля оставалась бы постоянной.</p>', },
+	  	"2": {
+		  	id: '2',
+		  	type: 'text',
+		  	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem voluptas, omnis?',
+	  	},
+	  	"3": {
+		  	id: '3',
+		  	type: 'text',
+		  	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus provident distinctio placeat, aspernatur non alias odit vero. Tempora quod sed, doloremque optio quis cum qui atque porro dignissimos architecto sequi earum necessitatibus at quidem, ad praesentium, ducimus magnam aliquid nobis. Et, quam.',
+	  	}
+	},
+	results: {
 
-// 	}
-// }
+	}
+}
 
 // WORK with local storage
 
@@ -52,9 +51,9 @@ const loadState = () => {
 	try {
 		const serializedState = localStorage.getItem('state');
 		if (serializedState === null) {
-			return undefined;
+			return initialState;
 		}
-		return Json.parse(serializedState);
+		return JSON.parse(serializedState);
 	} catch (err) {
 		return undefined;
 	}
@@ -62,19 +61,19 @@ const loadState = () => {
 
 const saveState = (state) => {
 	try {
-		const serializedState = Json.stringify(state);
-		localStorage.swetItem('state', serializedState);
+		const serializedState = JSON.stringify(state);
+		localStorage.setItem('state', serializedState);
 	} catch (err) {
 		// ignore write if errors
 	}
-}
+};
 
 const persistedState = loadState();
 
 
 // REDUCERS
 
-function taskApp(state = initialState, action) {
+function taskApp(state = [], action) {
   switch (action.type) {
     case NEXT_BLOCK:
       return Object.assign({}, state, {
@@ -99,6 +98,7 @@ store.subscribe(() =>
 // save store to localStorage every time store updated
 store.subscribe(() => {
 	saveState(store.getState());
+	console.log('Saved');
 })
 
 // COMPONENTS
@@ -156,17 +156,25 @@ const BlockList = ({ blocks, blocksById, currentBlockNumber }) => {
 class Task extends Component {
 
 	render() {
-		return (
-			<div>
-				<p className="p lead text-center">Домашнее задание</p>
-				<p>Сделать до: { this.props.task.datetime_to }</p>
-				<p>Учитель: { this.props.task.teacher }</p>
-				<p>Группа: { this.props.task.group }</p>
-				<p>Номер текущего блока: { this.props.currentBlockNumber }</p>
-				<hr></hr>
-				<BlockList blocks={this.props.task.blocks} blocksById={this.props.blocks} currentBlockNumber={this.props.currentBlockNumber} />
-			</div>
-		);
+		const task = this.props.task;
+
+		if (task) {
+			return (
+				<div>
+					<p className="p lead text-center">Домашнее задание</p>
+					<p>Сделать до: { task.datetime_to }</p>
+					<p>Учитель: { task.teacher }</p>
+					<p>Группа: { task.group }</p>
+					<p>Номер текущего блока: { this.props.currentBlockNumber }</p>
+					<hr></hr>
+					<BlockList blocks={task.blocks} blocksById={this.props.blocks} currentBlockNumber={this.props.currentBlockNumber} />
+				</div>
+			);
+		} else {
+			return (
+				<p>Хрен тебе, а не таск</p>
+			);
+		}
 	}
 }
 
