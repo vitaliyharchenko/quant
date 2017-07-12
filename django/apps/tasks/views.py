@@ -27,7 +27,7 @@ def task_list(request):
 def task_detail(request, pk):
     try:
         task = Task.objects.get(pk=pk)
-    except task.DoesNotExist:
+    except Exception:
         return HttpResponse(status=404)
 
     if request.method == 'GET':
@@ -43,7 +43,7 @@ def task_detail(request, pk):
             node_block_relations = NodeBlockRelation.objects.filter(node=relation.node)
             nodes[relation.node.pk]["blocks"] = [block.pk for block in node_block_relations]
             for entry in node_block_relations:
-                blocks[entry.block.pk] = BlockSerializer(entry.block).data
+                blocks[entry.block.pk] = BlockSerializerFactory().get_serializer(entry.block).data
         data["task"] = task_data
         data["nodes"] = nodes
         data["blocks"] = blocks
