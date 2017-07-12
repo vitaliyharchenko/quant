@@ -80,45 +80,41 @@
 		};
 	}
 
-	// const persistedState = {
-	//   	task: {
-	// 		datetime_to: "21/12/1992",
-	// 	    teacher: "МарьИванна",
-	// 	    group: "Супер группа Ф11",
-	// 	    blocks: ["1", "2", "3"],
-	// 	},
-	// 	currentBlockNumber: 1,
-	// 	blocks: {
-	// 	  	"1": {
-	// 		  	id: '1',
-	// 		  	type: 'text',
-	// 		  	content: '<h1 className="mt-0">Основное утверждение динамики</h1><h2>Базовые вещи</h2><p className="card-text">Динамика рассматривает ваимное действие тел друг на друга, являющееся причиной изменения их движения.</p><p className="card-text">Так как движение рассматривается относительно других тел, то выбор системы отсчета является важным вопросом динамики.</p><blockquote className="blockquote">Наблюдение за природой говорит нам о том, что изменение скорости тела всегда вызывается воздействием других тел.</blockquote><h3>Еще более базовые вещи</h3><p className="card-text">Приведем пример из жизни. Пусть вы захотите резко побежать. Что позволяет вам резко ускориться? Если бы вы находились на гладком льду, вряд ли у вас получилось бы быстро набрать скорость, скорее вы бы упали. Так что ходим и бегаем мы благодаря взаимодействию с дорогой, трению подошвы обуви о поверхность контакта.</p><figure className="figure"><img className="figure-img img-fluid rounded" src="http://static.probusiness.by/n/0a/c/e-gorlovka_com_ua_1.jpg" /><figcaption className="figure-caption text-right">На улице бывает охренеть как скользко.</figcaption></figure><p className="card-text">В древней Греции ученые считали, что для поддержания скорости тела необходимо, чтобы кто-то или что-то постоянно воздействовало на него. Таким образом, единственным естественным состоянием тела считался покой. </p><p className="card-text">В действительности же <strong>свободное тело</strong> (тело, которое не взаимодействует с другими телами) может сохранять свою скорость сколь угодно долго, подобно кометам, рассекающим космическое пространство, или же оставаться в покое.</p><div className="embed-responsive embed-responsive-16by9 rounded"><iframe className="embed-responsive-item" src="https://www.youtube.com/embed/E6VIH5_H1yo?feature=oembed" allowfullscreen=""></iframe></div><p className="card-text">Автомобиль, набравший скорость и выключивший двигатель останавливается лишь благодаря воздействию сопротивления воздуха и трению механизмов трансмиссии друг о друга. Без трения скорость автомобиля оставалась бы постоянной.</p>',
-	// 	  	},
-	// 	  	"2": {
-	// 		  	id: '2',
-	// 		  	type: 'text',
-	// 		  	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem voluptas, omnis?',
-	// 	  	},
-	// 	  	"3": {
-	// 		  	id: '3',
-	// 		  	type: 'text',
-	// 		  	content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus provident distinctio placeat, aspernatur non alias odit vero. Tempora quod sed, doloremque optio quis cum qui atque porro dignissimos architecto sequi earum necessitatibus at quidem, ad praesentium, ducimus magnam aliquid nobis. Et, quam.',
-	// 	  	}
-	// 	},
-	// 	results: {
+	var initialState = {
+		task: {
+			datetime_to: "21/12/1992",
+			teacher: "МарьИванна",
+			group: "Супер группа Ф11",
+			blocks: ["1", "2", "3"]
+		},
+		currentBlockNumber: 1,
+		blocks: {
+			"1": {
+				id: '1',
+				type: 'text',
+				content: '<h1 class="mt-0">Основное утверждение динамики</h1><h2>Базовые вещи</h2> <p class="card-text">Динамика рассматривает ваимное действие тел друг на друга, являющееся причиной изменения их движения.</p> <p class="card-text">Так как движение рассматривается относительно других тел, то выбор системы отсчета является важным вопросом динамики.</p> <blockquote class="blockquote">Наблюдение за природой говорит нам о том, что изменение скорости тела всегда вызывается воздействием других тел. </blockquote> <h3>Еще более базовые вещи</h3> <p class="card-text">Приведем пример из жизни. Пусть вы захотите резко побежать. Что позволяет вам резко ускориться? Если бы вы находились на гладком льду, вряд ли у вас получилось бы быстро набрать скорость, скорее вы бы упали. Так что ходим и бегаем мы благодаря взаимодействию с дорогой, трению подошвы обуви о поверхность контакта.</p> <figure class="figure"> <img class="figure-img img-fluid rounded" src="http://static.probusiness.by/n/0a/c/e-gorlovka_com_ua_1.jpg"> <figcaption class="figure-caption text-right">На улице бывает охренеть как скользко.</figcaption> </figure> <p class="card-text">В древней Греции ученые считали, что для поддержания скорости тела необходимо, чтобы кто-то или что-то постоянно воздействовало на него. Таким образом, единственным естественным состоянием тела считался покой. </p> <p class="card-text">В действительности же <strong>свободное тело</strong> (тело, которое не взаимодействует с другими телами) может сохранять свою скорость сколь угодно долго, подобно кометам, рассекающим космическое пространство, или же оставаться в покое.</p> <div class="embed-responsive embed-responsive-16by9 rounded"> <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E6VIH5_H1yo?feature=oembed" allowfullscreen=""></iframe> </div> <p class="card-text">Автомобиль, набравший скорость и выключивший двигатель останавливается лишь благодаря воздействию сопротивления воздуха и трению механизмов трансмиссии друг о друга. Без трения скорость автомобиля оставалась бы постоянной.</p>' },
+			"2": {
+				id: '2',
+				type: 'text',
+				content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem voluptas, omnis?'
+			},
+			"3": {
+				id: '3',
+				type: 'text',
+				content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus provident distinctio placeat, aspernatur non alias odit vero. Tempora quod sed, doloremque optio quis cum qui atque porro dignissimos architecto sequi earum necessitatibus at quidem, ad praesentium, ducimus magnam aliquid nobis. Et, quam.'
+			}
+		},
+		results: {}
 
-	// 	}
-	// }
+		// WORK with local storage
 
-	// WORK with local storage
-
-	var loadState = function loadState() {
+	};var loadState = function loadState() {
 		try {
 			var serializedState = localStorage.getItem('state');
 			if (serializedState === null) {
-				return undefined;
+				return initialState;
 			}
-			return Json.parse(serializedState);
+			return JSON.parse(serializedState);
 		} catch (err) {
 			return undefined;
 		}
@@ -126,8 +122,8 @@
 
 	var saveState = function saveState(state) {
 		try {
-			var serializedState = Json.stringify(state);
-			localStorage.swetItem('state', serializedState);
+			var serializedState = JSON.stringify(state);
+			localStorage.setItem('state', serializedState);
 		} catch (err) {
 			// ignore write if errors
 		}
@@ -138,7 +134,7 @@
 	// REDUCERS
 
 	function taskApp() {
-		var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+		var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 		var action = arguments[1];
 
 		switch (action.type) {
@@ -165,6 +161,7 @@
 	// save store to localStorage every time store updated
 	store.subscribe(function () {
 		saveState(store.getState());
+		console.log('Saved');
 	});
 
 	// COMPONENTS
@@ -261,41 +258,51 @@
 		_createClass(Task, [{
 			key: 'render',
 			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'p',
-						{ className: 'p lead text-center' },
-						'\u0414\u043E\u043C\u0430\u0448\u043D\u0435\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0435'
-					),
-					_react2.default.createElement(
+				var task = this.props.task;
+
+				if (task) {
+					return _react2.default.createElement(
+						'div',
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: 'p lead text-center' },
+							'\u0414\u043E\u043C\u0430\u0448\u043D\u0435\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0435'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'\u0421\u0434\u0435\u043B\u0430\u0442\u044C \u0434\u043E: ',
+							task.datetime_to
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'\u0423\u0447\u0438\u0442\u0435\u043B\u044C: ',
+							task.teacher
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'\u0413\u0440\u0443\u043F\u043F\u0430: ',
+							task.group
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043A\u0443\u0449\u0435\u0433\u043E \u0431\u043B\u043E\u043A\u0430: ',
+							this.props.currentBlockNumber
+						),
+						_react2.default.createElement('hr', null),
+						_react2.default.createElement(BlockList, { blocks: task.blocks, blocksById: this.props.blocks, currentBlockNumber: this.props.currentBlockNumber })
+					);
+				} else {
+					return _react2.default.createElement(
 						'p',
 						null,
-						'\u0421\u0434\u0435\u043B\u0430\u0442\u044C \u0434\u043E: ',
-						this.props.task.datetime_to
-					),
-					_react2.default.createElement(
-						'p',
-						null,
-						'\u0423\u0447\u0438\u0442\u0435\u043B\u044C: ',
-						this.props.task.teacher
-					),
-					_react2.default.createElement(
-						'p',
-						null,
-						'\u0413\u0440\u0443\u043F\u043F\u0430: ',
-						this.props.task.group
-					),
-					_react2.default.createElement(
-						'p',
-						null,
-						'\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043A\u0443\u0449\u0435\u0433\u043E \u0431\u043B\u043E\u043A\u0430: ',
-						this.props.currentBlockNumber
-					),
-					_react2.default.createElement('hr', null),
-					_react2.default.createElement(BlockList, { blocks: this.props.task.blocks, blocksById: this.props.blocks, currentBlockNumber: this.props.currentBlockNumber })
-				);
+						'\u0425\u0440\u0435\u043D \u0442\u0435\u0431\u0435, \u0430 \u043D\u0435 \u0442\u0430\u0441\u043A'
+					);
+				}
 			}
 		}]);
 
