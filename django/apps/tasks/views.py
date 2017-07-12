@@ -6,7 +6,7 @@ from .models import Task
 from .serializers import TaskSerializer
 from apps.lessons.models import LessonNodeRelation
 from apps.blocks.models import NodeBlockRelation
-from apps.blocks.serializers import BlockSerializer
+from apps.blocks.serializers import BlockSerializerFactory
 
 @csrf_exempt
 def task_list(request):
