@@ -27,14 +27,15 @@ quant
 
 Для начала работы запустить в разных консолях:
 1. `docker-compose up`
-2. `docker-compose run web migrate`
-3. ```
-	docker-compose run web shell
-	>>> from django.contrib.sites.models import Site
-	>>> Site.objects.create(name='Localhost', domain='0.0.0.0:8000')
-	>>> quit() [Enter]
-	```
+2. `docker-compose run web makemigrations blocks lessons nodes results tags tasks users`
+3. `docker-compose run web migrate`
 4. `cd frontend` && `npm i` && `gulp dev`
 
 Для передачи команд для django:
 1. `docker-compose run web [command]` - выполнит `python3 manage.py [command]`
+
+Для заполнения БД данными
+
+1. `docker-compose run web dumpdata --natural-foreign --exclude=contenttypes > django/fixtures.json`
+2. `docker-compose run web flush` - удалить все данные из БД
+3. `docker-compose run web loaddata fixtures.json`

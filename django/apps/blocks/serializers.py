@@ -12,7 +12,7 @@ class BlockSerializer(serializers.ModelSerializer):
         if isinstance(obj, TextBlock):
             return TextBlockSerializer(obj, context=self.context).to_representation(obj)
         elif isinstance(obj, ChoiceBlock):
-           return ChoiseBlockSerializer(obj, context=self.context).to_representation(obj)
+           return ChoiceBlockSerializer(obj, context=self.context).to_representation(obj)
         elif isinstance(obj, FloatBlock):
            return FloatBlockSerializer(obj, context=self.context).to_representation(obj)
         return super(BlockSerializer, self).to_representation(obj)
