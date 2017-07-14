@@ -11,6 +11,7 @@ INSTALLED_APPS = [
 
     # Third party
     'polymorphic',
+    'corsheaders',
 
     # Custom apps
     'apps.users',
