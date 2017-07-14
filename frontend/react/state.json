@@ -1,0 +1,145 @@
+{
+    "task": {
+        "id": 1,
+        "start_time": "2017-07-12T08:23:55Z",
+        "finish_time": "2018-07-12T08:23:57Z",
+        "is_finished": false,
+        "student": {
+            "id": 1,
+            "password": "pbkdf2_sha256$36000$vbBGjrdVYjhS$81usBcO+H1/SyabJezo4Fffz9jaGWNNKV3uXiyaBdh4=",
+            "last_login": "2017-07-13T15:11:19.032404Z",
+            "is_superuser": true,
+            "username": "root",
+            "first_name": "",
+            "last_name": "",
+            "email": "harchenko.grape@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2017-07-12T09:03:44.770000Z",
+            "groups": [],
+            "user_permissions": []
+        },
+        "teacher": {
+            "id": 1,
+            "password": "pbkdf2_sha256$36000$vbBGjrdVYjhS$81usBcO+H1/SyabJezo4Fffz9jaGWNNKV3uXiyaBdh4=",
+            "last_login": "2017-07-13T15:11:19.032404Z",
+            "is_superuser": true,
+            "username": "root",
+            "first_name": "",
+            "last_name": "",
+            "email": "harchenko.grape@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2017-07-12T09:03:44.770000Z",
+            "groups": [],
+            "user_permissions": []
+        },
+        "lesson": {
+            "id": 1,
+            "title": "Первый урок 7 класса",
+            "about": "Познакомимся с веществом!",
+            "time": 20,
+            "subject_tag": {
+                "id": 1,
+                "title": "Физика"
+            }
+        }
+    },
+    "nodes": {
+        "1": {
+            "title": "Физическое тело. Вещество, материя.",
+            "blocks": [
+                1,
+                2,
+                3
+            ]
+        },
+        "2": {
+            "title": "Простейшие свойства вещества.",
+            "blocks": []
+        },
+        "3": {
+            "title": "Агрегатные состояния вещества.",
+            "blocks": []
+        },
+        "4": {
+            "title": "Молекулы. Атомы. Их классификация.",
+            "blocks": []
+        }
+    },
+    "blocks": {
+        "1": {
+            "id": 1,
+            "time": 1,
+            "title": "Текстовая статья 1",
+            "body": "Молекула - мельчайшая структурная единица вещества. Молекула состоит из атомов.",
+            "polymorphic_ctype": {
+                "id": 13,
+                "app_label": "blocks",
+                "model": "textblock"
+            }
+        },
+        "2": {
+            "id": 2,
+            "time": 1,
+            "question_text": "Какова мельчайшая структурная единица вещества?",
+            "image": null,
+            "polymorphic_ctype": {
+                "id": 14,
+                "app_label": "blocks",
+                "model": "choiceblock"
+            }
+        },
+        "3": {
+            "id": 3,
+            "time": 1,
+            "question_text": "Сколько атомов в молекуле воды?",
+            "image": null,
+            "answer": 3.0,
+            "polymorphic_ctype": {
+                "id": 16,
+                "app_label": "blocks",
+                "model": "floatblock"
+            }
+        }
+    }
+}
+
+FUTURE STATE
+
+{
+	"blocks": {
+		"1": {
+			"id": "1",
+			"type": "textblock"
+		}
+	},
+	"tasks": {
+		"1": {
+			"id": "1",
+			"lesson": {
+	            "id": "1"
+	        },
+	        "isCompleted": false
+        }
+	},
+	"lessons": {
+		"1": {
+			"id": "1",
+            "title": "Первый урок 7 класса",
+            "about": "Познакомимся с веществом!",
+            "time": "20",
+            "subject_tag": {
+                "id": "1",
+                "title": "Физика"
+            },
+            nodes: [1]
+		}
+	},
+	"nodes": {
+		"node1": {
+            "title": "Физическое тело. Вещество, материя.",
+            "blocks": [1, 2, 3]
+        }
+	}
+}
