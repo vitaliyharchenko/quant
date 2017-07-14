@@ -3,14 +3,21 @@ import Spinner from 'react-spinkit';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 
+import Node from '../components/Node'
+
 class Task extends Component {
 
   render() {
 
     const task = this.props.task
+    const lesson = this.props.lesson
 
-    var content 
 
+    const nodes = lesson.nodes.map((node_id, i) => {
+      return <Node node_id={node_id}/>
+    });
+
+    var content
     if (task) {
       content = (
         <div>
@@ -18,6 +25,8 @@ class Task extends Component {
           <p>Сделать до: { task.datetime_to }</p>
           <p>Учитель: { task.teacher }</p>
           <p>Группа: { task.group }</p>
+          <p>Урок: { lesson.title }</p>
+
         </div>
       )
     } else {
@@ -36,6 +45,7 @@ class Task extends Component {
             <div className="card">
               <div className="card-block">
                 {content}
+                {nodes}
               </div>
             </div>
           </div>
@@ -46,17 +56,18 @@ class Task extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  const task = state.tasks[ownProps.match.params.task_id]
   return {
-    task: state.tasks[ownProps.match.params.task_id]
+    task: task,
+    lesson: state.lessons[task.lesson]
   }
 }
 
-Task = connect(
-  mapStateToProps
-)(Task)
-
 Task.propTypes = {
-  task: PropTypes.object.isRequired
+  task: PropTypes.object.isRequired,
+  lesson: PropTypes.object.isRequired
 }
 
-export default Task
+export default connect(
+  mapStateToProps
+)(Task)
