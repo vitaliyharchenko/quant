@@ -9,8 +9,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #REST
+    'rest_framework',
+    'rest_framework.authtoken',
+
     # Third party
     'polymorphic',
+    'corsheaders',
 
     # Custom apps
     'apps.users',

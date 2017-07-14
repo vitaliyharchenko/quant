@@ -5,7 +5,9 @@ class TaskSerializer(serializers.ModelSerializer):
     """
     
     """
+    owner = serializers.ReadOnlyField(source='student.username')
+
     class Meta:
         model = Task
-        fields = '__all__'
+        fields = ('id', 'lesson', 'owner')
         depth = 5

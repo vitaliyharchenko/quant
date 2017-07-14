@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux'
 import { Provider, connect } from 'react-redux'
+import fetch from 'isomorphic-fetch'
 import './index.css';
 
 // ACTION CONST
@@ -110,9 +111,16 @@ function taskApp(state = [], action) {
 
 // STORE
 
-let store = createStore(taskApp, persistedState)
+const configureStore = preloadedState => {
+  const store = createStore(
+    taskApp,
+    preloadedState
+  )
 
-console.log(store.getState())
+  return store
+}
+
+let store = configureStore(persistedState)
 
 // log store every time store updated
 store.subscribe(() =>
@@ -122,7 +130,6 @@ store.subscribe(() =>
 // save store to localStorage every time store updated
 store.subscribe(() => {
 	saveState(store.getState());
-	console.log('Saved');
 })
 
 // COMPONENTS

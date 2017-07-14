@@ -17,6 +17,7 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
 from apps.react import views as react_views
+from rest_framework.authtoken import views as authtoken_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -35,4 +36,9 @@ if settings.DEBUG:
 # Only at the end, resolve flatpages
 urlpatterns += [
     url(r'^pages/', include('django.contrib.flatpages.urls')),
+]
+
+# Auth with REST
+urlpatterns += [
+    url(r'^api-token-auth/$', authtoken_views.obtain_auth_token)
 ]

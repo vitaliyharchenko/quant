@@ -9,26 +9,45 @@ from apps.lessons.models import LessonNodeRelation
 from apps.blocks.models import NodeBlockRelation
 from apps.blocks.serializers import BlockSerializer
 
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
+from .permissions import IsProjectAdminUser
+
+
+# ===========example==================
+
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+class ExampleView(APIView):
+    authentication_classes = (SessionAuthentication, BasicAuthentication)
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request, format=None):
+        content = {
+            'user': str(request.user),  # `django.contrib.auth.User` instance.
+            'auth': str(request.auth),  # None
+        }
+        return Response(content)
+
+# =======================================
+
+class AdminAuthMixin(object):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
+class TaskListViewSet(AdminAuthMixin, generics.ListAPIView):
+    renderer_classes = (JSONRenderer,)
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
 
 class TaskList(generics.ListAPIView):
     renderer_classes = (JSONRenderer,)
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
-# @csrf_exempt
-# def task_list(request):
-#     if request.method == 'GET':
-#         tasks = Task.objects.all()
-#         serializer = TaskSerializer(tasks, many=True)
-#         return JsonResponse(serializer.data, safe=False)
-
-#     elif request.method == 'POST':
-#         data = JSONParser().parse(request)
-#         serializer = TaskSerializer(data=data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return JsonResponse(serializer.data, status=201)
-#         return JsonResponse(serializer.errors, status=400)
 
 @csrf_exempt
 def task_detail(request, pk):
