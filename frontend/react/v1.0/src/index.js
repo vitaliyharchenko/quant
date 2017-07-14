@@ -1,25 +1,24 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
-import Task from './components/Task'
-import Main from './components/Main'
-import store from './store'
+import configureStore from './store'
+import Root from './containers/Root'
 import registerServiceWorker from './registerServiceWorker'
 
+const initialState = {
+	tasks: {
+		"1": {
+			datetime_to: "21/12/1992",
+	    	teacher: "МарьИванна",
+	    	group: "Супер группа Ф11",
+	    	blocks: ["1", "2", "3"]
+    	}
+	}
+}
+
+const store = configureStore(initialState)
+
 render(
-  <Provider store={store}>
-  	<BrowserRouter>
-			<div>
-				<ul>
-	        <li><Link to="/">Home</Link></li>
-	        <li><Link to="/tasks/1">FirstBlock</Link></li>
-	      </ul>
-				<Route exact path='/' component={Main} />
-				<Route path='/tasks/:task_id' component={Task} />
-			</div>
-  	</BrowserRouter>
-  </Provider>,
+	<Root store={store} />,
   document.getElementById('root')
 )
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Spinner from 'react-spinkit';
 import { connect } from 'react-redux';
-import 'bootstrap/dist/css/bootstrap.css';
+import PropTypes from 'prop-types'
 
 class Task extends Component {
 
@@ -54,5 +54,9 @@ const mapStateToProps = (state, ownProps) => {
 Task = connect(
   mapStateToProps
 )(Task)
+
+Task.propTypes = {
+  task: PropTypes.object.isRequired
+}
 
 export default Task
