@@ -1,6 +1,5 @@
 from django.db import models
 #from apps.nodes.models import Lesson
-from apps.users.models import User
 from apps.lessons.models import Lesson
 
 # Tasks
@@ -8,8 +7,8 @@ class Task(models.Model):
     """
 		Задание для конкретного ученика, связаное с уроком
 	"""
-    student = models.ForeignKey(User, related_name='task_student')
-    teacher = models.ForeignKey(User, related_name='task_teacher')
+    student = models.ForeignKey('auth.User', related_name='task_student')
+    teacher = models.ForeignKey('auth.User', related_name='task_teacher')
     lesson = models.ForeignKey(Lesson)
     start_time = models.DateTimeField(null=True, blank=True)
     finish_time = models.DateTimeField(null=True, blank=True)

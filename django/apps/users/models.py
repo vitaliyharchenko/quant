@@ -26,7 +26,7 @@ class Profile(models.Model):
         (PARENT, 'Родитель'),
     )
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField('auth.User', on_delete=models.CASCADE)
     birth_date = models.DateField(u'Дата рождения', null=True, blank=True)
     email_confirmed = models.BooleanField(u'Почта подтверждена', default=False)
     is_complete = models.BooleanField(u'Профиль активен (имеется вся информация)', default=False)
