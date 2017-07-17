@@ -11,11 +11,14 @@ class Task extends Component {
 
     const task = this.props.task
     const lesson = this.props.lesson
+    const ui = this.props.ui
 
-
-    const nodes = lesson.nodes.map((node_id, i) => {
-      return <Node node_id={node_id}/>
-    });
+    const nodes = []
+    for (var i in lesson.nodes){
+      const node_id = lesson.nodes[i]
+      nodes.push(<Node node_id={node_id} key={node_id}/>)
+      if (node_id === ui.currentNode) {break} 
+    }
 
     var content
     if (task) {
@@ -26,7 +29,8 @@ class Task extends Component {
           <p>Учитель: { task.teacher }</p>
           <p>Группа: { task.group }</p>
           <p>Урок: { lesson.title }</p>
-
+          <p>CurrentNode: { ui.currentNode }</p>
+          <p>CurrentBlock: { ui.currentBlock }</p>
         </div>
       )
     } else {
@@ -59,13 +63,15 @@ const mapStateToProps = (state, ownProps) => {
   const task = state.tasks[ownProps.match.params.task_id]
   return {
     task: task,
-    lesson: state.lessons[task.lesson]
+    lesson: state.lessons[task.lesson],
+    ui: state.ui
   }
 }
 
 Task.propTypes = {
   task: PropTypes.object.isRequired,
-  lesson: PropTypes.object.isRequired
+  lesson: PropTypes.object.isRequired,
+  ui: PropTypes.object.isRequired
 }
 
 export default connect(

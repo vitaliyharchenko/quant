@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
+import { Card, CardText, Button } from 'reactstrap';
+
+import { nextBlock } from '../reducers'
 
 class TextBlock extends Component {
 	render() {
-	  let html = {__html: this.props.block.body};
 		return (
-			<div className="card block-card">
-				<div className="card-block" dangerouslySetInnerHTML={html}>
-				</div>
-			</div>
+			<Card block>
+        <CardText>{this.props.block.body}</CardText>
+        <Button color="secondary" onClick={() => alert("Clock")}>Следующий блок</Button>
+      </Card>
 		);
 	}
 }
@@ -22,9 +23,7 @@ class ChoiceBlock extends Component {
 		return (
 			<Card block>
         <CardText>
-        	<p className="card-text">
-        		{block.question_text}
-      		</p>
+        	{block.question_text}
       	</CardText>
       </Card>
 		);
@@ -37,9 +36,7 @@ class FloatBlock extends Component {
 		return (
 			<Card block>
         <CardText>
-        	<p>
-        		{block.question_text}
-      		</p>
+        	{block.question_text}
         	{block.answer}
       	</CardText>
       </Card>
@@ -63,14 +60,25 @@ function Block(props) {
 const mapStateToProps = (state, ownProps) => {
   const block = state.blocks[ownProps.block_id]
   return {
-    block: block
+    block: block,
+    ui: state.ui
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onNextClick: () => {
+      dispatch(nextBlock())
+    }
   }
 }
 
 Block.propTypes = {
-  block: PropTypes.object.isRequired
+  block: PropTypes.object.isRequired,
+  ui: PropTypes.object.isRequired
 }
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Block)

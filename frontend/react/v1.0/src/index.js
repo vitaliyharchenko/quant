@@ -55,8 +55,13 @@ const initialState = {
 	    	teacher: "МарьИванна",
 	    	group: "Супер группа Ф11",
 	    	nodes: ["1", "2"],
-	    	lesson: "1"
+	    	lesson: "1",
     	}
+	},
+	ui:{
+		currentTask: "1",
+		currentNode: "1",
+	  currentBlock: "1"
 	}
 }
 

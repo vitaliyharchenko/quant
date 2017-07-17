@@ -4,7 +4,7 @@ const NEXT_BLOCK = 'NEXT_BLOCK'
 
 // ACTION CREATORS
 
-function nextBlock() {
+export function nextBlock() {
   return {
     type: NEXT_BLOCK
   }
@@ -16,7 +16,9 @@ function taskApp(state = [], action) {
   switch (action.type) {
     case NEXT_BLOCK:
       return Object.assign({}, state, {
-        currentBlockNumber: state.currentBlockNumber+1
+        ui: {
+          currentBlock: state.ui.currentBlock+1
+        }
       })
     default:
       return state
