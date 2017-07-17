@@ -66,7 +66,7 @@ class ChoiceBlock(Block):
 
 
 class ChoiceBlockOption(models.Model):
-    choice_block = models.ForeignKey(ChoiceBlock)
+    choice_block = models.ForeignKey(ChoiceBlock, related_name='choices', on_delete=models.CASCADE)
     option_text = models.CharField('Вариант ответа', max_length=600, blank=True)
     option_image = models.ImageField('Картинка', upload_to='choice_block_options/', null=True, blank=True)
     help_text = models.CharField('Подсказка', max_length=300, blank=True)
