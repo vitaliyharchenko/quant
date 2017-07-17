@@ -27,9 +27,3 @@
 1. Установка - `pip3 install [pkg_name]`
 2. Сохранить зависимости в файл - `pip3 freeze > requirements.txt`
 3. Установить все зависимости из файла - `pip3 install -r requirements.txt`
-
-### Как создать фикстуры для данных
-
-1. `docker-compose run web dumpdata --exclude=contenttypes > django/fixtures.json`
-2. `docker-compose run web flush` - удалить все данные из БД
-3. `docker-compose run web loaddata fixtures.json`

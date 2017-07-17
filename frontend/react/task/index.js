@@ -46,13 +46,37 @@ const initialState = {
 	}
 }
 
+function fetchTask() {
+  return fetch('http://0.0.0.0:8000/tasks/1');
+}
+
+function fillTaskData() {
+
+  // Invert control!
+  // Return a function that accepts `dispatch` so we can dispatch later.
+  // Thunk middleware knows how to turn thunk async actions into actions.
+
+  return function (dispatch) {
+    return fetchTask().then(
+      json => console.log('Error!'),
+      error => console.log('Error!')
+    );
+  };
+}
+
+fetchTask().then(
+  json => console.log('Error!'),
+  error => console.log(error)
+);
+
 // WORK with local storage
 
 const loadState = () => {
 	try {
 		const serializedState = localStorage.getItem('state');
 		if (serializedState === null) {
-			return initialState;
+			// return initialState;
+			return undefined;
 		}
 		return JSON.parse(serializedState);
 	} catch (err) {
