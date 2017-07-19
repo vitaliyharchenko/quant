@@ -61,10 +61,18 @@ class Task extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const task = state.tasks[ownProps.match.params.task_id]
-  return {
-    task: task,
-    lesson: state.lessons[task.lesson],
-    ui: state.ui
+  if (task) {
+    return {
+      task: task,
+      lesson: state.lessons[task.lesson],
+      ui: state.ui
+    }
+  } else {
+    return {
+      task: false,
+      lesson: {},
+      ui: {}
+    }
   }
 }
 

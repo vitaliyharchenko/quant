@@ -4,6 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: {
         'task1': './react/task/index.js',
+        'v1': './react/v1.0/src/index.js',
     },
     output: {
         filename: '[name].js',

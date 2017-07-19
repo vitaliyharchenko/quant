@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^users/', include('apps.users.urls', namespace='users')),
     url(r'^tasks/', include('apps.tasks.urls', namespace='tasks')),
-    url(r'^react/', include('apps.react.urls', namespace='react')),
+    url(r'^app/', include('apps.react.urls', namespace='react')),
 ]
 
 # django-debug-toolbar
