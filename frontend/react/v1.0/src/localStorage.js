@@ -54,8 +54,8 @@ const initialState = {
   },
   ui:{
     currentTask: "1",
-    currentNode: "1",
-    currentBlock: "1"
+    currentNode: "2",
+    currentBlock: "3"
   },
   user: {
 
