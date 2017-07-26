@@ -50,6 +50,20 @@ def user_detail(request, pk):
         user.delete()
         return HttpResponse(status=204)
 
+# rest auth
+from django.contrib.auth.models import User
+from rest_framework import authentication
+from rest_framework import exceptions
+from rest_framework.authtoken import views as authtoken_views
+
+class EmailAuth(authentication.BaseAuthentication):
+    def authenticate(self, request):
+        email = request.email
+        if not email:
+            return None
+        return (user, None)
+
+
 
 # ===================
 # NATIVE DJANGO VIEWS

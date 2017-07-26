@@ -7,6 +7,7 @@ from polymorphic.models import PolymorphicModel
 # All lessons contains blocks (text, chioce, question with float answer)
 class Block(PolymorphicModel):
     time = models.IntegerField('Время в минутах на выполнение блока', blank=True)
+    score = models.IntegerField('Балл за верное выполнение блока', blank=True, default=0)
 
     def __str__(self):
         title = None
@@ -110,6 +111,7 @@ class TextAnswerBlock(Block):
 class NodeBlockRelation(models.Model):
     node = models.ForeignKey('nodes.Node')
     block = models.ForeignKey(Block)
+    order = models.IntegerField('Порядковый номер блока внутри узла', default=0)
 
     class Meta:
         verbose_name = 'включение блока в узел'

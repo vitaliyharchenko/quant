@@ -6,13 +6,22 @@ from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 from django.shortcuts import reverse
 from django.utils import timezone
-
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
 
 phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
                              message="Телефон должен быть заполнен в формате: '+999999999'. Максимум 15 цифр.")
 
 # https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-confirmation-mail
 # https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone
+
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
 
 # Model, contains extra info about user.
 class Profile(models.Model):

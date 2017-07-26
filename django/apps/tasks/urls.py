@@ -1,9 +1,7 @@
 from django.conf.urls import url
-from . import views
-from .views import TaskList, ExampleView
+from .views import TaskListViewSet, TaskDetailViewSet
 
 urlpatterns = [
-    url(r'^$', TaskList.as_view(), name="main"),
-    url(r'^example/$', ExampleView.as_view(), name="main"),
-    url(r'^(?P<pk>[0-9]+)$', views.task_detail, name="task"),
+    url(r'^$', TaskListViewSet.as_view(), name="main"),
+    url(r'^(?P<pk>[0-9]+)$', TaskDetailViewSet.as_view(), name="task"),
 ]
