@@ -7334,7 +7334,7 @@ html {
   min-height: 100%; }
 
 body {
-  margin-bottom: 120px;
+  margin-bottom: 180px;
   /* Margin bottom by footer height */ }
   body.with-nav {
     padding-top: 3.5rem; }
@@ -7343,14 +7343,25 @@ body {
   body nav {
     background-color: #375a7f; }
   body .footer {
-    margin-top: 50px;
-    height: 60px;
+    margin-top: 60px;
     line-height: 60px;
     /* Vertically center the text there */
-    background-color: #f7f7f9;
+    background-color: #464a4c;
+    color: #f7f7f9;
     position: absolute;
     bottom: 0;
     width: 100%; }
+    body .footer .footer-about {
+      text-align: right; }
+    @media screen and (max-width: 768px) {
+      body .footer .social-icons {
+        text-align: center; }
+      body .footer .footer-about {
+        text-align: center; } }
+
+.landing-section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 header.promo {
   padding-top: 50px;
@@ -7367,17 +7378,34 @@ header.promo {
   header.promo .main-form-button {
     margin-bottom: 30px; }
 
+@media screen and (max-width: 768px) {
+  header.promo {
+    padding-bottom: 50px; }
+    header.promo .main-text {
+      margin-top: 50px; } }
+
 #where {
-  padding-top: 50px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   #where .map-row {
     margin-top: 50px; }
 
 #what {
-  padding-top: 50px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   #what .cards-row {
     margin-top: 50px; }
     #what .cards-row .cards-img {
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      width: 100%; }
+
+#who {
+  padding-bottom: 0px; }
+  #who .who-row {
+    min-height: 400px; }
+
+#mentions .mention {
+  padding-top: 50px; }
 
 figure, .embed-responsive {
   margin: 30px 0; }

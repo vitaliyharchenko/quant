@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^users/', include('apps.users.urls', namespace='users')),
     url(r'^tasks/', include('apps.tasks.urls', namespace='tasks')),
     url(r'^app/', include('apps.react.urls', namespace='react')),
+    url(r'^landings/', include('apps.landings.urls', namespace='landings')),
 ]
 
 # django-debug-toolbar
