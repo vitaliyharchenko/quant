@@ -10,6 +10,7 @@ from .serializers import TaskSerializer
 from apps.lessons.models import LessonNodeRelation
 from apps.blocks.models import NodeBlockRelation
 from apps.blocks.serializers import BlockSerializer
+from apps.results.serializers import TaskResultSerializer
 
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -50,3 +51,15 @@ class TaskDetailViewSet(AuthMixin, APIView):
         data["nodes"] = nodes
         data["blocks"] = blocks
         return JsonResponse(data)
+
+class TaskResult(AuthMixin, APIView):
+    def post(self, request, pk, format=None):
+        try:
+            data = JSONParser().parse(request)
+            serializer = TaskResultSerializer(data=data)
+            if serializer.is_valid():
+                serializer.save(blocks=data.pop('blocks'))
+                return JsonResponse(serializer.data, status=201)
+            return JsonResponse(serializer.errors, status=401)
+        except Exception as e:
+            return JsonResponse(e, status=400)
