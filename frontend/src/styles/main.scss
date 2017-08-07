@@ -23,7 +23,11 @@ body {
 	}
 
 	// for sticky footer
-  	margin-bottom: 180px; /* Margin bottom by footer height */
+  	margin-bottom: 60px; /* Margin bottom by footer height */
+
+  	@media screen and (max-width: 768px) {
+	    margin-bottom: 180px; /* Margin bottom by footer height */
+	}
 
 	.footer {
 		margin-top: 60px;
@@ -49,6 +53,10 @@ body {
 		  	}
 		}
 	}
+}
+
+.btn {
+	white-space: normal;
 }
 
 .landing-section {
@@ -121,11 +129,15 @@ header {
 	padding-bottom: 0px;
 
 	.who-row {
-		min-height: 400px;
+		min-height: 425px;
 	}
 }
 
 #mentions {
+	.w-100 {
+		width: 100%;
+	}
+
 	.mention {
 		padding-top: 50px;
 	}

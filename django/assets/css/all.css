@@ -7334,7 +7334,7 @@ html {
   min-height: 100%; }
 
 body {
-  margin-bottom: 180px;
+  margin-bottom: 60px;
   /* Margin bottom by footer height */ }
   body.with-nav {
     padding-top: 3.5rem; }
@@ -7342,6 +7342,10 @@ body {
       margin-top: 50px; }
   body nav {
     background-color: #375a7f; }
+  @media screen and (max-width: 768px) {
+    body {
+      margin-bottom: 180px;
+      /* Margin bottom by footer height */ } }
   body .footer {
     margin-top: 60px;
     line-height: 60px;
@@ -7358,6 +7362,9 @@ body {
         text-align: center; }
       body .footer .footer-about {
         text-align: center; } }
+
+.btn {
+  white-space: normal; }
 
 .landing-section {
   padding-top: 50px;
@@ -7402,7 +7409,10 @@ header.promo {
 #who {
   padding-bottom: 0px; }
   #who .who-row {
-    min-height: 400px; }
+    min-height: 425px; }
+
+#mentions .w-100 {
+  width: 100%; }
 
 #mentions .mention {
   padding-top: 50px; }
