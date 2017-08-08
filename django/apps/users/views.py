@@ -1,9 +1,19 @@
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from .models import Profile
 from .serializers import UserSerializer
+
+
+from rest_framework.authtoken.models import Token
+
+@login_required
+def get_token(request):
+    if request.method == 'GET':
+        return JsonResponse({'Token': Token.objects.get(user=request.user).key})
+
 
 # Create your views here.
 @csrf_exempt
@@ -61,6 +71,8 @@ class EmailAuth(authentication.BaseAuthentication):
         email = request.email
         if not email:
             return None
+
+        user = Users.objects.get()
         return (user, None)
 
 
