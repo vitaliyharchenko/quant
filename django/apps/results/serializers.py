@@ -38,13 +38,13 @@ class TextBlockResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = TextBlockResult
         fields = '__all__'
-        depth = 5
+
 
 class ChoiceBlockResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChoiceBlockResult
         fields = '__all__'
-        depth = 5
+
 
 class TextAnswerBlockResultSerializer(serializers.ModelSerializer):
     # choices = ChoiceBlockOptionSerializer(many=True, read_only=True)
@@ -52,13 +52,12 @@ class TextAnswerBlockResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = TextAnswerBlockResult
         fields = '__all__'
-        depth = 5
+
 
 class FloatBlockResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = FloatBlockResult
         fields = '__all__'
-        depth = 5
 
 
 class TaskResultSerializer(serializers.ModelSerializer):

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Block, TextBlock, ChoiceBlock, FloatBlock, ChoiceBlockOption
+from .models import Block, TextBlock, TextAnswerBlock, ChoiceBlock, FloatBlock, ChoiceBlockOption
 
 class BlockSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,11 +15,19 @@ class BlockSerializer(serializers.ModelSerializer):
            return ChoiceBlockSerializer(obj, context=self.context).to_representation(obj)
         elif isinstance(obj, FloatBlock):
            return FloatBlockSerializer(obj, context=self.context).to_representation(obj)
+        elif isinstance(obj, TextAnswerBlock):
+           return TextAnswerBlockSerializer(obj, context=self.context).to_representation(obj)
         return super(BlockSerializer, self).to_representation(obj)
 
 class TextBlockSerializer(serializers.ModelSerializer):
     class Meta:
         model = TextBlock
+        fields = '__all__'
+        depth = 5
+
+class TextAnswerBlockSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TextAnswerBlock
         fields = '__all__'
         depth = 5
 
