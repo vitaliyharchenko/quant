@@ -6,7 +6,7 @@ from django.db import models
 # Nodes - nodes of learning graph
 
 class SubjectTag(models.Model):
-    title = models.CharField('Название объекта', max_length=300)
+    title = models.CharField('Название предмета', max_length=300)
 
     class Meta:
         verbose_name = 'предмет'

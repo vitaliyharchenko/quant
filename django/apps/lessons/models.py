@@ -1,7 +1,4 @@
 from django.db import models
-
-from django.core.urlresolvers import reverse
-from django.db import models
 from apps.tags.models import SubjectTag
 from apps.nodes.models import Node
 
@@ -17,9 +14,6 @@ class Lesson(models.Model):
     class Meta:
         verbose_name = 'урок'
         verbose_name_plural = 'уроки'
-
-    def get_absolute_url(self):
-        return reverse('lessons', args=[self.id])
 
     def __str__(self):
         return self.title

@@ -27,7 +27,7 @@ class TaskListViewSet(AuthMixin, generics.ListAPIView):
         serializer = TaskSerializer(queryset, many=True)
         return JsonResponse(serializer.data, safe=False, status=200)
 
-class TaskDetailViewSet(AuthMixin, APIView):
+class TaskDetailView(AuthMixin, APIView):
     # @csrf_protect
     def get(self, request, pk, format=None):
         try:

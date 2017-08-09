@@ -25,5 +25,7 @@ INSTALLED_APPS = [
     'apps.tasks',
     'apps.results',
     'apps.lessons',
-    'apps.tags'
+    'apps.tags', 
+    'apps.courses',
+    'apps.groups'
 ]

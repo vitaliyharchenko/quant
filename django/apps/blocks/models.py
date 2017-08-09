@@ -112,6 +112,9 @@ class NodeBlockRelation(models.Model):
     node = models.ForeignKey('nodes.Node')
     block = models.ForeignKey(Block)
     order = models.IntegerField('Порядковый номер блока внутри узла', default=0)
+    # TODO
+    # подумать про order. Когда будет много вершин, порядок не выгоден, 
+    # будет лучше между блоками сделать приоритет
 
     class Meta:
         verbose_name = 'включение блока в узел'
