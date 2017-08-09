@@ -17,10 +17,10 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id',)
 
 class StudentGroupSerializer(serializers.ModelSerializer):
-    rel = UserSerializer(source='students_of_group', many=True)
+    students = UserSerializer(source='students_of_group', many=True)
 
     class Meta:
         model = StudentGroup
-        fields = ('id', 'title', 'teacher', 'about', 'rel')
-        depth = 2
+        fields = ('id', 'title', 'teacher', 'about', 'students')
+        # depth = 2
 
