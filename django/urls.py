@@ -25,6 +25,7 @@ urlpatterns = [
     # url(r'^tasks/', include('apps.tasks.urls', namespace='tasks')),
     url(r'^app/', include('apps.react.urls', namespace='react')),
     url(r'^api/', include('apps.api.urls', namespace='api')),
+    url(r'^markdown/', include( 'django_markdown.urls')),
 ]
 
 # django-debug-toolbar

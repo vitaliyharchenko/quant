@@ -1,0 +1,40 @@
+{% extends "_base-with-nav.html" %}
+
+{% load staticfiles %}
+
+{% block body %}
+	<br><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+				{% include "components/progressbar.html" %}
+				<br>
+				<div class="card">
+					<div class="card-block">
+						<h1 class="mt-0">Основное утверждение динамики</h1>
+						<h2>Базовые вещи</h2>
+						<p class="card-text">Динамика рассматривает ваимное действие тел друг на друга, являющееся причиной изменения их движения.</p>
+						<p class="card-text">Так как движение рассматривается относительно других тел, то выбор системы отсчета является важным вопросом динамики.</p>
+						<blockquote class="blockquote">Наблюдение за природой говорит нам о том, что изменение скорости тела всегда вызывается воздействием других тел.
+						</blockquote>
+						<h3>Еще более базовые вещи</h3>
+						<p class="card-text">Приведем пример из жизни. Пусть вы захотите резко побежать. Что позволяет вам резко ускориться? Если бы вы находились на гладком льду, вряд ли у вас получилось бы быстро набрать скорость, скорее вы бы упали. Так что ходим и бегаем мы благодаря взаимодействию с дорогой, трению подошвы обуви о поверхность контакта.</p>
+						<figure class="figure">
+							<img class="figure-img img-fluid rounded" src="http://static.probusiness.by/n/0a/c/e-gorlovka_com_ua_1.jpg">
+							<figcaption class="figure-caption text-right">На улице бывает охренеть как скользко.</figcaption>
+						</figure>
+						<p class="card-text">В древней Греции ученые считали, что для поддержания скорости тела необходимо, чтобы кто-то или что-то постоянно воздействовало на него. Таким образом, единственным естественным состоянием тела считался покой. </p>
+						<p class="card-text">В действительности же <strong>свободное тело</strong> (тело, которое не взаимодействует с другими телами) может сохранять свою скорость сколь угодно долго, подобно кометам, рассекающим космическое пространство, или же оставаться в покое.</p>
+						<div class="embed-responsive embed-responsive-16by9 rounded">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E6VIH5_H1yo?feature=oembed" allowfullscreen=""></iframe>
+						</div>
+						<p class="card-text">Автомобиль, набравший скорость и выключивший двигатель останавливается лишь благодаря воздействию сопротивления воздуха и трению механизмов трансмиссии друг о друга. Без трения скорость автомобиля оставалась бы постоянной.</p>
+					</div>
+					<div class="card-footer text-muted">
+						<button id="read-action" class="btn btn-primary btn-block">Я прочитал</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

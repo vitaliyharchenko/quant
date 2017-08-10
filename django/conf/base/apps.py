@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     # Third party
     'polymorphic',
     'corsheaders',
+    'django_markdown',
 
     # Custom apps
     'apps.users',

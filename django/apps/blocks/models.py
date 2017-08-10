@@ -1,7 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.db import models
 from polymorphic.models import PolymorphicModel
-#from django_markdown.models import MarkdownField
+from django_markdown.models import MarkdownField
 
 
 # All lessons contains blocks (text, chioce, question with float answer)
@@ -42,8 +42,8 @@ class Block(PolymorphicModel):
 
 class TextBlock(Block):
     title = models.CharField(max_length=200, unique=True)
-    #body = MarkdownField()
-    body = models.CharField(max_length=600)
+    body = MarkdownField()
+    # body = models.CharField(max_length=600)
 
     class Meta:
         verbose_name = 'текстовая статья'
@@ -54,8 +54,8 @@ class TextBlock(Block):
 
 
 class ChoiceBlock(Block):
-    #question_text = MarkdownField('Текст вопроса')
-    question_text = models.CharField('Текст вопроса', max_length=600)
+    question_text = MarkdownField('Текст вопроса')
+    # question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='choice_blocks/', null=True, blank=True)
 
     class Meta:
@@ -68,7 +68,8 @@ class ChoiceBlock(Block):
 
 class ChoiceBlockOption(models.Model):
     choice_block = models.ForeignKey(ChoiceBlock, related_name='choices', on_delete=models.CASCADE)
-    option_text = models.CharField('Вариант ответа', max_length=600, blank=True)
+    # option_text = models.CharField('Вариант ответа', max_length=600, blank=True)
+    option_text = MarkdownField('Вариант ответа')
     option_image = models.ImageField('Картинка', upload_to='choice_block_options/', null=True, blank=True)
     help_text = models.CharField('Подсказка', max_length=300, blank=True)
     is_true = models.BooleanField('Правильный?')
@@ -82,8 +83,8 @@ class ChoiceBlockOption(models.Model):
 
 
 class FloatBlock(Block):
-    #question_text = MarkdownField('Текст вопроса')
-    question_text = models.CharField('Текст вопроса', max_length=600)
+    question_text = MarkdownField('Текст вопроса')
+    # question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='float_questions/', null=True, blank=True)
     answer = models.FloatField('Ответ')
 
@@ -95,8 +96,8 @@ class FloatBlock(Block):
         return self.question_text
 
 class TextAnswerBlock(Block):
-    #question_text = MarkdownField('Текст вопроса')
-    question_text = models.CharField('Текст вопроса', max_length=600)
+    question_text = MarkdownField('Текст вопроса')
+    # question_text = models.CharField('Текст вопроса', max_length=600)
     image = models.ImageField('Картинка', upload_to='float_questions/', null=True, blank=True)
     answer = models.CharField('Ответ', max_length=600)
 
