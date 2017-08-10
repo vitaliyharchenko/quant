@@ -10,7 +10,6 @@ urlpatterns = [
 
     url(r'^signup/$', views.signup, name='signup'),
 
-    # url(r'^login/$', views.login, name='login'),
     url(r'^login/$', login_view, kwargs={'template_name': 'users/login.html'}, name='login'),
 
     url(r'^social_auth/(?P<backend>[^/]+)$', views.social_auth, name='social_auth_begin'),
@@ -33,4 +32,5 @@ urlpatterns = [
 
     url(r'^$', views.user_list, name="main"),
     url(r'^(?P<pk>[0-9]+)$', views.user_detail, name="user"),
+    url(r'^get_token/$', views.get_token, name="get_token"),
 ]

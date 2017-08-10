@@ -11,3 +11,4 @@ djangorestframework==3.6.3
 pillow==4.0.0
 django-polymorphic
 django-cors-headers
+django-markdown-app

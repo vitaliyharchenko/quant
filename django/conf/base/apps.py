@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     # Third party
     'polymorphic',
     'corsheaders',
+    'django_markdown',
 
     # Custom apps
     'apps.users',
@@ -26,5 +27,7 @@ INSTALLED_APPS = [
     'apps.tasks',
     'apps.results',
     'apps.lessons',
-    'apps.tags'
+    'apps.tags', 
+    'apps.courses',
+    'apps.groups'
 ]

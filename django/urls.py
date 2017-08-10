@@ -22,9 +22,11 @@ from rest_framework.authtoken import views as authtoken_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^users/', include('apps.users.urls', namespace='users')),
-    url(r'^tasks/', include('apps.tasks.urls', namespace='tasks')),
+    # url(r'^tasks/', include('apps.tasks.urls', namespace='tasks')),
     url(r'^app/', include('apps.react.urls', namespace='react')),
     url(r'^landings/', include('apps.landings.urls', namespace='landings')),
+    url(r'^api/', include('apps.api.urls', namespace='api')),
+    url(r'^markdown/', include( 'django_markdown.urls')),
 ]
 
 # django-debug-toolbar

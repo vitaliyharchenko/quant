@@ -11,29 +11,29 @@ from apps.lessons.models import LessonNodeRelation
 from apps.blocks.models import NodeBlockRelation
 from apps.blocks.serializers import BlockSerializer
 from apps.results.serializers import TaskResultSerializer
+from apps.results.models import TaskResult
+from apps.api.views import AuthMixin
 
-from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated
-
-
-
-class AuthMixin(object):
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated]
 
 class TaskListViewSet(AuthMixin, generics.ListAPIView):
-    renderer_classes = (JSONRenderer,)
-    queryset = Task.objects.all()
-    serializer_class = TaskSerializer
+    # renderer_classes = (JSONRenderer,)
+    # queryset = Task.objects.all()
+    # serializer_class = TaskSerializer
 
+    def list(self, request):
+        # Note the use of `get_queryset()` instead of `self.queryset`
+        # queryset = Task.objects.all()
+        queryset = Task.objects.filter(student=request.user)
+        serializer = TaskSerializer(queryset, many=True)
+        return JsonResponse(serializer.data, safe=False, status=200)
 
-class TaskDetailViewSet(AuthMixin, APIView):
+class TaskDetailView(AuthMixin, APIView):
     # @csrf_protect
     def get(self, request, pk, format=None):
         try:
             task = Task.objects.get(pk=pk)
-        except Exception:
-            return HttpResponse(status=404)
+        except Exception as e:
+            return JsonResponse({'Error message': str(e)}, status=404)
         task_serializer = TaskSerializer(task)
         task_data = task_serializer.data
         lesson_node_reations = LessonNodeRelation.objects.filter(lesson=task.lesson)
@@ -50,16 +50,28 @@ class TaskDetailViewSet(AuthMixin, APIView):
         data["task"] = task_data
         data["nodes"] = nodes
         data["blocks"] = blocks
-        return JsonResponse(data)
+        return JsonResponse(data, status=200)
 
-class TaskResult(AuthMixin, APIView):
+class TaskResultView(AuthMixin, APIView):
     def post(self, request, pk, format=None):
         try:
             data = JSONParser().parse(request)
             serializer = TaskResultSerializer(data=data)
             if serializer.is_valid():
                 serializer.save(blocks=data.pop('blocks'))
-                return JsonResponse(serializer.data, status=201)
-            return JsonResponse(serializer.errors, status=401)
+                return JsonResponse({'Status':'OK'}, status=200)
+            return JsonResponse({'Validation error': serializer.errors}, status=401)
         except Exception as e:
-            return JsonResponse(e, status=400)
+            return JsonResponse({'Error message': str(e)}, status=400)
+
+    def get(self, request, pk, format=None):
+        results = TaskResult.objects.filter(task=Task.objects.get(pk=pk))
+        serializer = TaskResultSerializer(results, many=True)
+        return JsonResponse(serializer.data, safe=False, status=200)
+        # try:
+        #     results = TaskResult.objects.filter(task=Task.objects.get(pk=pk))
+        #     serializer = TaskResultSerializer(results, many=True)
+        #     return JsonResponse(serializer.data, safe=False, status=200)
+        # except Exception as e:
+        #     return JsonResponse({'Error message': str(e)}, status=404)
+

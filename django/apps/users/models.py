@@ -47,10 +47,6 @@ class Profile(models.Model):
     grade = models.PositiveSmallIntegerField(u'Класс', null=True, blank=True)
     school = models.CharField(u'Учебное заведние', max_length=100, null=True, blank=True)
 
-    # TODO: add city field
-    # TODO: add grade field
-    # TODO: add school field
-
     class Meta:
         verbose_name = "данные пользователя"
         verbose_name_plural = "данные пользователя"
