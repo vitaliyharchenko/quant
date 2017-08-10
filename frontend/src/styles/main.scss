@@ -86,14 +86,14 @@ header {
 			margin-bottom: 30px;
 		}
 
-		.main-form-button {
-			margin-bottom: 30px;
-		}
+		// .main-form-button {
+		// 	margin-bottom: 30px;
+		// }
 	}
 
 	@media screen and (max-width: 768px) {
 	    &.promo {
-	        padding-bottom: 50px;
+	        padding-bottom: 100px;
 
 	        .main-text {
 				margin-top: 50px;
@@ -140,6 +140,12 @@ header {
 
 	.mention {
 		padding-top: 50px;
+	}
+}
+
+#recomendation {
+	.divider {
+		border: 2px solid $gray-light;
 	}
 }
 
