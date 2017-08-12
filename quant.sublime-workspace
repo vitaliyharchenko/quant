@@ -4,96 +4,36 @@
 		"selected_items":
 		[
 			[
-				"e",
-				"email"
+				"clas",
+				"class_num"
 			],
 			[
-				"c",
-				"csrf_exempt"
+				"hidden",
+				"hidden-md-up"
 			],
 			[
-				"Task",
-				"TaskDetailViewSet"
+				"pad",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"lan",
+				"landing-section"
+			],
+			[
+				"ini",
+				"getInitialState\t Life Cycle"
 			],
 			[
 				"re",
-				"request"
+				"relationships"
 			],
 			[
-				"T",
-				"True"
-			],
-			[
-				"C",
-				"ChoiseBlockOptionSerializer"
-			],
-			[
-				"Ch",
-				"ChoiceBlockOption"
-			],
-			[
-				"p",
-				"Polymorphic"
-			],
-			[
-				"Tas",
-				"TaskSerializer"
-			],
-			[
-				"Te",
-				"TextBlock"
-			],
-			[
-				"Tex",
-				"TextBlockSerializer"
-			],
-			[
-				"seri",
-				"serialiser"
-			],
-			[
-				"t",
-				"try\tTry/Except"
-			],
-			[
-				"no",
-				"node_block_relations"
-			],
-			[
-				"block",
-				"blocks"
-			],
-			[
-				"task",
-				"task_data"
-			],
-			[
-				"le",
-				"lesson_node_reations"
-			],
-			[
-				"tas",
-				"task_data"
-			],
-			[
-				"Su",
-				"SubjectTag"
-			],
-			[
-				"Fo",
-				"ForeignKey"
-			],
-			[
-				"for",
-				"ForeignKey"
-			],
-			[
-				"fo",
-				"format"
-			],
-			[
-				"No",
-				"LessonNodeRelation"
+				"rea",
+				"react_views"
 			],
 			[
 				"bac",
@@ -132,10 +72,6 @@
 				"views\timport"
 			],
 			[
-				"pad",
-				"padding-top"
-			],
-			[
 				"text-cente",
 				"text-md-center\t all.css"
 			],
@@ -172,6 +108,10 @@
 				"fontawesome"
 			],
 			[
+				"no",
+				"node_modules"
+			],
+			[
 				"b",
 				"bootstrap"
 			],
@@ -196,277 +136,12 @@
 	"buffers":
 	[
 		{
-			"file": "django/apps/lessons/models.py",
+			"file": "frontend/src/html/landings/components/teachers/paramonova.html",
 			"settings":
 			{
-				"buffer_size": 1148,
+				"buffer_size": 1024,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/lessons/serializer.py",
-			"settings":
-			{
-				"buffer_size": 427,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tasks/urls.py",
-			"settings":
-			{
-				"buffer_size": 233,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tasks/tests.py",
-			"settings":
-			{
-				"buffer_size": 60,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tasks/views.py",
-			"settings":
-			{
-				"buffer_size": 2011,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "from django.http import HttpResponse, JsonResponse\nfrom django.views.decorators.csrf import csrf_exempt\nfrom rest_framework.renderers import JSONRenderer\nfrom rest_framework.parsers import JSONParser\nfrom .models import Profile\nfrom .serializers import UserSerializer\n\n# Create your views here.\n@csrf_exempt\ndef user_list(request):\n    \"\"\"\n    List all users or create new user\n    \"\"\"\n    if request.method == 'GET':\n        users = Profile.objects.all()\n        serializer = UserSerializer(users, many=True)\n        return JsonResponse(serializer.data, safe=False)\n\n    elif request.method == 'POST':\n        data = JSONParser().parse(request)\n        serializer = UserSerializer(data=data)\n        if serializer.is_valid():\n            serializer.save()\n            return JsonResponse(serializer.data, status=201)\n        return JsonResponse(serializer.errors, status=400)\n\n@csrf_exempt\ndef user_detail(request, pk):\n    \"\"\"\n    Retrieve, update or delete a user.\n    \"\"\"\n    try:\n        user = Profile.objects.get(pk=pk)\n    except user.DoesNotExist:\n        return HttpResponse(status=404)\n\n    if request.method == 'GET':\n        serializer = UserSerializer(user)\n        return JsonResponse(serializer.data)\n\n    elif request.method == 'PUT':\n        data = JSONParser().parse(request)\n        serializer = UserSerializer(user, data=data)\n        if serializer.is_valid():\n            serializer.save()\n            return JsonResponse(serializer.data)\n        return JsonResponse(serializer.errors, status=400)\n\n    elif request.method == 'DELETE':\n        user.delete()\n        return HttpResponse(status=204)\n\n# rest auth\nfrom django.contrib.auth.models import User\nfrom rest_framework import authentication\nfrom rest_framework import exceptions\nfrom rest_framework.authtoken import views as authtoken_views\n\nclass EmailAuth(authentication.BaseAuthentication):\n    def authenticate(self, request):\n        email = request.email\n        if not email:\n            return None\n\n        user = Users.objects.get()\n        return (user, None)\n\n\n\n# ===================\n# NATIVE DJANGO VIEWS\n# ===================\n\nimport json\nimport ssl\nimport urllib.request\nfrom random import randint\n\nfrom django.conf import settings as django_settings\nfrom django.contrib import auth, messages\nfrom django.contrib.auth import login, update_session_auth_hash\nfrom django.contrib.auth.decorators import login_required\nfrom django.contrib.auth.forms import (PasswordResetForm, SetPasswordForm)\nfrom django.contrib.auth.models import User\nfrom django.contrib.auth.tokens import PasswordResetTokenGenerator\nfrom django.contrib.sites.shortcuts import get_current_site\nfrom django.core.mail import send_mail\nfrom django.shortcuts import HttpResponse, redirect, render, reverse\nfrom django.template.loader import render_to_string\nfrom django.utils import six\nfrom django.utils.encoding import force_bytes, force_text\nfrom django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode\n\nfrom .forms import ProfileForm, SignUpForm, UserForm, UserLoginForm\nfrom .models import EmailConfirmation, UserSocialAuth\n\n\nclass AccountActivationTokenGenerator(PasswordResetTokenGenerator):\n    def _make_hash_value(self, user, timestamp):\n        return (\n            six.text_type(user.pk) + six.text_type(timestamp) +\n            six.text_type(user.profile.email_confirmed)\n        )\n\naccount_activation_token = AccountActivationTokenGenerator()\n\n\n# Login view\ndef login(request):\n    # ready for login from any page on site\n    return_path = request.META.get('HTTP_REFERER', '/')\n    login_path = 'http://{}{}'.format(get_current_site(request), reverse('users:login'))\n    if return_path == login_path:\n        return_path = reverse('users:settings')\n\n    if request.user.is_authenticated():\n        return redirect(return_path)\n\n    if request.method == \"POST\":\n        form = UserLoginForm(request, request.POST)\n        if form.is_valid():\n            username = request.POST.get('username', '')\n            password = request.POST.get('password', '')\n            user = auth.authenticate(username=username, password=password)\n            if user:\n                auth.login(request, user)\n                return redirect(return_path)\n            else:\n                messages.warning(request, \"Введенные данные неверны!\")\n        else:\n            messages.warning(request, \"Введенные данные некорректны!\")\n    else:\n        form = UserLoginForm(request)\n\n    return render(request, 'users/login.html', {\"form\": form})\n\n\n# Profiles view\n@login_required()\ndef users(request):\n    context = {\n        'users': User.objects.all().select_related('profile')\n    }\n    return render(request, 'users/users.html', context)\n\n\n# Profile view\n@login_required()\ndef user(request, user_id):\n    context = {\n        'instance': User.objects.get(pk=user_id)\n    }\n    return render(request, 'users/profile.html', context)\n\n\n# Profile settings view with forms\n@login_required\ndef settings(request):\n\n    if request.method == 'POST':\n        user_form = UserForm(request.POST, instance=request.user)\n        profile_form = ProfileForm(request.POST, request.FILES or None, instance=request.user.profile)\n        password_set_form = SetPasswordForm(request.user)\n\n        if user_form.is_valid() and profile_form.is_valid():\n            user_form.save()\n            profile_form.save()\n            messages.success(request, 'Изменения успешно сохранены!')\n            return redirect('users:settings')\n        else:\n            messages.warning(request, 'Пожалуйста, исправьте ошибки.')\n    else:\n        user_form = UserForm(instance=request.user)\n        profile_form = ProfileForm(instance=request.user.profile)\n        password_set_form = SetPasswordForm(request.user)\n\n    try:\n        vk_social_auth = UserSocialAuth.objects.get(user=request.user, provider='vk', is_active=True)\n    except UserSocialAuth.DoesNotExist:\n        vk_social_auth = None\n\n    try:\n        fb_social_auth = UserSocialAuth.objects.get(user=request.user, provider='fb', is_active=True)\n    except UserSocialAuth.DoesNotExist:\n        fb_social_auth = None\n\n    return render(request, 'users/settings.html', {\n        'user_form': user_form,\n        'profile_form': profile_form,\n        'password_set_form': password_set_form,\n        'vk_social_auth': vk_social_auth,\n        'fb_social_auth': fb_social_auth\n    })\n\n\n# Change password in Profile view\n@login_required\ndef change_password(request):\n    if request.method == 'POST':\n        form = SetPasswordForm(request.user, request.POST)\n        if form.is_valid():\n            user = form.save()\n            update_session_auth_hash(request, user)  # Important!\n            messages.success(request, 'Пароль успешно изменен!')\n            return redirect('users:settings')\n        else:\n            messages.warning(request, 'Пожалуйста, исправьте ошибки.')\n    return redirect('users:settings')\n\n\n# Registration starting point\ndef signup(request):\n    if request.method == 'POST':\n        form = SignUpForm(request.POST)\n        if form.is_valid():\n            user = form.save(commit=False)\n            user.is_active = False\n            user.save()\n\n            # Send email\n            send_activation_email(request, user)\n\n            return redirect('users:account_activation_sent')\n    else:\n        form = SignUpForm()\n    return render(request, 'users/signup.html', {'form': form})\n\n\n# Method, that send activation email to user\ndef send_activation_email(request, user):\n    current_site = get_current_site(request)\n    subject = 'Активируйте ваш аккаунт'\n    message = render_to_string('email/account_activation_email.html', {\n        'user': user,\n        'domain': current_site.domain,\n        'uid': urlsafe_base64_encode(force_bytes(user.pk)),\n        'token': account_activation_token.make_token(user),\n    })\n    return send_mail(subject, '', django_settings.EMAIL_HOST_USER, [user.email], html_message=message,\n                     fail_silently=True)\n\n\n# Success signup page\ndef account_activation_sent(request):\n    return render(request, 'users/account_activation_send.html')\n\n\n# Send activation for existing user\ndef send_activation(request):\n    send_activation_email(request, request.user)\n    return redirect('users:account_activation_sent')\n\n\n# Activate user\ndef activate(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))\n        user = User.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError, User.DoesNotExist):\n        user = None\n\n    if user is not None and account_activation_token.check_token(user, token):\n\n        try:\n            email_confirmation = EmailConfirmation.objects.get(user=user)\n            confirmed_email = email_confirmation.email\n            if confirmed_email != user.email:\n                email_confirmation.email = user.email\n                email_confirmation.save()\n        except EmailConfirmation.DoesNotExist:\n            email_confirmation = EmailConfirmation.objects.create(\n                user=user,\n                email=user.email\n            )\n            email_confirmation.save()\n\n        user.is_active = True\n        user.profile.email_confirmed = True\n        user.save()\n\n        if not request.user.is_authenticated():\n            user.backend = 'django.contrib.auth.backends.ModelBackend'\n            login(request, user)\n        return redirect('users:account_activation_success')\n    else:\n        return render(request, 'users/account_activation_invalid.html')\n\n\n# Success email activation point\ndef account_activation_success(request):\n    return render(request, 'users/account_activation_success.html')\n\n\n# ===========\n# SOCIAL AUTH\n# ===========\n\n# Social auth starting point\ndef social_auth(request, backend):\n    if backend == 'vk':\n        app_id = django_settings.VKONTAKTE['APP_ID']\n        current_site = get_current_site(request)\n        redirect_url = reverse('users:social_auth_complete', kwargs={'backend': backend})\n        scope = 'offline,email'\n        raw_link = 'https://oauth.vk.com/authorize?client_id={app_id}&scope={scope}' \\\n                   '&display=popup&redirect_uri=http://{host}{redirect_url}&response_type=code&v=5.41'\n        link = raw_link.format(scope=scope, host=current_site.domain, redirect_url=redirect_url, app_id=app_id)\n        return redirect(link)\n    elif backend == 'fb':\n        app_id = django_settings.FACEBOOK['APP_ID']\n        current_site = get_current_site(request)\n        redirect_url = reverse('users:social_auth_complete', kwargs={'backend': backend})\n        scope = 'email'\n        raw_link = \"https://www.facebook.com/v2.8/dialog/oauth?client_id={app_id}&scope={scope}&\" \\\n                   \"redirect_uri=http://{host}{redirect_url}&response_type=code\"\n        link = raw_link.format(scope=scope, host=current_site.domain, redirect_url=redirect_url, app_id=app_id)\n        return redirect(link)\n\n\ndef get_social_user_info(access_token, backend):\n    if backend == 'vk':\n        api_url = \"https://api.vk.com/method/users.get?fields={}&access_token={}&v=5.62\"\n        # https://vk.com/dev/objects/user\n        fields = \"about,activities,bdate,city,connections,contacts,country,education,first_name,followers_count,\" \\\n                 \"has_photo,interests,last_name,occupation,personal,photo_id,photo_max_orig,quotes,schools,sex,\" \\\n                 \"universities\"\n        api_url = api_url.format(fields, access_token)\n        context = ssl._create_unverified_context()\n        api_response = urllib.request.urlopen(api_url, context=context)\n        api_response = api_response.read().decode()\n        json_response = json.loads(api_response)\n        response = json_response['response'][0]\n        return response['id'], response\n    elif backend == 'fb':\n        api_url = \"https://graph.facebook.com/me?fields={}&access_token={}&debug=all\"\n        # https://vk.com/dev/objects/user\n        fields = \"id,email,first_name,gender,last_name,link,locale,name,timezone,updated_time,verified,\" \\\n                 \"picture.type(large)\"\n        api_url = api_url.format(fields, access_token)\n        context = ssl._create_unverified_context()\n        api_response = urllib.request.urlopen(api_url, context=context)\n        api_response = api_response.read().decode()\n        json_response = json.loads(api_response)\n        response = json_response\n        return response['id'], response\n\n\ndef build_social_access_link(request, backend):\n    if backend == 'vk':\n        url = \"https://oauth.vk.com/access_token?client_id={}&client_secret={}&code={}&redirect_uri=http://{}{}\"\n        app_id = django_settings.VKONTAKTE['APP_ID']\n        secret = django_settings.VKONTAKTE['SECRET']\n        code = request.GET['code']\n        current_site = get_current_site(request)\n        redirect_url = reverse('users:social_auth_complete', kwargs={'backend': backend})\n        url = url.format(app_id, secret, code, current_site.domain, redirect_url)\n        return url\n    elif backend == 'fb':\n        url = \"https://graph.facebook.com/v2.8/oauth/access_token?client_id={}&client_secret={}\" \\\n              \"&code={}&redirect_uri=http://{}{}\"\n        app_id = django_settings.FACEBOOK['APP_ID']\n        secret = django_settings.FACEBOOK['SECRET']\n        code = request.GET['code']\n        current_site = get_current_site(request)\n        redirect_url = reverse('users:social_auth_complete', kwargs={'backend': backend})\n        url = url.format(app_id, secret, code, current_site.domain, redirect_url)\n        return url\n    else:\n        return HttpResponse(\n            json.dumps({\n                'error': 'Auth error, response with errors',\n                'description': 'Unknown auth backend {}'.format(backend)\n            }),\n            content_type=\"application/json\"\n        )\n\n\n# Method for getting avatar_url and set to profile\ndef update_avatar_info(extra_data, user):\n    if not user.profile.avatar_url:\n        if extra_data.__class__.__name__ != 'dict':\n            dict_data = eval(extra_data)\n        else:\n            dict_data = extra_data\n\n        try:\n            avatar_url = dict_data['photo_max_orig']\n        except KeyError:\n            try:\n                avatar_url = dict_data['picture']['data']['url']\n            except KeyError:\n                avatar_url = None\n        user.profile.avatar_url = avatar_url\n        user.profile.save()\n\n\n# Success social auth point\ndef social_auth_complete(request, backend):\n    # try to get access token\n    try:\n        context = ssl._create_unverified_context()\n        url = build_social_access_link(request, backend)\n        response = urllib.request.urlopen(url, context=context)\n        response = response.read().decode()\n        response = json.loads(response)\n\n        if 'error' in response:\n            return HttpResponse(\n                json.dumps({'error': 'Auth error, response with errors', 'description': response['error']}),\n                content_type=\"application/json\")\n\n        access_token = response['access_token']\n    except Exception as e:\n        return HttpResponse(json.dumps({'error': 'Auth error, have not response', 'description': str(e)}), content_type=\"application/json\")\n\n    # try to get user_id and extra data\n    social_user_id, extra_data = get_social_user_info(access_token, backend)\n\n    # try to det user email\n    try:\n        if backend == 'vk':\n            email = response['email']\n        elif backend == 'fb':\n            email = extra_data['email']\n    except KeyError:\n        email = None\n\n    if 'error' in response:\n        return HttpResponse(json.dumps({'error': 'Auth error, response with errors', 'description': response['error']}), content_type=\"application/json\")\n\n    # if authenticated - it is request from profile page for connect social profile\n    if request.user.is_authenticated():\n        # if this social profile is already connected - we can not connect it twice\n        try:\n            existing_social_auth = UserSocialAuth.objects.get(provider=backend, uid=social_user_id)\n            if request.user != existing_social_auth.user:\n                messages.warning(request, 'Аккаунт уже прикреплен к другому профилю.')\n                return redirect('users:settings')\n            else:\n                existing_social_auth.extra_data = extra_data\n                existing_social_auth.is_active = True\n                existing_social_auth.save()\n\n                update_avatar_info(extra_data, request.user)\n\n                messages.success(request, 'Аккаунт успешно прикреплен.')\n                return redirect('users:settings')\n        except UserSocialAuth.DoesNotExist:\n            new_social_auth = UserSocialAuth.objects.create(\n                user=request.user,\n                provider=backend,\n                uid=social_user_id,\n                token=access_token,\n                email=email,\n                extra_data=str(extra_data)\n            )\n            new_social_auth.save()\n\n            update_avatar_info(extra_data, request.user)\n\n            messages.success(request, 'Аккаунт успешно прикреплен.')\n            return redirect('users:settings')\n    # if not authenticated - it is request for login\n    else:\n        # try to login by already existed connection\n        try:\n            social_auth = UserSocialAuth.objects.get(provider=backend, uid=social_user_id)\n\n            # renew extra data\n            social_auth.extra_data = extra_data\n            social_auth.is_active = True\n            social_auth.save()\n\n            user = social_auth.user\n\n            update_avatar_info(extra_data, user)\n\n            user.backend = 'django.contrib.auth.backends.ModelBackend'\n            auth.login(request, user)\n            return redirect('users:settings')\n        # if not login - try to associate by email\n        except UserSocialAuth.DoesNotExist:\n            if email:\n                try:\n                    user = User.objects.get(email=email)\n                    if user.profile.email_confirmed:\n                        new_social_auth = UserSocialAuth.objects.create(\n                            user=user,\n                            provider=backend,\n                            uid=social_user_id,\n                            token=access_token,\n                            email=email,\n                            extra_data=str(extra_data)\n                        )\n                        new_social_auth.save()\n                        user.backend = 'django.contrib.auth.backends.ModelBackend'\n                        login(request, user)\n\n                        messages.success(request,\n                                         'Ваш социальный аккаунт привязан на основании сответствия почтового адреса')\n                        return redirect('users:settings')\n                except User.DoesNotExist:\n                    pass\n\n            # if not associate to email - create profile and connection\n            generic_username = backend + str(social_user_id)\n\n            # if username conflict - add random string\n            if User.objects.filter(username=generic_username).count():\n                rand_hash = randint(100, 999)\n                generic_username += str(rand_hash)\n\n            user = User.objects.create_user(\n                username=generic_username,\n                email=email\n            )\n            user.save()\n\n            update_avatar_info(extra_data, user)\n\n            new_social_auth = UserSocialAuth.objects.create(\n                user=user,\n                provider=backend,\n                uid=social_user_id,\n                token=access_token,\n                email=email,\n                extra_data=str(extra_data)\n            )\n            new_social_auth.save()\n\n            user.backend = 'django.contrib.auth.backends.ModelBackend'\n            auth.login(request, user)\n\n            messages.success(request, 'Ваш аккаунт создан на основании данных соцсети.')\n            return redirect('users:settings')\n\n\n# Deassociate user email\n@login_required\ndef social_auth_deassociate(request, backend):\n    user = User.objects.get(pk=request.user.pk)\n    if not user.has_usable_password() or not user.email or not user.profile.email_confirmed:\n        messages.warning(request, 'Невозможно отвязать социальный профиль, у вас не остается возможностей для входа!')\n        return redirect('users:settings')\n    social_auth = UserSocialAuth.objects.get(provider=backend, user=request.user)\n    social_auth.is_active = False\n    social_auth.save()\n\n    # if disconnect - delete avatar\n    if backend == 'vk':\n        try:\n            extra_data = social_auth.extra_data\n            dict_data = eval(extra_data)\n            avatar_url = dict_data['photo_max_orig']\n        except KeyError:\n            avatar_url = None\n    elif backend == 'fb':\n        try:\n            extra_data = social_auth.extra_data\n            dict_data = eval(extra_data)\n            avatar_url = dict_data['picture']['data']['url']\n        except KeyError:\n            avatar_url = None\n    if user.profile.avatar_url == avatar_url:\n        user.profile.avatar_url = None\n        user.profile.save()\n\n    return redirect('users:settings')\n\n\n# Reset password starting point\ndef password_reset(request):\n    if request.method == 'POST':\n        form = PasswordResetForm(request.POST)\n        if form.is_valid():\n            email = form.cleaned_data[\"email\"]\n            try:\n                user = User.objects.get(email=email)\n            except User.DoesNotExist:\n                messages.warning(request, 'Такого почтового ящика нет в базе.')\n                return render(request, 'users/password_reset.html', {'form': form})\n\n            current_site = get_current_site(request)\n            subject = 'Сброс пароля'\n            message = render_to_string('email/password_reset_email.html', {\n                'user': user,\n                'domain': current_site.domain,\n                'uid': urlsafe_base64_encode(force_bytes(user.pk)),\n                'token': account_activation_token.make_token(user),\n            })\n            send_mail(subject, '', django_settings.EMAIL_HOST_USER, [user.email], html_message=message,\n                      fail_silently=True)\n            return redirect('users:password_reset_done')\n        else:\n            messages.warning(request, 'Пожалуйста, исправьте ошибки.')\n    else:\n        form = PasswordResetForm()\n    return render(request, 'users/password_reset.html', {'form': form})\n\n\n# Success start reset password\ndef password_reset_done(request):\n    return render(request, 'users/password_reset_done.html')\n\n\n# Link in reset password email\ndef password_reset_confirm(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))\n        user = User.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError, User.DoesNotExist):\n        user = None\n\n    if user is not None and account_activation_token.check_token(user, token):\n        if request.method == 'POST':\n            form = SetPasswordForm(user, request.POST)\n            if form.is_valid():\n                form.save()\n                return redirect('users:password_reset_complete')\n            else:\n                messages.warning(request, 'Исправьте ошибки')\n        else:\n            form = SetPasswordForm(user)\n        return render(request, 'users/password_reset_confirm.html', {'form': form})\n    else:\n        messages.warning(request, 'Что-то пошло не так')\n        return render(request, 'users/password_reset_incomplete.html')\n\n\n# Success finish reset password\ndef password_reset_complete(request):\n    return render(request, 'users/password_reset_complete.html')",
-			"file": "django/apps/users/views.py",
-			"file_size": 24733,
-			"file_write_time": 131447508752865381,
-			"settings":
-			{
-				"buffer_size": 23625,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tasks/models.py",
-			"settings":
-			{
-				"buffer_size": 791,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/fixtures.json",
-			"settings":
-			{
-				"buffer_size": 33097,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/blocks/admin.py",
-			"settings":
-			{
-				"buffer_size": 495,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tasks/serializers.py",
-			"settings":
-			{
-				"buffer_size": 300,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/blocks/serializers.py",
-			"settings":
-			{
-				"buffer_size": 1511,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/results/serializers.py",
-			"settings":
-			{
-				"buffer_size": 40,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "from django.contrib import admin\nfrom .models import Result\n\nadmin.site.register(Result)\nadmin.site.register()\n",
-			"file": "django/apps/results/admin.py",
-			"file_size": 93,
-			"file_write_time": 131441417969195736,
-			"settings":
-			{
-				"buffer_size": 111,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "from django.db import models\n\n# Create your models here.\n",
-			"file": "django/apps/groups/models.py",
-			"file_size": 60,
-			"file_write_time": 131443209496568554,
-			"settings":
-			{
-				"buffer_size": 57,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/lessons/apps.py",
-			"settings":
-			{
-				"buffer_size": 88,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/urls.py",
-			"settings":
-			{
-				"buffer_size": 1464,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/users/admin.py",
-			"settings":
-			{
-				"buffer_size": 210,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tasks/permissions.py",
-			"settings":
-			{
-				"buffer_size": 206,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/react/urls.py",
-			"settings":
-			{
-				"buffer_size": 112,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/conf/settings.py",
-			"settings":
-			{
-				"buffer_size": 769,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/conf/base/rest.py",
-			"settings":
-			{
-				"buffer_size": 535,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/conf/base/apps.py",
-			"settings":
-			{
-				"buffer_size": 573,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tags/apps.py",
-			"settings":
-			{
-				"buffer_size": 82,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tags/tests.py",
-			"settings":
-			{
-				"buffer_size": 60,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tags/models.py",
-			"settings":
-			{
-				"buffer_size": 378,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "from django.contrib.postgres.fields import ArrayField\nfrom django.db import models\nfrom django.utils import timezone\nfrom polymorphic.models import PolymorphicModel\nfrom apps.tasks.models import Task\nfrom apps.users.models import User\nfrom apps.blocks.models import Block, ChoiseBlockOptions\n\n\nclass Result(PolymorphicModel):\n    student = models.ForeignKey(User, verbose_name=u'Ученик')\n    date = models.DateTimeField(default=timezone.now)\n    score = models.IntegerField(null=True, blank=True)\n    max_score = models.IntegerField()\n\n    class Meta:\n        verbose_name = 'результат'\n        verbose_name_plural = 'результаты'\n\n\nclass TaskResult(Result):\n    task = models.ForeignKey(Task, verbose_name=u'Урок')\n\n    class Meta:\n        verbose_name = 'результат задания'\n        verbose_name_plural = 'результаты заданий'\n\n    def __str__(self):\n        return u'{}, {}, {}'.format(self.student, self.task, self.date)\n\n    @property\n    def task_result_block_result_relations(self):\n        return TaskResultBlockResultRelation.objects.filter(lesson_result=self)\n\n\n\n# =================\n# Results of blocks\n# =================\nclass BlockResult(Result):\n    block = models.ForeignKey(Block)\n\n    class Meta:\n        verbose_name = 'результат ответа на блок'\n        verbose_name_plural = 'результаты ответов на блоки'\n\n    def __str__(self):\n        return u'{}, {}, {}'.format(self.student, self.block, self.date)\n\n\nclass ChoiceBlockResult(BlockResult):\n    choices = ArrayField(models.IntegerField())\n\n    class Meta:\n        verbose_name = 'результат ответа на тестовый вопрос'\n        verbose_name_plural = 'результаты ответов на тестовые вопросы'\n\n\nclass FloatBlockResult(BlockResult):\n    answer = models.FloatField('Ответ')\n\n    class Meta:\n        verbose_name = 'результат ответа на задачу'\n        verbose_name_plural = 'результаты ответов на задачи'\n\nclass TextAnswerBlockResult(BlockResult):\n    correct_answers = ArrayField(models.CharField(max_length=100))\n\n    class Meta:\n        verbose_name = 'результат ответа на задание с текстовым ответом'\n        verbose_name_plural = 'результаты ответов на задание с текстовым ответом'\n\n# ========================\n# Relation between results\n# ========================\nclass TaskResultBlockResultRelation(models.Model):\n    task_result = models.ForeignKey(TaskResult)\n    block_result = models.ForeignKey(BlockResult)\n\n    class Meta:\n        verbose_name = 'связь результата задания с результатом блока'\n",
-			"file": "django/apps/results/models.py",
-			"file_size": 2873,
-			"file_write_time": 131455408779435173,
-			"settings":
-			{
-				"buffer_size": 2464,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/blocks/models.py",
-			"settings":
-			{
-				"buffer_size": 3869,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/nodes/models.py",
-			"settings":
-			{
-				"buffer_size": 1414,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tags/admin.py",
-			"settings":
-			{
-				"buffer_size": 97,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "django/apps/tags/views.py",
-			"settings":
-			{
-				"buffer_size": 198,
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -477,29 +152,29 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 215.0,
-		"last_filter": "jso",
+		"height": 87.0,
+		"last_filter": "json",
 		"selected_items":
 		[
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
 			[
 				"jso",
 				"JSON Reindent: reindent file or selection"
 			],
 			[
-				"insta",
+				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"pac",
-				"Install Package Control"
-			],
-			[
-				"json",
-				"Set Syntax: JSON"
 			],
 			[
 				"ins",
-				"Package Control: Install Package"
+				"Install Package Control"
 			],
 			[
 				"in",
@@ -510,12 +185,12 @@
 				"Package Control: List Packages"
 			],
 			[
-				"remove",
-				"Package Control: Remove Package"
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
+				"remove",
+				"Package Control: Remove Package"
 			],
 			[
 				"packag",
@@ -526,7 +201,7 @@
 				"Install Package Control"
 			]
 		],
-		"width": 600.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -550,137 +225,155 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Dev/quant",
-		"/C/Dev/quant/django",
-		"/C/Dev/quant/django/apps",
-		"/C/Dev/quant/django/apps/__pycache__",
-		"/C/Dev/quant/django/apps/blocks",
-		"/C/Dev/quant/django/apps/results",
-		"/C/Dev/quant/django/conf/base",
-		"/C/Dev/quant/django/conf/local_tpl",
-		"/C/Dev/quant/docker",
-		"/C/Dev/quant/docker/dev"
+		"/Users/vitaliyharchenko/Dev/quant",
+		"/Users/vitaliyharchenko/Dev/quant/frontend",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers"
 	],
 	"file_history":
 	[
-		"/C/Dev/quant/django/apps/users/serializers.py",
-		"/C/Dev/quant/django/apps/blocks/models.py",
-		"/C/Dev/quant/django/apps/blocks/apps.py",
-		"/C/Dev/quant/django/apps/users/models.py",
-		"/C/Dev/quant/django/apps/users/urls.py",
-		"/C/Dev/quant/docker/dev/Dockerfile.web",
-		"/C/Dev/quant/readme.md",
-		"/C/Dev/quant/docker-compose.yml",
-		"/C/Dev/quant/django/requirements.txt",
-		"/C/Dev/quant/django/apps/nodes/serializer.py",
-		"/C/Dev/quant/frontend/node_modules/weinre/web/client/UglifyJS/process.js",
-		"/C/Dev/quant/django/readme.md",
-		"/C/Dev/quant/django/apps/tasks/models.py",
-		"/C/Dev/quant/django/apps/nodes/migrations/0001_initial.py",
-		"/C/Dev/quant/django/apps/nodes/models.py",
-		"/C/Dev/quant/django/apps/subjects/models.py",
-		"/C/Dev/quant/django/apps/results/models.py",
-		"/C/Dev/quant/django/apps/nodes/apps.py",
-		"/C/Dev/quant/django/apps/lessons/apps.py",
-		"/C/Dev/quant/django/apps/blocks/admin.py",
-		"/C/Dev/quant/django/apps/lessons/views.py",
-		"/C/Dev/quant/django/conf/base/apps.py",
-		"/C/Dev/quant/django/apps/lessons/models.py",
-		"/C/Dev/quant/django/apps/tasks/serializers.py",
-		"/C/Dev/quant/django/apps/tasks/views.py",
-		"/C/Dev/quant/django/apps/tasks/admin.py",
-		"/C/Dev/quant/django/apps/subjects/admin.py",
-		"/C/Dev/quant/django/apps/results/apps.py",
-		"/C/Dev/quant/django/apps/results/admin.py",
-		"/C/Dev/quant/django/apps/nodes/admin.py",
-		"/C/Dev/quant/django/apps/lessons/admin.py",
-		"/C/Dev/quant/django/apps/subjects/apps.py",
-		"/C/Dev/quant/django/apps/users/views.py",
-		"/C/Dev/quant/django/urls.py",
-		"/C/Dev/quant/django/apps/users/admin.py",
-		"/C/Dev/quant/django/apps/serializers.py",
-		"/C/Dev/quant/django/apps/tasks/urls.py",
-		"/C/Dev/quant/django/apps/subject/apps.py",
-		"/C/Dev/quant/django/apps/react/urls.py",
-		"/C/Dev/quant/django/apps/users/tests.py",
-		"/C/Dev/quant/django/apps/users/apps.py",
-		"/C/Dev/quant/django/apps/tasks/apps.py",
-		"/C/Dev/quant/django/apps/tasks/serializer.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/templates/components/footer.html",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/theme/theme.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/main.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/assets/styleguide.html",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/assets/index.html",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/theme/_typography.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/_bootstrap-variables.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/bootstrap.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/images/logo-white.svg",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/images/logo-dark.svg",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/theme/_buttons.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/dist/css/all.css",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/theme/_sections.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/_bootstrap.scss",
-		"/Users/vitaliyharchenko/Dev/quant/readme.md",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/theme/_reboot.scss",
-		"/Users/vitaliyharchenko/Dev/quant/quant.sublime-project",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/readme.md",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/.gitignore",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/gulpfile.js",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/settings.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/frontend/src/assets/index.html",
-		"/Users/vitaliyharchenko/Dev/quant/django/assets/frontend/gulpfile.js",
-		"/Users/vitaliyharchenko/Dev/quant/docker-compose.yml",
-		"/Users/vitaliyharchenko/Dev/quant/docker/development/Dockerfile.web",
-		"/Users/vitaliyharchenko/Dev/quant/backend/conf/settings.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/assets/index.html",
-		"/Users/vitaliyharchenko/Dev/quant/backend/urls.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/_custom.scss",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/main.scss",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/views.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/urls.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/all.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/novoselova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/where.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/what.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/musallamova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/shaevich.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/vikulova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/sherbakova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/orechkin.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/kameneva.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/pirozhok.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/harchenko.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/paramonova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landing.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/_buttons.scss",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/views.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/components/footer.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/urls.py",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/gulpfile.js",
-		"/Users/vitaliyharchenko/Dev/quant/backend/apps/example/views.py",
-		"/Users/vitaliyharchenko/Dev/quant/backend/manage.py",
-		"/Users/vitaliyharchenko/Dev/quant/backend/wsgi.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/dist/index.html",
-		"/Users/vitaliyharchenko/Dev/quant/gulpfile.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landing.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/group.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/seo.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/touch-screen.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/read.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/theme.scss",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/_icons.scss",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/apps.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/apps.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/urls.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/fixtures.json",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/admin.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/requirements.txt",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/middleware.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/cors.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/readme.md",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.4/src/index.css",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task/index.css",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/serializers.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/tasks/views.py",
+		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/JSON Reindent/JSONReindent.sublime-settings",
+		"/Users/vitaliyharchenko/Dev/quant/api.json",
+		"/Users/vitaliyharchenko/Dev/quant/json.json",
+		"/Users/vitaliyharchenko/Dev/quant/docker-compose.yml",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/lessons/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/results/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/tags/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/tasks/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/nodes/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/react/urls.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/models.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/serializers.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/task.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/webpack.config.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.4/src/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Routes.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.prod.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.dev.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/store/configureStore.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/react.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/AppContainer.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/readme.md",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/package.json",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/index.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/public/index.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/store/configureStore.dev.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/views/IndexView.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/actions/index.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/routes.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.dev.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/DevTools.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/components/BlockList.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/components/App.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/readme.md",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/reducers/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/components/Block.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block_1/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/components/BlockList.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/reducers/blocks.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/reducers/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/types/blocks.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/types/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/counter.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/components/App.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/components/Block.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/wsgi.py",
+		"/Users/vitaliyharchenko/Dev/quant/readme.md",
 		"/Users/vitaliyharchenko/Dev/quant/.gitignore",
-		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings",
-		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/Gist/Default (OSX).sublime-keymap",
-		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/User/Gist.sublime-settings",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/styles/main.scss",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/assets/index.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/styles/_bootstrap.scss",
-		"/Users/vitaliyharchenko/Dev/quant/ana/private/stylesheets/email_body.sass",
-		"/Users/vitaliyharchenko/Dev/quant/dest/css/all.css",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/js/libs.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/styles/_custom.scss",
-		"/Users/vitaliyharchenko/Dev/quant/node_modules/bootstrap/scss/_reboot.scss",
-		"/Users/vitaliyharchenko/Dev/quant/node_modules/bootstrap/scss/_variables.scss",
-		"/Users/vitaliyharchenko/Dev/quant/package.json",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/js/main.js",
-		"/Users/vitaliyharchenko/Dev/quant/dest/index.html",
-		"/Users/vitaliyharchenko/Dev/quant/dest/all.js",
-		"/Users/vitaliyharchenko/Dev/quant/dest/all.css",
-		"/Users/vitaliyharchenko/Dev/quant/dest/styles/main.css",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/styles/_variables.scss",
-		"/Users/vitaliyharchenko/Dev/quant/node_modules/bootstrap/README.md",
-		"/Users/vitaliyharchenko/Dev/quant/node_modules/bootstrap/scss/bootstrap.scss",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/styles/header.scss",
-		"/Users/vitaliyharchenko/Dev/quant/readme.txt",
-		"/Users/vitaliyharchenko/Dev/quant/src/main.css",
-		"/Users/vitaliyharchenko/Dev/start/readme.md",
-		"/Users/vitaliyharchenko/Dev/start/package.json"
+		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/django_assets/src/html/react.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/template.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/settings.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/components/hello.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/main.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/readme.md",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/index.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/hello.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/world.jsx",
+		"/Users/vitaliyharchenko/Desktop/abc.json",
+		"/Users/vitaliyharchenko/Dev/quant/django/wsgi.py",
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev/Dockerfile.web",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/django_assets/src/html/styleguide.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/__init__.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/assets.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/local/flatpages.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/local_tpl/_flatpages.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/flatpages.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/django_assets/src/html/index.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/django_assets/gulpfile.js",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/gulpfile.js",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/bootstrap.scss",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/theme/_buttons.scss",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/example/views.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/templates/styleguide.html"
 	],
 	"find":
 	{
-		"height": 50.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
-			""
+			"/Users/vitaliyharchenko/Dev/quant/frontend/react/block"
 		]
 	},
 	"find_state":
@@ -688,19 +381,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			",)",
-			"ctype",
-			"poly",
-			"blocks",
-			"node_type",
-			"readme",
-			"connection",
-			"AubjectTag",
-			"SubjectTags",
-			"SubjectTag",
-			"subjects",
-			"MarkdownField",
-			"User",
+			">\n",
+			"state.blocks",
+			"console.log",
+			"[],",
+			"todo",
+			"script",
 			"static",
 			"static/images/logo.svg",
 			"bold",
@@ -741,102 +427,16 @@
 	"groups":
 	[
 		{
-			"selected": 25,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "django/apps/lessons/models.py",
-					"semi_transient": false,
+					"file": "frontend/src/html/landings/components/teachers/paramonova.html",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1148,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								841,
-								859
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 218.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "django/apps/lessons/serializer.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 427,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								382,
-								382
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 21,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "django/apps/tasks/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 233,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								216,
-								216
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "django/apps/tasks/tests.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 60,
+						"buffer_size": 1024,
 						"regions":
 						{
 						},
@@ -849,638 +449,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "django/apps/tasks/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2011,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1068,
-								1068
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 349.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "django/apps/users/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 23625,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4254,
-								4262
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 1953.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "django/apps/tasks/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 791,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								319,
-								319
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "django/fixtures.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 33097,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								21525,
-								21525
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 19375.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "django/apps/blocks/admin.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 495,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								82,
-								82
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "django/apps/tasks/serializers.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 300,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								269,
-								269
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "django/apps/blocks/serializers.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1511,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								38,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "django/apps/results/serializers.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 40,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "django/apps/results/admin.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 111,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								109,
-								109
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "django/apps/groups/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 57,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 24,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "django/apps/lessons/apps.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 88,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 22,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "django/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1464,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1429,
-								1444
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 316.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "django/apps/users/admin.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 210,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								173,
-								173
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "django/apps/tasks/permissions.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 206,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								206,
-								206
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "django/apps/react/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 112,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								112,
-								112
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 25,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "django/conf/settings.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 769,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "django/conf/base/rest.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 535,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								535,
-								535
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "django/conf/base/apps.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 573,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								320,
-								320
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "django/apps/tags/apps.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 82,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								79,
-								79
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 28,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "django/apps/tags/tests.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 60,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 27,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "django/apps/tags/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								285,
-								285
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "django/apps/results/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2464,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								291,
-								291
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1488,133 +458,17 @@
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 26,
-					"file": "django/apps/blocks/models.py",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3869,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1838,
-								1855
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1140.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 27,
-					"file": "django/apps/nodes/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1414,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								562,
-								562
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 167.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 28,
-					"file": "django/apps/tags/admin.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 97,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 29,
-					"type": "text"
-				},
-				{
-					"buffer": 29,
-					"file": "django/apps/tags/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 198,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12,
-								13
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 26,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 23.0
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 30.0
 	},
 	"layout":
 	{
@@ -1647,7 +501,7 @@
 	"project": "quant.sublime-project",
 	"replace":
 	{
-		"height": 58.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1680,24 +534,14 @@
 	"selected_group": 0,
 	"settings":
 	{
-		"last_automatic_layout":
-		[
-			[
-				0,
-				0,
-				1,
-				1
-			]
-		]
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 264.0,
+	"side_bar_width": 295.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
-		"max_columns": 1
 	}
 }

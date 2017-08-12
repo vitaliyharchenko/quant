@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'apps.users',
     'utils',
     'apps.blocks',
+    'apps.landings',
     'apps.nodes',
     'apps.tasks',
     'apps.results',

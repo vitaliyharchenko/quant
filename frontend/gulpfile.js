@@ -69,7 +69,7 @@ var styles = {
 var assets = {
 		in: source + 'html/**/*.*',
 	    out: dest + 'html/',
-	    watch: source + 'html/**/*.*',
+		watch: source + 'html/**/*.*',
 };
 
 var fonts = {
@@ -112,7 +112,8 @@ gulp.task('styles', function() {
 		// gulpIf(isDevelopment, sourcemaps.write()), // Если идет процесс разработки, то записываем sourcemaps
 		autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }), // Создаем префиксы
 		concat('all.css'), // Объединяем все в единый файл
-		gulp.dest(styles.out) // Выгружаем результаты в папку
+		gulp.dest(styles.out), // Выгружаем результаты в папку
+		browserSync.reload({stream: true}) // Перезагружаем браузеры
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
@@ -141,9 +142,9 @@ gulp.task('fonts', gulp.parallel('fonts:load', 'fonts:build'));
 // Собибраем html файлы
 gulp.task('assets', function() {
 	return combiner(
-		gulp.src(assets.in, {since: gulp.lastRun('assets')}), // выбираем только модифицированные файлы
-		newer(assets.out), // не позволяет перекопировать уже существующие файлы
-		gulp.dest(assets.out) // Выгружаем результаты в папку
+		gulp.src(assets.in), // выбираем только модифицированные файлы
+		gulp.dest(assets.out), // Выгружаем результаты в папку
+		browserSync.reload({stream: true}) // Перезагружаем браузеры
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
@@ -188,7 +189,8 @@ gulp.task('webpack', function() {
 gulp.task('react', function() {
 	return combiner(
 		gulp.src(react.bundlesIn, {since: gulp.lastRun('react')}), // выбираем только модифицированные файлы
-		gulp.dest(react.out) // Выгружаем результаты в папку
+		gulp.dest(react.out), // Выгружаем результаты в папку
+		browserSync.reload({stream: true}) // Перезагружаем браузеры
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
@@ -201,7 +203,8 @@ gulp.task('images', () => {
     return combiner(
     	gulp.src(images.in),
     	cache(imagemin([imagemin.gifsicle(), imagemin.jpegtran(), imagemin.optipng()])),
-    	gulp.dest(images.out)
+    	gulp.dest(images.out),
+    	browserSync.reload({stream: true}) // Перезагружаем браузеры
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
@@ -239,8 +242,7 @@ gulp.task('server', function() {
         proxy: "0.0.0.0:8000"
     });
 
-    browserSync.watch(dest + '**/*.*').on('change', browserSync.reload);
-    browserSync.watch(assets.watch).on('change', browserSync.reload);
+    // browserSync.watch(dest + '**/*.*').on('change', browserSync.reload);
 });
 
 /* ====== */

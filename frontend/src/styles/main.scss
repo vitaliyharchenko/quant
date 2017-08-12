@@ -23,18 +23,45 @@ body {
 	}
 
 	// for sticky footer
-  	margin-bottom: 120px; /* Margin bottom by footer height */
+  	margin-bottom: 60px; /* Margin bottom by footer height */
+
+  	@media screen and (max-width: 768px) {
+	    margin-bottom: 180px; /* Margin bottom by footer height */
+	}
 
 	.footer {
-		margin-top: 50px;
-		height: 60px;
+		margin-top: 60px;
 		line-height: 60px; /* Vertically center the text there */
-		background-color: $gray-lightest;
+		background-color: $gray;
+		color: $gray-lightest;
 		
 		position: absolute;
 	  	bottom: 0;
 	  	width: 100%;
+
+	  	.footer-about{
+	  		text-align: right;
+	  	}
+
+	  	@media screen and (max-width: 768px) {
+		    .social-icons {
+				text-align: center;
+		  	}
+
+		  	.footer-about{
+		  		text-align: center;
+		  	}
+		}
 	}
+}
+
+.btn {
+	white-space: normal;
+}
+
+.landing-section {
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 header {
@@ -59,14 +86,25 @@ header {
 			margin-bottom: 30px;
 		}
 
-		.main-form-button {
-			margin-bottom: 30px;
-		}
+		// .main-form-button {
+		// 	margin-bottom: 30px;
+		// }
+	}
+
+	@media screen and (max-width: 768px) {
+	    &.promo {
+	        padding-bottom: 100px;
+
+	        .main-text {
+				margin-top: 50px;
+			}
+	    }
 	}
 }
 
 #where {
 	padding-top: 50px;
+	padding-bottom: 50px;
 
 	.map-row {
 		margin-top: 50px;
@@ -75,13 +113,39 @@ header {
 
 #what {
 	padding-top: 50px;
+	padding-bottom: 50px;
 
 	.cards-row {
 		margin-top: 50px;
 
         .cards-img {
             margin-bottom: 25px;
+            width: 100%;
         }
+	}
+}
+
+#who {
+	padding-bottom: 0px;
+
+	.who-row {
+		min-height: 425px;
+	}
+}
+
+#mentions {
+	.w-100 {
+		width: 100%;
+	}
+
+	.mention {
+		padding-top: 50px;
+	}
+}
+
+#recomendation {
+	.divider {
+		border: 2px solid $gray-light;
 	}
 }
 
