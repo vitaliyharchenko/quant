@@ -5,4 +5,4 @@ usage: manage.py dumpdata [-h] [--version] [-v {0,1,2,3}]
                           [--natural-foreign] [--natural-primary] [-a]
                           [--pks PRIMARY_KEYS] [-o OUTPUT]
                           [app_label[.ModelName] [app_label[.ModelName] ...]]
-manage.py dumpdata: error: unrecognized arguments: -natural-foreign -natural-primary -indent
+manage.py dumpdata: error: unrecognized arguments: -natural-foreign -natural-primary
