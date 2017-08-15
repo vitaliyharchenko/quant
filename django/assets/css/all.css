@@ -7405,6 +7405,9 @@ body {
       body .footer .footer-about {
         text-align: center; } }
 
+.subject-img {
+  width: 26px; }
+
 .btn {
   white-space: normal; }
 

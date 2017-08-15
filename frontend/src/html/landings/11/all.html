@@ -16,9 +16,12 @@
 					</div>
 					{% if action == 'callback' %}
 						{% include "landings/components/actions/callback.html" %}
-					{% else %}
+					{% elif action == 'testing' %}
 						{% include "landings/components/actions/testing.html" %}
+					{% else %}
+						{% include "landings/components/actions/choice.html" %}
 					{% endif %}
+
 				</div>
 			</div>
 		</div>
@@ -152,256 +155,6 @@
 		</script>
 	</section>
 
-	<section id="program" class="landing-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<h2 class="mt-0 text-center">Программа курса</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8">
-					<h3>
-						Алгебра
-						<small>
-							19 занятий
-						</small>
-					</h3>
-				</div>
-				<div class="col-4 text-right">
-					<h3>
-						<small>
-							<a data-toggle="collapse" href="#program-collapse-1" aria-expanded="false" aria-controls="program-collapse-1">
-							    Все темы ⇲
-							</a>
-						</small>
-					</h3>
-				</div>
-				<div class="col-12">
-					<hr>
-					<div id="program-collapse-1" class="collapse">
-						<p>Тема 1. Множества, числа, представление данных, элементы комбинаторики, статистика, вероятность</p>
-						<p>Тема 2. Рациональные выражения и уравнения</p>
-						<p>Тема 3. Рациональные неравенства, метод интервалов, метод рационализации</p>
-						<p>Тема 4. Модуль, уравнения с модулем, неравенства с модулем</p>
-						<p>Тема 5. Иррациональные числа, иррациональные уравнения и неравенства</p>
-						<p>Тема 6. Степени, показательные уравнения и неравенства</p>
-						<p>Тема 7. Логарифмы, логарифмические уравнения и неравенства</p>
-						<p>Тема 8. Основы тригонометрии</p>
-						<p>Тема 9. Тригонометрические уравнения и неравенства</p>
-						<p>Тема 10. Числовые последовательности, прогрессии</p>
-						<p>Тема 11. Проценты, формула сложных процентов, задачи на вклады</p>
-						<p>Тема 12. Системы уравнений и неравенств</p>
-						<p>Тема 13. Текстовые задачи</p>
-						<p>Тема 14. Функции, их графики и свойства, преобразования</p>
-						<p>Тема 15. Производная функции, первообразная и интеграл</p>
-						<p>Тема 16. Исследование функции при помощи производной, оптимизационные задачи</p>
-						<p>Тема 17. Уравнения, неравенства и их системы, содержащие параметр</p>
-						<p>Тема 18. Графические способы решения задач с параметром</p>
-						<p>Тема 19. Задачи на теорию чисел</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8">
-					<h3>
-						Геометрия
-						<small>
-							11 занятий
-						</small>
-					</h3>
-				</div>
-				<div class="col-4 text-right">
-					<h3>
-						<small>
-							<a data-toggle="collapse" href="#program-collapse-2" aria-expanded="false" aria-controls="program-collapse-2">
-							    Все темы ⇲
-						    </a>
-					    </small>
-				    </h3>
-				</div>
-				<div class="col-12">
-					<hr>
-					<div id="program-collapse-2" class="collapse">
-						<p>Тема 20. Треугольник</p>
-						<p>Тема 21. Четырехугольники</p>
-						<p>Тема 22. Окружность</p>
-						<p>Тема 23. Задачи по планиметрии на ЕГЭ</p>
-						<p>Тема 24. Прямые и плоскости в пространстве</p>
-						<p>Тема 25. Призма, параллелепипед, куб</p>
-						<p>Тема 26. Пирамида</p>
-						<p>Тема 27. Построение сечений</p>
-						<p>Тема 28. Цилиндр, конус, шар и сфера</p>
-						<p>Тема 29. Векторная алгебра</p>
-						<p>Тема 30. Задачи по стереометрии на ЕГЭ</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8">
-					<h3>
-						Механика
-						<small>
-							9 занятий
-						</small>
-					</h3>
-				</div>
-				<div class="col-4 text-right">
-					<h3>
-						<small>
-							<a data-toggle="collapse" href="#program-collapse-3" aria-expanded="false" aria-controls="program-collapse-3">
-							    Все темы ⇲
-						    </a>
-					    </small>
-				    </h3>
-				</div>
-				<div class="col-12">
-					<hr>
-					<div id="program-collapse-3" class="collapse">
-						<p>Тема 1. Основные понятия механики, виды движения, графико-аналитические задачи</p>
-						<p>Тема 2. Равноускоренное движение. Баллистические задачи</p>
-						<p>Тема 3. Относительность движения. Вращательное движение</p>
-						<p>Тема 4. Законы Ньютона, виды сил</p>
-						<p>Тема 5. Основная задача динамики и ее основные подвиды</p>
-						<p>Тема 6. Статика</p>
-						<p>Тема 7. Закон сохранения импульса</p>
-						<p>Тема 8. Закон сохранения энергии</p>
-						<p>Тема 9. Механические колебания и волны</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8">
-					<h3>
-						Молекулярная физика
-						<small>
-							6 занятий
-						</small>
-					</h3>
-				</div>
-				<div class="col-4 text-right">
-					<h3>
-						<small>
-							<a data-toggle="collapse" href="#program-collapse-4" aria-expanded="false" aria-controls="program-collapse-4">
-							    Все темы ⇲
-						    </a>
-					    </small>
-				    </h3>
-				</div>
-				<div class="col-12">
-					<hr>
-					<div id="program-collapse-4" class="collapse">
-						<p>Тема 10. Молекулярная физика. МКТ. Идеальный газ. Уравнение состояния. Внутренняя энергия идеального газа.</p>
-						<p>Тема 11. Изопроцессы, графические задачи.</p>
-						<p>Тема 12. Количество теплоты и теплопередача. Тепловые процессы и фазовые переходы. Графические задачи о превращении тел. Уравнение теплового баланса</p>
-						<p>Тема 13. Работа газа. Первое начало термодинамики</p>
-						<p>Тема 14. Тепловые машины и их КПД</p>
-						<p>Тема 15. Реальный газ. Влажность.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8">
-					<h3>
-						Оптика и квантовая физика
-						<small>
-							5 занятий
-						</small>
-					</h3>
-				</div>
-				<div class="col-4 text-right">
-					<h3>
-						<small>
-							<a data-toggle="collapse" href="#program-collapse-5" aria-expanded="false" aria-controls="program-collapse-5">
-							    Все темы ⇲
-						    </a>
-					    </small>
-				    </h3>
-				</div>
-				<div class="col-12">
-					<hr>
-					<div id="program-collapse-5" class="collapse">
-						<p>Тема 16. Геометрическая оптика. Отражение и преломление. Линзы. Оптические приборы.</p>
-						<p>Тема 17. Волновая оптика. Когерентность. Интерференция света. Дифракция и дифракционная решетка. Дисперсия света.</p>
-						<p>Тема 18. Корпускулярно-волновой дуализм. Гипотеза Планка. Фотоны. Фотоэффект. Давление света.</p>
-						<p>Тема 19. Атомная физика. Планетарная модель атома. Постулаты Бора. Спектры атомов</p>
-						<p>Тема 20. Ядерная физика. Изотопы. Радиоактивность. Закон радиоактивного распада и ядерные реакции.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8">
-					<h3>
-						Электродинамика
-						<small>
-							6 занятий
-						</small>
-					</h3>
-				</div>
-				<div class="col-4 text-right">
-					<h3>
-						<small>
-							<a data-toggle="collapse" href="#program-collapse-6" aria-expanded="false" aria-controls="program-collapse-6">
-							    Все темы ⇲
-						    </a>
-					    </small>
-				    </h3>
-				</div>
-				<div class="col-12">
-					<hr>
-					<div id="program-collapse-6" class="collapse">
-						<p>Тема 21. Заряды. Электрическое поле. Напряженность, потенциал и их связь между собой. Проводники и диэлектрики в электрическом поле.</p>
-						<p>Тема 22. Электрическая емкость. конденсаторы и их соединения. Потенциальная энергия конденсатора.</p>
-						<p>Тема 23. Постоянный ток. Сопротивление, закон Ома. Последовательное и параллельное соединение проводников. Работа и мощность тока. Полупроводники.</p>
-						<p>Тема 24. Магнитное поле постоянного магнита и проводника с током. Сила Ампера, сила Лоренца. Движение заряженных частиц в магнитном поле.</p>
-						<p>Тема 25. Электромагнитная индукция. правило Ленца, Индуктивность и самоиндукция. Энергия магнитного поля катушки с током.</p>
-						<p>Тема 26. Электромагнитные колебания. Колебательный контур. Переменный ток. Электромагнитные волны и их свойства.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8">
-					<h3>
-						Повторение
-						<small>
-							4 занятия
-						</small>
-					</h3>
-				</div>
-				<div class="col-4 text-right">
-					<h3>
-						<small>
-							<a data-toggle="collapse" href="#program-collapse-7" aria-expanded="false" aria-controls="program-collapse-7">
-							    Все темы ⇲
-						    </a>
-					    </small>
-				    </h3>
-				</div>
-				<div class="col-12">
-					<hr>
-					<div id="program-collapse-7" class="collapse">
-						<p>Тема 27. Повторение пройденных тем, консультации.</p>
-						<p>Тема 28. Пробный экзамен</p>
-						<p>Тема 29. Разбор вариантов ЕГЭ</p>
-						<p>Тема 30. Составляем, решаем и разбираем свой вариант ЕГЭ.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="other" class="section-orange landing-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<h3 class="mt-0">Вас также могут заинтересовать</h3>
-					<hr>
-				</div>
-				{% include "landings/components/other.html" %}
-			</div>
-		</div>
-	</section>
-
 	<section id="recomendation" class="landing-section">
 		<div class="container">
 			<div class="row">
@@ -422,6 +175,18 @@
 						Желаемый результат
 					</h3>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="other" class="section-orange landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="mt-0">Вас также могут заинтересовать</h3>
+					<hr>
+				</div>
+				{% include "landings/components/other.html" %}
 			</div>
 		</div>
 	</section>

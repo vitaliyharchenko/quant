@@ -8,4 +8,5 @@ def example(request):
 
 def landing(request, class_num, subject):
 	tpl_path = 'landings/{}/{}.html'.format(class_num, subject)
-	return render(request, tpl_path)
+	action = request.GET.get('action')
+	return render(request, tpl_path, {'action': action, 'subject': subject, 'class_num': class_num})
