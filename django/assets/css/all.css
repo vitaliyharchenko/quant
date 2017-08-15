@@ -7425,8 +7425,6 @@ header.promo {
   header.promo .main-text {
     margin-top: 100px;
     margin-bottom: 80px; }
-  header.promo .main-form {
-    margin-bottom: 30px; }
 
 @media screen and (max-width: 768px) {
   header.promo {

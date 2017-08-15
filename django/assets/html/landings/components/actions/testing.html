@@ -1,3 +1,5 @@
+					{% load form_extras %}
+
 					<div class="row">
 						<div class="col text-center">
 							<p class="h3">
@@ -6,16 +8,21 @@
 							<hr>
 						</div>
 					</div>
-					<div class="row main-form">
-						<div class="col-sm-6">
-							<input class="form-control form-control-lg" type="text" placeholder="Ваше имя">
+					<form action="" method="post">
+						{% csrf_token %}
+						<div class="row">
+							<div class="col-sm-6">
+								{% text_input field=form.name placeholder='Ваше имя' no_label='True' extra_class='form-control-lg' %}
+							</div>
+							<div class="col-sm-6">
+								{% text_input field=form.email placeholder='Ваш email' no_label='True' extra_class='form-control-lg' input_type='email' %}
+							</div>
 						</div>
-						<div class="col-sm-6">
-							<input class="form-control form-control-lg" type="email" placeholder="Электронная почта">
+						<div class="row">
+							<div class="col-12">
+								<button type="submit" class="btn btn-success btn-lg btn-block">Пройти тестирование</button>
+								<br>
+								{% include "components/messages.html" %}
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<button type="button" role="button" class="btn btn-success btn-lg btn-block">Получи ссылку для тестирования</button>
-						</div>
-					</div>
+					</form>
