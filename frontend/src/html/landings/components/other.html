@@ -1,4 +1,9 @@
-				<div class="col-6 text-right">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="mt-0">Наши курсы</h3>
+					<hr>
+				</div>
+				<div class="col-6 text-center">
 					<p class="lead">Подготовка к ЕГЭ</p>
 					<p>
 						<a href="{% url 'landings:constructor' '11' 'rus' %}">
@@ -31,36 +36,84 @@
 						</a>
 					</p>
 				</div>
-				<div class="col-6">
+				<div class="col-6 text-center">
 					<p class="lead">Подготовка к ОГЭ</p>
 					<p>
-						<a href="{% url 'landings:constructor' '11' 'rus' %}">
+						<a href="{% url 'landings:constructor' '9' 'rus' %}">
 							по русскому языку
 						</a>
 					</p>
 					<p>
-						<a href="{% url 'landings:constructor' '11' 'math' %}">
+						<a href="{% url 'landings:constructor' '9' 'math' %}">
 							по математике
 						</a>
 					</p>
 					<p>
-						<a href="{% url 'landings:constructor' '11' 'phys' %}">
+						<a href="{% url 'landings:constructor' '9' 'phys' %}">
 							по физике
 						</a>
 					</p>
 					<p>
-						<a href="{% url 'landings:constructor' '11' 'chem' %}">
+						<a href="{% url 'landings:constructor' '9' 'chem' %}">
 							по химии
 						</a>
 					</p>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-4 text-center">
+					<p class="lead">10 класс</p>
 					<p>
-						<a href="{% url 'landings:constructor' '11' 'eng' %}">
-							по английскому языку
+						<a href="{% url 'landings:constructor' '10' 'rus' %}">
+							Русский язык
 						</a>
 					</p>
 					<p>
-						<a href="{% url 'landings:constructor' '11' 'obsh' %}">
-							по обществознанию
+						<a href="{% url 'landings:constructor' '10' 'math' %}">
+							Математика
+						</a>
+					</p>
+					<p>
+						<a href="{% url 'landings:constructor' '10' 'phys' %}">
+							Физика
+						</a>
+					</p>
+					<p>
+						<a href="{% url 'landings:constructor' '10' 'chem' %}">
+							Химия
 						</a>
 					</p>
 				</div>
+				<div class="col-4 text-center">
+					<p class="lead">8 класс</p>
+					<p>
+						<a href="{% url 'landings:constructor' '8' 'rus' %}">
+							Русский язык
+						</a>
+					</p>
+					<p>
+						<a href="{% url 'landings:constructor' '8' 'math' %}">
+							Математика
+						</a>
+					</p>
+					<p>
+						<a href="{% url 'landings:constructor' '8' 'phys' %}">
+							Физика
+						</a>
+					</p>
+					<p>
+						<a href="{% url 'landings:constructor' '8' 'chem' %}">
+							Химия
+						</a>
+					</p>
+				</div>
+				<div class="col-4 text-center">
+					<p class="lead">7 класс</p>
+					<p>
+						<a href="{% url 'landings:constructor' '7' 'urfu' %}">
+							Подготовка к физ-мат классам
+						</a>
+					</p>
+				</div>
+			</div>

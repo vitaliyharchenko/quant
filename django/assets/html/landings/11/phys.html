@@ -8,12 +8,12 @@
 	<header class="promo section-red">
 		<div class="container">
 			{% include "landings/components/header.html" %}
-			<div class="row">
-				<div class="col-10 offset-1 col-md-8 offset-md-2">
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-8">
 					<div class="row main-text">
 						<div class="col-12">
 							<h1 class="text-center">Подготовим ребенка к успешной сдаче ЕГЭ по физике</h1>
-							<p class="lead text-center">Годовая программа по физике разработана для успешной сдачи ЕГЭ с любым уровнем начальной подготовки</p>
+							<p class="lead text-center">Годовая программа по физике разработана для сдачи ЕГЭ на желаемый балл с любым уровнем начальной подготовки</p>
 						</div>
 					</div>
 					{% if action == 'testing' %}
@@ -83,9 +83,7 @@
 
 	<section id="where" class="landing-section">
 		<div class="container">
-			<div class="row">
-				{% include "landings/components/where.html" %}
-			</div>
+			{% include "landings/components/where.html" %}
 		</div>
 	</section>
 
@@ -302,13 +300,7 @@
 
 	<section id="other" class="section-orange landing-section">
 		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<h3 class="mt-0">Вас также могут заинтересовать</h3>
-					<hr>
-				</div>
-				{% include "landings/components/other.html" %}
-			</div>
+			{% include "landings/components/other.html" %}
 		</div>
 	</section>
 {% endblock %}

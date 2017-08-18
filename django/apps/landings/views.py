@@ -6,8 +6,29 @@ from .models import ClientRequest
 
 
 # Create your views here.
-def example(request):
-    return render(request, 'landing.html')
+def main(request):
+
+    if request.method == "POST":
+        form = ClientCallbackRequestForm(request.POST)
+        if form.is_valid():
+            name = request.POST.get('name', '')
+            phone = request.POST.get('phone', '')
+            client_request = ClientRequest.objects.create(
+                name=name,
+                phone=phone,
+                class_num='-',
+                subject='-',
+                client_status=ClientRequest.CALL_ORDERED
+            )
+            client_request.save()
+            messages.success(request, "Спасибо за обращение! Мы перезвоним вам как только появится свободная минута 😊")
+    else:
+        form = ClientCallbackRequestForm()
+
+    return render(request, 'landings/index.html',
+        {
+            'form': form
+        })
 
 
 def landing(request, class_num, subject):

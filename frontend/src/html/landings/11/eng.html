@@ -8,8 +8,8 @@
 	<header class="promo section-red">
 		<div class="container">
 			{% include "landings/components/header.html" %}
-			<div class="row">
-				<div class="col-10 offset-1 col-md-8 offset-md-2">
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-8">
 					<div class="row main-text">
 						<div class="col-12">
 							<h1 class="text-center">Подготовим ребенка к успешной сдаче ЕГЭ по английскому языку</h1>
@@ -30,7 +30,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center">
-					<h2 class="display-5 mt-0">Научись обходить все ловушки из первой части, продвинься в заданиях второй части и приобрети уверенность в прохождении аудирования!</h1>
+					<h2 class="display-5 mt-0">Отшлифуй грамматику и значительно расширь свой словарный запас, избавься от языкового барьера и с успешностью сдай разговорную часть, научись отлично понимать английскую речь и проходи любое аудирование с удовольствием!</h1>
 				</div>
 			</div>
 		</div>
@@ -83,9 +83,7 @@
 
 	<section id="where" class="landing-section">
 		<div class="container">
-			<div class="row">
-				{% include "landings/components/where.html" %}
-			</div>
+			{% include "landings/components/where.html" %}
 		</div>
 	</section>
 
@@ -220,13 +218,7 @@
 
 	<section id="other" class="section-orange landing-section">
 		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<h3 class="mt-0">Вас также могут заинтересовать</h3>
-					<hr>
-				</div>
-				{% include "landings/components/other.html" %}
-			</div>
+			{% include "landings/components/other.html" %}
 		</div>
 	</section>
 {% endblock %}

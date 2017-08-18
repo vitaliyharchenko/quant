@@ -23,17 +23,17 @@ body {
 	}
 
 	// for sticky footer
-  	margin-bottom: 60px; /* Margin bottom by footer height */
+  	margin-bottom: 120px; /* Margin bottom by footer height */
 
   	@media screen and (max-width: 768px) {
-	    margin-bottom: 180px; /* Margin bottom by footer height */
+	    margin-bottom: 300px; /* Margin bottom by footer height */
 	}
 
 	.footer {
 		margin-top: 60px;
 		line-height: 60px; /* Vertically center the text there */
-		background-color: $gray;
-		color: $gray-lightest;
+		background-color: $gray-700;
+		color: $gray-300;
 		
 		position: absolute;
 	  	bottom: 0;
@@ -53,6 +53,8 @@ body {
 		  	}
 		}
 	}
+
+	white-space: normal;
 }
 
 .subject-img {
@@ -74,7 +76,7 @@ header {
 		padding-bottom: 200px;
 
 		.phone {
-			color: $gray-dark;
+			color: $gray-800;
 		}
 
 		h1 {
@@ -125,6 +127,12 @@ header {
 	}
 }
 
+#key{
+	.row {
+		overflow: hidden;
+	}
+}
+
 #who {
 	padding-bottom: 0px;
 
@@ -145,7 +153,7 @@ header {
 
 #recomendation {
 	.divider {
-		border: 2px solid $gray-light;
+		border: 2px solid $gray-300;
 	}
 }
 
