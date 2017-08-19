@@ -7217,7 +7217,7 @@ html {
   min-height: 100%; }
 
 body {
-  margin-bottom: 120px;
+  margin-bottom: 180px;
   /* Margin bottom by footer height */
   white-space: normal; }
   body.with-nav {
@@ -7239,13 +7239,16 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%; }
-    body .footer .footer-about {
+    body .footer .footer-contacts {
+      text-align: left; }
+      @media screen and (max-width: 768px) {
+        body .footer .footer-contacts {
+          text-align: center; } }
+    body .footer .footer-docs {
       text-align: right; }
-    @media screen and (max-width: 768px) {
-      body .footer .social-icons {
-        text-align: center; }
-      body .footer .footer-about {
-        text-align: center; } }
+      @media screen and (max-width: 768px) {
+        body .footer .footer-docs {
+          text-align: center; } }
 
 .subject-img {
   width: 26px; }
