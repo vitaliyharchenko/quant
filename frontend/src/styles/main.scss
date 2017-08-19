@@ -41,21 +41,19 @@ body {
 
 	  	.footer-contacts {
 	  		text-align: left;
+
+	  		@media screen and (max-width: 768px) {
+			    text-align: center;
+			}
 	  	}
 
-	  	.footer-legacy {
-			text-align: right;
+	  	.footer-docs {
+	  		text-align: right;
+
+	  		@media screen and (max-width: 768px) {
+			    text-align: center;
+			}
 	  	}
-
-	  	@media screen and (max-width: 768px) {
-		    .footer-contacts {
-		  		text-align: center;
-		  	}
-
-		  	.footer-legacy {
-				text-align: center;
-		  	}
-		}
 	}
 
 	white-space: normal;
