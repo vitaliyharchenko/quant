@@ -136,10 +136,28 @@
 	"buffers":
 	[
 		{
-			"file": "frontend/src/html/landings/components/teachers/paramonova.html",
+			"file": "django/conf/base/db.py",
 			"settings":
 			{
-				"buffer_size": 1024,
+				"buffer_size": 449,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docker-compose.yml",
+			"settings":
+			{
+				"buffer_size": 663,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "readme.md",
+			"settings":
+			{
+				"buffer_size": 1327,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -226,13 +244,16 @@
 	"expanded_folders":
 	[
 		"/Users/vitaliyharchenko/Dev/quant",
-		"/Users/vitaliyharchenko/Dev/quant/frontend",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers"
+		"/Users/vitaliyharchenko/Dev/quant/django",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base",
+		"/Users/vitaliyharchenko/Dev/quant/docker",
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev"
 	],
 	"file_history":
 	[
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev/Dockerfile.web",
+		"/Users/vitaliyharchenko/Dev/quant/django/uwsgi.ini",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/main.scss",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/views.py",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/urls.py",
@@ -347,7 +368,6 @@
 		"/Users/vitaliyharchenko/Dev/quant/frontend/react/world.jsx",
 		"/Users/vitaliyharchenko/Desktop/abc.json",
 		"/Users/vitaliyharchenko/Dev/quant/django/wsgi.py",
-		"/Users/vitaliyharchenko/Dev/quant/docker/dev/Dockerfile.web",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/django_assets/src/html/styleguide.html",
 		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/__init__.py",
 		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/assets.py",
@@ -359,8 +379,7 @@
 		"/Users/vitaliyharchenko/Dev/quant/django/assets/gulpfile.js",
 		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/bootstrap.scss",
 		"/Users/vitaliyharchenko/Dev/quant/django/assets/src/styles/theme/_buttons.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/example/views.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/templates/styleguide.html"
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/example/views.py"
 	],
 	"find":
 	{
@@ -430,11 +449,245 @@
 			[
 				{
 					"buffer": 0,
-					"file": "frontend/src/html/landings/components/teachers/paramonova.html",
+					"file": "django/conf/base/db.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								254,
+								254
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "docker-compose.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 28.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "readme.md",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1024,
+						"buffer_size": 1327,
 						"regions":
 						{
 						},
@@ -533,14 +786,13 @@
 								"bh_default_content"
 							],
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

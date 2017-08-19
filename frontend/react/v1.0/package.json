@@ -12,6 +12,7 @@
     "react-router-dom": "^4.1.1",
     "react-scripts": "1.0.10",
     "react-spinkit": "^3.0.0",
+    "react-transition-group": "^2.2.0",
     "reactstrap": "^4.8.0"
   },
   "scripts": {
