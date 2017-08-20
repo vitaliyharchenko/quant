@@ -37,7 +37,9 @@ def landing(request, class_num, subject):
     TESTING_URLS = {
         '11': {
             'eng': 'https://docs.google.com/forms/d/1qJaa2t14-MjYBCchPOp3hg4_gICflE4F_s_asmTc0BI/edit',
-            'math': 'https://docs.google.com/forms/d/e/1FAIpQLSfDO7rk_VRqiPGqLkvItyYF5xwiGT8CQ35zpzl7MYbeJQYufA/viewform?usp=sf_link'
+            'math': 'https://docs.google.com/forms/d/e/1FAIpQLSfDO7rk_VRqiPGqLkvItyYF5xwiGT8CQ35zpzl7MYbeJQYufA/viewform?usp=sf_link',
+            'obsh': 'https://docs.google.com/forms/d/e/1FAIpQLSduoafeuks656_ULfgwgN79gUUdzG9rw-oF5sz8v0_o9GLXhg/viewform?usp=sf_link',
+            'phys': 'https://docs.google.com/forms/d/e/1FAIpQLScorWscrpFylL-fdYleieXTxXVT7W0FFe2l5AF7KHKTQ6n-Ig/viewform?usp=sf_link'
         }
     }
 
