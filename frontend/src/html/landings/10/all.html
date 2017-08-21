@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 
-{% block title %}Подготовка к ЕГЭ 2017 по обществознанию в Екатеринбурге{% endblock %}
+{% block title %}Подготовка к ЕГЭ 2017 в Екатеринбурге{% endblock %}
 
 {% block body %}
 	<header class="promo section-red">
@@ -12,15 +12,11 @@
 				<div class="col-10 col-md-8">
 					<div class="row main-text">
 						<div class="col-12">
-							<h1 class="text-center">Подготовим ребенка к успешной сдаче ЕГЭ по обществознанию</h1>
-							<p class="lead text-center">Годовая программа по химии разработана для сдачи ЕГЭ на желаемый балл с любым уровнем начальной подготовки</p>
+							<h1 class="text-center">Усилим базовые знания вашего ребенка в 10 классе</h1>
+							<p class="lead text-center">Программы ранней подготовки к ЕГЭ для 10-классников, претендующих на высокий балл в следующем учебном году</p>
 						</div>
 					</div>
-					{% if action == 'testing' %}
-						{% include "landings/components/actions/testing.html" %}
-					{% else %}
-						{% include "landings/components/actions/callback.html" %}
-					{% endif %}
+					{% include "landings/components/actions/callback.html" %}
 				</div>
 			</div>
 		</div>
@@ -30,7 +26,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center">
-					<h2 class="display-5 mt-0">Научись решать все задачи из первой части, продвинься в заданиях второй части и приобрети уверенность в своих силах!</h1>
+					<h2 class="mt-0">Выстроим в голове логичную картину предмета, избавим от недопонимания и дадим толчок к дальнейшему развитию!</h1>
 				</div>
 			</div>
 		</div>
@@ -42,14 +38,28 @@
 				<div class="carousel-item active">
 					<div class="container">
 						<div class="row who-row">
-							{% include "landings/components/teachers/novoselova.html" %}
+							{% include "landings/components/teachers/paramonova.html" %}
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="container">
 						<div class="row who-row">
-							{% include "landings/components/teachers/unknown.html" %}
+							{% include "landings/components/teachers/harchenko.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/pirozhok.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/lesogorova.html" %}
 						</div>
 					</div>
 				</div>
@@ -138,17 +148,24 @@
 		</script>
 	</section>
 
-	<section id="program" class="landing-section">
+	<section id="recomendation" class="landing-section">
 		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<h2 class="mt-0 text-center">Программа курса</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12">
-					<h3>
-						В разработке
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-8 col-lg-6 text-center">
+					<h3 class="display-5 mt-0">
+						Очные занятия
+					</h3>
+					<h3 class="display-5 mt-0">+</h3>
+					<h3 class="display-5 mt-0">
+						Поддержка онлайн
+					</h3>
+					<h3 class="display-5 mt-0">+</h3>
+					<h3 class="display-5 mt-0">
+						Самостоятельная работа
+					</h3>
+					<hr class="divider">
+					<h3 class="display-5 mt-0">
+						Желаемый результат
 					</h3>
 				</div>
 			</div>
