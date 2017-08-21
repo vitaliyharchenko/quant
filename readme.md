@@ -39,3 +39,9 @@ quant
 1. `docker-compose run web dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 > django/fixtures.json`
 2. `docker-compose run web flush` - удалить все данные из БД
 3. `docker-compose run web loaddata fixtures.json`
+
+Deployment
+
+1. Узнать IP сервера (например 188.127.237.245)
+2. Узнать пароль для доступа к серверу по SSH (root - 8NpVJcrNl84X)
+3. Подключаемся и накатываем docker

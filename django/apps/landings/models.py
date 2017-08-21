@@ -34,7 +34,7 @@ class ClientRequest(models.Model):
         (GONE_OUT, 'Ушел от нас'),
     )
 
-    name = models.CharField(verbose_name=u'Имя клиента', max_length=255)
+    name = models.CharField(verbose_name=u'Имя клиента', max_length=255, null=True, blank=True)
     email = models.CharField(verbose_name=u'Email', max_length=32, blank=True, default=None, null=True)
     phone = models.CharField(verbose_name=u'Телефон', max_length=32, blank=True, default=None, null=True)
     subject = models.CharField(verbose_name=u'Предмет', max_length=255)
