@@ -47,7 +47,8 @@ var libs = {
         	fonts: node_modules + '/font-awesome/fonts/**'
     	},
         jquery: node_modules + '/jquery/dist/jquery.js',
-        tether: node_modules + '/tether/dist/js/tether.js'
+        tether: node_modules + '/tether/dist/js/tether.js',
+        popper: node_modules + '/popper.js/dist/umd/popper.min.js'
     };
 
 var styles = {
@@ -158,6 +159,7 @@ gulp.task('libs', function() {
     	gulp.src([ // Берем все необходимые библиотеки
         	libs.jquery, // Берем jQuery
         	libs.tether, // Берем Tether
+        	libs.popper, // Берем Tether
         	libs.bootstrap.js // Берем Bootstrap
         ]),
         concat('all.js'), // Объединяем все файлы в один в нужном порядке
@@ -263,7 +265,7 @@ gulp.task('docker', function(cb) {
 /* MAIN */
 /* ==== */
 
-gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js', 'webpack', 'react'));
+gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js'));
 
 gulp.task('dev',
 	gulp.series('build', 
