@@ -1,7 +1,7 @@
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '5eqd$+3bmy5)glcipehy0debacj^2_(o2tg#29_8k=so%hr0vt'
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', 'quant.zone']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', 'quant.zone', '188.127.237.245']
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
