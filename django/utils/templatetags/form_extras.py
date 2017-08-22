@@ -8,7 +8,7 @@ register = template.Library()
 def text_input(field, *args, **kwargs):
 
     try:
-        input_type = kwargs['type']
+        input_type = kwargs['input_type']
     except KeyError:
         input_type = 'text'
 
@@ -22,11 +22,17 @@ def text_input(field, *args, **kwargs):
     except KeyError:
         no_label = None
 
+    try:
+        extra_class = kwargs['extra_class']
+    except KeyError:
+        extra_class = None
+
     return {
         'field': field,
         'placeholder': placeholder,
         'input_type': input_type,
-        'no_label': no_label
+        'no_label': no_label,
+        'extra_class': extra_class
     }
 
 

@@ -2,19 +2,25 @@
 
 {% load staticfiles %}
 
+{% block title %}Подготовка к ЕГЭ 2017 по математике в Екатеринбурге{% endblock %}
+
 {% block body %}
 	<header class="promo section-red">
 		<div class="container">
 			{% include "landings/components/header.html" %}
-			<div class="row">
-				<div class="col-10 offset-1 col-md-8 offset-md-2">
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-8">
 					<div class="row main-text">
 						<div class="col-12">
-							<h1 class="text-center">Подготовим ребенка к успешной сдаче ЕГЭ</h1>
-							<p class="lead text-center">Годовая программа по русскому языку разработана для успешной сдачи ОГЭ с любым уровнем начальной подготовки</p>
+							<h1 class="text-center">Подготовим ребенка к успешной сдаче ЕГЭ по математике</h1>
+							<p class="lead text-center">Годовая программа по математике разработана для сдачи ЕГЭ на желаемый балл с любым уровнем начальной подготовки</p>
 						</div>
 					</div>
-					{% include "landings/components/actions/callback.html" %}
+					{% if action == 'testing' %}
+						{% include "landings/components/actions/testing.html" %}
+					{% else %}
+						{% include "landings/components/actions/callback.html" %}
+					{% endif %}
 				</div>
 			</div>
 		</div>
@@ -77,9 +83,7 @@
 
 	<section id="where" class="landing-section">
 		<div class="container">
-			<div class="row">
-				{% include "landings/components/where.html" %}
-			</div>
+			{% include "landings/components/where.html" %}
 		</div>
 	</section>
 
@@ -89,32 +93,27 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active">
 					<div class="container">
-						{% include "landings/components/mentions/orechkin.html" %}
+						{% include "landings/components/mentions/math_kulashova.html" %}
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="container">
-						{% include "landings/components/mentions/vikulova.html" %}
+						{% include "landings/components/mentions/math_samohvalov.html" %}
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="container">
-						{% include "landings/components/mentions/musallamova.html" %}
+						{% include "landings/components/mentions/math_nasonova.html" %}
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="container">
-						{% include "landings/components/mentions/shaevich.html" %}
+						{% include "landings/components/mentions/math_sherbinin.html" %}
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="container">
-						{% include "landings/components/mentions/sherbakova.html" %}
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="container">
-						{% include "landings/components/mentions/kameneva.html" %}
+						{% include "landings/components/mentions/math_verhozin.html" %}
 					</div>
 				</div>
 			</div>
@@ -224,13 +223,7 @@
 
 	<section id="other" class="section-orange landing-section">
 		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<h3 class="mt-0">Вас также могут заинтересовать</h3>
-					<hr>
-				</div>
-				{% include "landings/components/other.html" %}
-			</div>
+			{% include "landings/components/other.html" %}
 		</div>
 	</section>
 {% endblock %}

@@ -18,12 +18,12 @@ services:
       context: .
       dockerfile: docker/dev/Dockerfile.web
     entrypoint: python3 manage.py
-    command: runserver 0.0.0.0:8000
+    command: runserver 0.0.0.0:80
     volumes:
       # копируем весь django код
       - ./django:/code
     ports:
-      - "8000:8000"
+      - "80:80"
     depends_on:
       - db
     # links:

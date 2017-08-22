@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic import RedirectView
+
 from apps.react import views as react_views
 from rest_framework.authtoken import views as authtoken_views
 
@@ -27,6 +29,7 @@ urlpatterns = [
     url(r'^landings/', include('apps.landings.urls', namespace='landings')),
     url(r'^api/', include('apps.api.urls', namespace='api')),
     url(r'^markdown/', include( 'django_markdown.urls')),
+    url(r'^$', RedirectView.as_view(pattern_name='landings:main', permanent=False), name='index'),
 ]
 
 # django-debug-toolbar
@@ -35,11 +38,6 @@ if settings.DEBUG:
     urlpatterns += [
         url(r'^__debug__/', include(debug_toolbar.urls)),
     ]
-
-# Only at the end, resolve flatpages
-urlpatterns += [
-    url(r'^pages/', include('django.contrib.flatpages.urls')),
-]
 
 # Auth with REST
 urlpatterns += [

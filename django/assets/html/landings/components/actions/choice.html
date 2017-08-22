@@ -1,0 +1,46 @@
+					{% load staticfiles %}
+
+					<div class="row">
+						<div class="col-12 text-center">
+							<h4>Выберите интересующий предмет:</h4>
+							<br>
+						</div>
+						<div class="col-12 text-center">
+							<p class="lead">
+								<img src="{% static '/images/icons/rus.svg' %}" alt="..." class="subject-img">
+								<a href="{% url 'landings:constructor' '11' 'rus' %}">
+									Русский язык
+								</a>
+							</p>
+							<p class="lead">
+								<img src="{% static '/images/icons/math.svg' %}" alt="..." class="subject-img">
+								<a href="{% url 'landings:constructor' '11' 'math' %}">
+									Математика
+								</a>
+							</p>
+							<p class="lead">
+								<img src="{% static '/images/icons/obsh.svg' %}" alt="..." class="subject-img">
+								<a href="{% url 'landings:constructor' '11' 'obsh' %}">
+									Обществознание
+								</a>
+							</p>
+							<p class="lead">
+								<img src="{% static '/images/icons/phys.svg' %}" alt="..." class="subject-img">
+								<a href="{% url 'landings:constructor' '11' 'phys' %}">
+									Физика
+								</a>
+							</p>
+							<p class="lead">
+								<img src="{% static '/images/icons/chem.svg' %}" alt="..." class="subject-img">
+								<a href="{% url 'landings:constructor' '11' 'chem' %}">
+									Химия
+								</a>
+							</p>
+							<p class="lead">
+								<img src="{% static '/images/icons/eng.svg' %}" alt="..." class="subject-img">
+								<a href="{% url 'landings:constructor' '11' 'eng' %}">
+									English
+								</a>
+							</p>
+						</div>
+					</div>
