@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"tex",
+				"text-align"
+			],
+			[
+				"text",
+				"text-white"
+			],
+			[
+				"test",
+				"testing"
+			],
+			[
+				"tes",
+				"testing_urls"
+			],
+			[
+				"C",
+				"ClientRequestAdmin"
+			],
+			[
+				"pho",
+				"phone_status"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"class",
+				"class_num"
+			],
+			[
 				"clas",
 				"class_num"
 			],
@@ -14,10 +46,6 @@
 			[
 				"pad",
 				"padding-top"
-			],
-			[
-				"text",
-				"text-align"
 			],
 			[
 				"lan",
@@ -136,46 +164,19 @@
 	"buffers":
 	[
 		{
-			"file": "docker-compose.yml",
+			"file": "frontend/src/html/landings/9/math.html",
 			"settings":
 			{
-				"buffer_size": 657,
+				"buffer_size": 7660,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "django/conf/base/cors.py",
+			"file": "frontend/src/html/landings/8/math.html",
 			"settings":
 			{
-				"buffer_size": 87,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/gulpfile.js",
-			"settings":
-			{
-				"buffer_size": 8428,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/src/html/components/footer.html",
-			"settings":
-			{
-				"buffer_size": 1341,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/src/html/landings/index.html",
-			"settings":
-			{
-				"buffer_size": 4752,
+				"buffer_size": 7864,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -188,10 +189,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 87.0,
-		"last_filter": "json",
+		"height": 147.0,
+		"last_filter": "jso",
 		"selected_items":
 		[
+			[
+				"jso",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"json",
 				"JSON Reindent: reindent file or selection"
@@ -199,10 +208,6 @@
 			[
 				"inst",
 				"Package Control: Install Package"
-			],
-			[
-				"jso",
-				"JSON Reindent: reindent file or selection"
 			],
 			[
 				"install",
@@ -219,10 +224,6 @@
 			[
 				"packa",
 				"Package Control: List Packages"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"remove",
@@ -262,41 +263,121 @@
 	"expanded_folders":
 	[
 		"/Users/vitaliyharchenko/Dev/quant",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/courses",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/courses/migrations",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings",
+		"/Users/vitaliyharchenko/Dev/quant/django",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/groups/migrations",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/tags",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base",
+		"/Users/vitaliyharchenko/Dev/quant/django/utils/templatetags",
+		"/Users/vitaliyharchenko/Dev/quant/django/utils/templatetags/__pycache__",
 		"/Users/vitaliyharchenko/Dev/quant/frontend",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.0/node_modules",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.0/node_modules/reactstrap/dist",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.0",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.0/src",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.0/src/components",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.0/src/containers",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.0/src/reducers",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.1",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/components",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles"
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/8",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/dist/static",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/store"
 	],
 	"file_history":
 	[
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/main.scss",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/eng_krylov.html",
-		"/Users/vitaliyharchenko/Dev/quant/docker/dev/sites-enabled/quant.conf",
-		"/Users/vitaliyharchenko/Dev/quant/docker/dev/Dockerfile.nginx",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/db.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/settings.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/10/math.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/store/api.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/store/store.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/main.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/_base.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/apps.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/urls.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/fixtures.json",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/middleware.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/App.vue",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/UserInput.vue",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/package.json",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/Hello.vue",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/Todo.vue",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/TodoList.vue",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/gulpfile.js",
-		"/Users/vitaliyharchenko/Dev/quant/docker-compose.yml",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/package.json",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/vue.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/debug_toolbar.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/security.py",
 		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/cors.py",
-		"/Users/vitaliyharchenko/Dev/quant/docker/dev/sites-enabled/django.conf",
-		"/Users/vitaliyharchenko/Dev/quant/.gitignore",
-		"/Users/vitaliyharchenko/Dev/quant/docker/dev/Dockerfile.web",
-		"/Users/vitaliyharchenko/Dev/quant/django/uwsgi.ini",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/10/phys.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/cache.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/models.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/env.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/header.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/main.scss",
+		"/Users/vitaliyharchenko/Dev/quant/readme.md",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/index.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/components/footer.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/what.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/safronov.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/rus.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/phys.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/obsh.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/all.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/math_samohvalov.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/math_sherbinin.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/math_verhozin.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/math_kulashova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/math_nasonova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/chem.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/eng.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/math.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/other.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/_var.scss",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/where.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/komleva.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/harchenko.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/lesogorova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/novoselova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/paramonova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/pirozhok.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/unknown.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/_typography.scss",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/_buttons.scss",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/index.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/bootstrap.scss",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/views.py",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/urls.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/all.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/actions/choice.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/actions/testing.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/actions/callback.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/eng_krylov.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/eng_busygina.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/eng_shadilov.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/eng_ovshinnikova.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/forms.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/admin.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/utils/templatetags/form_extras.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/components/messages.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/forms/input_snippet.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/apps.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/email/_base.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/email/testing_action.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/mailing.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/eng.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/chem.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/guit.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/math.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/obsh.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/phys.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/rus.svg",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/groups/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/courses/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.1/src/reducers/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/header.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/рьи",
 		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/novoselova.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/where.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/what.html",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/musallamova.html",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/shaevich.html",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/vikulova.html",
@@ -305,11 +386,8 @@
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/kameneva.html",
 		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/pirozhok.html",
 		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/harchenko.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/paramonova.html",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landing.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/_buttons.scss",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/views.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/components/footer.html",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/urls.py",
 		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landing.html",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/group.svg",
@@ -318,14 +396,9 @@
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/read.svg",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/theme.scss",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/_icons.scss",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/apps.py",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/apps.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/urls.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/fixtures.json",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/admin.py",
 		"/Users/vitaliyharchenko/Dev/quant/django/requirements.txt",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/middleware.py",
 		"/Users/vitaliyharchenko/Dev/quant/django/readme.md",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.4/src/index.css",
 		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task/index.css",
@@ -334,6 +407,7 @@
 		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/JSON Reindent/JSONReindent.sublime-settings",
 		"/Users/vitaliyharchenko/Dev/quant/api.json",
 		"/Users/vitaliyharchenko/Dev/quant/json.json",
+		"/Users/vitaliyharchenko/Dev/quant/docker-compose.yml",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/lessons/.gitignore",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/results/.gitignore",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/tags/.gitignore",
@@ -341,71 +415,7 @@
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/.gitignore",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/nodes/.gitignore",
 		"/Users/vitaliyharchenko/Dev/quant/django/apps/.gitignore",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/.gitignore",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/react/urls.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/models.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/serializers.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/task.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/webpack.config.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.4/src/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Routes.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.prod.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.dev.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/store/configureStore.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/react.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/AppContainer.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/readme.md",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/package.json",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/index.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/public/index.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/store/configureStore.dev.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/views/IndexView.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/actions/index.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/routes.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.dev.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/DevTools.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/components/BlockList.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/components/App.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/readme.md",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/reducers/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/blocks/components/Block.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block_1/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/components/BlockList.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/reducers/blocks.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/reducers/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/types/blocks.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/types/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/counter.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/index.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/components/App.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block/components/Block.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/block.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/wsgi.py",
-		"/Users/vitaliyharchenko/Dev/quant/readme.md",
-		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/django_assets/src/html/react.html",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/template.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/components/hello.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/main.js",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/readme.md",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/index.html",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/hello.jsx",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/react/world.jsx",
-		"/Users/vitaliyharchenko/Desktop/abc.json",
-		"/Users/vitaliyharchenko/Dev/quant/django/wsgi.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/django_assets/src/html/styleguide.html",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/__init__.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/assets.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/local/flatpages.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/local_tpl/_flatpages.py",
-		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/flatpages.py",
-		"/Users/vitaliyharchenko/Dev/quant/frontend/django_assets/src/html/index.html"
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/.gitignore"
 	],
 	"find":
 	{
@@ -416,6 +426,9 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/vitaliyharchenko/Dev/quant/django",
+			"/Users/vitaliyharchenko/Dev/quant",
+			"/Users/vitaliyharchenko/Dev/quant/frontend/src/html",
 			"/Users/vitaliyharchenko/Dev/quant/frontend/react/block"
 		]
 	},
@@ -424,6 +437,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sites",
+			"PRODUCTION ==",
+			"PRODUCTION",
+			"production",
+			"PRODUCTION",
+			"d-lg-block",
+			"d-md-block",
+			"block",
+			"hidden",
+			"display",
 			">\n",
 			"state.blocks",
 			"console.log",
@@ -460,6 +483,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"d-lg-flex",
+			"d-md-flex"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -470,623 +495,62 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "docker-compose.yml",
+					"file": "frontend/src/html/landings/9/math.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 657,
+						"buffer_size": 7660,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								475,
-								475
+								7486,
+								4376
 							]
 						],
 						"settings":
 						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "django/conf/base/cors.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 87,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								83,
-								83
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										83,
-										84
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										72,
-										73
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "frontend/gulpfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8428,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6966,
-								6966
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2712.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "frontend/src/html/components/footer.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1341,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1140,
-								1140
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1136,
-										1139
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/tag.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										942,
-										945
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 322.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "frontend/src/html/landings/index.html",
+					"buffer": 1,
+					"file": "frontend/src/html/landings/8/math.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4752,
+						"buffer_size": 7864,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4690,
-								4690
+								6767,
+								6767
 							]
 						],
 						"settings":
 						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										4715,
-										4716
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										4670,
-										4671
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 882.0,
+						"translation.y": 2440.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1097,7 +561,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -1126,10 +590,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.CSS Extended Completions":
-	{
-		"height": 0.0
-	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -1176,7 +636,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 295.0,
+	"side_bar_width": 212.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
