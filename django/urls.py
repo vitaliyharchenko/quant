@@ -38,9 +38,6 @@ if settings.DEBUG:
     urlpatterns += [
         url(r'^__debug__/', include(debug_toolbar.urls)),
     ]
-    urlpatterns += [
-        url(r'^pages/', include('django.contrib.flatpages.urls')),
-    ]
 
 # Auth with REST
 urlpatterns += [
