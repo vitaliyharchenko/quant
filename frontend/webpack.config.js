@@ -3,12 +3,11 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        'task1': './react/task/index.js',
-        'v1': './react/v1.0/src/index.js',
+        'vue': './vue/src/auth/index.js',
     },
     output: {
         filename: '[name].js',
-        path: __dirname + '/src/react/'
+        path: __dirname + './vue/src/'
     },
     module: {
         loaders: [
@@ -17,12 +16,17 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 query: {
-                    presets: ['es2015', 'react', 'stage-1']
+                    presets: ['es2015', 'react', 'stage-1'],
+                    plugins: ['transform-runtime']
                 }
             },
             {   
                 test: /\.css$/,
                 loader: "style-loader!css-loader?importLoaders=1"
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue'
             }
         ]
     },
