@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Api from '@/components/Api'
+import Auth from '@/components/Auth'
+import Task from '@/components/Task'
 
 Vue.use(Router)
 
@@ -16,6 +18,17 @@ export default new Router({
       path: '/api',
       name: 'Api',
       component: Api
+    },
+    {
+      path: '/auth',
+      name: 'Auth',
+      component: Auth
+    },
+    {
+      path: '/task',
+      name: 'Task',
+      component: Task
     }
+
   ]
 })

@@ -1,10 +1,10 @@
 <template>
     <div class="col-sm-6 col-sm-offset-3">
-      <h1>Get a API call from Yesno!</h1>
-      <button class="btn btn-primary" v-on:click="getQuote()">
-        Get a Quote
+      <h1>Get a Auth from local API!</h1>
+      <button class="btn btn-primary" v-on:click="getTask()">
+        Get a Token
       </button>
-      <h2>{{ quote }}</h2>      
+      <h2>{{ response }}</h2>      
     </div>
   </template>
 
@@ -14,15 +14,19 @@
   export default {
     data: function () {
       return {
-        quote: 'quote'
+        response: 'response'
       }
     },
     methods: {
-      getQuote: function () {
+      getTask: function () {
         var vm = this
-        axios.get('https://yesno.wtf/api')
+
+        axios.post('http://localhost/api-token-auth/', {
+          username: 'root',
+          password: 'quant123456'
+        })
           .then(function (response) {
-            vm.quote = response.data.answer.toString()
+            vm.response = response.data.token
           })
           .catch(function (error) {
             console.log(error)

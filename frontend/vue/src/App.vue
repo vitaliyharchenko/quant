@@ -6,7 +6,9 @@
       <!-- входной параметр `to` определяет путь для перехода -->
       <!-- `<router-link>` по умолчанию преобразуется в тег `<a>` -->
       <router-link to="/">Index</router-link>
-      <router-link to="/api">Api call</router-link>
+      <router-link to="/api">Yes/no</router-link>
+      <router-link to="/auth">Auth</router-link>
+      <router-link to="/task">Task</router-link>
     </p>
     <router-view></router-view>
   </div>
