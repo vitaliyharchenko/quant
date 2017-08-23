@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 import Api from '@/components/Api'
 import Auth from '@/components/Auth'
 import Task from '@/components/Task'
+import Login from '@/components/Login'
 
 Vue.use(Router)
 
@@ -28,7 +29,11 @@ export default new Router({
       path: '/task',
       name: 'Task',
       component: Task
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
-
   ]
 })

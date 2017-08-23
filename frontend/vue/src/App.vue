@@ -7,7 +7,8 @@
       <!-- `<router-link>` по умолчанию преобразуется в тег `<a>` -->
       <router-link to="/">Index</router-link>
       <router-link to="/api">Yes/no</router-link>
-      <router-link to="/auth">Auth</router-link>
+      <router-link to="/task">Get Token</router-link>
+      <router-link to="/login">Login</router-link>
       <router-link to="/task">Task</router-link>
     </p>
     <router-view></router-view>
