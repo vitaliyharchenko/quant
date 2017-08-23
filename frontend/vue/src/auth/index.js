@@ -1,11 +1,14 @@
 // src/auth/index.js
 
-import router from './router'
+import router from '../router'
+// import axios from 'axios'
+import Vue from 'vue'
 import axios from 'axios'
 
 // URL and endpoint constants
-const API_URL = 'http://localhost/'
-const LOGIN_URL = API_URL + 'api-token-auth/'
+const HOST = 'http://localhost/'
+// const API_URL = HOST + 'api/'
+const LOGIN_URL = HOST + 'api-token-auth/'
 
 export default {
 
@@ -15,16 +18,18 @@ export default {
   },
 
   // Send a request to the login URL and save the returned JWT
-  login (context, creds, redirect) {
+  login (context, username, password, redirect) {
+    var self = this
+
     axios.post(LOGIN_URL, {
-      username: creds.username,
-      password: creds.password
+      username: username,
+      password: password
     })
       .then(function (response) {
-        console.log(response)
+        console.log(this)
         localStorage.setItem('token', response.data.token)
 
-        this.user.authenticated = true
+        self.user.authenticated = true
 
         // Redirect to a specified route
         if (redirect) {
@@ -34,20 +39,38 @@ export default {
       .catch(function (error) {
         console.log(error)
       })
+
+    // context.$http.post(LOGIN_URL, {
+    //   username: username,
+    //   password: password
+    // }).then(response => {
+    //   localStorage.setItem('token', response.data.token)
+    //   this.user.authenticated = true
+    //   // Redirect to a specified route
+    //   if (redirect) {
+    //     router.push(redirect)
+    //   }
+    // }, response => {
+    //   console.log(response)
+    // })
   },
 
   // To log out, we just need to remove the token
   logout () {
     localStorage.removeItem('token')
     this.user.authenticated = false
+    delete Vue.http.headers.common['Authorization']
+    router.push('/login')
   },
 
   checkAuth () {
     var jwt = localStorage.getItem('token')
     if (jwt) {
       this.user.authenticated = true
+      console.log('Is auhenticated')
     } else {
       this.user.authenticated = false
+      console.log('Not auhenticated')
     }
   },
 

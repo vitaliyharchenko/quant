@@ -1,6 +1,6 @@
 <template>
     <div class="col-sm-6 col-sm-offset-3">
-      <h1>Get a Auth from local API!</h1>
+      <h1>Get a Token from local API!</h1>
       <button class="btn btn-primary" v-on:click="getTask()">
         Get a Token
       </button>

@@ -23,7 +23,7 @@
 
         axios.get('http://localhost/api/tasks/', {
           headers: {
-            'Authorization': 'Token 21d5af1eea22b40cb908ebe433cb09faacd1ac5a',
+            'Authorization': 'Token 0d48cb09b991eebf8386b8714dbb851ca399aa9e',
             'Content-Type': 'application/json'
           }
         })

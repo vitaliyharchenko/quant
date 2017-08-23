@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import Api from '@/components/Api'
-import Auth from '@/components/Auth'
+import Yesno from '@/components/Yesno'
+import Token from '@/components/Token'
 import Task from '@/components/Task'
 import Login from '@/components/Login'
 
@@ -16,14 +16,14 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/api',
-      name: 'Api',
-      component: Api
+      path: '/yesno',
+      name: 'Yesno',
+      component: Yesno
     },
     {
-      path: '/auth',
-      name: 'Auth',
-      component: Auth
+      path: '/token',
+      name: 'Token',
+      component: Token
     },
     {
       path: '/task',

@@ -2,9 +2,9 @@
     <div class="col-sm-6 col-sm-offset-3">
       <h1>Get a API call from Yesno!</h1>
       <button class="btn btn-primary" v-on:click="getQuote()">
-        Get a Quote
+        Get a Answer
       </button>
-      <h2>{{ quote }}</h2>      
+      <h2>{{ answer }}</h2>      
     </div>
   </template>
 
@@ -14,7 +14,7 @@
   export default {
     data: function () {
       return {
-        quote: 'quote'
+        answer: 'answer'
       }
     },
     methods: {
@@ -22,7 +22,7 @@
         var vm = this
         axios.get('https://yesno.wtf/api')
           .then(function (response) {
-            vm.quote = response.data.answer.toString()
+            vm.answer = response.data.answer.toString()
           })
           .catch(function (error) {
             console.log(error)
