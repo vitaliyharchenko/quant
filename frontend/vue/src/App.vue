@@ -1,21 +1,23 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <user-input></user-input>
-    <todo-list></todo-list>
+    <p>
+      <!-- используйте компонент router-link для создания ссылок -->
+      <!-- входной параметр `to` определяет путь для перехода -->
+      <!-- `<router-link>` по умолчанию преобразуется в тег `<a>` -->
+      <router-link to="/">Index</router-link>
+      <router-link to="/api">Yes/no</router-link>
+      <router-link to="/task">Get Token</router-link>
+      <router-link to="/login">Login</router-link>
+      <router-link to="/task">Task</router-link>
+    </p>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TodoList from './components/TodoList.vue'
-import UserInput from './components/UserInput.vue'
-
 export default {
-  name: 'app',
-  components: {
-    UserInput,
-    TodoList
-  }
+  name: 'app'
 }
 </script>
 

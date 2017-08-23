@@ -4,4 +4,4 @@ RUN mkdir -p /code
 WORKDIR /code
 ADD django/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-ADD . /code/
+ADD ./django/ /code/django/
