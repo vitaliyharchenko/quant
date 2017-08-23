@@ -2,7 +2,6 @@ from django.db import models
 from apps.lessons.models import Lesson
 from apps.tags.models import SubjectTag
 
-
 class Course(models.Model):
     title = models.CharField('Название курса', max_length=300)
     subject_tag = models.ForeignKey(SubjectTag)
@@ -21,7 +20,8 @@ class Course(models.Model):
     def course_lesson_relations(self):
         return CourseLessonRelation.objects.filter(lesson=self)
 
-class CourseLessonRelaion(models.Model):
+
+class CourseLessonRelation(models.Model):
     course = models.ForeignKey(Course)
     lesson = models.ForeignKey(Lesson)
     order = models.IntegerField('Порядковый номер урока в курсе', default=0)
@@ -32,3 +32,5 @@ class CourseLessonRelaion(models.Model):
 
     def __str__(self):
         return "{} in {}".format(self.lesson, self.course)
+
+
