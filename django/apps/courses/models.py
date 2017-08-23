@@ -18,7 +18,11 @@ class Course(models.Model):
 
     @property
     def course_lesson_relations(self):
-        return CourseLessonRelation.objects.filter(lesson=self)
+        return CourseLessonRelation.objects.filter(course=self)
+
+    @property
+    def lessons_of_course(self):
+        return [rel.lesson for rel in self.course_lesson_relations]
 
 
 class CourseLessonRelation(models.Model):

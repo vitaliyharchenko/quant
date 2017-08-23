@@ -25,6 +25,10 @@ class StudentGroup(models.Model):
     def course_group_relations(self):
         return CourseGroupRelation.objects.filter(group=self)
 
+    @property
+    def courses_of_group(self):
+        return [rel.course for rel in self.course_group_relations]
+
 
 
 class StudentGroupRelation(models.Model):

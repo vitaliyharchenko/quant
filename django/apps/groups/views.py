@@ -7,6 +7,8 @@ from apps.lessons.models import Lesson
 from apps.tasks.models import Task
 from apps.results.models import TaskResult
 from apps.results.serializers import TaskResultSerializer
+from apps.courses.serializers import CourseSerializer
+from rest_framework import generics
 
 class GroupDetailView(AuthMixin, APIView):
     def get(self, request, pk, format=None):
@@ -16,6 +18,12 @@ class GroupDetailView(AuthMixin, APIView):
             return JsonResponse({'Error message': str(e)}, status=404)
         serializer = StudentGroupSerializer(group)
         return JsonResponse(serializer.data, status=200)
+
+class GroupCoursesViewSet(AuthMixin, generics.ListAPIView):
+    def list(self, request, group, format=None):
+        queryset = StudentGroup.objects.get(pk=group).courses_of_group
+        serializer = CourseSerializer(queryset, many=True)
+        return JsonResponse(serializer.data, safe=False, status=200)
 
 class GroupLessonResultView(AuthMixin, APIView):
     def get(self, request, group, lesson, format=None):
