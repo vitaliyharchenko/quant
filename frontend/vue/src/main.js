@@ -2,24 +2,22 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Router from 'vue-router'
-import VueResource from 'vue-resource'
-import App from './App'
+
+import App from './components/App'
 import router from './router'
 import auth from './auth'
+import store from './store'
 
 Vue.config.productionTip = false
-Vue.use(VueResource)
 Vue.use(Router)
 
 /* eslint-disable no-new */
-var vm = new Vue({
+new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
 
-console.log(vm)
-
 auth.checkAuth()
-console.log(auth.user.authenticated)
