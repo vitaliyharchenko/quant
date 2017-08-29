@@ -1,0 +1,524 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"clas",
+				"class_num"
+			],
+			[
+				"hidden",
+				"hidden-md-up"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"lan",
+				"landing-section"
+			],
+			[
+				"ini",
+				"getInitialState\t Life Cycle"
+			],
+			[
+				"re",
+				"relationships"
+			],
+			[
+				"rea",
+				"react_views"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"te",
+				"text-white\t all.css"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"displa",
+				"display-1\t all.css"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"view",
+				"views\timport"
+			],
+			[
+				"text-cente",
+				"text-md-center\t all.css"
+			],
+			[
+				"cu",
+				"cursor"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"ima",
+				"images"
+			],
+			[
+				"ou",
+				"outvendors"
+			],
+			[
+				"s",
+				"scss"
+			],
+			[
+				"f",
+				"fonts"
+			],
+			[
+				"fon",
+				"fontawesome"
+			],
+			[
+				"no",
+				"node_modules"
+			],
+			[
+				"b",
+				"bootstrap"
+			],
+			[
+				"jqu",
+				"jquery"
+			],
+			[
+				"card",
+				"card-block\t all.css"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"last_filter": "json",
+		"selected_items":
+		[
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"jso",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Install Package Control"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"Packa",
+				"Install Package Control"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"cd",
+			"ls",
+			"cd",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/vitaliyharchenko/Dev/quant",
+		"/Users/vitaliyharchenko/Dev/quant/django",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/tasks",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/local",
+		"/Users/vitaliyharchenko/Dev/quant/docker",
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev",
+		"/Users/vitaliyharchenko/Dev/quant/docs",
+		"/Users/vitaliyharchenko/Dev/quant/frontend",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v1.0/src",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/router"
+	],
+	"file_history":
+	[
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/7/urfu.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/8/rus.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/8/phys.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/8/math.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/8/chem.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/8/all.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/9/rus.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/9/phys.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/9/math.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/9/chem.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/9/all.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/10/rus.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/10/phys.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/10/math.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/10/chem.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/10/all.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/rus.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/obsh.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/math.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/eng.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/chem.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/phys.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/11/all.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/index.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/Auth.vue",
+		"/Users/vitaliyharchenko/Dev/quant/django/readme.md",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/auth.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/router/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/Task.vue",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/Login.vue",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/App.vue",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/Api.vue",
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev/Dockerfile.web",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/cors.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/debug_toolbar.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/local/env.py",
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev/Dockerfile.nginx",
+		"/Users/vitaliyharchenko/Dev/quant/docker-compose.yml",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/package.json",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/komleva.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/views.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/vue/src/components/Home.vue",
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev/nginx.conf",
+		"/Users/vitaliyharchenko/Dev/quant/django/urls.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/middleware.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/apps.py",
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev/sites-enabled/django.conf",
+		"/Users/vitaliyharchenko/Dev/quant/django/fixtures.json",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/security.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/chem_sycheva.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/other.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/local_tpl/env.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/chem_telicyna.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/chem_shishova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/chem_shulakova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/obsh_viktoria.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/components/footer.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/gulpfile.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/main.scss",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/eng_krylov.html",
+		"/Users/vitaliyharchenko/Dev/quant/docker/dev/sites-enabled/quant.conf",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/base/db.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/conf/settings.py",
+		"/Users/vitaliyharchenko/Dev/quant/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/uwsgi.ini",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/urls.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/novoselova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/where.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/what.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/musallamova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/shaevich.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/vikulova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/sherbakova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/orechkin.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/mentions/kameneva.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/pirozhok.html",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landings/components/teachers/harchenko.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landings/components/teachers/paramonova.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/landing.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/_buttons.scss",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/views.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/urls.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/assets/html/landing.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/group.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/seo.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/touch-screen.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/images/icons/read.svg",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/theme.scss",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/styles/theme/_icons.scss",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/landings/apps.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/admin.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/requirements.txt",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.4/src/index.css",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task/index.css",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/serializers.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/tasks/views.py",
+		"/Users/vitaliyharchenko/Library/Application Support/Sublime Text 3/Packages/JSON Reindent/JSONReindent.sublime-settings",
+		"/Users/vitaliyharchenko/Dev/quant/api.json",
+		"/Users/vitaliyharchenko/Dev/quant/json.json",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/lessons/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/results/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/tags/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/tasks/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/nodes/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/blocks/.gitignore",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/react/urls.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/models.py",
+		"/Users/vitaliyharchenko/Dev/quant/django/apps/users/serializers.py",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/task.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/webpack.config.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/task.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.4/src/index.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Routes.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.prod.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/Root.dev.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/store/configureStore.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/src/html/react.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/containers/AppContainer.js",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/readme.md",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/package.json",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/index.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/public/index.html",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/store/configureStore.dev.jsx",
+		"/Users/vitaliyharchenko/Dev/quant/frontend/react/v0.1/src/views/IndexView.jsx"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/vitaliyharchenko/Dev/quant/frontend/react/block"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"flat",
+			"sites",
+			"vue",
+			">\n",
+			"state.blocks",
+			"console.log",
+			"[],",
+			"todo",
+			"script",
+			"static",
+			"static/images/logo.svg",
+			"bold",
+			"white",
+			"#000",
+			"cursor",
+			"curs",
+			"p ",
+			"p",
+			"p {",
+			"p ",
+			"brand-primary",
+			"btn-primary",
+			"btn-primary-bg",
+			"brand-primary",
+			"button",
+			"max-width: 100%",
+			"adress",
+			"Font",
+			"h1",
+			"Font",
+			"orange",
+			"\n@"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "quant.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 295.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

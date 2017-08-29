@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import Yesno from '@/components/Yesno'
-import Token from '@/components/Token'
 import Task from '@/components/Task'
 import Login from '@/components/Login'
 
@@ -16,16 +14,6 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/yesno',
-      name: 'Yesno',
-      component: Yesno
-    },
-    {
-      path: '/token',
-      name: 'Token',
-      component: Token
-    },
-    {
       path: '/task',
       name: 'Task',
       component: Task
@@ -35,5 +23,6 @@ export default new Router({
       name: 'Login',
       component: Login
     }
-  ]
+  ],
+  mode: 'history'
 })
