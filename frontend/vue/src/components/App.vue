@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="../assets/logo.png">
     <p>
       <!-- используйте компонент router-link для создания ссылок -->
       <!-- входной параметр `to` определяет путь для перехода -->
       <!-- `<router-link>` по умолчанию преобразуется в тег `<a>` -->
       <router-link to="/">Index</router-link>
       <router-link to="/login">Login</router-link>
+      <router-link to="/vuex">Vuex Counter</router-link>
       <router-link to="/task">Task</router-link>
     </p>
     <router-view></router-view>
