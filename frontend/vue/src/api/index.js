@@ -1,18 +1,13 @@
 import auth from '../auth'
+import axios from 'axios'
 
 export default {
-  getTask (cb) {
-    setTimeout(() => cb(_products), 100)
-  }
-
   getTask: function (callBack) {
-    var vm = this
-
     axios.get('http://localhost/api/tasks/', {
       headers: auth.getAuthHeaders()
     })
       .then(function (response) {
-        vm.response = response
+        callBack(response.data[0])
       })
       .catch(function (error) {
         console.log(error)

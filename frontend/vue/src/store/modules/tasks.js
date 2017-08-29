@@ -1,6 +1,9 @@
+import api from '../../api'
+import * as types from '../mutation-types'
+
 // initial state
 const state = {
-  task: {}
+  task: 'task'
 }
 
 // getters
@@ -20,6 +23,7 @@ const actions = {
 // mutations
 const mutations = {
   [types.RECEIVE_TASK] (state, { task }) {
+    console.log(task)
     state.task = task
   }
 }

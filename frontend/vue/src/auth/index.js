@@ -48,10 +48,8 @@ export default {
     var jwt = localStorage.getItem('token')
     if (jwt) {
       this.user.authenticated = true
-      console.log('Is auhenticated')
     } else {
       this.user.authenticated = false
-      console.log('Not auhenticated')
     }
   },
 

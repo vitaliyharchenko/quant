@@ -1,20 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import tasks from './modules/tasks'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    count: 0,
-    task: null
-  },
-  mutations: {
-    increment: state => state.count++,
-    decrement: state => state.count--
-  },
-  actions: {
-    getTask ({ commit }) {
-      commit('getTask')
-    }
+  modules: {
+    tasks
   }
 })
