@@ -1,24 +1,26 @@
-<template>
+  <template>
     <div class="col-sm-6 col-sm-offset-3">
-      <h1>Get a Task from local API!</h1>
-      <h2>{{ task }}</h2>     
+      <h1>Task!</h1>
+      Task #{{ pk }}
+      <p>{{ task }}</p>
     </div>
   </template>
 
   <script>
   export default {
-    data: function () {
-      return {
-        response: 'response'
+    props: {
+      pk: {
+        type: String,
+        default: ''
       }
     },
     computed: {
       task () {
-        return this.$store.state.tasks.task
+        return this.$store.getters.currentTask
       }
     },
     created () {
-      this.$store.dispatch('getTask')
+      this.$store.dispatch('getTask', this.pk)
     }
   }
   </script>

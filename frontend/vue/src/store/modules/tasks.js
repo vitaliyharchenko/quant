@@ -3,18 +3,25 @@ import * as types from '../mutation-types'
 
 // initial state
 const state = {
-  task: 'task'
+  all: [],
+  current: {}
 }
 
 // getters
 const getters = {
-  task: state => state.task
+  tasks: state => state.all,
+  currentTask: state => state.current
 }
 
 // actions
 const actions = {
-  getTask ({ commit }) {
-    api.getTask(task => {
+  getTasks ({ commit }) {
+    api.getTasks(tasks => {
+      commit(types.RECEIVE_TASKS, { tasks })
+    })
+  },
+  getTask ({ commit }, pk) {
+    api.getTask(pk, task => {
       commit(types.RECEIVE_TASK, { task })
     })
   }
@@ -22,9 +29,11 @@ const actions = {
 
 // mutations
 const mutations = {
+  [types.RECEIVE_TASKS] (state, { tasks }) {
+    state.all = tasks
+  },
   [types.RECEIVE_TASK] (state, { task }) {
-    console.log(task)
-    state.task = task
+    state.current = task
   }
 }
 
