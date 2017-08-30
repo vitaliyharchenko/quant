@@ -1,0 +1,82 @@
+{
+    "task": {
+        "id": 1,
+        "lesson": {
+            "id": 1,
+            "title": "Первый урок 7 класса",
+            "about": "Познакомимся с веществом!",
+            "time": 20,
+            "subject_tag": {
+                "id": 1,
+                "title": "Физика"
+            }
+        },
+        "owner": "root"
+    },
+    "nodes": {
+        "1": {
+            "title": "Физическое тело. Вещество, материя.",
+            "blocks": [
+                1,
+                2
+            ]
+        },
+        "2": {
+            "title": "Простейшие свойства вещества.",
+            "blocks": []
+        },
+        "3": {
+            "title": "Агрегатные состояния вещества.",
+            "blocks": []
+        },
+        "4": {
+            "title": "Молекулы. Атомы. Их классификация.",
+            "blocks": []
+        }
+    },
+    "blocks": {
+        "1": {
+            "id": 1,
+            "time": 2,
+            "score": 2,
+            "polymorphic_ctype": {
+                "id": 13,
+                "app_label": "blocks",
+                "model": "choiceblock"
+            },
+            "question_text": "WTF?",
+            "choices": [
+                {
+                    "option_text": "nojnijn",
+                    "option_image": null,
+                    "help_text": "",
+                    "is_true": true
+                },
+                {
+                    "option_text": "hgf",
+                    "option_image": null,
+                    "help_text": "iutr",
+                    "is_true": false
+                },
+                {
+                    "option_text": "qw",
+                    "option_image": null,
+                    "help_text": "qwer",
+                    "is_true": true
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "time": 3,
+            "score": 3,
+            "title": "Ghbdtn",
+            "body": "vgudsck k",
+            "polymorphic_ctype": {
+                "id": 12,
+                "app_label": "blocks",
+                "model": "textblock"
+            }
+        }
+    }
+}

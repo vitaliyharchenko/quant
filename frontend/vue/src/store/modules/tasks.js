@@ -4,13 +4,15 @@ import * as types from '../mutation-types'
 // initial state
 const state = {
   all: [],
-  current: {}
+  byId: {},
+  nodes: {},
+  blocks: {}
 }
 
 // getters
 const getters = {
   tasks: state => state.all,
-  currentTask: state => state.current
+  tasksById: state => state.byId
 }
 
 // actions
@@ -33,7 +35,10 @@ const mutations = {
     state.all = tasks
   },
   [types.RECEIVE_TASK] (state, { task }) {
-    state.current = task
+    state.byId[task.task.id] = task.task
+    state.byId[task.task.id].lesson.nodes = Object.keys(task.nodes)
+    state.nodes = Object.assign(state.nodes, task.nodes)
+    state.blocks = Object.assign(state.blocks, task.blocks)
   }
 }
 
