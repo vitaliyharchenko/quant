@@ -25,7 +25,7 @@
         return this.$store.getters.tasks
       }
     },
-    created () {
+    beforeCreate () {
       this.$store.dispatch('getTasks')
     }
   }

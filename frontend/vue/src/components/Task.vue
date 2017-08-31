@@ -75,7 +75,7 @@
         return this.blocks[this.currentNode.blocks[this.currentBlockIndex]]
       }
     },
-    created () {
+    beforeCreate () {
       this.$store.dispatch('getTask', this.pk)
     },
     methods: {
