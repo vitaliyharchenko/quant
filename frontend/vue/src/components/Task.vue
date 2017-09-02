@@ -49,7 +49,7 @@
   export default {
     props: {
       pk: {
-        type: Number
+        type: String
       }
     },
     data () {
@@ -75,7 +75,7 @@
         return this.blocks[this.currentNode.blocks[this.currentBlockIndex]]
       }
     },
-    beforeCreate () {
+    created () {
       this.$store.dispatch('getTask', this.pk)
     },
     methods: {

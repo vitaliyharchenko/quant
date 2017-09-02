@@ -18,6 +18,8 @@ const getters = {
 // actions
 const actions = {
   getTasks ({ commit }) {
+    console.log('getTask action call? then API')
+    console.log(api)
     api.getTasks(tasks => {
       commit(types.RECEIVE_TASKS, { tasks })
     })
