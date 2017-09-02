@@ -11,24 +11,24 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'hello',
+      name: 'Hello',
       component: Hello
     },
     {
       path: '/tasks',
-      name: 'tasks',
+      name: 'Tasks',
       component: Tasks
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
     },
     {
       path: '/task/:pk',
       name: 'task',
       component: Task,
       props: true
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ],
   mode: 'history'

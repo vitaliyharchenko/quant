@@ -5,6 +5,7 @@ import Router from 'vue-router'
 
 import App from './components/App'
 import router from './router'
+import auth from './auth'
 import store from './store'
 
 Vue.config.productionTip = false
@@ -18,3 +19,5 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+auth.checkAuth()
