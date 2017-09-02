@@ -33,6 +33,7 @@ export default {
       })
       .catch(function (error) {
         context.error = error.response.data.non_field_errors
+        console.log(error)
       })
   },
 

@@ -1,5 +1,5 @@
   <template>
-    <div class="col-sm-6 col-sm-offset-3">
+    <div v-if="task">
       <p>Задание #{{ pk }}</p>
       <hr>
       <div v-if="currentNodeIndex === -1">
@@ -48,9 +48,7 @@
   <script>
   export default {
     props: {
-      pk: {
-        type: Number
-      }
+      pk: {}
     },
     data () {
       return {
@@ -69,13 +67,21 @@
         return this.$store.state.tasks.blocks
       },
       currentNode () {
-        return this.nodes[this.task.lesson.nodes[this.currentNodeIndex]]
+        if (this.currentNodeIndex === -1) {
+          return undefined
+        } else {
+          return this.$store.state.tasks.nodes[this.$store.state.tasks.byId[this.pk].lesson.nodes[this.currentNodeIndex]]
+        }
       },
       currentBlock () {
-        return this.blocks[this.currentNode.blocks[this.currentBlockIndex]]
+        if (this.currentNodeIndex === -1) {
+          return undefined
+        } else {
+          return this.$store.state.tasks.blocks[this.currentNode.blocks[this.currentBlockIndex]]
+        }
       }
     },
-    beforeCreate () {
+    created () {
       this.$store.dispatch('getTask', this.pk)
     },
     methods: {

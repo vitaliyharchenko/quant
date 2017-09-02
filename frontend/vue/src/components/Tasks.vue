@@ -1,4 +1,4 @@
-<template>
+  <template>
     <div class="col-sm-6 col-sm-offset-3">
       <h1>Tasks!</h1>
       <div class="alert alert-danger" v-if="error">
@@ -25,7 +25,7 @@
         return this.$store.getters.tasks
       }
     },
-    beforeCreate () {
+    created () {
       this.$store.dispatch('getTasks')
     }
   }
