@@ -5,23 +5,25 @@
       <div class="alert alert-danger" v-if="error">
         <p>{{ error }}</p>
       </div>
-      <div class="form-group">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Enter your username"
-          v-model="credentials.username"
-        >
-      </div>
-      <div class="form-group">
-        <input
-          type="password"
-          class="form-control"
-          placeholder="Enter your password"
-          v-model="credentials.password"
-        >
-      </div>
-      <button class="btn btn-primary" @click="submit()">Access</button>
+      <form autocomplete="on">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter your username"
+            v-model="username"
+          >
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter your password"
+            v-model="password"
+          >
+        </div>
+        <button class="btn btn-primary" @click.prevent="submit()">Access</button>
+      </form>
     </div>
   </template>
 
@@ -31,22 +33,16 @@
   export default {
     data () {
       return {
-        credentials: {
-          username: '',
-          password: ''
-        },
+        username: '',
+        password: '',
         error: ''
       }
     },
     methods: {
       submit () {
-        var credentials = {
-          username: 'root',
-          password: 'quant123456'
-        }
-        // We need to pass the component's this context
-        // to properly make use of http in the auth service
-        auth.login(this, credentials, 'secretquote')
+        var username = this.username
+        var password = this.password
+        auth.login(this, username, password, 'Tasks')
       }
     }
 

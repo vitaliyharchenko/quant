@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import Api from '@/components/Api'
-import Auth from '@/components/Auth'
+import Tasks from '@/components/Tasks'
 import Task from '@/components/Task'
 import Login from '@/components/Login'
 
@@ -16,24 +15,21 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/api',
-      name: 'Api',
-      component: Api
+      path: '/tasks',
+      name: 'Tasks',
+      component: Tasks
     },
     {
-      path: '/auth',
-      name: 'Auth',
-      component: Auth
-    },
-    {
-      path: '/task',
-      name: 'Task',
-      component: Task
+      path: '/task/:pk',
+      name: 'task',
+      component: Task,
+      props: true
     },
     {
       path: '/login',
       name: 'Login',
       component: Login
     }
-  ]
+  ],
+  mode: 'history'
 })

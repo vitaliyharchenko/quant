@@ -40,6 +40,10 @@ def landing(request, class_num, subject):
             'math': 'https://docs.google.com/forms/d/e/1FAIpQLSfDO7rk_VRqiPGqLkvItyYF5xwiGT8CQ35zpzl7MYbeJQYufA/viewform?usp=sf_link',
             'obsh': 'https://docs.google.com/forms/d/e/1FAIpQLSduoafeuks656_ULfgwgN79gUUdzG9rw-oF5sz8v0_o9GLXhg/viewform?usp=sf_link',
             'phys': 'https://docs.google.com/forms/d/e/1FAIpQLScorWscrpFylL-fdYleieXTxXVT7W0FFe2l5AF7KHKTQ6n-Ig/viewform?usp=sf_link'
+        },
+        '9': {
+            'math': 'https://docs.google.com/forms/d/e/1FAIpQLSfsXZA__eYKs0uE2JvXShIu7eha6F6ESJjGX6kHt8AmbYZ4og/viewform?usp=sf_link',
+            'phys': 'https://docs.google.com/forms/d/e/1FAIpQLSeNfat-soE9phDeaj1o7_5IqyztVuShmZbO7BI59Cy6Vy2Skg/viewform?usp=sf_link'
         }
     }
 

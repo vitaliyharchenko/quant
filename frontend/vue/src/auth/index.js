@@ -1,11 +1,12 @@
 // src/auth/index.js
 
-import router from './router'
+import router from '../router'
 import axios from 'axios'
 
 // URL and endpoint constants
-const API_URL = 'http://localhost/'
-const LOGIN_URL = API_URL + 'api-token-auth/'
+const HOST = 'http://localhost/'
+// const API_URL = HOST + 'api/'
+const LOGIN_URL = HOST + 'api-token-auth/'
 
 export default {
 
@@ -15,23 +16,23 @@ export default {
   },
 
   // Send a request to the login URL and save the returned JWT
-  login (context, creds, redirect) {
+  login (context, username, password, redirect) {
+    var self = this
+
     axios.post(LOGIN_URL, {
-      username: creds.username,
-      password: creds.password
+      username: username,
+      password: password
     })
       .then(function (response) {
-        console.log(response)
         localStorage.setItem('token', response.data.token)
-
-        this.user.authenticated = true
-
+        self.user.authenticated = true
         // Redirect to a specified route
         if (redirect) {
-          router.go(redirect)
+          router.push(redirect)
         }
       })
       .catch(function (error) {
+        context.error = error.response.data.non_field_errors
         console.log(error)
       })
   },
@@ -40,6 +41,7 @@ export default {
   logout () {
     localStorage.removeItem('token')
     this.user.authenticated = false
+    router.push('/login')
   },
 
   checkAuth () {
@@ -52,9 +54,10 @@ export default {
   },
 
   // The object to be passed as a header for authenticated requests
-  getAuthHeader () {
+  getAuthHeaders () {
     return {
-      'Authorization': 'Token ' + localStorage.getItem('token')
+      'Authorization': 'Token ' + localStorage.getItem('token'),
+      'Content-Type': 'application/json'
     }
   }
 }
