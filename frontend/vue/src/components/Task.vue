@@ -19,20 +19,10 @@
             <ul>
               <li>
                 <div v-if="currentBlock.polymorphic_ctype.model === 'choiceblock'">
-                  <p>Вопрос: {{ currentBlock.question_text }}</p>
-                  <ul>
-                    <li v-for="choice in currentBlock.choices">
-                      <label>
-                        <input id="checkBox" type="checkbox"> {{ choice.option_text }} is_true:{{ choice.is_true }}
-                      </label>
-                    </li>
-                  </ul>
+                  <choiceblock :block="currentBlock"></choiceblock>
                 </div>
                 <div v-else-if="currentBlock.polymorphic_ctype.model === 'textblock'">
-                  <h2>
-                    {{ currentBlock.title }}
-                  </h2>
-                  <p>{{ currentBlock.body }}</p>
+                  <textblock :block="currentBlock"></textblock>
                 </div>
               </li>
             </ul>
@@ -46,6 +36,9 @@
   </template>
 
   <script>
+  import ChoiceBlock from './ChoiceBlock'
+  import TextBlock from './TextBlock'
+
   export default {
     props: {
       pk: {}
@@ -53,7 +46,8 @@
     data () {
       return {
         currentNodeIndex: -1,
-        currentBlockIndex: 0
+        currentBlockIndex: 0,
+        results: {}
       }
     },
     computed: {
@@ -84,6 +78,16 @@
     created () {
       this.$store.dispatch('getTask', this.pk)
     },
+    mounted () {
+      var blocksIds = Object.keys(this.blocks)
+      console.log(blocksIds)
+      var resultsObj = {}
+      for (var i in blocksIds) {
+        resultsObj[blocksIds[i]] = {}
+      }
+      console.log(resultsObj)
+      this.results = Object.assign({}, this.results, resultsObj)
+    },
     methods: {
       // Перейти к следующему вопросу
       nextBlock: function () {
@@ -103,6 +107,10 @@
           }
         }
       }
+    },
+    components: {
+      'choiceblock': ChoiceBlock,
+      'textblock': TextBlock
     }
   }
   </script>
