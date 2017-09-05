@@ -95,9 +95,7 @@
     "model": "authtoken.token",
     "pk": "4387fc4bd477af48198d5963770fc8ea089b7089",
     "fields": {
-        "user": [
-            "root"
-        ],
+        "user": 1,
         "created": "2017-08-22T13:43:16.673Z"
     }
 },
@@ -105,9 +103,7 @@
     "model": "users.profile",
     "pk": 1,
     "fields": {
-        "user": [
-            "root"
-        ],
+        "user": 1,
         "birth_date": null,
         "email_confirmed": false,
         "is_complete": false,
@@ -124,9 +120,7 @@
     "model": "users.profile",
     "pk": 2,
     "fields": {
-        "user": [
-            "user"
-        ],
+        "user": 2,
         "birth_date": null,
         "email_confirmed": false,
         "is_complete": false,
@@ -143,9 +137,7 @@
     "model": "users.profile",
     "pk": 3,
     "fields": {
-        "user": [
-            "User2"
-        ],
+        "user": 3,
         "birth_date": null,
         "email_confirmed": false,
         "is_complete": false,
@@ -162,9 +154,7 @@
     "model": "users.profile",
     "pk": 4,
     "fields": {
-        "user": [
-            "Student1"
-        ],
+        "user": 4,
         "birth_date": null,
         "email_confirmed": false,
         "is_complete": false,
@@ -181,10 +171,7 @@
     "model": "blocks.block",
     "pk": 1,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "choiceblock"
-        ],
+        "polymorphic_ctype": 15,
         "time": 2,
         "score": 2
     }
@@ -193,10 +180,7 @@
     "model": "blocks.block",
     "pk": 2,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 14,
         "time": 3,
         "score": 3
     }
@@ -205,10 +189,7 @@
     "model": "blocks.block",
     "pk": 3,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 14,
         "time": 3,
         "score": 0
     }
@@ -217,10 +198,7 @@
     "model": "blocks.block",
     "pk": 4,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 14,
         "time": 2,
         "score": 1
     }
@@ -229,10 +207,7 @@
     "model": "blocks.block",
     "pk": 5,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 14,
         "time": 3,
         "score": 1
     }
@@ -241,10 +216,7 @@
     "model": "blocks.block",
     "pk": 6,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 14,
         "time": 3,
         "score": 1
     }
@@ -253,10 +225,7 @@
     "model": "blocks.block",
     "pk": 7,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 14,
         "time": 3,
         "score": 1
     }
@@ -265,10 +234,7 @@
     "model": "blocks.block",
     "pk": 8,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "choiceblock"
-        ],
+        "polymorphic_ctype": 15,
         "time": 1,
         "score": 1
     }
@@ -277,10 +243,7 @@
     "model": "blocks.block",
     "pk": 9,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textanswerblock"
-        ],
+        "polymorphic_ctype": 18,
         "time": 1,
         "score": 1
     }
@@ -289,10 +252,7 @@
     "model": "blocks.block",
     "pk": 10,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "floatblock"
-        ],
+        "polymorphic_ctype": 17,
         "time": 1,
         "score": 0
     }
@@ -301,10 +261,7 @@
     "model": "blocks.block",
     "pk": 11,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "floatblock"
-        ],
+        "polymorphic_ctype": 17,
         "time": 1,
         "score": 0
     }
@@ -661,12 +618,8 @@
     "model": "tasks.task",
     "pk": 1,
     "fields": {
-        "student": [
-            "root"
-        ],
-        "teacher": [
-            "root"
-        ],
+        "student": 1,
+        "teacher": 1,
         "lesson": 1,
         "start_time": "2017-07-12T08:23:55Z",
         "finish_time": "2018-07-12T08:23:57Z",
@@ -677,12 +630,8 @@
     "model": "tasks.task",
     "pk": 2,
     "fields": {
-        "student": [
-            "user"
-        ],
-        "teacher": [
-            "root"
-        ],
+        "student": 2,
+        "teacher": 1,
         "lesson": 2,
         "start_time": "2017-08-08T09:44:09Z",
         "finish_time": "2017-08-09T09:44:13Z",
@@ -693,12 +642,8 @@
     "model": "tasks.task",
     "pk": 3,
     "fields": {
-        "student": [
-            "Student1"
-        ],
-        "teacher": [
-            "root"
-        ],
+        "student": 4,
+        "teacher": 1,
         "lesson": 4,
         "start_time": "2017-09-05T08:20:45Z",
         "finish_time": "2017-09-11T08:20:47Z",
@@ -709,13 +654,8 @@
     "model": "results.result",
     "pk": 156,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 24,
+        "student": 1,
         "date": "2017-09-05T08:33:10.036Z",
         "score": null,
         "max_score": null
@@ -725,13 +665,8 @@
     "model": "results.result",
     "pk": 157,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 24,
+        "student": 1,
         "date": "2017-09-05T08:34:12.453Z",
         "score": null,
         "max_score": null
@@ -741,13 +676,8 @@
     "model": "results.result",
     "pk": 158,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 24,
+        "student": 1,
         "date": "2017-09-05T08:37:30.689Z",
         "score": 4,
         "max_score": 5
@@ -757,13 +687,8 @@
     "model": "results.result",
     "pk": 159,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "textblockresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 33,
+        "student": 1,
         "date": "2017-09-05T08:37:30.753Z",
         "score": 3,
         "max_score": 3
@@ -773,13 +698,8 @@
     "model": "results.result",
     "pk": 160,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "choiceblockresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 26,
+        "student": 1,
         "date": "2017-09-05T08:37:30.862Z",
         "score": 1,
         "max_score": 2
@@ -958,9 +878,7 @@
     "fields": {
         "title": "\u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441",
         "subject_tag": 1,
-        "teacher": [
-            "root"
-        ],
+        "teacher": 1,
         "about": "\u041a\u0443\u0440\u0441 \u043f\u043e \u0444\u0438\u0437\u0438\u043a\u0435 \u0434\u043b\u044f 7 \u043a\u043b\u0430\u0441\u0441\u0430"
     }
 },
@@ -970,9 +888,7 @@
     "fields": {
         "title": "\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430 8 \u043a\u043b\u0430\u0441\u0441",
         "subject_tag": 2,
-        "teacher": [
-            "root"
-        ],
+        "teacher": 1,
         "about": "\u041a\u043b\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043a\u0443\u0440\u0441 \u043f\u043e \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 \u0434\u043b\u044f \u0443\u0447\u0435\u043d\u0438\u043a\u043e\u0432 8 \u043a\u043b\u0430\u0441\u0441\u0430 \u043e\u0431\u0449\u0435\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0439 \u0448\u043a\u043e\u043b\u044b"
     }
 },
@@ -1008,9 +924,7 @@
     "pk": 1,
     "fields": {
         "title": "\u04247",
-        "teacher": [
-            "root"
-        ],
+        "teacher": 1,
         "about": "\u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441"
     }
 },
@@ -1018,9 +932,7 @@
     "model": "groups.studentgrouprelation",
     "pk": 1,
     "fields": {
-        "student": [
-            "user"
-        ],
+        "student": 2,
         "group": 1
     }
 },
@@ -1028,9 +940,7 @@
     "model": "groups.studentgrouprelation",
     "pk": 2,
     "fields": {
-        "student": [
-            "Student1"
-        ],
+        "student": 4,
         "group": 1
     }
 },
@@ -1038,9 +948,7 @@
     "model": "groups.studentgrouprelation",
     "pk": 4,
     "fields": {
-        "student": [
-            "root"
-        ],
+        "student": 1,
         "group": 1
     }
 },
@@ -1060,13 +968,8 @@
     "pk": 1,
     "fields": {
         "action_time": "2017-07-13T08:42:06.126Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "authtoken",
-            "token"
-        ],
+        "user": 1,
+        "content_type": 9,
         "object_id": "f110231dd632d4eefbd816e98bbce39c12af4dce",
         "object_repr": "f110231dd632d4eefbd816e98bbce39c12af4dce",
         "action_flag": 1,
@@ -1078,13 +981,8 @@
     "pk": 2,
     "fields": {
         "action_time": "2017-07-13T08:56:08.724Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "auth",
-            "user"
-        ],
+        "user": 1,
+        "content_type": 4,
         "object_id": "2",
         "object_repr": "user",
         "action_flag": 1,
@@ -1096,13 +994,8 @@
     "pk": 3,
     "fields": {
         "action_time": "2017-07-13T08:56:48.299Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "auth",
-            "user"
-        ],
+        "user": 1,
+        "content_type": 4,
         "object_id": "2",
         "object_repr": "user",
         "action_flag": 2,
@@ -1114,13 +1007,8 @@
     "pk": 4,
     "fields": {
         "action_time": "2017-07-13T08:57:09.272Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "authtoken",
-            "token"
-        ],
+        "user": 1,
+        "content_type": 9,
         "object_id": "37274155cfe0081ae12c77bfdbafa3372d2b93a9",
         "object_repr": "37274155cfe0081ae12c77bfdbafa3372d2b93a9",
         "action_flag": 1,
@@ -1132,13 +1020,8 @@
     "pk": 5,
     "fields": {
         "action_time": "2017-07-14T11:24:11.640Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "authtoken",
-            "token"
-        ],
+        "user": 1,
+        "content_type": 9,
         "object_id": "37274155cfe0081ae12c77bfdbafa3372d2b93a9",
         "object_repr": "37274155cfe0081ae12c77bfdbafa3372d2b93a9",
         "action_flag": 3,
@@ -1150,13 +1033,8 @@
     "pk": 6,
     "fields": {
         "action_time": "2017-07-17T05:48:38.037Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "choiceblock"
-        ],
+        "user": 1,
+        "content_type": 15,
         "object_id": "1",
         "object_repr": "WTF?",
         "action_flag": 1,
@@ -1168,13 +1046,8 @@
     "pk": 7,
     "fields": {
         "action_time": "2017-07-17T05:49:01.096Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "choiceblockoption"
-        ],
+        "user": 1,
+        "content_type": 16,
         "object_id": "1",
         "object_repr": "qw",
         "action_flag": 1,
@@ -1186,13 +1059,8 @@
     "pk": 8,
     "fields": {
         "action_time": "2017-07-17T05:49:12.930Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "choiceblockoption"
-        ],
+        "user": 1,
+        "content_type": 16,
         "object_id": "2",
         "object_repr": "hgf",
         "action_flag": 1,
@@ -1204,13 +1072,8 @@
     "pk": 9,
     "fields": {
         "action_time": "2017-07-17T05:49:30.106Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "choiceblockoption"
-        ],
+        "user": 1,
+        "content_type": 16,
         "object_id": "3",
         "object_repr": "nojnijn",
         "action_flag": 1,
@@ -1222,13 +1085,8 @@
     "pk": 10,
     "fields": {
         "action_time": "2017-07-17T05:49:45.714Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "1",
         "object_repr": "WTF? in \u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0442\u0435\u043b\u043e. \u0412\u0435\u0449\u0435\u0441\u0442\u0432\u043e, \u043c\u0430\u0442\u0435\u0440\u0438\u044f.",
         "action_flag": 1,
@@ -1240,13 +1098,8 @@
     "pk": 11,
     "fields": {
         "action_time": "2017-07-17T05:53:36.333Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textblock"
-        ],
+        "user": 1,
+        "content_type": 14,
         "object_id": "2",
         "object_repr": "Ghbdtn",
         "action_flag": 1,
@@ -1258,13 +1111,8 @@
     "pk": 12,
     "fields": {
         "action_time": "2017-07-17T05:53:47.129Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "2",
         "object_repr": "Ghbdtn in \u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0442\u0435\u043b\u043e. \u0412\u0435\u0449\u0435\u0441\u0442\u0432\u043e, \u043c\u0430\u0442\u0435\u0440\u0438\u044f.",
         "action_flag": 1,
@@ -1276,13 +1124,8 @@
     "pk": 13,
     "fields": {
         "action_time": "2017-07-17T06:33:20.072Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "auth",
-            "user"
-        ],
+        "user": 1,
+        "content_type": 4,
         "object_id": "3",
         "object_repr": "User2",
         "action_flag": 1,
@@ -1294,13 +1137,8 @@
     "pk": 14,
     "fields": {
         "action_time": "2017-07-17T06:33:42.619Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "auth",
-            "user"
-        ],
+        "user": 1,
+        "content_type": 4,
         "object_id": "3",
         "object_repr": "User2",
         "action_flag": 2,
@@ -1312,13 +1150,8 @@
     "pk": 15,
     "fields": {
         "action_time": "2017-08-04T09:45:25.189Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "23",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:41:19.754349+00:00",
         "action_flag": 3,
@@ -1330,13 +1163,8 @@
     "pk": 16,
     "fields": {
         "action_time": "2017-08-04T09:45:25.205Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "22",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:38:28.620462+00:00",
         "action_flag": 3,
@@ -1348,13 +1176,8 @@
     "pk": 17,
     "fields": {
         "action_time": "2017-08-04T09:45:25.217Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "21",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:37:15.282524+00:00",
         "action_flag": 3,
@@ -1366,13 +1189,8 @@
     "pk": 18,
     "fields": {
         "action_time": "2017-08-04T09:45:25.230Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "20",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:35:46.040758+00:00",
         "action_flag": 3,
@@ -1384,13 +1202,8 @@
     "pk": 19,
     "fields": {
         "action_time": "2017-08-04T09:45:25.242Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "19",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:27:31.071841+00:00",
         "action_flag": 3,
@@ -1402,13 +1215,8 @@
     "pk": 20,
     "fields": {
         "action_time": "2017-08-04T09:45:25.254Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "18",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:25:54.767497+00:00",
         "action_flag": 3,
@@ -1420,13 +1228,8 @@
     "pk": 21,
     "fields": {
         "action_time": "2017-08-04T09:45:25.268Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "17",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:24:54.176073+00:00",
         "action_flag": 3,
@@ -1438,13 +1241,8 @@
     "pk": 22,
     "fields": {
         "action_time": "2017-08-04T09:45:25.279Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "16",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:23:48.674133+00:00",
         "action_flag": 3,
@@ -1456,13 +1254,8 @@
     "pk": 23,
     "fields": {
         "action_time": "2017-08-04T09:45:25.291Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "15",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:22:38.396584+00:00",
         "action_flag": 3,
@@ -1474,13 +1267,8 @@
     "pk": 24,
     "fields": {
         "action_time": "2017-08-04T09:45:25.305Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "14",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:19:59.138673+00:00",
         "action_flag": 3,
@@ -1492,13 +1280,8 @@
     "pk": 25,
     "fields": {
         "action_time": "2017-08-04T09:45:25.319Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "13",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:18:10.219516+00:00",
         "action_flag": 3,
@@ -1510,13 +1293,8 @@
     "pk": 26,
     "fields": {
         "action_time": "2017-08-04T09:45:25.331Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "12",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:16:43.798962+00:00",
         "action_flag": 3,
@@ -1528,13 +1306,8 @@
     "pk": 27,
     "fields": {
         "action_time": "2017-08-04T09:45:25.344Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "11",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:11:18.500577+00:00",
         "action_flag": 3,
@@ -1546,13 +1319,8 @@
     "pk": 28,
     "fields": {
         "action_time": "2017-08-04T09:45:25.356Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "10",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:10:55.748850+00:00",
         "action_flag": 3,
@@ -1564,13 +1332,8 @@
     "pk": 29,
     "fields": {
         "action_time": "2017-08-04T09:45:25.370Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "9",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:03:04.186950+00:00",
         "action_flag": 3,
@@ -1582,13 +1345,8 @@
     "pk": 30,
     "fields": {
         "action_time": "2017-08-04T09:45:25.384Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "8",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:02:24.884465+00:00",
         "action_flag": 3,
@@ -1600,13 +1358,8 @@
     "pk": 31,
     "fields": {
         "action_time": "2017-08-04T09:45:25.396Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "7",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:00:40.074170+00:00",
         "action_flag": 3,
@@ -1618,13 +1371,8 @@
     "pk": 32,
     "fields": {
         "action_time": "2017-08-04T09:45:25.407Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "6",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 08:57:53.538181+00:00",
         "action_flag": 3,
@@ -1636,13 +1384,8 @@
     "pk": 33,
     "fields": {
         "action_time": "2017-08-04T09:45:25.420Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "5",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 08:55:30.695337+00:00",
         "action_flag": 3,
@@ -1654,13 +1397,8 @@
     "pk": 34,
     "fields": {
         "action_time": "2017-08-04T09:45:25.437Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "4",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 08:46:54.275202+00:00",
         "action_flag": 3,
@@ -1672,13 +1410,8 @@
     "pk": 35,
     "fields": {
         "action_time": "2017-08-04T09:45:25.449Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "3",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 08:45:55.982311+00:00",
         "action_flag": 3,
@@ -1690,13 +1423,8 @@
     "pk": 36,
     "fields": {
         "action_time": "2017-08-04T09:45:25.461Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "2",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 08:45:24.628029+00:00",
         "action_flag": 3,
@@ -1708,13 +1436,8 @@
     "pk": 37,
     "fields": {
         "action_time": "2017-08-04T09:55:55.179Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textblock"
-        ],
+        "user": 1,
+        "content_type": 14,
         "object_id": "2",
         "object_repr": "Ghbdtn",
         "action_flag": 2,
@@ -1726,13 +1449,8 @@
     "pk": 38,
     "fields": {
         "action_time": "2017-08-04T11:03:45.502Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "choiceblock"
-        ],
+        "user": 1,
+        "content_type": 15,
         "object_id": "1",
         "object_repr": "WTF?",
         "action_flag": 2,
@@ -1744,13 +1462,8 @@
     "pk": 39,
     "fields": {
         "action_time": "2017-08-04T11:12:52.806Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textblock"
-        ],
+        "user": 1,
+        "content_type": 14,
         "object_id": "2",
         "object_repr": "Ghbdtn",
         "action_flag": 2,
@@ -1762,13 +1475,8 @@
     "pk": 40,
     "fields": {
         "action_time": "2017-08-04T11:27:42.865Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "39",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1780,13 +1488,8 @@
     "pk": 41,
     "fields": {
         "action_time": "2017-08-04T11:27:42.880Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "38",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1798,13 +1501,8 @@
     "pk": 42,
     "fields": {
         "action_time": "2017-08-04T11:27:42.893Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "37",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1816,13 +1514,8 @@
     "pk": 43,
     "fields": {
         "action_time": "2017-08-04T11:27:42.906Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "36",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1834,13 +1527,8 @@
     "pk": 44,
     "fields": {
         "action_time": "2017-08-04T11:27:42.917Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "35",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1852,13 +1540,8 @@
     "pk": 45,
     "fields": {
         "action_time": "2017-08-04T11:27:42.930Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "34",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1870,13 +1553,8 @@
     "pk": 46,
     "fields": {
         "action_time": "2017-08-04T11:27:42.942Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "33",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1888,13 +1566,8 @@
     "pk": 47,
     "fields": {
         "action_time": "2017-08-04T11:27:42.953Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "32",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1906,13 +1579,8 @@
     "pk": 48,
     "fields": {
         "action_time": "2017-08-04T11:27:42.967Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "31",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1924,13 +1592,8 @@
     "pk": 49,
     "fields": {
         "action_time": "2017-08-04T11:27:42.981Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "30",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1942,13 +1605,8 @@
     "pk": 50,
     "fields": {
         "action_time": "2017-08-04T11:27:42.994Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "29",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1960,13 +1618,8 @@
     "pk": 51,
     "fields": {
         "action_time": "2017-08-04T11:27:43.006Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "28",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1978,13 +1631,8 @@
     "pk": 52,
     "fields": {
         "action_time": "2017-08-04T11:27:43.017Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "27",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -1996,13 +1644,8 @@
     "pk": 53,
     "fields": {
         "action_time": "2017-08-04T11:27:43.031Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "26",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2014,13 +1657,8 @@
     "pk": 54,
     "fields": {
         "action_time": "2017-08-04T11:27:43.043Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "25",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2032,13 +1670,8 @@
     "pk": 55,
     "fields": {
         "action_time": "2017-08-04T11:27:43.054Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "24",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2050,13 +1683,8 @@
     "pk": 56,
     "fields": {
         "action_time": "2017-08-04T11:27:43.065Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "23",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2068,13 +1696,8 @@
     "pk": 57,
     "fields": {
         "action_time": "2017-08-04T11:27:43.076Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "22",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2086,13 +1709,8 @@
     "pk": 58,
     "fields": {
         "action_time": "2017-08-04T11:27:43.087Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "21",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2104,13 +1722,8 @@
     "pk": 59,
     "fields": {
         "action_time": "2017-08-04T11:27:43.101Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "20",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2122,13 +1735,8 @@
     "pk": 60,
     "fields": {
         "action_time": "2017-08-04T11:27:43.112Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "19",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2140,13 +1748,8 @@
     "pk": 61,
     "fields": {
         "action_time": "2017-08-04T11:27:43.125Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "18",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2158,13 +1761,8 @@
     "pk": 62,
     "fields": {
         "action_time": "2017-08-04T11:27:43.136Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "17",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2176,13 +1774,8 @@
     "pk": 63,
     "fields": {
         "action_time": "2017-08-04T11:27:43.150Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "16",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2194,13 +1787,8 @@
     "pk": 64,
     "fields": {
         "action_time": "2017-08-04T11:27:43.162Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "15",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2212,13 +1800,8 @@
     "pk": 65,
     "fields": {
         "action_time": "2017-08-04T11:27:43.172Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "14",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2230,13 +1813,8 @@
     "pk": 66,
     "fields": {
         "action_time": "2017-08-04T11:27:43.186Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "13",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2248,13 +1826,8 @@
     "pk": 67,
     "fields": {
         "action_time": "2017-08-04T11:27:43.197Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "12",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2266,13 +1839,8 @@
     "pk": 68,
     "fields": {
         "action_time": "2017-08-04T11:27:43.210Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "11",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2284,13 +1852,8 @@
     "pk": 69,
     "fields": {
         "action_time": "2017-08-04T11:27:43.222Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "10",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2302,13 +1865,8 @@
     "pk": 70,
     "fields": {
         "action_time": "2017-08-04T11:27:43.234Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "9",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2320,13 +1878,8 @@
     "pk": 71,
     "fields": {
         "action_time": "2017-08-04T11:27:43.249Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "8",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2338,13 +1891,8 @@
     "pk": 72,
     "fields": {
         "action_time": "2017-08-04T11:27:43.264Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "7",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2356,13 +1904,8 @@
     "pk": 73,
     "fields": {
         "action_time": "2017-08-04T11:27:43.277Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "6",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2374,13 +1917,8 @@
     "pk": 74,
     "fields": {
         "action_time": "2017-08-04T11:27:43.289Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "5",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2392,13 +1930,8 @@
     "pk": 75,
     "fields": {
         "action_time": "2017-08-04T11:27:43.303Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "4",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2410,13 +1943,8 @@
     "pk": 76,
     "fields": {
         "action_time": "2017-08-04T11:27:43.316Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "3",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2428,13 +1956,8 @@
     "pk": 77,
     "fields": {
         "action_time": "2017-08-04T11:27:43.327Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "2",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2446,13 +1969,8 @@
     "pk": 78,
     "fields": {
         "action_time": "2017-08-04T11:27:43.341Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "1",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -2464,13 +1982,8 @@
     "pk": 79,
     "fields": {
         "action_time": "2017-08-04T11:28:07.049Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "98",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:20:58.220263+00:00",
         "action_flag": 3,
@@ -2482,13 +1995,8 @@
     "pk": 80,
     "fields": {
         "action_time": "2017-08-04T11:28:07.068Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "95",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:19:59.633167+00:00",
         "action_flag": 3,
@@ -2500,13 +2008,8 @@
     "pk": 81,
     "fields": {
         "action_time": "2017-08-04T11:28:07.079Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "92",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:18:23.214862+00:00",
         "action_flag": 3,
@@ -2518,13 +2021,8 @@
     "pk": 82,
     "fields": {
         "action_time": "2017-08-04T11:28:07.091Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "89",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:14:52.649570+00:00",
         "action_flag": 3,
@@ -2536,13 +2034,8 @@
     "pk": 83,
     "fields": {
         "action_time": "2017-08-04T11:28:07.105Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "86",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:14:10.592412+00:00",
         "action_flag": 3,
@@ -2554,13 +2047,8 @@
     "pk": 84,
     "fields": {
         "action_time": "2017-08-04T11:28:07.117Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "83",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:13:01.213839+00:00",
         "action_flag": 3,
@@ -2572,13 +2060,8 @@
     "pk": 85,
     "fields": {
         "action_time": "2017-08-04T11:28:07.129Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "80",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:11:01.078674+00:00",
         "action_flag": 3,
@@ -2590,13 +2073,8 @@
     "pk": 86,
     "fields": {
         "action_time": "2017-08-04T11:28:07.141Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "77",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:10:01.913016+00:00",
         "action_flag": 3,
@@ -2608,13 +2086,8 @@
     "pk": 87,
     "fields": {
         "action_time": "2017-08-04T11:28:07.155Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "74",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:08:37.787005+00:00",
         "action_flag": 3,
@@ -2626,13 +2099,8 @@
     "pk": 88,
     "fields": {
         "action_time": "2017-08-04T11:28:07.166Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "71",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:03:51.913798+00:00",
         "action_flag": 3,
@@ -2644,13 +2112,8 @@
     "pk": 89,
     "fields": {
         "action_time": "2017-08-04T11:28:07.178Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "68",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:02:31.748209+00:00",
         "action_flag": 3,
@@ -2662,13 +2125,8 @@
     "pk": 90,
     "fields": {
         "action_time": "2017-08-04T11:28:07.191Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "65",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 10:58:39.777742+00:00",
         "action_flag": 3,
@@ -2680,13 +2138,8 @@
     "pk": 91,
     "fields": {
         "action_time": "2017-08-04T11:28:07.202Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "62",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 10:13:22.911142+00:00",
         "action_flag": 3,
@@ -2698,13 +2151,8 @@
     "pk": 92,
     "fields": {
         "action_time": "2017-08-04T11:28:07.213Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "59",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 10:11:22.792059+00:00",
         "action_flag": 3,
@@ -2716,13 +2164,8 @@
     "pk": 93,
     "fields": {
         "action_time": "2017-08-04T11:28:07.226Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "56",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 10:08:49.348441+00:00",
         "action_flag": 3,
@@ -2734,13 +2177,8 @@
     "pk": 94,
     "fields": {
         "action_time": "2017-08-04T11:28:07.239Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "54",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 10:08:21.409766+00:00",
         "action_flag": 3,
@@ -2752,13 +2190,8 @@
     "pk": 95,
     "fields": {
         "action_time": "2017-08-04T11:28:07.252Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "51",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 10:02:17.631760+00:00",
         "action_flag": 3,
@@ -2770,13 +2203,8 @@
     "pk": 96,
     "fields": {
         "action_time": "2017-08-04T11:28:07.263Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "48",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 10:01:43.031122+00:00",
         "action_flag": 3,
@@ -2788,13 +2216,8 @@
     "pk": 97,
     "fields": {
         "action_time": "2017-08-04T11:28:07.274Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "45",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 10:01:14.074183+00:00",
         "action_flag": 3,
@@ -2806,13 +2229,8 @@
     "pk": 98,
     "fields": {
         "action_time": "2017-08-04T11:28:07.285Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "42",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:59:25.621015+00:00",
         "action_flag": 3,
@@ -2824,13 +2242,8 @@
     "pk": 99,
     "fields": {
         "action_time": "2017-08-04T11:28:07.297Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "39",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:56:04.257173+00:00",
         "action_flag": 3,
@@ -2842,13 +2255,8 @@
     "pk": 100,
     "fields": {
         "action_time": "2017-08-04T11:28:07.310Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "36",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:55:04.665682+00:00",
         "action_flag": 3,
@@ -2860,13 +2268,8 @@
     "pk": 101,
     "fields": {
         "action_time": "2017-08-04T11:28:07.322Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "34",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:54:41.706844+00:00",
         "action_flag": 3,
@@ -2878,13 +2281,8 @@
     "pk": 102,
     "fields": {
         "action_time": "2017-08-04T11:28:07.334Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "32",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:54:03.232578+00:00",
         "action_flag": 3,
@@ -2896,13 +2294,8 @@
     "pk": 103,
     "fields": {
         "action_time": "2017-08-04T11:28:07.346Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "29",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:50:14.910937+00:00",
         "action_flag": 3,
@@ -2914,13 +2307,8 @@
     "pk": 104,
     "fields": {
         "action_time": "2017-08-04T11:28:07.358Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "27",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:48:10.871840+00:00",
         "action_flag": 3,
@@ -2932,13 +2320,8 @@
     "pk": 105,
     "fields": {
         "action_time": "2017-08-04T11:28:07.371Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "25",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 09:45:08.290881+00:00",
         "action_flag": 3,
@@ -2950,13 +2333,8 @@
     "pk": 106,
     "fields": {
         "action_time": "2017-08-04T11:28:28.757Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "99",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:20:58.278022+00:00",
         "action_flag": 3,
@@ -2968,13 +2346,8 @@
     "pk": 107,
     "fields": {
         "action_time": "2017-08-04T11:28:28.772Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "96",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:19:59.695219+00:00",
         "action_flag": 3,
@@ -2986,13 +2359,8 @@
     "pk": 108,
     "fields": {
         "action_time": "2017-08-04T11:28:28.783Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "93",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:18:23.257710+00:00",
         "action_flag": 3,
@@ -3004,13 +2372,8 @@
     "pk": 109,
     "fields": {
         "action_time": "2017-08-04T11:28:28.794Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "90",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:14:52.712185+00:00",
         "action_flag": 3,
@@ -3022,13 +2385,8 @@
     "pk": 110,
     "fields": {
         "action_time": "2017-08-04T11:28:28.807Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "87",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:14:10.657690+00:00",
         "action_flag": 3,
@@ -3040,13 +2398,8 @@
     "pk": 111,
     "fields": {
         "action_time": "2017-08-04T11:28:28.819Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "84",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:13:01.261322+00:00",
         "action_flag": 3,
@@ -3058,13 +2411,8 @@
     "pk": 112,
     "fields": {
         "action_time": "2017-08-04T11:28:28.830Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "81",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:11:01.145574+00:00",
         "action_flag": 3,
@@ -3076,13 +2424,8 @@
     "pk": 113,
     "fields": {
         "action_time": "2017-08-04T11:28:28.843Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "78",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:10:01.976672+00:00",
         "action_flag": 3,
@@ -3094,13 +2437,8 @@
     "pk": 114,
     "fields": {
         "action_time": "2017-08-04T11:28:28.855Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "75",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:08:37.844554+00:00",
         "action_flag": 3,
@@ -3112,13 +2450,8 @@
     "pk": 115,
     "fields": {
         "action_time": "2017-08-04T11:28:28.867Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "72",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:03:51.963428+00:00",
         "action_flag": 3,
@@ -3130,13 +2463,8 @@
     "pk": 116,
     "fields": {
         "action_time": "2017-08-04T11:28:28.881Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "69",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:02:31.833828+00:00",
         "action_flag": 3,
@@ -3148,13 +2476,8 @@
     "pk": 117,
     "fields": {
         "action_time": "2017-08-04T11:28:28.893Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "66",
         "object_repr": "root, Ghbdtn, 2017-08-04 10:58:39.851651+00:00",
         "action_flag": 3,
@@ -3166,13 +2489,8 @@
     "pk": 118,
     "fields": {
         "action_time": "2017-08-04T11:28:28.906Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "63",
         "object_repr": "root, Ghbdtn, 2017-08-04 10:13:22.974356+00:00",
         "action_flag": 3,
@@ -3184,13 +2502,8 @@
     "pk": 119,
     "fields": {
         "action_time": "2017-08-04T11:28:28.917Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "60",
         "object_repr": "root, Ghbdtn, 2017-08-04 10:11:22.857849+00:00",
         "action_flag": 3,
@@ -3202,13 +2515,8 @@
     "pk": 120,
     "fields": {
         "action_time": "2017-08-04T11:28:28.929Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "57",
         "object_repr": "root, Ghbdtn, 2017-08-04 10:08:49.411765+00:00",
         "action_flag": 3,
@@ -3220,13 +2528,8 @@
     "pk": 121,
     "fields": {
         "action_time": "2017-08-04T11:28:28.941Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "55",
         "object_repr": "root, Ghbdtn, 2017-08-04 10:08:21.472270+00:00",
         "action_flag": 3,
@@ -3238,13 +2541,8 @@
     "pk": 122,
     "fields": {
         "action_time": "2017-08-04T11:28:28.953Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "52",
         "object_repr": "root, Ghbdtn, 2017-08-04 10:02:17.697465+00:00",
         "action_flag": 3,
@@ -3256,13 +2554,8 @@
     "pk": 123,
     "fields": {
         "action_time": "2017-08-04T11:28:28.964Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "49",
         "object_repr": "root, Ghbdtn, 2017-08-04 10:01:43.093443+00:00",
         "action_flag": 3,
@@ -3274,13 +2567,8 @@
     "pk": 124,
     "fields": {
         "action_time": "2017-08-04T11:28:28.981Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "46",
         "object_repr": "root, Ghbdtn, 2017-08-04 10:01:14.145568+00:00",
         "action_flag": 3,
@@ -3292,13 +2580,8 @@
     "pk": 125,
     "fields": {
         "action_time": "2017-08-04T11:28:28.992Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "43",
         "object_repr": "root, Ghbdtn, 2017-08-04 09:59:25.694906+00:00",
         "action_flag": 3,
@@ -3310,13 +2593,8 @@
     "pk": 126,
     "fields": {
         "action_time": "2017-08-04T11:28:29.007Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "40",
         "object_repr": "root, Ghbdtn, 2017-08-04 09:56:04.300049+00:00",
         "action_flag": 3,
@@ -3328,13 +2606,8 @@
     "pk": 127,
     "fields": {
         "action_time": "2017-08-04T11:28:29.018Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "37",
         "object_repr": "root, Ghbdtn, 2017-08-04 09:55:04.726400+00:00",
         "action_flag": 3,
@@ -3346,13 +2619,8 @@
     "pk": 128,
     "fields": {
         "action_time": "2017-08-04T11:28:29.030Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "35",
         "object_repr": "root, Ghbdtn, 2017-08-04 09:54:41.768709+00:00",
         "action_flag": 3,
@@ -3364,13 +2632,8 @@
     "pk": 129,
     "fields": {
         "action_time": "2017-08-04T11:28:29.043Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "33",
         "object_repr": "root, Ghbdtn, 2017-08-04 09:54:03.351818+00:00",
         "action_flag": 3,
@@ -3382,13 +2645,8 @@
     "pk": 130,
     "fields": {
         "action_time": "2017-08-04T11:28:29.055Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "30",
         "object_repr": "root, Ghbdtn, 2017-08-04 09:50:14.971626+00:00",
         "action_flag": 3,
@@ -3400,13 +2658,8 @@
     "pk": 131,
     "fields": {
         "action_time": "2017-08-04T11:28:29.070Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "28",
         "object_repr": "root, Ghbdtn, 2017-08-04 09:48:10.935624+00:00",
         "action_flag": 3,
@@ -3418,13 +2671,8 @@
     "pk": 132,
     "fields": {
         "action_time": "2017-08-04T11:28:29.082Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "26",
         "object_repr": "root, Ghbdtn, 2017-08-04 09:45:08.350929+00:00",
         "action_flag": 3,
@@ -3436,13 +2684,8 @@
     "pk": 133,
     "fields": {
         "action_time": "2017-08-04T11:29:03.840Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "100",
         "object_repr": "root, WTF?, 2017-08-04 11:20:58.384374+00:00",
         "action_flag": 3,
@@ -3454,13 +2697,8 @@
     "pk": 134,
     "fields": {
         "action_time": "2017-08-04T11:29:03.854Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "97",
         "object_repr": "root, WTF?, 2017-08-04 11:19:59.815791+00:00",
         "action_flag": 3,
@@ -3472,13 +2710,8 @@
     "pk": 135,
     "fields": {
         "action_time": "2017-08-04T11:29:03.866Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "94",
         "object_repr": "root, WTF?, 2017-08-04 11:18:23.349456+00:00",
         "action_flag": 3,
@@ -3490,13 +2723,8 @@
     "pk": 136,
     "fields": {
         "action_time": "2017-08-04T11:29:03.878Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "91",
         "object_repr": "root, WTF?, 2017-08-04 11:14:52.831353+00:00",
         "action_flag": 3,
@@ -3508,13 +2736,8 @@
     "pk": 137,
     "fields": {
         "action_time": "2017-08-04T11:29:03.892Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "88",
         "object_repr": "root, WTF?, 2017-08-04 11:14:10.777706+00:00",
         "action_flag": 3,
@@ -3526,13 +2749,8 @@
     "pk": 138,
     "fields": {
         "action_time": "2017-08-04T11:29:03.903Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "85",
         "object_repr": "root, WTF?, 2017-08-04 11:13:01.350701+00:00",
         "action_flag": 3,
@@ -3544,13 +2762,8 @@
     "pk": 139,
     "fields": {
         "action_time": "2017-08-04T11:29:03.915Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "82",
         "object_repr": "root, WTF?, 2017-08-04 11:11:01.253648+00:00",
         "action_flag": 3,
@@ -3562,13 +2775,8 @@
     "pk": 140,
     "fields": {
         "action_time": "2017-08-04T11:29:03.927Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "79",
         "object_repr": "root, WTF?, 2017-08-04 11:10:02.078703+00:00",
         "action_flag": 3,
@@ -3580,13 +2788,8 @@
     "pk": 141,
     "fields": {
         "action_time": "2017-08-04T11:29:03.938Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "76",
         "object_repr": "root, WTF?, 2017-08-04 11:08:37.920735+00:00",
         "action_flag": 3,
@@ -3598,13 +2801,8 @@
     "pk": 142,
     "fields": {
         "action_time": "2017-08-04T11:29:03.950Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "73",
         "object_repr": "root, WTF?, 2017-08-04 11:03:52.025285+00:00",
         "action_flag": 3,
@@ -3616,13 +2814,8 @@
     "pk": 143,
     "fields": {
         "action_time": "2017-08-04T11:29:03.961Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "70",
         "object_repr": "root, WTF?, 2017-08-04 11:02:31.918993+00:00",
         "action_flag": 3,
@@ -3634,13 +2827,8 @@
     "pk": 144,
     "fields": {
         "action_time": "2017-08-04T11:29:03.974Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "67",
         "object_repr": "root, WTF?, 2017-08-04 10:58:39.939924+00:00",
         "action_flag": 3,
@@ -3652,13 +2840,8 @@
     "pk": 145,
     "fields": {
         "action_time": "2017-08-04T11:29:03.986Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "64",
         "object_repr": "root, WTF?, 2017-08-04 10:13:23.057127+00:00",
         "action_flag": 3,
@@ -3670,13 +2853,8 @@
     "pk": 146,
     "fields": {
         "action_time": "2017-08-04T11:29:03.998Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "61",
         "object_repr": "root, WTF?, 2017-08-04 10:11:22.944429+00:00",
         "action_flag": 3,
@@ -3688,13 +2866,8 @@
     "pk": 147,
     "fields": {
         "action_time": "2017-08-04T11:29:04.013Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "58",
         "object_repr": "root, WTF?, 2017-08-04 10:08:49.502075+00:00",
         "action_flag": 3,
@@ -3706,13 +2879,8 @@
     "pk": 148,
     "fields": {
         "action_time": "2017-08-04T11:29:04.025Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "53",
         "object_repr": "root, WTF?, 2017-08-04 10:02:17.774980+00:00",
         "action_flag": 3,
@@ -3724,13 +2892,8 @@
     "pk": 149,
     "fields": {
         "action_time": "2017-08-04T11:29:04.037Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "50",
         "object_repr": "root, WTF?, 2017-08-04 10:01:43.175293+00:00",
         "action_flag": 3,
@@ -3742,13 +2905,8 @@
     "pk": 150,
     "fields": {
         "action_time": "2017-08-04T11:29:04.048Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "47",
         "object_repr": "root, WTF?, 2017-08-04 10:01:14.251382+00:00",
         "action_flag": 3,
@@ -3760,13 +2918,8 @@
     "pk": 151,
     "fields": {
         "action_time": "2017-08-04T11:29:04.061Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "44",
         "object_repr": "root, WTF?, 2017-08-04 09:59:25.815948+00:00",
         "action_flag": 3,
@@ -3778,13 +2931,8 @@
     "pk": 152,
     "fields": {
         "action_time": "2017-08-04T11:29:04.074Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "41",
         "object_repr": "root, WTF?, 2017-08-04 09:56:04.357468+00:00",
         "action_flag": 3,
@@ -3796,13 +2944,8 @@
     "pk": 153,
     "fields": {
         "action_time": "2017-08-04T11:29:04.085Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "38",
         "object_repr": "root, WTF?, 2017-08-04 09:55:04.800883+00:00",
         "action_flag": 3,
@@ -3814,13 +2957,8 @@
     "pk": 154,
     "fields": {
         "action_time": "2017-08-04T11:29:04.097Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "31",
         "object_repr": "root, WTF?, 2017-08-04 09:50:15.042191+00:00",
         "action_flag": 3,
@@ -3832,13 +2970,8 @@
     "pk": 155,
     "fields": {
         "action_time": "2017-08-08T09:43:40.522Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "lessons",
-            "lesson"
-        ],
+        "user": 1,
+        "content_type": 30,
         "object_id": "2",
         "object_repr": "\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 8 \u043a\u043b\u0430\u0441\u0441\u0430",
         "action_flag": 1,
@@ -3850,13 +2983,8 @@
     "pk": 156,
     "fields": {
         "action_time": "2017-08-08T09:44:15.963Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "tasks",
-            "task"
-        ],
+        "user": 1,
+        "content_type": 22,
         "object_id": "2",
         "object_repr": "For user, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 8 \u043a\u043b\u0430\u0441\u0441\u0430\"",
         "action_flag": 1,
@@ -3868,13 +2996,8 @@
     "pk": 157,
     "fields": {
         "action_time": "2017-08-08T10:56:43.326Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "blockresult"
-        ],
+        "user": 1,
+        "content_type": 25,
         "object_id": "146",
         "object_repr": "root, WTF?, 2017-08-08 10:54:13+00:00",
         "action_flag": 1,
@@ -3886,13 +3009,8 @@
     "pk": 158,
     "fields": {
         "action_time": "2017-08-08T12:29:49.860Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "147",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 12:27:27.062885+00:00",
         "action_flag": 3,
@@ -3904,13 +3022,8 @@
     "pk": 159,
     "fields": {
         "action_time": "2017-08-08T12:29:49.874Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "143",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:32:34.390627+00:00",
         "action_flag": 3,
@@ -3922,13 +3035,8 @@
     "pk": 160,
     "fields": {
         "action_time": "2017-08-08T12:29:49.890Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "140",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:29:02.460718+00:00",
         "action_flag": 3,
@@ -3940,13 +3048,8 @@
     "pk": 161,
     "fields": {
         "action_time": "2017-08-08T12:29:49.913Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "137",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:28:39.827888+00:00",
         "action_flag": 3,
@@ -3958,13 +3061,8 @@
     "pk": 162,
     "fields": {
         "action_time": "2017-08-08T12:29:49.926Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "134",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:26:35.394846+00:00",
         "action_flag": 3,
@@ -3976,13 +3074,8 @@
     "pk": 163,
     "fields": {
         "action_time": "2017-08-08T12:29:49.941Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "131",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:25:34.947888+00:00",
         "action_flag": 3,
@@ -3994,13 +3087,8 @@
     "pk": 164,
     "fields": {
         "action_time": "2017-08-08T12:29:49.957Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "128",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:25:29.837475+00:00",
         "action_flag": 3,
@@ -4012,13 +3100,8 @@
     "pk": 165,
     "fields": {
         "action_time": "2017-08-08T12:29:49.972Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "125",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:24:45.656309+00:00",
         "action_flag": 3,
@@ -4030,13 +3113,8 @@
     "pk": 166,
     "fields": {
         "action_time": "2017-08-08T12:29:49.995Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "122",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:23:03.079947+00:00",
         "action_flag": 3,
@@ -4048,13 +3126,8 @@
     "pk": 167,
     "fields": {
         "action_time": "2017-08-08T12:29:50.009Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "119",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:21:14.005848+00:00",
         "action_flag": 3,
@@ -4066,13 +3139,8 @@
     "pk": 168,
     "fields": {
         "action_time": "2017-08-08T12:29:50.024Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "116",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:20:44.226663+00:00",
         "action_flag": 3,
@@ -4084,13 +3152,8 @@
     "pk": 169,
     "fields": {
         "action_time": "2017-08-08T12:29:50.039Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "113",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:19:19.407888+00:00",
         "action_flag": 3,
@@ -4102,13 +3165,8 @@
     "pk": 170,
     "fields": {
         "action_time": "2017-08-08T12:29:50.055Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "110",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:18:07.802294+00:00",
         "action_flag": 3,
@@ -4120,13 +3178,8 @@
     "pk": 171,
     "fields": {
         "action_time": "2017-08-08T12:29:50.071Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "107",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 10:16:43.551770+00:00",
         "action_flag": 3,
@@ -4138,13 +3191,8 @@
     "pk": 172,
     "fields": {
         "action_time": "2017-08-08T12:29:50.087Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "104",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 09:03:46.551530+00:00",
         "action_flag": 3,
@@ -4156,13 +3204,8 @@
     "pk": 173,
     "fields": {
         "action_time": "2017-08-08T12:29:50.107Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "101",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-04 11:29:13.714538+00:00",
         "action_flag": 3,
@@ -4174,13 +3217,8 @@
     "pk": 174,
     "fields": {
         "action_time": "2017-08-08T12:30:29.787Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "149",
         "object_repr": "root, WTF?, 2017-08-08 12:27:27.230797+00:00",
         "action_flag": 3,
@@ -4192,13 +3230,8 @@
     "pk": 175,
     "fields": {
         "action_time": "2017-08-08T12:30:29.805Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "145",
         "object_repr": "root, WTF?, 2017-08-08 10:32:34.550940+00:00",
         "action_flag": 3,
@@ -4210,13 +3243,8 @@
     "pk": 176,
     "fields": {
         "action_time": "2017-08-08T12:30:29.819Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "142",
         "object_repr": "root, WTF?, 2017-08-08 10:29:02.619861+00:00",
         "action_flag": 3,
@@ -4228,13 +3256,8 @@
     "pk": 177,
     "fields": {
         "action_time": "2017-08-08T12:30:29.830Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "139",
         "object_repr": "root, WTF?, 2017-08-08 10:28:40.055352+00:00",
         "action_flag": 3,
@@ -4246,13 +3269,8 @@
     "pk": 178,
     "fields": {
         "action_time": "2017-08-08T12:30:29.849Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "136",
         "object_repr": "root, WTF?, 2017-08-08 10:26:35.551017+00:00",
         "action_flag": 3,
@@ -4264,13 +3282,8 @@
     "pk": 179,
     "fields": {
         "action_time": "2017-08-08T12:30:29.861Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "133",
         "object_repr": "root, WTF?, 2017-08-08 10:25:35.069774+00:00",
         "action_flag": 3,
@@ -4282,13 +3295,8 @@
     "pk": 180,
     "fields": {
         "action_time": "2017-08-08T12:30:29.877Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "130",
         "object_repr": "root, WTF?, 2017-08-08 10:25:29.966099+00:00",
         "action_flag": 3,
@@ -4300,13 +3308,8 @@
     "pk": 181,
     "fields": {
         "action_time": "2017-08-08T12:30:29.889Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "127",
         "object_repr": "root, WTF?, 2017-08-08 10:24:45.830883+00:00",
         "action_flag": 3,
@@ -4318,13 +3321,8 @@
     "pk": 182,
     "fields": {
         "action_time": "2017-08-08T12:30:29.902Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "124",
         "object_repr": "root, WTF?, 2017-08-08 10:23:03.201245+00:00",
         "action_flag": 3,
@@ -4336,13 +3334,8 @@
     "pk": 183,
     "fields": {
         "action_time": "2017-08-08T12:30:29.914Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "121",
         "object_repr": "root, WTF?, 2017-08-08 10:21:14.174755+00:00",
         "action_flag": 3,
@@ -4354,13 +3347,8 @@
     "pk": 184,
     "fields": {
         "action_time": "2017-08-08T12:30:29.927Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "118",
         "object_repr": "root, WTF?, 2017-08-08 10:20:44.402497+00:00",
         "action_flag": 3,
@@ -4372,13 +3360,8 @@
     "pk": 185,
     "fields": {
         "action_time": "2017-08-08T12:30:29.941Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "115",
         "object_repr": "root, WTF?, 2017-08-08 10:19:19.566779+00:00",
         "action_flag": 3,
@@ -4390,13 +3373,8 @@
     "pk": 186,
     "fields": {
         "action_time": "2017-08-08T12:30:29.960Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "112",
         "object_repr": "root, WTF?, 2017-08-08 10:18:07.967350+00:00",
         "action_flag": 3,
@@ -4408,13 +3386,8 @@
     "pk": 187,
     "fields": {
         "action_time": "2017-08-08T12:30:29.972Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "109",
         "object_repr": "root, WTF?, 2017-08-08 10:16:43.710949+00:00",
         "action_flag": 3,
@@ -4426,13 +3399,8 @@
     "pk": 188,
     "fields": {
         "action_time": "2017-08-08T12:30:29.984Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "106",
         "object_repr": "root, WTF?, 2017-08-08 09:03:46.733920+00:00",
         "action_flag": 3,
@@ -4444,13 +3412,8 @@
     "pk": 189,
     "fields": {
         "action_time": "2017-08-08T12:30:29.998Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "103",
         "object_repr": "root, WTF?, 2017-08-04 11:29:13.919484+00:00",
         "action_flag": 3,
@@ -4462,13 +3425,8 @@
     "pk": 190,
     "fields": {
         "action_time": "2017-08-08T12:30:55.853Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "blockresult"
-        ],
+        "user": 1,
+        "content_type": 25,
         "object_id": "146",
         "object_repr": "root, WTF?, 2017-08-08 10:54:13+00:00",
         "action_flag": 3,
@@ -4480,13 +3438,8 @@
     "pk": 191,
     "fields": {
         "action_time": "2017-08-08T12:31:06.674Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "148",
         "object_repr": "root, Ghbdtn, 2017-08-08 12:27:27.124454+00:00",
         "action_flag": 3,
@@ -4498,13 +3451,8 @@
     "pk": 192,
     "fields": {
         "action_time": "2017-08-08T12:31:06.688Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "144",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:32:34.451854+00:00",
         "action_flag": 3,
@@ -4516,13 +3464,8 @@
     "pk": 193,
     "fields": {
         "action_time": "2017-08-08T12:31:06.700Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "141",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:29:02.520133+00:00",
         "action_flag": 3,
@@ -4534,13 +3477,8 @@
     "pk": 194,
     "fields": {
         "action_time": "2017-08-08T12:31:06.715Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "138",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:28:39.891847+00:00",
         "action_flag": 3,
@@ -4552,13 +3490,8 @@
     "pk": 195,
     "fields": {
         "action_time": "2017-08-08T12:31:06.726Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "135",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:26:35.454615+00:00",
         "action_flag": 3,
@@ -4570,13 +3503,8 @@
     "pk": 196,
     "fields": {
         "action_time": "2017-08-08T12:31:06.739Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "132",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:25:34.992523+00:00",
         "action_flag": 3,
@@ -4588,13 +3516,8 @@
     "pk": 197,
     "fields": {
         "action_time": "2017-08-08T12:31:06.751Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "129",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:25:29.885469+00:00",
         "action_flag": 3,
@@ -4606,13 +3529,8 @@
     "pk": 198,
     "fields": {
         "action_time": "2017-08-08T12:31:06.762Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "126",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:24:45.709328+00:00",
         "action_flag": 3,
@@ -4624,13 +3542,8 @@
     "pk": 199,
     "fields": {
         "action_time": "2017-08-08T12:31:06.775Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "123",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:23:03.120888+00:00",
         "action_flag": 3,
@@ -4642,13 +3555,8 @@
     "pk": 200,
     "fields": {
         "action_time": "2017-08-08T12:31:06.787Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "120",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:21:14.068594+00:00",
         "action_flag": 3,
@@ -4660,13 +3568,8 @@
     "pk": 201,
     "fields": {
         "action_time": "2017-08-08T12:31:06.801Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "117",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:20:44.296631+00:00",
         "action_flag": 3,
@@ -4678,13 +3581,8 @@
     "pk": 202,
     "fields": {
         "action_time": "2017-08-08T12:31:06.812Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "114",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:19:19.467286+00:00",
         "action_flag": 3,
@@ -4696,13 +3594,8 @@
     "pk": 203,
     "fields": {
         "action_time": "2017-08-08T12:31:06.825Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "111",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:18:07.861008+00:00",
         "action_flag": 3,
@@ -4714,13 +3607,8 @@
     "pk": 204,
     "fields": {
         "action_time": "2017-08-08T12:31:06.839Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "108",
         "object_repr": "root, Ghbdtn, 2017-08-08 10:16:43.610810+00:00",
         "action_flag": 3,
@@ -4732,13 +3620,8 @@
     "pk": 205,
     "fields": {
         "action_time": "2017-08-08T12:31:06.852Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "105",
         "object_repr": "root, Ghbdtn, 2017-08-08 09:03:46.619059+00:00",
         "action_flag": 3,
@@ -4750,13 +3633,8 @@
     "pk": 206,
     "fields": {
         "action_time": "2017-08-08T12:31:06.863Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "102",
         "object_repr": "root, Ghbdtn, 2017-08-04 11:29:13.783316+00:00",
         "action_flag": 3,
@@ -4768,13 +3646,8 @@
     "pk": 207,
     "fields": {
         "action_time": "2017-08-09T08:00:10.230Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "groups",
-            "studentgroup"
-        ],
+        "user": 1,
+        "content_type": 37,
         "object_id": "1",
         "object_repr": "\u04247",
         "action_flag": 1,
@@ -4786,13 +3659,8 @@
     "pk": 208,
     "fields": {
         "action_time": "2017-08-09T08:00:56.906Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "courses",
-            "course"
-        ],
+        "user": 1,
+        "content_type": 34,
         "object_id": "1",
         "object_repr": "\u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441",
         "action_flag": 1,
@@ -4804,13 +3672,8 @@
     "pk": 209,
     "fields": {
         "action_time": "2017-08-09T08:01:11.086Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "courses",
-            "courselessonrelaion"
-        ],
+        "user": 1,
+        "content_type": 35,
         "object_id": "1",
         "object_repr": "\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430 in \u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441",
         "action_flag": 1,
@@ -4822,13 +3685,8 @@
     "pk": 210,
     "fields": {
         "action_time": "2017-08-09T08:01:49.283Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "lessons",
-            "lesson"
-        ],
+        "user": 1,
+        "content_type": 30,
         "object_id": "3",
         "object_repr": "\u0414\u0432\u0438\u0436\u0435\u043d\u0438\u0435",
         "action_flag": 1,
@@ -4840,13 +3698,8 @@
     "pk": 211,
     "fields": {
         "action_time": "2017-08-09T08:02:10.752Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "courses",
-            "courselessonrelaion"
-        ],
+        "user": 1,
+        "content_type": 35,
         "object_id": "2",
         "object_repr": "\u0414\u0432\u0438\u0436\u0435\u043d\u0438\u0435 in \u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441",
         "action_flag": 1,
@@ -4858,13 +3711,8 @@
     "pk": 212,
     "fields": {
         "action_time": "2017-08-09T08:02:45.828Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "groups",
-            "coursegrouprelation"
-        ],
+        "user": 1,
+        "content_type": 36,
         "object_id": "1",
         "object_repr": "Group \u04247 study \u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441",
         "action_flag": 1,
@@ -4876,13 +3724,8 @@
     "pk": 213,
     "fields": {
         "action_time": "2017-08-09T08:03:01.824Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "groups",
-            "studentgrouprelation"
-        ],
+        "user": 1,
+        "content_type": 38,
         "object_id": "1",
         "object_repr": "Student user in group \u04247",
         "action_flag": 1,
@@ -4894,13 +3737,8 @@
     "pk": 214,
     "fields": {
         "action_time": "2017-08-09T08:03:42.315Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "auth",
-            "user"
-        ],
+        "user": 1,
+        "content_type": 4,
         "object_id": "4",
         "object_repr": "Student1",
         "action_flag": 1,
@@ -4912,13 +3750,8 @@
     "pk": 215,
     "fields": {
         "action_time": "2017-08-09T08:04:05.882Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "auth",
-            "user"
-        ],
+        "user": 1,
+        "content_type": 4,
         "object_id": "4",
         "object_repr": "Student1",
         "action_flag": 2,
@@ -4930,13 +3763,8 @@
     "pk": 216,
     "fields": {
         "action_time": "2017-08-09T08:04:27.940Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "groups",
-            "studentgrouprelation"
-        ],
+        "user": 1,
+        "content_type": 38,
         "object_id": "2",
         "object_repr": "Student Student1 in group \u04247",
         "action_flag": 1,
@@ -4948,13 +3776,8 @@
     "pk": 217,
     "fields": {
         "action_time": "2017-08-09T12:14:30.671Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "groups",
-            "studentgrouprelation"
-        ],
+        "user": 1,
+        "content_type": 38,
         "object_id": "3",
         "object_repr": "Student root in group \u04247",
         "action_flag": 1,
@@ -4966,13 +3789,8 @@
     "pk": 218,
     "fields": {
         "action_time": "2017-08-09T12:36:12.228Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "groups",
-            "studentgrouprelation"
-        ],
+        "user": 1,
+        "content_type": 38,
         "object_id": "3",
         "object_repr": "Student root in group \u04247",
         "action_flag": 3,
@@ -4984,13 +3802,8 @@
     "pk": 219,
     "fields": {
         "action_time": "2017-08-09T12:36:34.862Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "groups",
-            "studentgrouprelation"
-        ],
+        "user": 1,
+        "content_type": 38,
         "object_id": "4",
         "object_repr": "Student root in group \u04247",
         "action_flag": 1,
@@ -5002,13 +3815,8 @@
     "pk": 220,
     "fields": {
         "action_time": "2017-08-10T07:15:29.452Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textblock"
-        ],
+        "user": 1,
+        "content_type": 14,
         "object_id": "3",
         "object_repr": "Markdown",
         "action_flag": 1,
@@ -5020,13 +3828,8 @@
     "pk": 221,
     "fields": {
         "action_time": "2017-08-14T08:10:32.077Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "authtoken",
-            "token"
-        ],
+        "user": 1,
+        "content_type": 9,
         "object_id": "9ceb6fa285c66c1fefd3bad181836ef314704d75",
         "object_repr": "9ceb6fa285c66c1fefd3bad181836ef314704d75",
         "action_flag": 3,
@@ -5038,13 +3841,8 @@
     "pk": 222,
     "fields": {
         "action_time": "2017-08-14T08:10:32.096Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "authtoken",
-            "token"
-        ],
+        "user": 1,
+        "content_type": 9,
         "object_id": "6a00d585d63ed160252e5216e61254c3d5737e3a",
         "object_repr": "6a00d585d63ed160252e5216e61254c3d5737e3a",
         "action_flag": 3,
@@ -5056,13 +3854,8 @@
     "pk": 223,
     "fields": {
         "action_time": "2017-08-14T08:10:32.114Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "authtoken",
-            "token"
-        ],
+        "user": 1,
+        "content_type": 9,
         "object_id": "f110231dd632d4eefbd816e98bbce39c12af4dce",
         "object_repr": "f110231dd632d4eefbd816e98bbce39c12af4dce",
         "action_flag": 3,
@@ -5074,13 +3867,8 @@
     "pk": 224,
     "fields": {
         "action_time": "2017-08-22T13:43:16.676Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "authtoken",
-            "token"
-        ],
+        "user": 1,
+        "content_type": 9,
         "object_id": "4387fc4bd477af48198d5963770fc8ea089b7089",
         "object_repr": "4387fc4bd477af48198d5963770fc8ea089b7089",
         "action_flag": 1,
@@ -5092,13 +3880,8 @@
     "pk": 225,
     "fields": {
         "action_time": "2017-09-05T05:55:52.419Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "tags",
-            "subjecttag"
-        ],
+        "user": 1,
+        "content_type": 32,
         "object_id": "2",
         "object_repr": "\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430",
         "action_flag": 1,
@@ -5110,13 +3893,8 @@
     "pk": 226,
     "fields": {
         "action_time": "2017-09-05T05:57:24.697Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "courses",
-            "course"
-        ],
+        "user": 1,
+        "content_type": 34,
         "object_id": "2",
         "object_repr": "\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430 8 \u043a\u043b\u0430\u0441\u0441",
         "action_flag": 1,
@@ -5128,13 +3906,8 @@
     "pk": 227,
     "fields": {
         "action_time": "2017-09-05T06:00:31.129Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "lessons",
-            "lesson"
-        ],
+        "user": 1,
+        "content_type": 30,
         "object_id": "4",
         "object_repr": "\u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c. \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438.",
         "action_flag": 1,
@@ -5146,13 +3919,8 @@
     "pk": 228,
     "fields": {
         "action_time": "2017-09-05T06:01:14.907Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "nodes",
-            "node"
-        ],
+        "user": 1,
+        "content_type": 20,
         "object_id": "5",
         "object_repr": "\u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c",
         "action_flag": 1,
@@ -5164,13 +3932,8 @@
     "pk": 229,
     "fields": {
         "action_time": "2017-09-05T06:01:39.318Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "nodes",
-            "node"
-        ],
+        "user": 1,
+        "content_type": 20,
         "object_id": "6",
         "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438",
         "action_flag": 1,
@@ -5182,13 +3945,8 @@
     "pk": 230,
     "fields": {
         "action_time": "2017-09-05T06:01:58.385Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "nodes",
-            "noderelation"
-        ],
+        "user": 1,
+        "content_type": 21,
         "object_id": "4",
         "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438 in \u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c",
         "action_flag": 1,
@@ -5200,13 +3958,8 @@
     "pk": 231,
     "fields": {
         "action_time": "2017-09-05T06:03:47.712Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "courses",
-            "courselessonrelation"
-        ],
+        "user": 1,
+        "content_type": 40,
         "object_id": "3",
         "object_repr": "\u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c. \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438. in \u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430 8 \u043a\u043b\u0430\u0441\u0441",
         "action_flag": 1,
@@ -5218,13 +3971,8 @@
     "pk": 232,
     "fields": {
         "action_time": "2017-09-05T06:04:06.449Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "lessons",
-            "lessonnoderelation"
-        ],
+        "user": 1,
+        "content_type": 31,
         "object_id": "5",
         "object_repr": "\u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c in \u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c. \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438.",
         "action_flag": 1,
@@ -5236,13 +3984,8 @@
     "pk": 233,
     "fields": {
         "action_time": "2017-09-05T06:04:14.072Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "lessons",
-            "lessonnoderelation"
-        ],
+        "user": 1,
+        "content_type": 31,
         "object_id": "6",
         "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438 in \u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c. \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438.",
         "action_flag": 1,
@@ -5254,13 +3997,8 @@
     "pk": 234,
     "fields": {
         "action_time": "2017-09-05T06:25:43.743Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textblock"
-        ],
+        "user": 1,
+        "content_type": 14,
         "object_id": "4",
         "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
         "action_flag": 1,
@@ -5272,13 +4010,8 @@
     "pk": 235,
     "fields": {
         "action_time": "2017-09-05T08:00:38.932Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textblock"
-        ],
+        "user": 1,
+        "content_type": 14,
         "object_id": "5",
         "object_repr": "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f",
         "action_flag": 1,
@@ -5290,13 +4023,8 @@
     "pk": 236,
     "fields": {
         "action_time": "2017-09-05T08:02:49.197Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textblock"
-        ],
+        "user": 1,
+        "content_type": 14,
         "object_id": "6",
         "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0435\u0439",
         "action_flag": 1,
@@ -5308,13 +4036,8 @@
     "pk": 237,
     "fields": {
         "action_time": "2017-09-05T08:05:02.500Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textblock"
-        ],
+        "user": 1,
+        "content_type": 14,
         "object_id": "7",
         "object_repr": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439",
         "action_flag": 1,
@@ -5326,13 +4049,8 @@
     "pk": 238,
     "fields": {
         "action_time": "2017-09-05T08:05:35.484Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "3",
         "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438 in \u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c",
         "action_flag": 1,
@@ -5344,13 +4062,8 @@
     "pk": 239,
     "fields": {
         "action_time": "2017-09-05T08:05:45.263Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "4",
         "object_repr": "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f in \u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c",
         "action_flag": 1,
@@ -5362,13 +4075,8 @@
     "pk": 240,
     "fields": {
         "action_time": "2017-09-05T08:05:53.606Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "5",
         "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0435\u0439 in \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438",
         "action_flag": 1,
@@ -5380,13 +4088,8 @@
     "pk": 241,
     "fields": {
         "action_time": "2017-09-05T08:06:01.637Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "6",
         "object_repr": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439 in \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438",
         "action_flag": 1,
@@ -5398,13 +4101,8 @@
     "pk": 242,
     "fields": {
         "action_time": "2017-09-05T08:09:15.749Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "choiceblock"
-        ],
+        "user": 1,
+        "content_type": 15,
         "object_id": "8",
         "object_repr": "\u041a\u0430\u043a\u0438\u0435 \u0438\u0437 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0434\u0440\u043e\u0431\u044f\u043c\u0438?",
         "action_flag": 1,
@@ -5416,13 +4114,8 @@
     "pk": 243,
     "fields": {
         "action_time": "2017-09-05T08:10:48.398Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "textanswerblock"
-        ],
+        "user": 1,
+        "content_type": 18,
         "object_id": "9",
         "object_repr": "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0432 \u0432\u0438\u0434\u0435 \u0434\u0440\u043e\u0431\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 1\\frac{2}{5}a",
         "action_flag": 1,
@@ -5434,13 +4127,8 @@
     "pk": 244,
     "fields": {
         "action_time": "2017-09-05T08:11:45.377Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "floatblock"
-        ],
+        "user": 1,
+        "content_type": 17,
         "object_id": "10",
         "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \\frac{x^2+2}{3-y}  \u043f\u0440\u0438 x=2,y =-3",
         "action_flag": 1,
@@ -5452,13 +4140,8 @@
     "pk": 245,
     "fields": {
         "action_time": "2017-09-05T08:14:00.712Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "floatblock"
-        ],
+        "user": 1,
+        "content_type": 17,
         "object_id": "11",
         "object_repr": "\u041d\u0430 \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0435 \u0432\u044b \u0432\u0438\u0434\u0438\u0442\u0435 \u0424\u043e\u0440\u043c\u0443\u043b\u0443 \u0434\u043b\u044f \u0440\u0430\u0441\u0447\u0435\u0442\u0430 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0435\u0441\u0430 \u0436\u0435\u043d\u0449\u0438\u043d\u044b.\r\n\u0413\u0434\u0435 \u0420\u041e\u0421\u0422 \u2013 \u044d\u0442\u043e \u0440\u043e\u0441\u0442 \u0432 \u0441\u0430\u043d\u0442\u0438\u043c\u0435\u0442\u0440\u0430\u0445. \u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u044b\u0439 \u0432\u0435\u0441 \u0434\u043b\u044f \u0436\u0435\u043d\u0449\u0438\u043d\u044b \u0440\u043e\u0441\u0442\u043e\u043c 165 \u0441\u043c. \r\n![formula](http://prntscr.com/gh9d6m \"form",
         "action_flag": 1,
@@ -5470,13 +4153,8 @@
     "pk": 246,
     "fields": {
         "action_time": "2017-09-05T08:15:13.300Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "7",
         "object_repr": "\u041a\u0430\u043a\u0438\u0435 \u0438\u0437 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0434\u0440\u043e\u0431\u044f\u043c\u0438? in \u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c",
         "action_flag": 1,
@@ -5488,13 +4166,8 @@
     "pk": 247,
     "fields": {
         "action_time": "2017-09-05T08:15:27.859Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "8",
         "object_repr": "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0432 \u0432\u0438\u0434\u0435 \u0434\u0440\u043e\u0431\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 1\\frac{2}{5}a in \u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c",
         "action_flag": 1,
@@ -5506,13 +4179,8 @@
     "pk": 248,
     "fields": {
         "action_time": "2017-09-05T08:15:42.412Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "9",
         "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \\frac{x^2+2}{3-y}  \u043f\u0440\u0438 x=2,y =-3 in \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438",
         "action_flag": 1,
@@ -5524,13 +4192,8 @@
     "pk": 249,
     "fields": {
         "action_time": "2017-09-05T08:15:52.535Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "blocks",
-            "nodeblockrelation"
-        ],
+        "user": 1,
+        "content_type": 19,
         "object_id": "10",
         "object_repr": "\u041d\u0430 \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0435 \u0432\u044b \u0432\u0438\u0434\u0438\u0442\u0435 \u0424\u043e\u0440\u043c\u0443\u043b\u0443 \u0434\u043b\u044f \u0440\u0430\u0441\u0447\u0435\u0442\u0430 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0435\u0441\u0430 \u0436\u0435\u043d\u0449\u0438\u043d\u044b.\r\n\u0413\u0434\u0435 \u0420\u041e\u0421\u0422 \u2013 \u044d\u0442\u043e \u0440\u043e\u0441\u0442 \u0432 \u0441\u0430\u043d\u0442\u0438\u043c\u0435\u0442\u0440\u0430\u0445. \u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u044b\u0439 \u0432\u0435\u0441 \u0434\u043b\u044f \u0436\u0435\u043d\u0449\u0438\u043d\u044b \u0440\u043e\u0441\u0442\u043e\u043c 165 \u0441\u043c. \r\n![formula](http://prntscr.com/gh9d6m \"form",
         "action_flag": 1,
@@ -5542,13 +4205,8 @@
     "pk": 250,
     "fields": {
         "action_time": "2017-09-05T08:20:53.009Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "tasks",
-            "task"
-        ],
+        "user": 1,
+        "content_type": 22,
         "object_id": "3",
         "object_repr": "For Student1, \"\u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c. \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438.\"",
         "action_flag": 1,
@@ -5560,13 +4218,8 @@
     "pk": 251,
     "fields": {
         "action_time": "2017-09-05T08:28:58.710Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "153",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-09-05 08:28:04.020043+00:00",
         "action_flag": 3,
@@ -5578,13 +4231,8 @@
     "pk": 252,
     "fields": {
         "action_time": "2017-09-05T08:29:17.989Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "154",
         "object_repr": "root, Ghbdtn, 2017-09-05 08:28:04.085448+00:00",
         "action_flag": 3,
@@ -5596,13 +4244,8 @@
     "pk": 253,
     "fields": {
         "action_time": "2017-09-05T08:29:54.463Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "155",
         "object_repr": "root, WTF?, 2017-09-05 08:28:04.227622+00:00",
         "action_flag": 3,
@@ -5614,13 +4257,8 @@
     "pk": 254,
     "fields": {
         "action_time": "2017-09-05T08:29:54.477Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "choiceblockresult"
-        ],
+        "user": 1,
+        "content_type": 26,
         "object_id": "152",
         "object_repr": "root, WTF?, 2017-08-08 12:31:25.664000+00:00",
         "action_flag": 3,
@@ -5632,13 +4270,8 @@
     "pk": 255,
     "fields": {
         "action_time": "2017-09-05T08:30:09.878Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresultblockresultrelation"
-        ],
+        "user": 1,
+        "content_type": 29,
         "object_id": "72",
         "object_repr": "TaskResultBlockResultRelation object",
         "action_flag": 3,
@@ -5650,13 +4283,8 @@
     "pk": 256,
     "fields": {
         "action_time": "2017-09-05T08:30:32.348Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "taskresult"
-        ],
+        "user": 1,
+        "content_type": 24,
         "object_id": "150",
         "object_repr": "root, For root, \"\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0440\u043e\u043a 7 \u043a\u043b\u0430\u0441\u0441\u0430\", 2017-08-08 12:31:25.522000+00:00",
         "action_flag": 3,
@@ -5668,13 +4296,8 @@
     "pk": 257,
     "fields": {
         "action_time": "2017-09-05T08:30:44.782Z",
-        "user": [
-            "root"
-        ],
-        "content_type": [
-            "results",
-            "textblockresult"
-        ],
+        "user": 1,
+        "content_type": 33,
         "object_id": "151",
         "object_repr": "root, Ghbdtn, 2017-08-08 12:31:25.582000+00:00",
         "action_flag": 3,
