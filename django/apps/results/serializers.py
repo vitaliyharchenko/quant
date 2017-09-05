@@ -90,7 +90,7 @@ class TaskResultSerializer(serializers.ModelSerializer):
         for block_id in blocks_data:
             block_data = blocks_data[block_id]
             block = Block.objects.get(pk=block_id)
-            serializer = BlockResultSerializer().get_serializer(block_data.pop("block_type"))
+            serializer = BlockResultSerializer().get_serializer(block.polymorphic_ctype.model)
             block_result = serializer.create(dict(student=student_id, block=block, answer=block_data.pop("answer")))
             block_result.set_score()
             TaskResultBlockResultRelation.objects.create(task_result=task_result, block_result=block_result)
