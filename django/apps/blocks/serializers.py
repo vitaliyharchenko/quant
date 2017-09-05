@@ -34,7 +34,7 @@ class TextAnswerBlockSerializer(serializers.ModelSerializer):
 class ChoiceBlockOptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChoiceBlockOption
-        fields = ('option_text', 'option_image', 'help_text', 'is_true')
+        fields = ('id', 'option_text', 'option_image', 'help_text', 'is_true')
 
 class ChoiceBlockSerializer(serializers.ModelSerializer):
     choices = ChoiceBlockOptionSerializer(many=True, read_only=True)
