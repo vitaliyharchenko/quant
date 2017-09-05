@@ -1,6 +1,7 @@
 [
 {
     "model": "auth.user",
+    "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$36000$vbBGjrdVYjhS$81usBcO+H1/SyabJezo4Fffz9jaGWNNKV3uXiyaBdh4=",
         "last_login": "2017-08-08T08:25:06.568Z",
@@ -18,6 +19,7 @@
 },
 {
     "model": "auth.user",
+    "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$36000$ocOCcp9XxPUx$jbbhmELkS+SbCE4rvVuKs3rh7dsqfDyr6tcoRgM1KD4=",
         "last_login": "2017-08-03T13:49:48.827Z",
@@ -35,6 +37,7 @@
 },
 {
     "model": "auth.user",
+    "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$36000$1HgHlOcoee7G$UfhhXk/SNCSVZLqivion//M2+OTQLDL3nZ6yuAnJ0l0=",
         "last_login": null,
@@ -52,6 +55,7 @@
 },
 {
     "model": "auth.user",
+    "pk": 4,
     "fields": {
         "password": "pbkdf2_sha256$36000$NW71r7KUMWYL$xXqYApshWW3v16N4Kw/YEr1b3QpFCMHeBJBz0kE7vKw=",
         "last_login": null,
@@ -89,14 +93,6 @@
     "fields": {
         "session_data": "YjlmYWRlMmMyMDA0NWRhM2Q3N2YzM2FkNjkxNGI5MWNlMDUzNDk1Nzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiNDdjMjY4NmI1OTY5MDg3MmZjNGU3ZjA0NDgxOGNiNjhkMmE2MTkwIn0=",
         "expire_date": "2017-09-05T13:38:47.860Z"
-    }
-},
-{
-    "model": "authtoken.token",
-    "pk": "4387fc4bd477af48198d5963770fc8ea089b7089",
-    "fields": {
-        "user": 1,
-        "created": "2017-08-22T13:43:16.673Z"
     }
 },
 {
