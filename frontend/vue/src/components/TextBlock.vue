@@ -1,7 +1,7 @@
   <template>
     <div>
       <h2>
-        {{ block.title }} <b-badge>Текст</b-badge>
+        {{ block.title }} <small><b-badge>Теория</b-badge></small>
       </h2>
       <div v-html="compiledMarkdown" id="markdown"></div>
     </div>
@@ -31,3 +31,9 @@
     }
   }
   </script>
+
+  <style>
+    img {
+      max-width: 100%;
+    }
+  </style>

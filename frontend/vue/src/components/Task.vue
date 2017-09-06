@@ -18,6 +18,12 @@
         <div v-else-if="currentBlock.polymorphic_ctype.model === 'textblock'">
           <textblock :block="currentBlock"></textblock>
         </div>
+        <div v-else-if="currentBlock.polymorphic_ctype.model === 'textanswerblock'">
+          <textanswerblock :block="currentBlock"></textanswerblock>
+        </div>
+        <div v-else-if="currentBlock.polymorphic_ctype.model === 'floatblock'">
+          <floatblock :block="currentBlock"></floatblock>
+        </div>
         <b-button v-on:click="nextBlock">
           Следующий блок
         </b-button>
@@ -28,6 +34,8 @@
   <script>
   import ChoiceBlock from './ChoiceBlock'
   import TextBlock from './TextBlock'
+  import TextAnswerBlock from './TextAnswerBlock'
+  import FloatBlock from './FloatBlock'
 
   export default {
     props: {
@@ -111,7 +119,9 @@
     },
     components: {
       'choiceblock': ChoiceBlock,
-      'textblock': TextBlock
+      'textblock': TextBlock,
+      'textanswerblock': TextAnswerBlock,
+      'floatblock': FloatBlock
     }
   }
   </script>

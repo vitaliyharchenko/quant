@@ -1,19 +1,21 @@
   <template>
     <div>
-      <p>Вопрос: {{ block.question_text }}</p>
+      <p><b>Вопрос:</b> {{ block.question_text }}</p>
       <p>{{ choicesComputed }}</p>
-      <ul>
-        <li v-for="choice in block.choices">
-          <label>
-            <input id="choice.id" :value="choice.id" type="checkbox"
-            v-model="choices"> {{ choice.option_text }} is_true:{{ choice.is_true }}
-          </label>
-        </li>
-      </ul>
+      <div v-for="choice in block.choices">
+        <b-form-group id="choices">
+          <b-form-checkbox v-model="choices" id="choice.id" :value="choice.id">
+            <div v-html="markdown(choice.option_text)"></div>
+          </b-form-checkbox>
+        </b-form-group>
+      </div>
     </div>
   </template>
 
   <script>
+  import MarkdownIt from 'markdown-it'
+  import mk from 'markdown-it-katex'
+
   export default {
     props: {
       block: {}
@@ -26,6 +28,13 @@
     computed: {
       choicesComputed () {
         return this.choices
+      }
+    },
+    methods: {
+      markdown: function (value) {
+        var md = new MarkdownIt()
+        md.use(mk)
+        return md.render(value)
       }
     }
   }
