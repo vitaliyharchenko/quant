@@ -8,6 +8,8 @@ import router from './router'
 import auth from './auth'
 import store from './store'
 
+import './styles'
+
 Vue.config.productionTip = false
 Vue.use(Router)
 

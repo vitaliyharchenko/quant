@@ -1,36 +1,26 @@
   <template>
     <div v-if="task">
-      <p>Задание #{{ pk }}</p>
-      <hr>
+      <b-breadcrumb :items="items"/>
       <div v-if="currentNodeIndex === -1">
-        <p>{{ task.lesson.title }}</p>
+        <p class="lead">{{ task.lesson.title }}</p>
         <p>{{ task.lesson.about }}</p>
-        <button v-on:click="nextNode">
+        <b-button v-on:click="nextNode">
           Начать
-        </button>
+        </b-button>
       </div>
       <div v-else-if="currentNodeIndex === task.lesson.nodes.length">
         <h2>Конец</h2>
       </div>
       <div v-else>
-        <ul>
-          <li>
-            Тема: {{ currentNode.title }}
-            <ul>
-              <li>
-                <div v-if="currentBlock.polymorphic_ctype.model === 'choiceblock'">
-                  <choiceblock :block="currentBlock"></choiceblock>
-                </div>
-                <div v-else-if="currentBlock.polymorphic_ctype.model === 'textblock'">
-                  <textblock :block="currentBlock"></textblock>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <button v-on:click="nextBlock">
+        <div v-if="currentBlock.polymorphic_ctype.model === 'choiceblock'">
+          <choiceblock :block="currentBlock"></choiceblock>
+        </div>
+        <div v-else-if="currentBlock.polymorphic_ctype.model === 'textblock'">
+          <textblock :block="currentBlock"></textblock>
+        </div>
+        <b-button v-on:click="nextBlock">
           Следующий блок
-        </button>
+        </b-button>
       </div>
     </div>
   </template>
@@ -47,7 +37,15 @@
       return {
         currentNodeIndex: -1,
         currentBlockIndex: 0,
-        results: {}
+        items: [
+          {
+            text: 'Tasks',
+            href: '/tasks'
+          }, {
+            text: 'Task',
+            active: true
+          }
+        ]
       }
     },
     computed: {
@@ -77,16 +75,19 @@
     },
     created () {
       this.$store.dispatch('getTask', this.pk)
+      this.items[1].text = 'Task #' + this.pk
     },
-    mounted () {
-      var blocksIds = Object.keys(this.blocks)
-      console.log(blocksIds)
-      var resultsObj = {}
-      for (var i in blocksIds) {
-        resultsObj[blocksIds[i]] = {}
+    watch: {
+      currentNode: function (currentNode) {
+        if (currentNode) {
+          this.items[2] = {
+            text: currentNode.title,
+            active: true
+          }
+        } else {
+          this.items[2] = undefined
+        }
       }
-      console.log(resultsObj)
-      this.results = Object.assign({}, this.results, resultsObj)
     },
     methods: {
       // Перейти к следующему вопросу

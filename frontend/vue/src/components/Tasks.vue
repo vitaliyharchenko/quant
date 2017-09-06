@@ -1,5 +1,5 @@
   <template>
-    <div class="col-sm-6 col-sm-offset-3">
+    <div class="col-sm-12">
       <h1>Tasks!</h1>
       <div class="alert alert-danger" v-if="error">
         <p>{{ error }}</p>
