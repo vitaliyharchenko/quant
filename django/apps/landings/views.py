@@ -31,6 +31,10 @@ def main(request):
         })
 
 
+def testing(request):
+    return render(request, 'landings/testing.html')
+
+
 def landing(request, class_num, subject):
     tpl_path = 'landings/{}/{}.html'.format(class_num, subject)
     action = request.GET.get('action')

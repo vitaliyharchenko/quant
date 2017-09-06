@@ -1,0 +1,220 @@
+{% extends "_base.html" %}
+
+{% load staticfiles %}
+
+{% block body %}
+	<header class="promo section-red">
+		<div class="container">
+			{% include "landings/components/header.html" %}
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-8">
+					<div class="row main-text">
+						<div class="col-12">
+							<h1 class="text-center">Проверь свой текущий уровень знаний</h1>
+							<p class="lead text-center">Бесплатное тестирование, которое займет у тебя не более 30 минут!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="key" class="landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="display-5 mt-0">Ниже вы найдете систему дифференцирующих тестов, разделенных по предметам и возрастам. Пройдите любые из них, подходящие вам и получите комментарии преподавателя</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="testing" class="section-yellow landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="mt-0">Доступные тестирования</h3>
+					<hr>
+				</div>
+				<div class="col-6 text-center">
+					<p class="lead">11 класс</p>
+					<p>
+						<a href="https://goo.gl/forms/EP8pMg2472R2IJQ72" target="_blank">
+							по математике
+						</a>
+					</p>
+					<p>
+						<a href="https://goo.gl/forms/qbkNBV49WKtQhdDf2" target="_blank">
+							по физике
+						</a>
+					</p>
+					<p>
+						<a href="https://goo.gl/forms/mE2vSmFtNb5vn66L2" target="_blank">
+							по английскому языку
+						</a>
+					</p>
+					<p>
+						<a href="https://goo.gl/forms/DGDaKuN0aHdfWchD2" target="_blank">
+							по обществознанию
+						</a>
+					</p>
+				</div>
+				<div class="col-6 text-center">
+					<p class="lead">9 класс</p>
+					<p>
+						<a href="https://goo.gl/forms/IbFNUsx9ukKL2eq93" target="_blank">
+							по математике
+						</a>
+					</p>
+					<p>
+						<a href="https://goo.gl/forms/N37Q5OC3U7WO0BR63" target="_blank">
+							по физике
+						</a>
+					</p>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-4 text-center">
+					<p class="lead">10 класс</p>
+					<p>
+						<a href="https://goo.gl/forms/29qsoCdNodm6WVKi1" target="_blank">
+							Математика
+						</a>
+					</p>
+					<p>
+						<a href="https://goo.gl/forms/FO0h0twsasP9iYIV2" target="_blank">
+							Физика
+						</a>
+					</p>
+				</div>
+				<div class="col-4 text-center">
+					<p class="lead">8 класс</p>
+					<p>
+						<a href="https://goo.gl/forms/Y6g7fuNizzCN1EJw2" target="_blank">
+							Математика
+						</a>
+					</p>
+					<p>
+						<a href="https://goo.gl/forms/fyzPnKCZIYs30Dsf1" target="_blank">
+							Физика
+						</a>
+					</p>
+				</div>
+				<div class="col-4 text-center">
+					<p class="lead">7 класс</p>
+					<p>
+						<a href="https://goo.gl/forms/eTDIGHejz8RlcGCX2" target="_blank">
+							Математика
+						</a>
+					</p>
+					<p>
+						<a href="https://goo.gl/forms/dNkaG60XPH3waJy33" target="_blank">
+							Физика
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="who" class="section-green landing-section">
+		<h2 class="text-center">Кто мы?</h2>
+		<hr>
+		<br>
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/paramonova.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item active">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/harchenko.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/pirozhok.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/lesogorova.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/safronov.html" %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</section>
+
+	<section id="mentions" class="section-purple landing-section">
+		<h2 class="mt-0 text-center">Отзывы учеников и родителей</h2>
+		<div id="carouselMentions" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="container">
+						{% include "landings/components/mentions/orechkin.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/vikulova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/eng_ovshinnikova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/eng_shadilov.html" %}
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselMentions" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselMentions" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<script>
+			$('.carousel').carousel({
+			  intrerval: false
+			})
+		</script>
+	</section>
+
+	<section id="other" class="landing-section">
+		<div class="container">
+			{% include "landings/components/other.html" %}
+		</div>
+	</section>
+{% endblock %}

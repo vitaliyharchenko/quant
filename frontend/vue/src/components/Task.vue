@@ -1,14 +1,14 @@
   <template>
     <div v-if="task">
       <b-breadcrumb :items="items"/>
-      <div v-if="currentNodeIndex === -1">
+      <div>
         <p class="lead">{{ task.lesson.title }}</p>
         <p>{{ task.lesson.about }}</p>
         <b-button v-on:click="nextNode">
           Начать
         </b-button>
       </div>
-      <div v-else-if="currentNodeIndex === task.lesson.nodes.length">
+      <div v-if="currentNodeIndex === task.lesson.nodes.length">
         <h2>Конец</h2>
       </div>
       <div v-else>
