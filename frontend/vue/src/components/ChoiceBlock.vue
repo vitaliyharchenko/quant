@@ -1,10 +1,9 @@
   <template>
-    <div>
+    <div v-focus>
       <p><b>Вопрос:</b> <span v-html="markdown(block.question_text)"></span></p>
-      <p>{{ choicesComputed }}</p>
       <div v-for="choice in block.choices">
         <b-form-group id="choices">
-          <b-form-checkbox v-model="choices" id="choice.id" :value="choice.id">
+          <b-form-checkbox v-model="answer" id="choice.id" :value="choice.id">
             <div v-html="markdown(choice.option_text)"></div>
           </b-form-checkbox>
         </b-form-group>
@@ -22,12 +21,12 @@
     },
     data () {
       return {
-        choices: []
+        answer: []
       }
     },
     computed: {
       choicesComputed () {
-        return this.choices
+        return this.answer
       }
     },
     methods: {

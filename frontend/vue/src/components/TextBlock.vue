@@ -1,5 +1,5 @@
   <template>
-    <div>
+    <div v-focus>
       <h2>
         {{ block.title }} <small><b-badge>Теория</b-badge></small>
       </h2>
@@ -15,12 +15,16 @@
     props: {
       block: {}
     },
+    data () {
+      return {
+        answer: true
+      }
+    },
     created: function () {
       var md = new MarkdownIt()
       md.use(mk)
       var result = md.render('# Math Rulez! \n  $\\sqrt{3x-1}+(1+x)^2$')
       this.result = result
-      console.log(this)
     },
     computed: {
       compiledMarkdown: function () {

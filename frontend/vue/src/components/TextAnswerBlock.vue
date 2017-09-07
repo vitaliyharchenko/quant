@@ -1,5 +1,5 @@
   <template>
-    <div>
+    <div v-focus>
       <p><b>Вопрос:</b>
         <span v-html="markdown(block.question_text)"></span>
       </p>

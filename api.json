@@ -310,29 +310,27 @@
     }
 },
 
-// Определяем оптимальный state для React приложения (task)
-
-{
-    "tasks": {
-        "1: {
-            "id": "4",
-            "type": "text",
-            "content": "Lorem ipsum dolor."
-        },
-    },
-},
-
 // TaskResult format
 
 {
     "student": 1,
     "task": 1,
     "blocks": {
+        // text
         "2":{
             "answer": "True"
         },
+        // choice
         "1":{
             "answer": [2, 3]
+        },
+        // float
+        "3":{
+            "answer": 20.3
+        },
+        // textanswer
+        "3":{
+            "answer": fdgsdfgsdgdf"
         }
     }
 }

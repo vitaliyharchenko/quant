@@ -15,7 +15,9 @@
       </div>
       <div v-for="(node, key, nodeIndex) in nodes">
         <div v-if="nodeIndex <= currentNodeIndex">
-          <b-card bg-variant="info" text-variant="white" class="text-center">
+          <b-card bg-variant="info"
+                  text-variant="white"
+                  class="text-center">
             <p class="card-text">
               {{ node.title }}
             </p>
@@ -23,7 +25,7 @@
           <br>
           <div v-for="(blockId, blockIndex) in node.blocks">
             <div v-if="nodeIndex < currentNodeIndex || blockIndex <= currentBlockIndex">
-              <b-card>
+              <b-card :border-variant="blockBorderClass(blockId)">
                 <div v-if="blocks[blockId].polymorphic_ctype.model === 'choiceblock'">
                   <choiceblock :block="blocks[blockId]"></choiceblock>
                 </div>
@@ -101,8 +103,11 @@
       currentBlock () {
         if (this.currentNodeIndex === -1) {
           return undefined
+        } else if (!this.currentNode) {
+          return undefined
         } else {
-          return this.$store.state.tasks.blocks[this.currentNode.blocks[this.currentBlockIndex]]
+          var blockId = this.currentNode.blocks[this.currentBlockIndex]
+          return this.$store.state.tasks.blocks[blockId]
         }
       }
     },
@@ -128,6 +133,15 @@
           if (this.nodes[this.task.lesson.nodes[this.currentNodeIndex]].blocks.length === 0) {
             this.nextNode()
           }
+        }
+      },
+      blockBorderClass: function (blockId) {
+        console.log(this.blocks[blockId])
+        console.log(this.currentBlock)
+        if (this.blocks[blockId] === this.currentBlock) {
+          return 'primary'
+        } else {
+          return undefined
         }
       }
     },
