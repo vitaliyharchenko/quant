@@ -19,7 +19,7 @@
                   text-variant="white"
                   class="text-center">
             <p class="card-text">
-              {{ node.title }}
+              Тема {{ nodeIndex+1 }}. {{ node.title }}
             </p>
           </b-card>
           <br>
