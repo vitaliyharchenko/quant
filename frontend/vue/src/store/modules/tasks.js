@@ -39,7 +39,6 @@ const mutations = {
     // We shoul use Vue.set for detect changes in array
     // https://vuejs.org/v2/guide/list.html#Caveats
     var newTask = task.task
-    newTask.lesson.nodes = Object.keys(task.nodes)
     Vue.set(state.byId, task.task.id, newTask)
 
     state.nodes = Object.assign(state.nodes, task.nodes)

@@ -21,8 +21,8 @@
             </p>
           </b-card>
           <br>
-          <div v-if="nodeIndex < currentNodeIndex">
-            <div v-for="(blockId, blockIndex) in node.blocks">
+          <div v-for="(blockId, blockIndex) in node.blocks">
+            <div v-if="nodeIndex < currentNodeIndex || blockIndex <= currentBlockIndex">
               <b-card>
                 <div v-if="blocks[blockId].polymorphic_ctype.model === 'choiceblock'">
                   <choiceblock :block="blocks[blockId]"></choiceblock>
@@ -36,32 +36,11 @@
                 <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'floatblock'">
                   <floatblock :block="blocks[blockId]"></floatblock>
                 </div>
+                <b-button v-on:click="nextBlock" v-if="blockIndex === currentBlockIndex">
+                  Следующий блок
+                </b-button>
               </b-card>
               <br>
-            </div>
-          </div>
-          <div v-else-if="nodeIndex === currentNodeIndex">
-            <div v-for="(blockId, blockIndex) in node.blocks">
-              <div v-if="blockIndex <= currentBlockIndex">
-                <b-card>
-                  <div v-if="blocks[blockId].polymorphic_ctype.model === 'choiceblock'">
-                    <choiceblock :block="blocks[blockId]"></choiceblock>
-                  </div>
-                  <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textblock'">
-                    <textblock :block="blocks[blockId]"></textblock>
-                  </div>
-                  <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textanswerblock'">
-                    <textanswerblock :block="blocks[blockId]"></textanswerblock>
-                  </div>
-                  <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'floatblock'">
-                    <floatblock :block="blocks[blockId]"></floatblock>
-                  </div>
-                  <b-button v-on:click="nextBlock" v-if="blockIndex === currentBlockIndex">
-                    Следующий блок
-                  </b-button>
-                </b-card>
-                <br>
-              </div>
             </div>
           </div>
         </div>
@@ -130,19 +109,6 @@
     created () {
       this.$store.dispatch('getTask', this.pk)
       this.items[1].text = 'Task #' + this.pk
-    },
-    watch: {
-      // подставляет подпись в breadcrumb
-      currentNode: function (currentNode) {
-        if (currentNode) {
-          this.items[2] = {
-            text: currentNode.title,
-            active: true
-          }
-        } else {
-          this.items[2] = undefined
-        }
-      }
     },
     methods: {
       // Перейти к следующему вопросу

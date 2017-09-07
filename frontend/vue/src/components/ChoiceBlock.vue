@@ -1,6 +1,6 @@
   <template>
     <div>
-      <p><b>Вопрос:</b> {{ block.question_text }}</p>
+      <p><b>Вопрос:</b> <span v-html="markdown(block.question_text)"></span></p>
       <p>{{ choicesComputed }}</p>
       <div v-for="choice in block.choices">
         <b-form-group id="choices">
@@ -35,11 +35,6 @@
         var md = new MarkdownIt()
         md.use(mk)
         return md.render(value)
-      }
-    },
-    watch: {
-      block: function () {
-        this.choices = []
       }
     }
   }
