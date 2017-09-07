@@ -1175,7 +1175,8 @@
     "pk": 1,
     "fields": {
         "lesson": 1,
-        "node": 1
+        "node": 1,
+        "order": 0
     }
 },
 {
@@ -1183,7 +1184,8 @@
     "pk": 2,
     "fields": {
         "lesson": 1,
-        "node": 2
+        "node": 2,
+        "order": 0
     }
 },
 {
@@ -1191,7 +1193,8 @@
     "pk": 3,
     "fields": {
         "lesson": 1,
-        "node": 3
+        "node": 3,
+        "order": 0
     }
 },
 {
@@ -1199,7 +1202,8 @@
     "pk": 4,
     "fields": {
         "lesson": 1,
-        "node": 4
+        "node": 4,
+        "order": 0
     }
 },
 {
@@ -1207,7 +1211,8 @@
     "pk": 5,
     "fields": {
         "lesson": 4,
-        "node": 5
+        "node": 5,
+        "order": 1
     }
 },
 {
@@ -1215,7 +1220,8 @@
     "pk": 6,
     "fields": {
         "lesson": 4,
-        "node": 6
+        "node": 6,
+        "order": 2
     }
 },
 {

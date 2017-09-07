@@ -36,6 +36,7 @@ class TaskDetailView(AuthMixin, APIView):
             return JsonResponse({'Error message': str(e)}, status=404)
         task_serializer = TaskSerializer(task)
         task_data = task_serializer.data
+        task_data["lesson"]["nodes"] = task.lesson.nodes_of_lesson
         lesson_node_reations = LessonNodeRelation.objects.filter(lesson=task.lesson)
         data = {}
         nodes = {}
