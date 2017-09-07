@@ -11,29 +11,67 @@
              Начать
            </a>
         </b-card>
-        <hr>
+        <br>
+      </div>
+      <div v-for="(node, key, nodeIndex) in nodes">
+        <div v-if="nodeIndex <= currentNodeIndex">
+          <b-card bg-variant="info" text-variant="white" class="text-center">
+            <p class="card-text">
+              {{ node.title }}
+            </p>
+          </b-card>
+          <br>
+          <div v-if="nodeIndex < currentNodeIndex">
+            <div v-for="(blockId, blockIndex) in node.blocks">
+              <b-card>
+                <div v-if="blocks[blockId].polymorphic_ctype.model === 'choiceblock'">
+                  <choiceblock :block="blocks[blockId]"></choiceblock>
+                </div>
+                <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textblock'">
+                  <textblock :block="blocks[blockId]"></textblock>
+                </div>
+                <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textanswerblock'">
+                  <textanswerblock :block="blocks[blockId]"></textanswerblock>
+                </div>
+                <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'floatblock'">
+                  <floatblock :block="blocks[blockId]"></floatblock>
+                </div>
+              </b-card>
+              <br>
+            </div>
+          </div>
+          <div v-else-if="nodeIndex === currentNodeIndex">
+            <div v-for="(blockId, blockIndex) in node.blocks">
+              <div v-if="blockIndex <= currentBlockIndex">
+                <b-card>
+                  <div v-if="blocks[blockId].polymorphic_ctype.model === 'choiceblock'">
+                    <choiceblock :block="blocks[blockId]"></choiceblock>
+                  </div>
+                  <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textblock'">
+                    <textblock :block="blocks[blockId]"></textblock>
+                  </div>
+                  <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textanswerblock'">
+                    <textanswerblock :block="blocks[blockId]"></textanswerblock>
+                  </div>
+                  <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'floatblock'">
+                    <floatblock :block="blocks[blockId]"></floatblock>
+                  </div>
+                  <b-button v-on:click="nextBlock" v-if="blockIndex === currentBlockIndex">
+                    Следующий блок
+                  </b-button>
+                </b-card>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div v-if="currentNodeIndex === task.lesson.nodes.length">
-        <h2>Конец</h2>
-      </div>
-      <div v-else-if="currentBlock">
-
-        <b-card>
-          <div v-if="currentBlock.polymorphic_ctype.model === 'choiceblock'">
-            <choiceblock :block="currentBlock"></choiceblock>
-          </div>
-          <div v-else-if="currentBlock.polymorphic_ctype.model === 'textblock'">
-            <textblock :block="currentBlock"></textblock>
-          </div>
-          <div v-else-if="currentBlock.polymorphic_ctype.model === 'textanswerblock'">
-            <textanswerblock :block="currentBlock"></textanswerblock>
-          </div>
-          <div v-else-if="currentBlock.polymorphic_ctype.model === 'floatblock'">
-            <floatblock :block="currentBlock"></floatblock>
-          </div>
-          <b-button v-on:click="nextBlock">
-            Следующий блок
-          </b-button>
+        <b-card bg-variant="success"
+                text-variant="white"
+                header="Конец"
+                class="text-center">
+          <p class="card-text">Теперь, если нет другой домашки, ты можешь отдохнуть 😉</p>
         </b-card>
       </div>
     </div>
