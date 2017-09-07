@@ -11,7 +11,7 @@
       <div v-if="currentNodeIndex === task.lesson.nodes.length">
         <h2>Конец</h2>
       </div>
-      <div v-else>
+      <div v-else-if="currentBlock">
         <div v-if="currentBlock.polymorphic_ctype.model === 'choiceblock'">
           <choiceblock :block="currentBlock"></choiceblock>
         </div>

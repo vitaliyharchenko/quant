@@ -1,10 +1,9 @@
 [
 {
     "model": "auth.user",
-    "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$36000$vbBGjrdVYjhS$81usBcO+H1/SyabJezo4Fffz9jaGWNNKV3uXiyaBdh4=",
-        "last_login": "2017-08-08T08:25:06.568Z",
+        "last_login": "2017-09-05T09:26:07.473Z",
         "is_superuser": true,
         "username": "root",
         "first_name": "",
@@ -19,7 +18,6 @@
 },
 {
     "model": "auth.user",
-    "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$36000$ocOCcp9XxPUx$jbbhmELkS+SbCE4rvVuKs3rh7dsqfDyr6tcoRgM1KD4=",
         "last_login": "2017-08-03T13:49:48.827Z",
@@ -37,7 +35,6 @@
 },
 {
     "model": "auth.user",
-    "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$36000$1HgHlOcoee7G$UfhhXk/SNCSVZLqivion//M2+OTQLDL3nZ6yuAnJ0l0=",
         "last_login": null,
@@ -55,7 +52,6 @@
 },
 {
     "model": "auth.user",
-    "pk": 4,
     "fields": {
         "password": "pbkdf2_sha256$36000$NW71r7KUMWYL$xXqYApshWW3v16N4Kw/YEr1b3QpFCMHeBJBz0kE7vKw=",
         "last_login": null,
@@ -81,6 +77,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "6fe4qsnm5dqyqylvl5se9h6dt9fz7zuz",
+    "fields": {
+        "session_data": "YjlmYWRlMmMyMDA0NWRhM2Q3N2YzM2FkNjkxNGI5MWNlMDUzNDk1Nzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiNDdjMjY4NmI1OTY5MDg3MmZjNGU3ZjA0NDgxOGNiNjhkMmE2MTkwIn0=",
+        "expire_date": "2017-09-19T09:26:07.574Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "eu4s8tv3c0896vz84mnyab7iasb2b7n3",
     "fields": {
         "session_data": "YjlmYWRlMmMyMDA0NWRhM2Q3N2YzM2FkNjkxNGI5MWNlMDUzNDk1Nzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiNDdjMjY4NmI1OTY5MDg3MmZjNGU3ZjA0NDgxOGNiNjhkMmE2MTkwIn0=",
@@ -99,9 +103,7 @@
     "model": "users.profile",
     "pk": 1,
     "fields": {
-        "user": [
-            "root"
-        ],
+        "user": 1,
         "birth_date": null,
         "email_confirmed": false,
         "is_complete": false,
@@ -118,9 +120,7 @@
     "model": "users.profile",
     "pk": 2,
     "fields": {
-        "user": [
-            "user"
-        ],
+        "user": 2,
         "birth_date": null,
         "email_confirmed": false,
         "is_complete": false,
@@ -137,9 +137,7 @@
     "model": "users.profile",
     "pk": 3,
     "fields": {
-        "user": [
-            "User2"
-        ],
+        "user": 3,
         "birth_date": null,
         "email_confirmed": false,
         "is_complete": false,
@@ -156,9 +154,7 @@
     "model": "users.profile",
     "pk": 4,
     "fields": {
-        "user": [
-            "Student1"
-        ],
+        "user": 4,
         "birth_date": null,
         "email_confirmed": false,
         "is_complete": false,
@@ -175,10 +171,7 @@
     "model": "blocks.block",
     "pk": 1,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "choiceblock"
-        ],
+        "polymorphic_ctype": 13,
         "time": 2,
         "score": 2
     }
@@ -187,10 +180,7 @@
     "model": "blocks.block",
     "pk": 2,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 12,
         "time": 3,
         "score": 3
     }
@@ -199,10 +189,7 @@
     "model": "blocks.block",
     "pk": 3,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 12,
         "time": 3,
         "score": 0
     }
@@ -211,10 +198,7 @@
     "model": "blocks.block",
     "pk": 4,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 12,
         "time": 2,
         "score": 1
     }
@@ -223,10 +207,7 @@
     "model": "blocks.block",
     "pk": 5,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 12,
         "time": 3,
         "score": 1
     }
@@ -235,10 +216,7 @@
     "model": "blocks.block",
     "pk": 6,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 12,
         "time": 3,
         "score": 1
     }
@@ -247,10 +225,7 @@
     "model": "blocks.block",
     "pk": 7,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textblock"
-        ],
+        "polymorphic_ctype": 12,
         "time": 3,
         "score": 1
     }
@@ -259,10 +234,7 @@
     "model": "blocks.block",
     "pk": 8,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "choiceblock"
-        ],
+        "polymorphic_ctype": 13,
         "time": 1,
         "score": 1
     }
@@ -271,10 +243,7 @@
     "model": "blocks.block",
     "pk": 9,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "textanswerblock"
-        ],
+        "polymorphic_ctype": 16,
         "time": 1,
         "score": 1
     }
@@ -283,10 +252,7 @@
     "model": "blocks.block",
     "pk": 10,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "floatblock"
-        ],
+        "polymorphic_ctype": 15,
         "time": 1,
         "score": 0
     }
@@ -295,10 +261,7 @@
     "model": "blocks.block",
     "pk": 11,
     "fields": {
-        "polymorphic_ctype": [
-            "blocks",
-            "floatblock"
-        ],
+        "polymorphic_ctype": 15,
         "time": 1,
         "score": 0
     }
@@ -324,7 +287,7 @@
     "pk": 4,
     "fields": {
         "title": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
-        "body": "\u0414\u0440\u043e\u0431\u044c\u044e \u043d\u0430\u0437\u044b\u0432\u0430\u044e\u0442 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0432\u0438\u0434\u0430 \\frac{a}{b}, \u0433\u0434\u0435 \u0431\u0443\u043a\u0432\u0430\u043c\u0438 a \u0438 b \u043e\u0431\u043e\u0437\u043d\u0430\u0447\u0435\u043d\u044b \u0447\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0438\u043b\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f, \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0449\u0438\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435. \u0412\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 a \u2013 \u044d\u0442\u043e \u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u044c \u0434\u0440\u043e\u0431\u0438, \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 b \u2013 \u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b\u044c \u0434\u0440\u043e\u0431\u0438.\r\n\u0412\u044b \u0445\u043e\u0440\u043e\u0448\u043e \u0437\u043d\u0430\u043a\u043e\u043c\u044b \u0441 \u0447\u0438\u0441\u043b\u043e\u0432\u044b\u043c\u0438 \u0434\u0440\u043e\u0431\u044f\u043c\u0438\r\n\u041f\u0440\u0438\u043c\u0435\u0440\u044b \u0447\u0438\u0441\u043b\u043e\u0432\u044b\u0445 \u0434\u0440\u043e\u0431\u0435\u0439\r\n\\frac{4}{7}\r\n\\frac{1,8-4,2}{5,6\u2219(-3)}\r\n\\frac{1}{3/4+9/5}\r\n\u0422\u0430\u043a \u0436\u0435 \u0432\u044b \u0443\u0436\u0435 \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u043b\u0438\u0441\u044c \u0441 \u0434\u0440\u043e\u0431\u044f\u043c\u0438, \u0432 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u0435\u0441\u0442\u044c \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435\r\n\u041f\u0440\u0438\u043c\u0435\u0440\u044b \u0434\u0440\u043e\u0431\u0435\u0439 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438\r\n\\frac{10}{(2-a)^2} \r\n\\frac{cd+d^3}{c^2-d}\r\n\\frac{2}{\\frac{1}{a}+\\frac{b}{3}}"
+        "body": "\u0414\u0440\u043e\u0431\u044c\u044e \u043d\u0430\u0437\u044b\u0432\u0430\u044e\u0442 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0432\u0438\u0434\u0430 $\\frac{a}{b}$, \u0433\u0434\u0435 \u0431\u0443\u043a\u0432\u0430\u043c\u0438 a \u0438 b \u043e\u0431\u043e\u0437\u043d\u0430\u0447\u0435\u043d\u044b \u0447\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0438\u043b\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f, \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0449\u0438\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435. \u0412\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 a \u2013 \u044d\u0442\u043e \u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u044c \u0434\u0440\u043e\u0431\u0438, \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 b \u2013 \u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b\u044c \u0434\u0440\u043e\u0431\u0438.\r\n\u0412\u044b \u0445\u043e\u0440\u043e\u0448\u043e \u0437\u043d\u0430\u043a\u043e\u043c\u044b \u0441 \u0447\u0438\u0441\u043b\u043e\u0432\u044b\u043c\u0438 \u0434\u0440\u043e\u0431\u044f\u043c\u0438\r\n\u041f\u0440\u0438\u043c\u0435\u0440\u044b \u0447\u0438\u0441\u043b\u043e\u0432\u044b\u0445 \u0434\u0440\u043e\u0431\u0435\u0439\r\n$$\\frac{4}{7}$$\r\n$$\\frac{1,8-4,2}{5,6*(-3)}$$\r\n$$\\frac{1}{3/4+9/5}$$\r\n\u0422\u0430\u043a \u0436\u0435 \u0432\u044b \u0443\u0436\u0435 \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u043b\u0438\u0441\u044c \u0441 \u0434\u0440\u043e\u0431\u044f\u043c\u0438, \u0432 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u0435\u0441\u0442\u044c \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435\r\n\u041f\u0440\u0438\u043c\u0435\u0440\u044b \u0434\u0440\u043e\u0431\u0435\u0439 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438\r\n$$\\frac{10}{(2-a)^2} $$\r\n$$\\frac{cd+d^3}{c^2-d}$$\r\n$$\\frac{2}{\\frac{1}{a}+\\frac{b}{3}}$$"
     }
 },
 {
@@ -332,7 +295,7 @@
     "pk": 5,
     "fields": {
         "title": "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f",
-        "body": "\u041d\u0435\u043c\u043d\u043e\u0433\u043e \u0442\u0435\u0440\u043c\u0438\u043d\u043e\u0432:\r\n\u0420\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u2013 \u044d\u0442\u043e \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f, \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u043d\u044b\u0435 \u043f\u0443\u0442\u0435\u043c \u0441\u043b\u043e\u0436\u0435\u043d\u0438\u044f, \u0432\u044b\u0447\u0438\u0442\u0430\u043d\u0438\u044f, \u0443\u043c\u043d\u043e\u0436\u0435\u043d\u0438\u044f, \u0434\u0435\u043b\u0435\u043d\u0438\u044f \u0438 \u0432\u043e\u0437\u0432\u0435\u0434\u0435\u043d\u0438\u044f \u0432 \u0441\u0442\u0435\u043f\u0435\u043d\u044c \u0447\u0438\u0441\u0435\u043b \u0438 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445.\r\n\u0420\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u043c\u043e\u0433\u0443\u0442 \u0431\u044b\u0442\u044c \u0446\u0435\u043b\u044b\u043c\u0438 \u0438 \u0434\u0440\u043e\u0431\u043d\u044b\u043c\u0438. \u0426\u0435\u043b\u044b\u0435 \u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u043d\u0435 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 \u0432 \u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b\u0435 (\u0441\u044e\u0434\u0430 \u043e\u0442\u043d\u043e\u0441\u044f\u0442\u0441\u044f \u0447\u0438\u0441\u043b\u0430, \u043e\u0434\u043d\u043e\u0447\u043b\u0435\u043d\u044b, \u043c\u043d\u043e\u0433\u043e\u0447\u043b\u0435\u043d\u044b), \r\n\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, 7,5, a^3,2x^2-5x+18,\\frac{x^4}{15}\r\n\u0414\u0440\u043e\u0431\u043d\u044b\u0435 \u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f, \u043d\u0430\u043e\u0431\u043e\u0440\u043e\u0442, \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044e \u0434\u0435\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439\r\n\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \r\n\r\n2+a\r\n\\frac{cd+d^3{}{c^2-d}\r\n\\frac{2}{\\frac{1}{a}+\\frac{b}{3}}\r\n\u041a \u043d\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u043c \u0434\u0440\u043e\u0431\u044f\u043c \u043e\u0442\u043d\u043e\u0441\u044f\u0442\u0441\u044f, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0434\u0440\u043e\u0431\u0438, \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0449\u0438\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u0443\u044e \u043f\u043e\u0434 \u0437\u043d\u0430\u043a\u043e\u043c \u043c\u043e\u0434\u0443\u043b\u044f. \r\n\\frac{x}{1-|2x|}\r\n\r\n\u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u044c\u044e \u043d\u0430\u0437\u044b\u0432\u0430\u044e\u0442 \u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u043e \u0432 \u0432\u0438\u0434\u0435 \u0447\u0430\u0441\u0442\u043d\u043e\u0433\u043e \u0434\u0432\u0443\u0445 \u043c\u043d\u043e\u0433\u043e\u0447\u043b\u0435\u043d\u043e\u0432. \r\n\r\n![cat](https://www.google.ru/imgres?imgurl=http%3A%2F%2Fgetbg.net%2Fupload%2Ffull%2F158049_kotik_malysh_1600x1200_(www.GetBg.net).jpg&imgrefurl=http%3A%2F%2Fscorpion-cats.ru%2Fmalysh-kotik%2F&docid=GVTmptIENewZGM&tbnid=8t0MFWFhj_0RVM%3A&vet=10ahUKEwidiObbyY3WAhVrJ5oKHfWtCbIQMwhDKAgwCA..i&w=1600&h=1200&bih=755&biw=787&q=%D0%BA%D0%BE%D1%82%D0%B8%D0%BA&ved=0ahUKEwidiObbyY3WAhVrJ5oKHfWtCbIQMwhDKAgwCA&iact=mrc&uact=8 \"cat\")"
+        "body": "\u041d\u0435\u043c\u043d\u043e\u0433\u043e \u0442\u0435\u0440\u043c\u0438\u043d\u043e\u0432:\r\n\u0420\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u2013 \u044d\u0442\u043e \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f, \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u043d\u044b\u0435 \u043f\u0443\u0442\u0435\u043c \u0441\u043b\u043e\u0436\u0435\u043d\u0438\u044f, \u0432\u044b\u0447\u0438\u0442\u0430\u043d\u0438\u044f, \u0443\u043c\u043d\u043e\u0436\u0435\u043d\u0438\u044f, \u0434\u0435\u043b\u0435\u043d\u0438\u044f \u0438 \u0432\u043e\u0437\u0432\u0435\u0434\u0435\u043d\u0438\u044f \u0432 \u0441\u0442\u0435\u043f\u0435\u043d\u044c \u0447\u0438\u0441\u0435\u043b \u0438 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445.\r\n\u0420\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u043c\u043e\u0433\u0443\u0442 \u0431\u044b\u0442\u044c \u0446\u0435\u043b\u044b\u043c\u0438 \u0438 \u0434\u0440\u043e\u0431\u043d\u044b\u043c\u0438. \u0426\u0435\u043b\u044b\u0435 \u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u043d\u0435 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 \u0432 \u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b\u0435 (\u0441\u044e\u0434\u0430 \u043e\u0442\u043d\u043e\u0441\u044f\u0442\u0441\u044f \u0447\u0438\u0441\u043b\u0430, \u043e\u0434\u043d\u043e\u0447\u043b\u0435\u043d\u044b, \u043c\u043d\u043e\u0433\u043e\u0447\u043b\u0435\u043d\u044b), \r\n\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, $7,5$, $a^3$, $2x^2-5x+18$, $\\frac{x^4}{15}$\r\n\u0414\u0440\u043e\u0431\u043d\u044b\u0435 \u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f, \u043d\u0430\u043e\u0431\u043e\u0440\u043e\u0442, \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044e \u0434\u0435\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439\r\n\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \r\n\r\n$$ 2+a $$\r\n$$ \\frac{cd+d^3}{c^2-d} $$\r\n$$ \\frac{2}{\\frac{1}{a}+\\frac{b}{3}} $$\r\n\u041a \u043d\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u043c \u0434\u0440\u043e\u0431\u044f\u043c \u043e\u0442\u043d\u043e\u0441\u044f\u0442\u0441\u044f, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0434\u0440\u043e\u0431\u0438, \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0449\u0438\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u0443\u044e \u043f\u043e\u0434 \u0437\u043d\u0430\u043a\u043e\u043c \u043c\u043e\u0434\u0443\u043b\u044f. \r\n$$ \\frac{x}{1-|2x|} $$\r\n\r\n\u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u044c\u044e \u043d\u0430\u0437\u044b\u0432\u0430\u044e\u0442 \u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u043e \u0432 \u0432\u0438\u0434\u0435 \u0447\u0430\u0441\u0442\u043d\u043e\u0433\u043e \u0434\u0432\u0443\u0445 \u043c\u043d\u043e\u0433\u043e\u0447\u043b\u0435\u043d\u043e\u0432. \r\n\r\n![cat](http://getbg.net/upload/full/158049_kotik_malysh_1600x1200_(www.GetBg.net).jpg)"
     }
 },
 {
@@ -340,7 +303,7 @@
     "pk": 6,
     "fields": {
         "title": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0435\u0439",
-        "body": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0435\u0439\r\n\u0427\u0442\u043e\u0431\u044b \u043d\u0430\u0439\u0442\u0438 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \u043d\u0443\u0436\u043d\u043e \r\n\t\u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0441\u0442\u043e\u0438\u0442 \u0432 \u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u0435\r\n\t\u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u0432 \u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b\u0435\r\n\t\u041f\u0435\u0440\u0432\u044b\u0439 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u0440\u0430\u0437\u0434\u0435\u043b\u0438\u0442\u044c \u043d\u0430 \u0432\u0442\u043e\u0440\u043e\u0439\r\n\u041f\u0440\u0438\u043c\u0435\u0440 1.\r\n\u0417\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u044f \u0438 \u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b\u044f \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0432\u0445\u043e\u0434\u044f\u0442 \u0432 \u044d\u0442\u0443 \u0434\u0440\u043e\u0431\u044c.\r\n\u0427\u0442\u043e\u0431\u044b \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 2/(x-3) \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0437\u043d\u0430\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 x.\r\n\u0417\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0438 \u043f\u0440\u0438 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f\u0445 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u044b \u0432 \u0442\u0430\u0431\u043b\u0438\u0446\u0435:\r\n![table1](http://prntscr.com/gh98vk \"table1\")"
+        "body": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0435\u0439\r\n\u0427\u0442\u043e\u0431\u044b \u043d\u0430\u0439\u0442\u0438 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \u043d\u0443\u0436\u043d\u043e:\r\n\r\n- \u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u0441\u0442\u043e\u0438\u0442 \u0432 \u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u0435\r\n- \u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f \u0432 \u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b\u0435\r\n- \u041f\u0435\u0440\u0432\u044b\u0439 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u0440\u0430\u0437\u0434\u0435\u043b\u0438\u0442\u044c \u043d\u0430 \u0432\u0442\u043e\u0440\u043e\u0439\r\n\r\n\u041f\u0440\u0438\u043c\u0435\u0440 1.\r\n\r\n\u0417\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u044f \u0438 \u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b\u044f \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0432\u0445\u043e\u0434\u044f\u0442 \u0432 \u044d\u0442\u0443 \u0434\u0440\u043e\u0431\u044c.\r\n\r\n\u0427\u0442\u043e\u0431\u044b \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 $2/(x-3)$ \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0437\u043d\u0430\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 $x$.\r\n\u0417\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0438 \u043f\u0440\u0438 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f\u0445 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u044b \u0432 \u0442\u0430\u0431\u043b\u0438\u0446\u0435:\r\n![table1](https://image.prntscr.com/image/6YAB-FumQ7eku0-XiQzlCw.png)"
     }
 },
 {
@@ -348,7 +311,7 @@
     "pk": 7,
     "fields": {
         "title": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439",
-        "body": "\u0412\u044b \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u043b\u0438\u0441\u044c \u0441 \u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f\u043c\u0438 \u0432 \u043a\u0443\u0440\u0441\u0435 \u0444\u0438\u0437\u0438\u043a\u0438. \u0427\u0442\u043e\u0431\u044b \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0443\u0441\u043a\u043e\u0440\u0435\u043d\u0438\u0435 \u043f\u0440\u0438 \u0440\u0430\u0432\u043d\u043e\u0443\u0441\u043a\u043e\u0440\u0435\u043d\u043d\u043e\u043c \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u0438 \u043f\u043e \u0444\u043e\u0440\u043c\u0443\u043b\u0435 a=\\frac{v-v_0}{t}, \u043d\u0443\u0436\u043d\u043e \u0437\u043d\u0430\u0442\u044c 3 \u0432\u0435\u043b\u0438\u0447\u0438\u043d\u044b v-\u043a\u043e\u043d\u0435\u0447\u043d\u0430\u044f \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c,v_0-\u043d\u0430\u0447\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c,t-\u0432\u0440\u0435\u043c\u044f .\r\n\u041f\u0440\u0438\u043c\u0435\u0440 2.\r\n\u0421\u043a\u043e\u043b\u044c\u043a\u043e \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439 \u043d\u0443\u0436\u043d\u043e \u0437\u0430\u0434\u0430\u0442\u044c, \u0447\u0442\u043e\u0431\u044b \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438  \\frac{a+b-3}{2\u2219(a-b)}?\r\n\u041d\u0430\u043c \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b \u0434\u0432\u0430 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f, \u0442\u0430\u043a \u043a\u0430\u043a \u0432 \u0434\u0440\u043e\u0431\u0438 \u0434\u0432\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435 a \u0438 b.\r\n\u041f\u0443\u0441\u0442\u044c a=5,b=4. \u0427\u0442\u043e\u0431\u044b \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \u043f\u0440\u0438 \u0437\u0430\u0434\u0430\u043d\u043d\u044b\u0445 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f\u0445 a \u0438 b, \u043d\u0443\u0436\u043d\u043e \u043f\u043e\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u044d\u0442\u0438 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0432 \u0434\u0440\u043e\u0431\u044c \u0432\u043c\u0435\u0441\u0442\u043e \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445\r\n\\frac{5+4-3}{2\u2219(5-4)}=\\frac{6}{(2\u22191}=\\frac{6}{2}=3\r\n\u041f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0441\u0430\u043c\u043e\u0441\u0442\u043e\u044f\u0442\u0435\u043b\u044c\u043d\u043e \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \u043f\u0440\u0438 a=-1,b=2."
+        "body": "\u0412\u044b \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u043b\u0438\u0441\u044c \u0441 \u0440\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f\u043c\u0438 \u0432 \u043a\u0443\u0440\u0441\u0435 \u0444\u0438\u0437\u0438\u043a\u0438. \u0427\u0442\u043e\u0431\u044b \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0443\u0441\u043a\u043e\u0440\u0435\u043d\u0438\u0435 \u043f\u0440\u0438 \u0440\u0430\u0432\u043d\u043e\u0443\u0441\u043a\u043e\u0440\u0435\u043d\u043d\u043e\u043c \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u0438 \u043f\u043e \u0444\u043e\u0440\u043c\u0443\u043b\u0435 $a=\\frac{v-v_0}{t}$, \u043d\u0443\u0436\u043d\u043e \u0437\u043d\u0430\u0442\u044c 3 \u0432\u0435\u043b\u0438\u0447\u0438\u043d\u044b: $v$-\u043a\u043e\u043d\u0435\u0447\u043d\u0430\u044f \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c, $v_0$ - \u043d\u0430\u0447\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c, $t$ - \u0432\u0440\u0435\u043c\u044f.\r\n\r\n\u041f\u0440\u0438\u043c\u0435\u0440 2.\r\n\r\n\u0421\u043a\u043e\u043b\u044c\u043a\u043e \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439 \u043d\u0443\u0436\u043d\u043e \u0437\u0430\u0434\u0430\u0442\u044c, \u0447\u0442\u043e\u0431\u044b \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 $\\frac{a+b-3}{2*(a-b)}$?\r\n\u041d\u0430\u043c \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b \u0434\u0432\u0430 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f, \u0442\u0430\u043a \u043a\u0430\u043a \u0432 \u0434\u0440\u043e\u0431\u0438 \u0434\u0432\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435 $a$ \u0438 $b$.\r\n\u041f\u0443\u0441\u0442\u044c $a=5$, $b=4$. \u0427\u0442\u043e\u0431\u044b \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \u043f\u0440\u0438 \u0437\u0430\u0434\u0430\u043d\u043d\u044b\u0445 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f\u0445 $a$ \u0438 $b$, \u043d\u0443\u0436\u043d\u043e \u043f\u043e\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u044d\u0442\u0438 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0432 \u0434\u0440\u043e\u0431\u044c \u0432\u043c\u0435\u0441\u0442\u043e \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445\r\n$$ \\frac{5+4-3}{2*(5-4)} = \\frac{6}{2*1} = \\frac{6}{2}=3 $$\r\n\u041f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0441\u0430\u043c\u043e\u0441\u0442\u043e\u044f\u0442\u0435\u043b\u044c\u043d\u043e \u0432\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \u043f\u0440\u0438 $a=-1$, $b=2$."
     }
 },
 {
@@ -405,7 +368,7 @@
     "pk": 4,
     "fields": {
         "choice_block": 8,
-        "option_text": "4:a",
+        "option_text": "$\\frac{4}{a}$",
         "option_image": "",
         "help_text": "",
         "is_true": false
@@ -416,7 +379,7 @@
     "pk": 5,
     "fields": {
         "choice_block": 8,
-        "option_text": "\\frac{a}{5}",
+        "option_text": "$\\frac{a}{5}$",
         "option_image": "",
         "help_text": "",
         "is_true": true
@@ -427,7 +390,7 @@
     "pk": 6,
     "fields": {
         "choice_block": 8,
-        "option_text": "\\frac{a^2}{b^2}",
+        "option_text": "$\\frac{a^2}{b^2}$",
         "option_image": "",
         "help_text": "",
         "is_true": true
@@ -438,7 +401,7 @@
     "pk": 7,
     "fields": {
         "choice_block": 8,
-        "option_text": "a+\\frac{1}{2}",
+        "option_text": "$a+\\frac{1}{2}$",
         "option_image": "",
         "help_text": "",
         "is_true": false
@@ -448,7 +411,7 @@
     "model": "blocks.floatblock",
     "pk": 10,
     "fields": {
-        "question_text": "\u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 \\frac{x^2+2}{3-y}  \u043f\u0440\u0438 x=2,y =-3",
+        "question_text": "\u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 $\\frac{x^2+2}{3-y}$  \u043f\u0440\u0438 $x=2$, $y=-3$.",
         "image": "",
         "answer": 1.0
     }
@@ -457,7 +420,7 @@
     "model": "blocks.floatblock",
     "pk": 11,
     "fields": {
-        "question_text": "\u041d\u0430 \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0435 \u0432\u044b \u0432\u0438\u0434\u0438\u0442\u0435 \u0424\u043e\u0440\u043c\u0443\u043b\u0443 \u0434\u043b\u044f \u0440\u0430\u0441\u0447\u0435\u0442\u0430 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0435\u0441\u0430 \u0436\u0435\u043d\u0449\u0438\u043d\u044b.\r\n\u0413\u0434\u0435 \u0420\u041e\u0421\u0422 \u2013 \u044d\u0442\u043e \u0440\u043e\u0441\u0442 \u0432 \u0441\u0430\u043d\u0442\u0438\u043c\u0435\u0442\u0440\u0430\u0445. \u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u044b\u0439 \u0432\u0435\u0441 \u0434\u043b\u044f \u0436\u0435\u043d\u0449\u0438\u043d\u044b \u0440\u043e\u0441\u0442\u043e\u043c 165 \u0441\u043c. \r\n![formula](http://prntscr.com/gh9d6m \"formula\")",
+        "question_text": "\u041d\u0430 \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0435 \u0432\u044b \u0432\u0438\u0434\u0438\u0442\u0435 \u0424\u043e\u0440\u043c\u0443\u043b\u0443 \u0434\u043b\u044f \u0440\u0430\u0441\u0447\u0435\u0442\u0430 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0435\u0441\u0430 \u0436\u0435\u043d\u0449\u0438\u043d\u044b.\r\n\u0413\u0434\u0435 \u0420\u041e\u0421\u0422 \u2013 \u044d\u0442\u043e \u0440\u043e\u0441\u0442 \u0432 \u0441\u0430\u043d\u0442\u0438\u043c\u0435\u0442\u0440\u0430\u0445. \u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u044b\u0439 \u0432\u0435\u0441 \u0434\u043b\u044f \u0436\u0435\u043d\u0449\u0438\u043d\u044b \u0440\u043e\u0441\u0442\u043e\u043c 165 \u0441\u043c. \r\n![formula](https://image.prntscr.com/image/JPHgXOfHS8icApQVAI5y5A.png)",
         "image": "",
         "answer": 57.5
     }
@@ -466,7 +429,7 @@
     "model": "blocks.textanswerblock",
     "pk": 9,
     "fields": {
-        "question_text": "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0432 \u0432\u0438\u0434\u0435 \u0434\u0440\u043e\u0431\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 1\\frac{2}{5}a",
+        "question_text": "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0432 \u0432\u0438\u0434\u0435 \u0434\u0440\u043e\u0431\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 $1\\frac{2}{5}a$",
         "image": "",
         "answer": "7a/5"
     }
@@ -655,12 +618,8 @@
     "model": "tasks.task",
     "pk": 1,
     "fields": {
-        "student": [
-            "root"
-        ],
-        "teacher": [
-            "root"
-        ],
+        "student": 1,
+        "teacher": 1,
         "lesson": 1,
         "start_time": "2017-07-12T08:23:55Z",
         "finish_time": "2018-07-12T08:23:57Z",
@@ -671,12 +630,8 @@
     "model": "tasks.task",
     "pk": 2,
     "fields": {
-        "student": [
-            "user"
-        ],
-        "teacher": [
-            "root"
-        ],
+        "student": 2,
+        "teacher": 1,
         "lesson": 2,
         "start_time": "2017-08-08T09:44:09Z",
         "finish_time": "2017-08-09T09:44:13Z",
@@ -687,12 +642,8 @@
     "model": "tasks.task",
     "pk": 3,
     "fields": {
-        "student": [
-            "Student1"
-        ],
-        "teacher": [
-            "root"
-        ],
+        "student": 1,
+        "teacher": 1,
         "lesson": 4,
         "start_time": "2017-09-05T08:20:45Z",
         "finish_time": "2017-09-11T08:20:47Z",
@@ -703,13 +654,8 @@
     "model": "results.result",
     "pk": 156,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 23,
+        "student": 1,
         "date": "2017-09-05T08:33:10.036Z",
         "score": null,
         "max_score": null
@@ -719,13 +665,8 @@
     "model": "results.result",
     "pk": 157,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 23,
+        "student": 1,
         "date": "2017-09-05T08:34:12.453Z",
         "score": null,
         "max_score": null
@@ -735,13 +676,8 @@
     "model": "results.result",
     "pk": 158,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 23,
+        "student": 1,
         "date": "2017-09-05T08:37:30.689Z",
         "score": 4,
         "max_score": 5
@@ -751,13 +687,8 @@
     "model": "results.result",
     "pk": 159,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "textblockresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 25,
+        "student": 1,
         "date": "2017-09-05T08:37:30.753Z",
         "score": 3,
         "max_score": 3
@@ -767,13 +698,8 @@
     "model": "results.result",
     "pk": 160,
     "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "choiceblockresult"
-        ],
-        "student": [
-            "root"
-        ],
+        "polymorphic_ctype": 26,
+        "student": 1,
         "date": "2017-09-05T08:37:30.862Z",
         "score": 1,
         "max_score": 2
@@ -952,9 +878,7 @@
     "fields": {
         "title": "\u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441",
         "subject_tag": 1,
-        "teacher": [
-            "root"
-        ],
+        "teacher": 1,
         "about": "\u041a\u0443\u0440\u0441 \u043f\u043e \u0444\u0438\u0437\u0438\u043a\u0435 \u0434\u043b\u044f 7 \u043a\u043b\u0430\u0441\u0441\u0430"
     }
 },
@@ -964,9 +888,7 @@
     "fields": {
         "title": "\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430 8 \u043a\u043b\u0430\u0441\u0441",
         "subject_tag": 2,
-        "teacher": [
-            "root"
-        ],
+        "teacher": 1,
         "about": "\u041a\u043b\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043a\u0443\u0440\u0441 \u043f\u043e \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 \u0434\u043b\u044f \u0443\u0447\u0435\u043d\u0438\u043a\u043e\u0432 8 \u043a\u043b\u0430\u0441\u0441\u0430 \u043e\u0431\u0449\u0435\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0439 \u0448\u043a\u043e\u043b\u044b"
     }
 },
@@ -1002,9 +924,7 @@
     "pk": 1,
     "fields": {
         "title": "\u04247",
-        "teacher": [
-            "root"
-        ],
+        "teacher": 1,
         "about": "\u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441"
     }
 },
@@ -1012,9 +932,7 @@
     "model": "groups.studentgrouprelation",
     "pk": 1,
     "fields": {
-        "student": [
-            "user"
-        ],
+        "student": 2,
         "group": 1
     }
 },
@@ -1022,9 +940,7 @@
     "model": "groups.studentgrouprelation",
     "pk": 2,
     "fields": {
-        "student": [
-            "Student1"
-        ],
+        "student": 4,
         "group": 1
     }
 },
@@ -1032,9 +948,7 @@
     "model": "groups.studentgrouprelation",
     "pk": 4,
     "fields": {
-        "student": [
-            "root"
-        ],
+        "student": 1,
         "group": 1
     }
 },
@@ -1047,6 +961,396 @@
         "start_time": "2017-08-09T08:02:42Z",
         "finish_time": null,
         "is_finished": false
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2017-09-05T09:27:00.125Z",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "3",
+        "object_repr": "For root, \"\u0410\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0434\u0440\u043e\u0431\u044c. \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0440\u043e\u0431\u0438.\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"student\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2017-09-06T06:42:53.325Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2017-09-06T06:44:53.223Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2017-09-06T06:53:18.755Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2017-09-06T06:56:09.002Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2017-09-06T07:56:02.655Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2017-09-06T07:56:28.017Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2017-09-06T07:58:17.408Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2017-09-06T07:58:52.665Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2017-09-06T07:59:12.749Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2017-09-06T08:50:14.245Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "\u0427\u0438\u0441\u043b\u043e\u0432\u044b\u0435 \u0434\u0440\u043e\u0431\u0438 \u0438 \u0434\u0440\u043e\u0431\u0438 \u0441 \u043f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2017-09-06T08:52:23.733Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2017-09-06T08:53:46.655Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2017-09-06T09:02:17.946Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2017-09-06T11:36:19.461Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u044f",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2017-09-06T11:39:45.274Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "8",
+        "object_repr": "\u041a\u0430\u043a\u0438\u0435 \u0438\u0437 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0434\u0440\u043e\u0431\u044f\u043c\u0438?",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u0432\\u0430\\u0440\\u0438\\u0430\\u043d\\u0442 \\u043e\\u0442\\u0432\\u0435\\u0442\\u0430 \\u043d\\u0430 \\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u044b\\u0439 \\u0432\\u043e\\u043f\\u0440\\u043e\\u0441\", \"object\": \"$/frac{4}{a}$\", \"fields\": [\"option_text\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2017-09-06T11:45:45.509Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "8",
+        "object_repr": "\u041a\u0430\u043a\u0438\u0435 \u0438\u0437 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0434\u0440\u043e\u0431\u044f\u043c\u0438?",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u0432\\u0430\\u0440\\u0438\\u0430\\u043d\\u0442 \\u043e\\u0442\\u0432\\u0435\\u0442\\u0430 \\u043d\\u0430 \\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u044b\\u0439 \\u0432\\u043e\\u043f\\u0440\\u043e\\u0441\", \"object\": \"$\\\\frac{4}{a}$\", \"fields\": [\"option_text\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2017-09-06T11:49:46.069Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "8",
+        "object_repr": "\u041a\u0430\u043a\u0438\u0435 \u0438\u0437 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u0434\u0440\u043e\u0431\u044f\u043c\u0438?",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"\\u0432\\u0430\\u0440\\u0438\\u0430\\u043d\\u0442 \\u043e\\u0442\\u0432\\u0435\\u0442\\u0430 \\u043d\\u0430 \\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u044b\\u0439 \\u0432\\u043e\\u043f\\u0440\\u043e\\u0441\", \"object\": \"$\\\\frac{a}{5}$\", \"fields\": [\"option_text\"]}}, {\"changed\": {\"name\": \"\\u0432\\u0430\\u0440\\u0438\\u0430\\u043d\\u0442 \\u043e\\u0442\\u0432\\u0435\\u0442\\u0430 \\u043d\\u0430 \\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u044b\\u0439 \\u0432\\u043e\\u043f\\u0440\\u043e\\u0441\", \"object\": \"$\\\\frac{a^2}{b^2}$\", \"fields\": [\"option_text\"]}}, {\"changed\": {\"name\": \"\\u0432\\u0430\\u0440\\u0438\\u0430\\u043d\\u0442 \\u043e\\u0442\\u0432\\u0435\\u0442\\u0430 \\u043d\\u0430 \\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u044b\\u0439 \\u0432\\u043e\\u043f\\u0440\\u043e\\u0441\", \"object\": \"$a+\\\\frac{1}{2}$\", \"fields\": [\"option_text\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2017-09-06T11:51:26.832Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "9",
+        "object_repr": "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0432 \u0432\u0438\u0434\u0435 \u0434\u0440\u043e\u0431\u0438 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u0435 $1\\frac{2}{5}a$",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"question_text\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2017-09-06T11:56:34.045Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0435\u0439",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2017-09-06T11:57:12.430Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u0434\u0440\u043e\u0431\u0435\u0439",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2017-09-06T13:14:03.858Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "7",
+        "object_repr": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2017-09-06T13:14:29.270Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "7",
+        "object_repr": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2017-09-06T13:15:17.473Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "7",
+        "object_repr": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2017-09-06T13:15:41.934Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "7",
+        "object_repr": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2017-09-06T13:16:04.151Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "7",
+        "object_repr": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2017-09-06T13:16:30.890Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "7",
+        "object_repr": "\u041f\u0440\u0438\u043c\u0435\u0440 \u043d\u0430 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0435\u0439",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"body\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2017-09-06T13:17:54.902Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "10",
+        "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 $/frac{x^2+2}{3-y}$  \u043f\u0440\u0438 $x=2$, $y=-3$.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"question_text\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2017-09-06T13:20:52.832Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "10",
+        "object_repr": "\u0412\u044b\u0447\u0438\u0441\u043b\u0438\u0442\u0435 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0434\u0440\u043e\u0431\u0438 $\\frac{x^2+2}{3-y}$  \u043f\u0440\u0438 $x=2$, $y=-3$.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"question_text\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2017-09-06T13:24:43.980Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "11",
+        "object_repr": "\u041d\u0430 \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0435 \u0432\u044b \u0432\u0438\u0434\u0438\u0442\u0435 \u0424\u043e\u0440\u043c\u0443\u043b\u0443 \u0434\u043b\u044f \u0440\u0430\u0441\u0447\u0435\u0442\u0430 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0432\u0435\u0441\u0430 \u0436\u0435\u043d\u0449\u0438\u043d\u044b.\r\n\u0413\u0434\u0435 \u0420\u041e\u0421\u0422 \u2013 \u044d\u0442\u043e \u0440\u043e\u0441\u0442 \u0432 \u0441\u0430\u043d\u0442\u0438\u043c\u0435\u0442\u0440\u0430\u0445. \u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u044b\u0439 \u0432\u0435\u0441 \u0434\u043b\u044f \u0436\u0435\u043d\u0449\u0438\u043d\u044b \u0440\u043e\u0441\u0442\u043e\u043c 165 \u0441\u043c. \r\n![formula](https://image.prntscr.com/image",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"question_text\"]}}]"
     }
 }
 ]
