@@ -36,7 +36,7 @@ quant
 
 Для заполнения БД данными
 
-1. `docker-compose run web dumpdata --natural-primary -e contenttypes -e auth.Permission -e authtoken.token --indent 4 > django/fixtures.json`
+1. `docker-compose run web dumpdata --natural-foreign -e contenttypes -e auth.Permission -e authtoken.token -e admin.logentry --indent 4 > django/fixtures.json`
 2. `docker-compose run web flush` - удалить все данные из БД
 3. `docker-compose run web loaddata fixtures.json`
 

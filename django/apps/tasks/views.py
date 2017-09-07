@@ -43,10 +43,10 @@ class TaskDetailView(AuthMixin, APIView):
         for relation in lesson_node_reations:
             nodes[relation.node.pk] = {}
             nodes[relation.node.pk]["title"] = relation.node.title
-            node_block_relations = NodeBlockRelation.objects.filter(node=relation.node)
-            nodes[relation.node.pk]["blocks"] = [entry.block.pk for entry in node_block_relations]
-            for entry in node_block_relations:
-                blocks[entry.block.pk] = BlockSerializer(entry.block).data
+            blocks_of_node = relation.node.blocks_of_node
+            nodes[relation.node.pk]["blocks"] = [block.pk for block in blocks_of_node]
+            for block in blocks_of_node:
+                blocks[block.pk] = BlockSerializer(block).data
         data["task"] = task_data
         data["nodes"] = nodes
         data["blocks"] = blocks
