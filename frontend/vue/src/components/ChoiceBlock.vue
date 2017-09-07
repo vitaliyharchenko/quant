@@ -37,7 +37,6 @@
         return md.render(value)
       }
     },
-    ,
     watch: {
       block: function () {
         this.choices = []
