@@ -2,31 +2,38 @@
     <div v-if="task">
       <b-breadcrumb :items="items"/>
       <div>
-        <p class="lead">{{ task.lesson.title }}</p>
-        <p>{{ task.lesson.about }}</p>
-        <b-button v-on:click="nextNode">
-          Начать
-        </b-button>
+        <b-card :title="task.lesson.title">
+          <p class="card-text">
+            {{ task.lesson.about }}
+          </p>
+          <a href="#" v-on:click="nextNode"
+             class="card-link">
+             Начать
+           </a>
+        </b-card>
+        <hr>
       </div>
       <div v-if="currentNodeIndex === task.lesson.nodes.length">
         <h2>Конец</h2>
       </div>
       <div v-else-if="currentBlock">
-        <div v-if="currentBlock.polymorphic_ctype.model === 'choiceblock'">
-          <choiceblock :block="currentBlock"></choiceblock>
-        </div>
-        <div v-else-if="currentBlock.polymorphic_ctype.model === 'textblock'">
-          <textblock :block="currentBlock"></textblock>
-        </div>
-        <div v-else-if="currentBlock.polymorphic_ctype.model === 'textanswerblock'">
-          <textanswerblock :block="currentBlock"></textanswerblock>
-        </div>
-        <div v-else-if="currentBlock.polymorphic_ctype.model === 'floatblock'">
-          <floatblock :block="currentBlock"></floatblock>
-        </div>
-        <b-button v-on:click="nextBlock">
-          Следующий блок
-        </b-button>
+        <b-card>
+          <div v-if="currentBlock.polymorphic_ctype.model === 'choiceblock'">
+            <choiceblock :block="currentBlock"></choiceblock>
+          </div>
+          <div v-else-if="currentBlock.polymorphic_ctype.model === 'textblock'">
+            <textblock :block="currentBlock"></textblock>
+          </div>
+          <div v-else-if="currentBlock.polymorphic_ctype.model === 'textanswerblock'">
+            <textanswerblock :block="currentBlock"></textanswerblock>
+          </div>
+          <div v-else-if="currentBlock.polymorphic_ctype.model === 'floatblock'">
+            <floatblock :block="currentBlock"></floatblock>
+          </div>
+          <b-button v-on:click="nextBlock">
+            Следующий блок
+          </b-button>
+        </b-card>
       </div>
     </div>
   </template>
