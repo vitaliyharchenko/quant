@@ -4,8 +4,12 @@ from django.core.urlresolvers import reverse
 from django.db import models
 
 from apps.tags.models import SubjectTag
+from apps.blocks.models import NodeBlockRelation
 
 # Nodes - nodes of learning graph
+def sortByOrder(rel):
+    return rel.order
+
 
 class Node(models.Model):
     
@@ -26,6 +30,17 @@ class Node(models.Model):
 
     def __str__(self):
         return self.title
+
+    @property
+    def node_block_relations(self):
+        return NodeBlockRelation.objects.filter(node=self)
+
+    @property
+    def blocks_of_node(self):
+        relations = [rel for rel in self.node_block_relations]
+        relations.sort(key=sortByOrder) 
+        return [rel.block for rel in relations]
+
 
 
 # Relation objects between nodes

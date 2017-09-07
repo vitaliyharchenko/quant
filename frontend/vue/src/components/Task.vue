@@ -7,7 +7,7 @@
             {{ task.lesson.about }}
           </p>
           <a href="#" v-on:click="nextNode"
-             class="card-link">
+             class="card-link" v-if="currentNodeIndex === -1">
              Начать
            </a>
         </b-card>
@@ -17,6 +17,7 @@
         <h2>Конец</h2>
       </div>
       <div v-else-if="currentBlock">
+
         <b-card>
           <div v-if="currentBlock.polymorphic_ctype.model === 'choiceblock'">
             <choiceblock :block="currentBlock"></choiceblock>
@@ -93,6 +94,7 @@
       this.items[1].text = 'Task #' + this.pk
     },
     watch: {
+      // подставляет подпись в breadcrumb
       currentNode: function (currentNode) {
         if (currentNode) {
           this.items[2] = {
@@ -113,6 +115,7 @@
           this.nextNode()
         }
       },
+      // перейти к следующей node
       nextNode: function () {
         this.currentBlockIndex = 0
         this.currentNodeIndex++

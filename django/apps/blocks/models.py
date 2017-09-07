@@ -123,3 +123,4 @@ class NodeBlockRelation(models.Model):
 
     def __str__(self):
         return "{} in {}".format(self.block, self.node)
+
