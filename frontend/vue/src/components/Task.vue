@@ -51,7 +51,8 @@
         <b-card bg-variant="success"
                 text-variant="white"
                 header="Конец"
-                class="text-center">
+                class="text-center"
+                v-focus>
           <p class="card-text">Теперь, если нет другой домашки, ты можешь отдохнуть 😉</p>
         </b-card>
       </div>
@@ -136,8 +137,6 @@
         }
       },
       blockBorderClass: function (blockId) {
-        console.log(this.blocks[blockId])
-        console.log(this.currentBlock)
         if (this.blocks[blockId] === this.currentBlock) {
           return 'primary'
         } else {

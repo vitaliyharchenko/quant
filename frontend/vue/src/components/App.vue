@@ -52,6 +52,9 @@
   </script>
 
   <style>
+    body {
+      padding-bottom: 50px;
+    }
     .navbar {
       margin-bottom: 50px;
     }
