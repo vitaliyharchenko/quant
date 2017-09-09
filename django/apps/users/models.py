@@ -12,7 +12,7 @@ from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 
 phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
-                             message="Телефон должен быть заполнен в формате: '+999999999'. Максимум 15 цифр.")
+                             message="Телефон должен быть заполнен в формате: '+79999999999'. Максимум 15 цифр.")
 
 # https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html#sign-up-with-confirmation-mail
 # https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone

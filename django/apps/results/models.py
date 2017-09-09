@@ -107,14 +107,14 @@ class FloatBlockResult(BlockResult):
         verbose_name_plural = 'результаты ответов на задачи'
 
     def set_score(self, cur_score=None):
-        max_score = self.block.score
+        self.max_score = self.block.score
         correct_answer = self.block.answer
         if cur_score:
             if cur_score <= max_score:
-                score = cur_score
+                self.score = cur_score
         else:
             if self.answer == correct_answer:
-                score = max_score
+                self.score = max_score
         self.save()
 
 class TextAnswerBlockResult(BlockResult):
@@ -125,14 +125,14 @@ class TextAnswerBlockResult(BlockResult):
         verbose_name_plural = 'результаты ответов на задание с текстовым ответом'
 
     def set_score(self, cur_score=None):
-        max_score = self.block.score
+        self.max_score = self.block.score
         correct_answer = self.block.answer
         if cur_score:
             if cur_score <= max_score:
-                score = cur_score
+                self.score = cur_score
         else:
             if self.answer == correct_answer:
-                score = max_score
+                self.score = max_score
         self.save()
 
 # ========================

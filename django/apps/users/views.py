@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
+from rest_framework.views import APIView
 from .models import Profile
 from .serializers import UserSerializer
 
@@ -59,6 +60,19 @@ def user_detail(request, pk):
     elif request.method == 'DELETE':
         user.delete()
         return HttpResponse(status=204)
+
+class UserRegisterView(APIView):
+    def post(self, request, format=None):
+        try:
+            data = JSONParser().parse(request)
+            serializer = UserSerializer(data=data)
+            if serializer.is_valid():
+                serializer.save()
+                return JsonResponse({'Status':'OK'}, status=200)
+            return JsonResponse({'Validation error': serializer.errors}, status=401)
+        except Exception as e:
+            return JsonResponse({'Error message': str(e)}, status=400)
+
 
 # rest auth
 from django.contrib.auth.models import User
