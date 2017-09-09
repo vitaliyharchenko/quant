@@ -54,5 +54,6 @@
   <style>
     img {
       max-width: 100%;
+      max-height: 300px;
     }
   </style>
