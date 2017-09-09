@@ -110,11 +110,11 @@ class FloatBlockResult(BlockResult):
         self.max_score = self.block.score
         correct_answer = self.block.answer
         if cur_score:
-            if cur_score <= max_score:
+            if cur_score <= self.max_score:
                 self.score = cur_score
         else:
             if self.answer == correct_answer:
-                self.score = max_score
+                self.score = self.max_score
         self.save()
 
 class TextAnswerBlockResult(BlockResult):
@@ -128,11 +128,11 @@ class TextAnswerBlockResult(BlockResult):
         self.max_score = self.block.score
         correct_answer = self.block.answer
         if cur_score:
-            if cur_score <= max_score:
+            if cur_score <= self.max_score:
                 self.score = cur_score
         else:
             if self.answer == correct_answer:
-                self.score = max_score
+                self.score = self.max_score
         self.save()
 
 # ========================
