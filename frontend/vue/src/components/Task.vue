@@ -150,8 +150,6 @@
             this.nextNode()
           }
         } else {
-          console.log('Конец')
-          console.log(this.results)
           this.$store.dispatch('sendTaskResults', [this.task, this.results])
         }
       },
