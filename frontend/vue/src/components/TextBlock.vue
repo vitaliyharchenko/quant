@@ -1,9 +1,14 @@
   <template>
     <div v-focus>
-      <h2>
-        {{ block.title }} <small><b-badge>Теория</b-badge></small>
-      </h2>
-      <div v-html="compiledMarkdown" id="markdown"></div>
+      <b-card :border-variant="borderVariant">
+        <h2>
+          {{ block.title }} <small><b-badge>Теория</b-badge></small>
+        </h2>
+        <div v-html="compiledMarkdown" id="markdown"></div>
+        <b-button v-on:click="endBlock" v-if="current">
+          Я прочитал
+        </b-button>
+      </b-card>
     </div>
   </template>
 
@@ -13,7 +18,8 @@
 
   export default {
     props: {
-      block: {}
+      block: {},
+      current: false
     },
     data () {
       return {
@@ -31,6 +37,15 @@
         var md = new MarkdownIt()
         md.use(mk)
         return md.render(this.block.body)
+      },
+      borderVariant () {
+        var variant = (this.current) ? ('primary') : ('')
+        return variant
+      }
+    },
+    methods: {
+      endBlock: function () {
+        this.$emit('finish', this.block, this.answer)
       }
     }
   }

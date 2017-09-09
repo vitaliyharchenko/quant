@@ -1,2 +1,3 @@
 export const RECEIVE_TASKS = 'RECEIVE_TASKS'
 export const RECEIVE_TASK = 'RECEIVE_TASK'
+export const SET_BLOCK_RESULT = 'SET_BLOCK_RESULT'

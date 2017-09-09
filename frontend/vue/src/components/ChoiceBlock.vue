@@ -1,13 +1,18 @@
   <template>
     <div v-focus>
-      <p><b>Вопрос:</b> <span v-html="markdown(block.question_text)"></span></p>
-      <div v-for="choice in block.choices">
-        <b-form-group id="choices">
-          <b-form-checkbox v-model="answer" id="choice.id" :value="choice.id">
-            <div v-html="markdown(choice.option_text)"></div>
-          </b-form-checkbox>
-        </b-form-group>
-      </div>
+      <b-card :border-variant="borderVariant">
+        <p><b>Вопрос:</b> <span v-html="markdown(block.question_text)"></span></p>
+        <div v-for="choice in block.choices">
+          <b-form-group id="choices">
+            <b-form-checkbox v-model="answer" id="choice.id" :value="choice.id">
+              <div v-html="markdown(choice.option_text)"></div>
+            </b-form-checkbox>
+          </b-form-group>
+        </div>
+        <b-button v-on:click="endBlock" v-if="current">
+          Далее
+        </b-button>
+      </b-card>
     </div>
   </template>
 
@@ -17,7 +22,8 @@
 
   export default {
     props: {
-      block: {}
+      block: {},
+      current: false
     },
     data () {
       return {
@@ -27,6 +33,10 @@
     computed: {
       choicesComputed () {
         return this.answer
+      },
+      borderVariant () {
+        var variant = (this.current) ? ('primary') : ('')
+        return variant
       }
     },
     methods: {
@@ -34,6 +44,9 @@
         var md = new MarkdownIt()
         md.use(mk)
         return md.render(value)
+      },
+      endBlock: function () {
+        this.$emit('finish', this.block, this.answer)
       }
     }
   }

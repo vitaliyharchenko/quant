@@ -11,38 +11,42 @@
              Начать
            </a>
         </b-card>
-        <br>
       </div>
-      <div v-for="(node, key, nodeIndex) in nodes">
+      <div v-for="(nodeId, nodeIndex) in task.lesson.nodes">
         <div v-if="nodeIndex <= currentNodeIndex">
           <b-card bg-variant="info"
                   text-variant="white"
                   class="text-center">
             <p class="card-text">
-              Тема {{ nodeIndex+1 }}. {{ node.title }}
+              Тема {{ nodeIndex+1 }}. {{ nodes[nodeId].title }}
             </p>
           </b-card>
-          <br>
-          <div v-for="(blockId, blockIndex) in node.blocks">
+          <div v-for="(blockId, blockIndex) in nodes[nodeId].blocks">
             <div v-if="nodeIndex < currentNodeIndex || blockIndex <= currentBlockIndex">
-              <b-card :border-variant="blockBorderClass(blockId)">
-                <div v-if="blocks[blockId].polymorphic_ctype.model === 'choiceblock'">
-                  <choiceblock :block="blocks[blockId]"></choiceblock>
-                </div>
-                <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textblock'">
-                  <textblock :block="blocks[blockId]"></textblock>
-                </div>
-                <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textanswerblock'">
-                  <textanswerblock :block="blocks[blockId]"></textanswerblock>
-                </div>
-                <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'floatblock'">
-                  <floatblock :block="blocks[blockId]"></floatblock>
-                </div>
-                <b-button v-on:click="nextBlock" v-if="blockIndex === currentBlockIndex">
-                  Следующий блок
-                </b-button>
-              </b-card>
-              <br>
+              <div v-if="blocks[blockId].polymorphic_ctype.model === 'choiceblock'">
+                <choiceblock :block="blocks[blockId]"
+                    v-on:finish="finishBlock"
+                    :current="isCurrentBlock(blockId)">
+                </choiceblock>
+              </div>
+              <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textblock'">
+                <textblock :block="blocks[blockId]"
+                    v-on:finish="finishBlock"
+                    :current="isCurrentBlock(blockId)">
+                </textblock>
+              </div>
+              <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'textanswerblock'">
+                <textanswerblock :block="blocks[blockId]"
+                    v-on:finish="finishBlock"
+                    :current="isCurrentBlock(blockId)">
+                </textanswerblock>
+              </div>
+              <div v-else-if="blocks[blockId].polymorphic_ctype.model === 'floatblock'">
+                <floatblock :block="blocks[blockId]"
+                    v-on:finish="finishBlock"
+                    :current="isCurrentBlock(blockId)">
+                </floatblock>
+              </div>
             </div>
           </div>
         </div>
@@ -81,7 +85,10 @@
             text: 'Task',
             active: true
           }
-        ]
+        ],
+        results: {
+          blocks: {}
+        }
       }
     },
     computed: {
@@ -117,6 +124,13 @@
       this.items[1].text = 'Task #' + this.pk
     },
     methods: {
+      // вызывается, когда оканчивается какой-то блок для обработки ответа
+      finishBlock: function (block, answer) {
+        this.results.blocks[block.id] = {
+          answer: answer
+        }
+        this.nextBlock()
+      },
       // Перейти к следующему вопросу
       nextBlock: function () {
         this.currentBlockIndex++
@@ -131,16 +145,21 @@
         this.currentNodeIndex++
         // Пока нода пустая - идем дальше, если ноды нет - не делаем ничего, это конец
         if (this.nodes[this.task.lesson.nodes[this.currentNodeIndex]] !== undefined) {
+          // tckb нода пустая - мотаем дальше
           if (this.nodes[this.task.lesson.nodes[this.currentNodeIndex]].blocks.length === 0) {
             this.nextNode()
           }
+        } else {
+          console.log('Конец')
+          console.log(this.results)
+          this.$store.dispatch('sendTaskResults', [this.task, this.results])
         }
       },
-      blockBorderClass: function (blockId) {
+      isCurrentBlock: function (blockId) {
         if (this.blocks[blockId] === this.currentBlock) {
-          return 'primary'
+          return true
         } else {
-          return undefined
+          return false
         }
       }
     },
@@ -152,3 +171,9 @@
     }
   }
   </script>
+
+  <style>
+    .card {
+      margin-bottom: 30px;
+    }
+  </style>
