@@ -378,3 +378,53 @@
         }
     }
 }
+
+{
+    "student": 1,
+    "task": 3,
+    "blocks": {
+        "4": {
+            "answer": true
+        },
+        "5": {
+            "answer": true
+        },
+        "6": {
+            "answer": true
+        },
+        "7": {
+            "answer": true
+        },
+        "8": {
+            "answer": [
+                7
+            ]
+        },
+        "9": {
+            "answer": "qwe"
+        },
+        "10": {
+            "answer": "qw"
+        },
+        "11": {
+            "answer": 12
+        },
+        "13": {
+            "answer": [
+                9
+            ]
+        },
+        "14": {
+            "answer": 12
+        },
+        "15": {
+            "answer": 12
+        },
+        "16": {
+            "answer": [
+                19,
+                18
+            ]
+        }
+    }
+}
