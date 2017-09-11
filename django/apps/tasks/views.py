@@ -55,15 +55,21 @@ class TaskDetailView(AuthMixin, APIView):
 
 class TaskResultView(AuthMixin, APIView):
     def post(self, request, pk, format=None):
-        try:
-            data = JSONParser().parse(request)
-            serializer = TaskResultSerializer(data=data)
-            if serializer.is_valid():
-                serializer.save(blocks=data.pop('blocks'))
-                return JsonResponse({'Status':'OK'}, status=200)
-            return JsonResponse({'Validation error': serializer.errors}, status=401)
-        except Exception as e:
-            return JsonResponse({'Error message': str(e)}, status=400)
+        # try:
+        #     data = JSONParser().parse(request)
+        #     serializer = TaskResultSerializer(data=data)
+        #     if serializer.is_valid():
+        #         serializer.save(blocks=data.pop('blocks'))
+        #         return JsonResponse({'Status':'OK'}, status=200)
+        #     return JsonResponse({'Validation error': serializer.errors}, status=401)
+        # except Exception as e:
+        #     return JsonResponse({'Error message': str(e)}, status=400)
+        data = JSONParser().parse(request)
+        serializer = TaskResultSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save(blocks=data.pop('blocks'))
+            return JsonResponse({'Status':'OK'}, status=200)
+        return JsonResponse({'Validation error': serializer.errors}, status=401)
 
     def get(self, request, pk, format=None):
         results = TaskResult.objects.filter(task=Task.objects.get(pk=pk))
