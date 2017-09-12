@@ -6,6 +6,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework.views import APIView
 from .models import Profile
 from .serializers import UserSerializer
+from apps.groups.serializers import StudentGroupSerializer
 
 
 from rest_framework.authtoken.models import Token
@@ -60,6 +61,27 @@ def user_detail(request, pk):
     elif request.method == 'DELETE':
         user.delete()
         return HttpResponse(status=204)
+
+class UserGroupsViewSet(APIView):
+    def get(self, request, format=None):
+        try:
+            groups_list_teacher = Profile.objects.get(user=request.user).my_groups_teacher
+            groups_list_student = Profile.objects.get(user=request.user).my_groups_student
+            data = {}
+            if groups_list_teacher is not None:
+                if len(groups_list_teacher) > 0:
+                    serializer = StudentGroupSerializer(groups_list_teacher, many=True)
+                    data["teacher"] = serializer.data
+            if len(groups_list_student) > 0:
+                serializer = StudentGroupSerializer(groups_list_student, many=True)
+                data["student"] = serializer.data
+            if len(data) > 0:
+                return JsonResponse(data, safe=False)
+            else:
+                return JsonResponse({'Status':'OK'}, status=200)
+        except user.DoesNotExist:
+            return HttpResponse(status=404)
+
 
 class UserRegisterView(APIView):
     def post(self, request, format=None):
