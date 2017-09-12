@@ -8,7 +8,7 @@
                     label="Ответ:" label-for="Input1"
                     description="Введите число">
           <b-form-input id="Input1"
-                        type="text" v-model.number="answer" required
+                        type="text" v-model="answer" required
                         placeholder="Введите ответ"
           >
           </b-form-input>
@@ -31,7 +31,7 @@
     },
     data () {
       return {
-        answer: ''
+        answer: undefined
       }
     },
     methods: {
@@ -46,7 +46,19 @@
     },
     watch: {
       block: function () {
-        this.answer = ''
+        this.answer = undefined
+      },
+      answer: function (val) {
+        if (val !== undefined) {
+          if (isNaN(Number(val))) {
+            alert('Введите корректное число')
+            this.answer = undefined
+          } else {
+            if (Number(val) !== 0) {
+              this.answer = Number(val)
+            }
+          }
+        }
       }
     },
     computed: {

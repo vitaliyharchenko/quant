@@ -113,7 +113,7 @@ class FloatBlockResult(BlockResult):
             if cur_score <= self.max_score:
                 self.score = cur_score
         else:
-            if self.answer == correct_answer:
+            if float(self.answer) == correct_answer:
                 self.score = self.max_score
         self.save()
 
