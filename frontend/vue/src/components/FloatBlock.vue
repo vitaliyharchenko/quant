@@ -6,7 +6,7 @@
         </p>
         <b-form-group id="InputGroup1"
                     label="Ответ:" label-for="Input1"
-                    description="Введите число">
+                    description="Число">
           <b-form-input id="Input1"
                         type="text" v-model.number="answer" required
                         :state="nameState"
