@@ -3,7 +3,6 @@ from apps.courses.models import Course
 
 class StudentGroup(models.Model):
     title = models.CharField('Название группы', max_length=300)
-    teacher = models.ForeignKey('auth.User', related_name='group_teacher') # куратор группы 
     about = models.TextField('Описание группы')
 
     class Meta:
@@ -22,12 +21,31 @@ class StudentGroup(models.Model):
         return [rel.student for rel in self.student_group_relations]
 
     @property
+    def teacher_group_relations(self):
+        return TeacherGroupRelation.objects.filter(group=self)
+
+    @property
+    def teachers_of_group(self):
+        return [rel.teacher for rel in self.teacher_group_relations]
+
+    @property
     def course_group_relations(self):
         return CourseGroupRelation.objects.filter(group=self)
 
     @property
     def courses_of_group(self):
         return [rel.course for rel in self.course_group_relations]
+
+
+class TeacherGroupRelation(models.Model):
+    teacher = models.ForeignKey('auth.User', related_name='group_teacher') # куратор группы 
+    group = models.ForeignKey(StudentGroup)
+    class Meta:
+        verbose_name = 'связь учителя или курастора с группой'
+        verbose_name_plural = 'связи учителя или куратора с группой'
+
+    def __str__(self):
+        return u'Teacher {} of group {}'.format(self.teacher, self.group)
 
 
 

@@ -10,6 +10,7 @@ from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
+from apps.groups.models import TeacherGroupRelation, StudentGroupRelation
 
 phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
                              message="Телефон должен быть заполнен в формате: '+79999999999'. Максимум 15 цифр.")
@@ -23,26 +24,20 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
 
+
+
 # Model, contains extra info about user.
 class Profile(models.Model):
-
-    LEARNER = 'LR'
-    TEACHER = 'TH'
-    PARENT = 'PR'
-    PROFILE_TYPE_CHOICES = (
-        (LEARNER, 'Ученик'),
-        (TEACHER, 'Учитель'),
-        (PARENT, 'Родитель'),
-    )
-
     user = models.OneToOneField('auth.User', on_delete=models.CASCADE)
+    is_teacher = models.BooleanField(u'Является учителем', default=False)
+    is_administrator = models.BooleanField(u'Является администратором', default=False)
+    is_parent = models.BooleanField(u'Является родителем', default=False)
     birth_date = models.DateField(u'Дата рождения', null=True, blank=True)
     email_confirmed = models.BooleanField(u'Почта подтверждена', default=False)
     is_complete = models.BooleanField(u'Профиль активен (имеется вся информация)', default=False)
     avatar = models.ImageField(u'Аватар профиля', upload_to='avatars', null=True, blank=True)
     avatar_url = models.CharField(u'Ссылка на аватар профиля', max_length=255, null=True, blank=True)
     phone = models.CharField(u'Контактный телефон', validators=[phone_regex], blank=True, max_length=20)
-    profile_type = models.CharField(u'Тип пользователя', max_length=2, choices=PROFILE_TYPE_CHOICES, default=LEARNER)
     city = models.CharField(u'Город', max_length=100, null=True, blank=True)
     grade = models.PositiveSmallIntegerField(u'Класс', null=True, blank=True)
     school = models.CharField(u'Учебное заведние', max_length=100, null=True, blank=True)
@@ -62,6 +57,16 @@ class Profile(models.Model):
     def social_auths(self):
         social_auths = UserSocialAuth.objects.filter(user=self.user)
         return social_auths
+
+    @property
+    def my_groups_teacher(self):
+        if self.is_teacher:
+            return [rel.group for rel in TeacherGroupRelation.objects.filter(teacher=self.user)]
+
+    @property
+    def my_groups_student(self):
+        return [rel.group for rel in StudentGroupRelation.objects.filter(student=self.user)]
+
 
 
 class UserSocialAuth(models.Model):
