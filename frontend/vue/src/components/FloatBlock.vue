@@ -8,10 +8,14 @@
                     label="Ответ:" label-for="Input1"
                     description="Введите число">
           <b-form-input id="Input1"
-                        type="text" v-model="answer" required
+                        type="text" v-model.number="answer" required
+                        :state="nameState"
                         placeholder="Введите ответ"
           >
           </b-form-input>
+          <b-form-feedback v-if="error">
+            {{ error }}
+          </b-form-feedback>
         </b-form-group>
         <b-button v-on:click="endBlock" v-if="current">
           Далее
@@ -31,7 +35,8 @@
     },
     data () {
       return {
-        answer: undefined
+        answer: '',
+        error: ''
       }
     },
     methods: {
@@ -49,15 +54,10 @@
         this.answer = undefined
       },
       answer: function (val) {
-        if (val !== undefined) {
-          if (isNaN(Number(val))) {
-            alert('Введите корректное число')
-            this.answer = undefined
-          } else {
-            if (Number(val) !== 0) {
-              this.answer = Number(val)
-            }
-          }
+        if (isNaN(Number(val))) {
+          this.error = 'Введите корректное число'
+        } else {
+          this.error = undefined
         }
       }
     },
@@ -65,6 +65,9 @@
       borderVariant () {
         var variant = (this.current) ? ('primary') : ('')
         return variant
+      },
+      nameState () {
+        return !isNaN(Number(this.answer)) ? null : 'invalid'
       }
     }
   }
