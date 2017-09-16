@@ -10,27 +10,7 @@ class Block(PolymorphicModel):
     score = models.IntegerField('Балл за верное выполнение блока', blank=True, default=0)
 
     def __str__(self):
-        title = None
-
-        try:
-            title = self.textblock.title
-        except AttributeError:
-            pass
-
-        try:
-            title = self.choiceblock.question_text[:100]
-        except AttributeError:
-            pass
-
-        try:
-            title = self.floatblock.question_text[:100]
-        except AttributeError:
-            pass
-
-        if title:
-            return title
-        else:
-            return u'Block #{}'.format(self.id)
+        return u'Block #{}'.format(self.id)
 
     class Meta:
         verbose_name = 'блок'
@@ -50,7 +30,7 @@ class TextBlock(Block):
         verbose_name_plural = 'текстовые статьи'
 
     def __str__(self):
-        return self.title
+        return self.title[:100]
 
 
 class ChoiceBlock(Block):
@@ -63,7 +43,7 @@ class ChoiceBlock(Block):
         verbose_name_plural = 'тестовые вопросы'
 
     def __str__(self):
-        return self.question_text
+        return self.question_text[:100]
 
 
 class ChoiceBlockOption(models.Model):
@@ -93,7 +73,7 @@ class FloatBlock(Block):
         verbose_name_plural = 'задачи с численным ответом'
 
     def __str__(self):
-        return self.question_text
+        return self.question_text[:100]
 
 class TextAnswerBlock(Block):
     question_text = MarkdownField('Текст вопроса')
@@ -106,7 +86,7 @@ class TextAnswerBlock(Block):
         verbose_name_plural = 'задачи с текстовым ответом'
 
     def __str__(self):
-        return self.question_text
+        return self.question_text[:100]
 
 # Включение блоков в урок
 class NodeBlockRelation(models.Model):

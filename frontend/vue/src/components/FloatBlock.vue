@@ -6,12 +6,16 @@
         </p>
         <b-form-group id="InputGroup1"
                     label="Ответ:" label-for="Input1"
-                    description="Введите число">
+                    description="Число">
           <b-form-input id="Input1"
                         type="text" v-model.number="answer" required
+                        :state="nameState"
                         placeholder="Введите ответ"
           >
           </b-form-input>
+          <b-form-feedback v-if="error">
+            {{ error }}
+          </b-form-feedback>
         </b-form-group>
         <b-button v-on:click="endBlock" v-if="current">
           Далее
@@ -31,7 +35,8 @@
     },
     data () {
       return {
-        answer: ''
+        answer: '',
+        error: ''
       }
     },
     methods: {
@@ -46,13 +51,23 @@
     },
     watch: {
       block: function () {
-        this.answer = ''
+        this.answer = undefined
+      },
+      answer: function (val) {
+        if (isNaN(Number(val))) {
+          this.error = 'Введите корректное число'
+        } else {
+          this.error = undefined
+        }
       }
     },
     computed: {
       borderVariant () {
         var variant = (this.current) ? ('primary') : ('')
         return variant
+      },
+      nameState () {
+        return !isNaN(Number(this.answer)) ? null : 'invalid'
       }
     }
   }

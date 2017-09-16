@@ -1,8 +1,9 @@
 def show_toolbar(request):
-    if DEBUG:
-        return True
-    else:
-        return False
+    return False
+    # if DEBUG:
+    #     return True
+    # else:
+    #     return False
 
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TEMPLATE_CONTEXT': True,
