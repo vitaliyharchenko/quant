@@ -1,9 +1,12 @@
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from rest_framework.views import APIView
+from rest_framework.generics import CreateAPIView
+from rest_framework import permissions
 from .models import Profile
 from .serializers import UserSerializer
 from apps.groups.serializers import StudentGroupSerializer
@@ -83,17 +86,12 @@ class UserGroupsViewSet(APIView):
             return HttpResponse(status=404)
 
 
-class UserRegisterView(APIView):
-    def post(self, request, format=None):
-        try:
-            data = JSONParser().parse(request)
-            serializer = UserSerializer(data=data)
-            if serializer.is_valid():
-                serializer.save()
-                return JsonResponse({'Status':'OK'}, status=200)
-            return JsonResponse({'Validation error': serializer.errors}, status=401)
-        except Exception as e:
-            return JsonResponse({'Error message': str(e)}, status=400)
+class UserRegisterView(CreateAPIView):
+    model = User
+    permission_classes = [
+        permissions.AllowAny # Or anon users can't register
+    ]
+    serializer_class = UserSerializer
 
 
 # rest auth

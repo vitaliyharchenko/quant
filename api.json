@@ -428,3 +428,13 @@
         }
     }
 }
+
+
+//User register localhost:80/api/users/register/
+{
+    "username":"123@mail.ru",
+    "email":"123@mail.ru",
+    "first_name":"Вася", 
+    "last_name":"Пупкин", 
+    "password":"12345678"
+}
