@@ -2,6 +2,10 @@ from django.db import models
 from apps.lessons.models import Lesson
 from apps.tags.models import SubjectTag
 
+def sortByOrder(rel):
+    return rel.order
+
+
 class Course(models.Model):
     title = models.CharField('Название курса', max_length=300)
     subject_tag = models.ForeignKey(SubjectTag)
@@ -22,7 +26,9 @@ class Course(models.Model):
 
     @property
     def lessons_of_course(self):
-        return [rel.lesson for rel in self.course_lesson_relations]
+        relations = self.course_lesson_relations
+        relations.sort(key=sortByOrder) 
+        return [rel.lesson for rel in relations]
 
 
 class CourseLessonRelation(models.Model):

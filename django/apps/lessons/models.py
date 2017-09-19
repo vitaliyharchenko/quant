@@ -42,4 +42,3 @@ class LessonNodeRelation(models.Model):
     def __str__(self):
         return "{} in {}".format(self.node, self.lesson)
 
-
