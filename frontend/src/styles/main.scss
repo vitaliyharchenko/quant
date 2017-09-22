@@ -149,13 +149,19 @@ header {
 	}
 
 	.mention {
-		padding-top: 50px;
+		padding-top: 25px;
 	}
 }
 
 #recomendation {
 	.divider {
 		border: 2px solid $gray-300;
+	}
+}
+
+#price {
+	.price-table {
+		margin-top: 50px;
 	}
 }
 

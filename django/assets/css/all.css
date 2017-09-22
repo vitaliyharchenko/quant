@@ -7304,10 +7304,13 @@ header.promo {
   width: 100%; }
 
 #mentions .mention {
-  padding-top: 50px; }
+  padding-top: 25px; }
 
 #recomendation .divider {
   border: 2px solid #dee2e6; }
+
+#price .price-table {
+  margin-top: 50px; }
 
 figure, .embed-responsive {
   margin: 30px 0; }
