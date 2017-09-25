@@ -1,22 +1,17 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <hr>
+    <h2>Как зарегистироваться</h2>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
+      <li>1. Вспомнить адрес электронной почты</li>
+      <li>2. Если его нет, завести его по ссылке на <a href="https://accounts.google.com/SignUp">Google</a></li>
+      <li>3. Зарегистрироваться на нашем сайте по ссылке</li>
     </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <br>
+    <hr>
+    <h2>Обнаружили ошибку?</h2>
+    <p>Напишите <a href="https://vk.com/write17610278">сообщение</a></p>
   </div>
 </template>
 
@@ -25,7 +20,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Образовательная платформа "Квант"'
     }
   }
 }
@@ -35,16 +30,6 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 
 a {

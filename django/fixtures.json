@@ -124,7 +124,6 @@
         "avatar": "",
         "avatar_url": null,
         "phone": "",
-        "profile_type": "LR",
         "city": null,
         "grade": null,
         "school": null
@@ -143,7 +142,6 @@
         "avatar": "",
         "avatar_url": null,
         "phone": "",
-        "profile_type": "LR",
         "city": null,
         "grade": null,
         "school": null
@@ -162,7 +160,6 @@
         "avatar": "",
         "avatar_url": null,
         "phone": "",
-        "profile_type": "LR",
         "city": null,
         "grade": null,
         "school": null
@@ -181,7 +178,6 @@
         "avatar": "",
         "avatar_url": null,
         "phone": "",
-        "profile_type": "LR",
         "city": null,
         "grade": null,
         "school": null
@@ -986,151 +982,6 @@
     }
 },
 {
-    "model": "results.result",
-    "pk": 156,
-    "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
-        "date": "2017-09-05T08:33:10.036Z",
-        "score": null,
-        "max_score": null
-    }
-},
-{
-    "model": "results.result",
-    "pk": 157,
-    "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
-        "date": "2017-09-05T08:34:12.453Z",
-        "score": null,
-        "max_score": null
-    }
-},
-{
-    "model": "results.result",
-    "pk": 158,
-    "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "taskresult"
-        ],
-        "student": [
-            "root"
-        ],
-        "date": "2017-09-05T08:37:30.689Z",
-        "score": 4,
-        "max_score": 5
-    }
-},
-{
-    "model": "results.result",
-    "pk": 159,
-    "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "textblockresult"
-        ],
-        "student": [
-            "root"
-        ],
-        "date": "2017-09-05T08:37:30.753Z",
-        "score": 3,
-        "max_score": 3
-    }
-},
-{
-    "model": "results.result",
-    "pk": 160,
-    "fields": {
-        "polymorphic_ctype": [
-            "results",
-            "choiceblockresult"
-        ],
-        "student": [
-            "root"
-        ],
-        "date": "2017-09-05T08:37:30.862Z",
-        "score": 1,
-        "max_score": 2
-    }
-},
-{
-    "model": "results.taskresult",
-    "pk": 156,
-    "fields": {
-        "task": 1
-    }
-},
-{
-    "model": "results.taskresult",
-    "pk": 157,
-    "fields": {
-        "task": 1
-    }
-},
-{
-    "model": "results.taskresult",
-    "pk": 158,
-    "fields": {
-        "task": 1
-    }
-},
-{
-    "model": "results.blockresult",
-    "pk": 159,
-    "fields": {
-        "block": 2
-    }
-},
-{
-    "model": "results.blockresult",
-    "pk": 160,
-    "fields": {
-        "block": 1
-    }
-},
-{
-    "model": "results.textblockresult",
-    "pk": 159,
-    "fields": {
-        "answer": true
-    }
-},
-{
-    "model": "results.choiceblockresult",
-    "pk": 160,
-    "fields": {
-        "answer": "[\"2\", \"3\"]"
-    }
-},
-{
-    "model": "results.taskresultblockresultrelation",
-    "pk": 76,
-    "fields": {
-        "task_result": 158,
-        "block_result": 159
-    }
-},
-{
-    "model": "results.taskresultblockresultrelation",
-    "pk": 77,
-    "fields": {
-        "task_result": 158,
-        "block_result": 160
-    }
-},
-{
     "model": "lessons.lesson",
     "pk": 1,
     "fields": {
@@ -1294,9 +1145,6 @@
     "pk": 1,
     "fields": {
         "title": "\u04247",
-        "teacher": [
-            "root"
-        ],
         "about": "\u0424\u0438\u0437\u0438\u043a\u0430 7 \u043a\u043b\u0430\u0441\u0441"
     }
 },
