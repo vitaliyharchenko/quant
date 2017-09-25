@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 import Tasks from '@/components/Tasks'
 import Task from '@/components/Task'
 import Login from '@/components/Login'
+import Reg from '@/components/Reg'
 
 Vue.use(Router)
 
@@ -29,7 +30,13 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/reg',
+      name: 'Reg',
+      component: Reg
     }
   ],
-  mode: 'history'
+  mode: 'history',
+  base: '/app/'
 })

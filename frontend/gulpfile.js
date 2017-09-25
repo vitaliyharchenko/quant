@@ -31,7 +31,8 @@ const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developm
 /* ===== */
 var source = 'src/',
     dest = '../django/assets/', // for django assets
-    node_modules = './node_modules';
+    node_modules = './node_modules',
+    vue = 'vue/';
 
 // Third-party libs
 var libs = {
@@ -92,6 +93,16 @@ var react = {
 	    bundlesIn: source + 'react/**/*.*',
 	    out: dest + 'react/',
 	    watch: 'react/**/*.*'
+};
+
+var vue = {
+	    htmlIn: vue + 'dist/index.html',
+	    cssIn: vue + 'dist/static/css/**/*.*',
+	    jsIn: vue + 'dist/static/js/**/*.*',
+	    htmlOut: dest + 'html/vue/',
+	    cssOut: dest + 'css/',
+	    jsOut: dest + 'js/',
+	    watch: vue + '**/*.*'
 };
 
 var images = {
@@ -196,6 +207,32 @@ gulp.task('react', function() {
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
+// Перекидываем html Vue
+gulp.task('vue_html', function() {
+	return combiner(
+		gulp.src(vue.htmlIn), // выбираем только модифицированные файлы
+		gulp.dest(vue.htmlOut), // Выгружаем результаты в папку
+	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
+});
+
+// Перекидываем css Vue
+gulp.task('vue_css', function() {
+	return combiner(
+		gulp.src(vue.cssIn), // выбираем только модифицированные файлы
+		gulp.dest(vue.cssOut), // Выгружаем результаты в папку
+	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
+});
+
+// Перекидываем css Vue
+gulp.task('vue_js', function() {
+	return combiner(
+		gulp.src(vue.jsIn), // выбираем только модифицированные файлы
+		gulp.dest(vue.jsOut), // Выгружаем результаты в папку
+	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
+});
+
+gulp.task('vue', gulp.series('vue_html', 'vue_css', 'vue_js'));
+
 /* ====== */
 /* IMAGES */
 /* ====== */
@@ -229,6 +266,7 @@ gulp.task('watch', function() {
 	gulp.watch(images.watch, gulp.series('images'));
 	gulp.watch(js.watch, gulp.series('libs', 'js'));
 	gulp.watch(react.watch, gulp.series('webpack', 'react'));
+	gulp.watch(vue.watch, gulp.series('vue'));
 });
 
 /* =========== */
@@ -265,7 +303,7 @@ gulp.task('docker', function(cb) {
 /* MAIN */
 /* ==== */
 
-gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js'));
+gulp.task('build', gulp.series('clean', 'styles', 'assets', 'images', 'fonts', 'libs', 'js', 'vue'));
 
 gulp.task('dev',
 	gulp.series('build', 

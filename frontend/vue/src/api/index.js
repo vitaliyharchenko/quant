@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default {
   getTasks: function (callBack) {
-    axios.get('http://localhost/api/tasks/', {
+    axios.get('http://quant.zone/api/tasks/', {
       headers: auth.getAuthHeaders()
     })
       .then(function (response) {
@@ -14,7 +14,7 @@ export default {
       })
   },
   getTask: function (pk, callBack) {
-    var url = 'http://localhost/api/tasks/' + pk + '/'
+    var url = 'http://quant.zone/api/tasks/' + pk + '/'
     axios.get(url, {
       headers: auth.getAuthHeaders()
     })
@@ -26,7 +26,7 @@ export default {
       })
   },
   sendTaskResults: function (task, results, callBack) {
-    var url = 'http://localhost/api/tasks/result/' + task.id + '/'
+    var url = 'http://quant.zone/api/tasks/result/' + task.id + '/'
     var data = {
       'student': task.owner,
       'task': task.id,

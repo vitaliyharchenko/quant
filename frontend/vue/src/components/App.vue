@@ -2,10 +2,10 @@
     <div id="app">
         <b-navbar toggleable="md" type="light" variant="light">
           <b-nav-toggle target="nav_collapse"></b-nav-toggle>
-          <b-navbar-brand href="/">Quant</b-navbar-brand>
+          <b-navbar-brand href="/app/">Quant</b-navbar-brand>
           <b-collapse is-nav id="nav_collapse">
             <b-nav is-nav-bar>
-              <b-nav-item href="/tasks" disabled>Задания</b-nav-item>
+              <b-nav-item href="/app/tasks" disabled>Задания</b-nav-item>
             </b-nav>
             <!-- Right aligned nav items -->
             <b-nav is-nav-bar class="ml-auto">
@@ -16,8 +16,8 @@
                 </template>
                 <b-dropdown-item v-if="user.authenticated" href="" @click.prevent="logout()">Выйти</b-dropdown-item>
                 <div v-else>
-                  <b-dropdown-item href="/login">Войти</b-dropdown-item>
-                  <b-dropdown-item href="/reg">Зарегистироваться</b-dropdown-item>
+                  <b-dropdown-item href="/app/login">Войти</b-dropdown-item>
+                  <b-dropdown-item href="/app/reg">Зарегистироваться</b-dropdown-item>
                 </div>
               </b-nav-item-dropdown>
             </b-nav>
@@ -46,7 +46,9 @@
     created () {
       auth.checkAuth()
       if (!auth.user.authenticated) {
-        router.push('login')
+        if (router.currentRoute.name !== 'Reg' && router.currentRoute.name !== 'Hello') {
+          router.push('login')
+        }
       }
     }
   }
