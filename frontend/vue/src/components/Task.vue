@@ -79,10 +79,10 @@
         currentBlockIndex: 0,
         items: [
           {
-            text: 'Tasks',
-            href: '/tasks'
+            text: 'Задания',
+            href: '/app/tasks'
           }, {
-            text: 'Task',
+            text: 'Задание',
             active: true
           }
         ],
@@ -121,7 +121,7 @@
     },
     created () {
       this.$store.dispatch('getTask', this.pk)
-      this.items[1].text = 'Task #' + this.pk
+      this.items[1].text = 'Задание #' + this.pk
     },
     methods: {
       // вызывается, когда оканчивается какой-то блок для обработки ответа
