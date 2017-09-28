@@ -1,0 +1,306 @@
+{% extends "_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Подготовка к ЕГЭ 2017 по физике в Екатеринбурге{% endblock %}
+
+{% block body %}
+	<header class="promo section-red">
+		<div class="container">
+			{% include "landings/components/header.html" %}
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-8">
+					<div class="row main-text">
+						<div class="col-12">
+							<h1 class="text-center">Подготовим ребенка к успешной сдаче ЕГЭ по физике</h1>
+							<p class="lead text-center">Годовая программа по физике разработана для сдачи ЕГЭ на желаемый балл с любым уровнем начальной подготовки</p>
+						</div>
+					</div>
+					{% if action == 'testing' %}
+						{% include "landings/components/actions/testing.html" %}
+					{% else %}
+						{% include "landings/components/actions/callback.html" %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="key" class="landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="display-5 mt-0">Научись решать все задачи из первой части, продвинься в заданиях второй части и приобрети уверенность в своих силах!</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="who" class="section-green landing-section">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/harchenko.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/komleva.html" %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</section>
+
+	<section id="what" class="landing-section">
+		<div class="container">
+			{% include "landings/components/what.html" %}
+		</div>
+	</section>
+
+	<section id="when" class="section-yellow landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="mt-0">Старт занятий 27 сентября</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="where" class="landing-section">
+		<div class="container">
+			{% include "landings/components/where.html" %}
+		</div>
+	</section>
+
+	<section id="mentions" class="section-blue landing-section">
+		<h2 class="mt-0 text-center">Отзывы учеников и родителей</h2>
+		<div id="carouselMentions" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="container">
+						{% include "landings/components/mentions/orechkin.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/vikulova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/musallamova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/shaevich.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/sherbakova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/kameneva.html" %}
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselMentions" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselMentions" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<script>
+			$('.carousel').carousel({
+			  intrerval: false
+			})
+		</script>
+	</section>
+
+	<section id="program" class="landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="mt-0 text-center">Программа курса</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Механика
+						<small>
+							9 занятий
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-3" aria-expanded="false" aria-controls="program-collapse-3">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-3" class="collapse">
+						<p>Тема 1. Основные понятия механики, виды движения, графико-аналитические задачи</p>
+						<p>Тема 2. Равноускоренное движение. Баллистические задачи</p>
+						<p>Тема 3. Относительность движения. Вращательное движение</p>
+						<p>Тема 4. Законы Ньютона, виды сил</p>
+						<p>Тема 5. Основная задача динамики и ее основные подвиды</p>
+						<p>Тема 6. Статика</p>
+						<p>Тема 7. Закон сохранения импульса</p>
+						<p>Тема 8. Закон сохранения энергии</p>
+						<p>Тема 9. Механические колебания и волны</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Молекулярная физика
+						<small>
+							6 занятий
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-4" aria-expanded="false" aria-controls="program-collapse-4">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-4" class="collapse">
+						<p>Тема 10. Молекулярная физика. МКТ. Идеальный газ. Уравнение состояния. Внутренняя энергия идеального газа.</p>
+						<p>Тема 11. Изопроцессы, графические задачи.</p>
+						<p>Тема 12. Количество теплоты и теплопередача. Тепловые процессы и фазовые переходы. Графические задачи о превращении тел. Уравнение теплового баланса</p>
+						<p>Тема 13. Работа газа. Первое начало термодинамики</p>
+						<p>Тема 14. Тепловые машины и их КПД</p>
+						<p>Тема 15. Реальный газ. Влажность.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Оптика и квантовая физика
+						<small>
+							5 занятий
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-5" aria-expanded="false" aria-controls="program-collapse-5">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-5" class="collapse">
+						<p>Тема 16. Геометрическая оптика. Отражение и преломление. Линзы. Оптические приборы.</p>
+						<p>Тема 17. Волновая оптика. Когерентность. Интерференция света. Дифракция и дифракционная решетка. Дисперсия света.</p>
+						<p>Тема 18. Корпускулярно-волновой дуализм. Гипотеза Планка. Фотоны. Фотоэффект. Давление света.</p>
+						<p>Тема 19. Атомная физика. Планетарная модель атома. Постулаты Бора. Спектры атомов</p>
+						<p>Тема 20. Ядерная физика. Изотопы. Радиоактивность. Закон радиоактивного распада и ядерные реакции.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Электродинамика
+						<small>
+							6 занятий
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-6" aria-expanded="false" aria-controls="program-collapse-6">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-6" class="collapse">
+						<p>Тема 21. Заряды. Электрическое поле. Напряженность, потенциал и их связь между собой. Проводники и диэлектрики в электрическом поле.</p>
+						<p>Тема 22. Электрическая емкость. конденсаторы и их соединения. Потенциальная энергия конденсатора.</p>
+						<p>Тема 23. Постоянный ток. Сопротивление, закон Ома. Последовательное и параллельное соединение проводников. Работа и мощность тока. Полупроводники.</p>
+						<p>Тема 24. Магнитное поле постоянного магнита и проводника с током. Сила Ампера, сила Лоренца. Движение заряженных частиц в магнитном поле.</p>
+						<p>Тема 25. Электромагнитная индукция. правило Ленца, Индуктивность и самоиндукция. Энергия магнитного поля катушки с током.</p>
+						<p>Тема 26. Электромагнитные колебания. Колебательный контур. Переменный ток. Электромагнитные волны и их свойства.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Повторение
+						<small>
+							4 занятия
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-7" aria-expanded="false" aria-controls="program-collapse-7">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-7" class="collapse">
+						<p>Тема 27. Повторение пройденных тем, консультации.</p>
+						<p>Тема 28. Пробный экзамен</p>
+						<p>Тема 29. Разбор вариантов ЕГЭ</p>
+						<p>Тема 30. Составляем, решаем и разбираем свой вариант ЕГЭ.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="other" class="section-orange landing-section">
+		<div class="container">
+			{% include "landings/components/other.html" %}
+		</div>
+	</section>
+{% endblock %}
