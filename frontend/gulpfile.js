@@ -211,7 +211,7 @@ gulp.task('react', function() {
 gulp.task('vue_html', function() {
 	return combiner(
 		gulp.src(vue.htmlIn), // выбираем только модифицированные файлы
-		gulp.dest(vue.htmlOut), // Выгружаем результаты в папку
+		gulp.dest(vue.htmlOut) // Выгружаем результаты в папку
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
@@ -219,7 +219,7 @@ gulp.task('vue_html', function() {
 gulp.task('vue_css', function() {
 	return combiner(
 		gulp.src(vue.cssIn), // выбираем только модифицированные файлы
-		gulp.dest(vue.cssOut), // Выгружаем результаты в папку
+		gulp.dest(vue.cssOut) // Выгружаем результаты в папку
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 
@@ -227,7 +227,7 @@ gulp.task('vue_css', function() {
 gulp.task('vue_js', function() {
 	return combiner(
 		gulp.src(vue.jsIn), // выбираем только модифицированные файлы
-		gulp.dest(vue.jsOut), // Выгружаем результаты в папку
+		gulp.dest(vue.jsOut) // Выгружаем результаты в папку
 	).on('error', notify.onError()) // Обработчик ошибок для всех участников комбайнера
 });
 

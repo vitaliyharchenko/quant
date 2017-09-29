@@ -37,7 +37,7 @@ class Node(models.Model):
 
     @property
     def blocks_of_node(self):
-        relations = self.node_block_relations
+        relations = [rel for rel in self.node_block_relations]
         relations.sort(key=sortByOrder)
         return [rel.block for rel in relations]
 

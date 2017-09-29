@@ -1,0 +1,158 @@
+{% extends "_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Подготовка к ЕГЭ 2017 по математике в Екатеринбурге{% endblock %}
+
+{% block body %}
+	<header class="promo section-red">
+		<div class="container">
+			{% include "landings/components/header.html" %}
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-8">
+					<div class="row main-text">
+						<div class="col-12">
+							<h1 class="text-center">Базовый курс по математике для 10 класса</h1>
+							<p class="lead text-center">Курс математики для 10-классников, которые заранее готовятся к ЕГЭ и хотят показать высокий балл на олимпиадах</p>
+						</div>
+					</div>
+					{% if action == 'testing' %}
+						{% include "landings/components/actions/testing.html" %}
+					{% else %}
+						{% include "landings/components/actions/callback.html" %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="key" class="landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="display-5 mt-0">Решай сложные нестандартные задачи по алгебре и геометрии. Будь уверен в своих силах на олимпиадах по математике!</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="who" class="section-green landing-section">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/paramonova.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/unknown.html" %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</section>
+
+	<section id="what" class="landing-section">
+		<div class="container">
+			{% include "landings/components/what.html" %}
+		</div>
+	</section>
+
+	<section id="when" class="section-yellow landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="mt-0">Старт занятий 27 сентября</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="where" class="landing-section">
+		<div class="container">
+			{% include "landings/components/where.html" %}
+		</div>
+	</section>
+
+	<section id="mentions" class="section-blue landing-section">
+		<h2 class="mt-0 text-center">Отзывы учеников и родителей</h2>
+		<div id="carouselMentions" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="container">
+						{% include "landings/components/mentions/math_kulashova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/math_samohvalov.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/math_nasonova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/math_sherbinin.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/math_verhozin.html" %}
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselMentions" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselMentions" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<script>
+			$('.carousel').carousel({
+			  intrerval: false
+			})
+		</script>
+	</section>
+
+	<section id="program" class="landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="mt-0 text-center">Программа курса</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h3>
+						В разработке
+					</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="other" class="section-orange landing-section">
+		<div class="container">
+			{% include "landings/components/other.html" %}
+		</div>
+	</section>
+{% endblock %}
