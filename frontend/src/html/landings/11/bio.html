@@ -1,0 +1,362 @@
+{% extends "_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Подготовка к ЕГЭ 2017 по биологии в Екатеринбурге{% endblock %}
+
+{% block body %}
+	<header class="promo section-red">
+		<div class="container">
+			{% include "landings/components/header.html" %}
+			<div class="row justify-content-center">
+				<div class="col-10 col-md-8">
+					<div class="row main-text">
+						<div class="col-12">
+							<h1 class="text-center">Подготовим ребенка к успешной сдаче ЕГЭ по биологии</h1>
+							<p class="lead text-center">Годовая программа по физике разработана для сдачи ЕГЭ на желаемый балл с любым уровнем начальной подготовки</p>
+						</div>
+					</div>
+					{% if action == 'testing' %}
+						{% include "landings/components/actions/testing.html" %}
+					{% else %}
+						{% include "landings/components/actions/callback.html" %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="key" class="landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="display-5 mt-0">Систематизируй свои знания и поступи в медицинский ВУЗ!</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="who" class="section-green landing-section">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/noskova.html" %}
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						<div class="row who-row">
+							{% include "landings/components/teachers/unknown.html" %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</section>
+
+	<section id="what" class="landing-section">
+		<div class="container">
+			{% include "landings/components/what.html" %}
+		</div>
+	</section>
+
+	<section id="when" class="section-yellow landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h3 class="mt-0">Старт занятий 11 ноября</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="where" class="landing-section">
+		<div class="container">
+			{% include "landings/components/where.html" %}
+		</div>
+	</section>
+
+	<section id="mentions" class="section-purple landing-section">
+		<h2 class="mt-0 text-center">Отзывы учеников и родителей</h2>
+		<div id="carouselMentions" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="container">
+						{% include "landings/components/mentions/orechkin.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/vikulova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/musallamova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/shaevich.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/sherbakova.html" %}
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="container">
+						{% include "landings/components/mentions/kameneva.html" %}
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselMentions" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselMentions" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<script>
+			$('.carousel').carousel({
+			  intrerval: false
+			})
+		</script>
+	</section>
+
+	<section id="program" class="landing-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="mt-0 text-center">Программа курса</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Клетка
+						<small>
+							4 занятия
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-3" aria-expanded="false" aria-controls="program-collapse-3">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-3" class="collapse">
+						<p>Тема 1. Общие понятия биологии. Понятие о клетке. Методы изучения клетки. Органоиды клетки и их функции. Прокариоты, эукариоты. Специфика заданий ЕГЭ 2018.</p>
+						<p>Тема 2. Химия клетки : белки, жиры, углеводы, нуклеиновые кислоты.  Генетический код. Синтез белка</p>
+						<p>Тема 3. Обмен веществ в клетке. Фотосинтез. Энергетический и пластический обмен.</p>
+						<p>Тема 4. Деление клетки. Митоз, мейоз. Размножение организмов. Гаметогенез, онтогенез.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Генетика
+						<small>
+							3 занятия
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-4" aria-expanded="false" aria-controls="program-collapse-4">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-4" class="collapse">
+						<p>Тема 5. Основные понятия и законы генетики. Моногибридное скрещивание. Дигибридное скрещивание. </p>
+						<p>Тема 6. Генеалогической метод.  Кодоминирование, взаимодействие генов. Сцепление генов.</p>
+						<p>Тема 7. Изменчивость, типы изменчивости. Мутации. Генетические основы селекции животных  и растений. Современные методы исследования, основанные на генетике, их применение.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Ботаника
+						<small>
+							2 занятия
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-5" aria-expanded="false" aria-controls="program-collapse-5">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-5" class="collapse">
+						<p>Тема 8. Систематика и классификация растений.  Ткани и органы высших растений. Вегетативные и генеративные органы.</p>
+						<p>Тема 9. Бактерии, грибы, лишайники. Обзор царства растения. Водоросли, мхи, папоротниковидные, плауновидные, хвощевидные, голосеменные, покрытосеменные.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Зоология
+						<small>
+							5 занятий
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-6" aria-expanded="false" aria-controls="program-collapse-6">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-6" class="collapse">
+						<p>Тема 10. Систематика и классификация. Подцарство одноклеточные. Тип кишечнополостные.</p>
+						<p>Тема 11. Тип плоские черви. Круглые черви. Кольчатые черви.</p>
+						<p>Тема 12. Тип моллюски. Тип членистоногие. Личиночнохордовые</p>
+						<p>Тема 13. Надкласс рыбы. Класс земноводные. Класс пресмыкающиеся.</p>
+						<p>Тема 14. Класс птицы. Класс млекопитающие. Сравнительная анатомия систем органов позвоночных.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Анатомия и физиология человека
+						<small>
+							8 занятий
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-7" aria-expanded="false" aria-controls="program-collapse-7">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-7" class="collapse">
+						<p>Тема 15. Систематика человека. Ткани и органы. Общие понятия анатомии. Опорно-двигательный аппарат. Мышечная система.</p>
+						<p>Тема 16. Внутренняя среда организма. Гомеостаз. Кровь, группы крови. Иммунитет, виды иммунитета.</p>
+						<p>Тема 17.  Система органов кровообращения. Сердце и сосуды. Круги кровообращения. АД, пульс. Регуляция системы кровообращения.</p>
+						<p>Тема 18. Система органов дыхания. Механизм вдоха и выдоха. Жизненная емкость легких. </p>
+						<p>Тема 19. Система органов пищеварения.</p>
+						<p>Тема 20. Система органов выделения. Мочевыделительная система. Кожа. Половая система. </p>
+						<p>Тема 21. Витамины. Эндокринная система. Нервная система (1) нервная ткань, рефлекторная дуга, спинной мозг</p>
+						<p>Тема 22. Нервная система (2) Головной мозг. Учение о двух сигнальных системах. Органы чувств</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Эволюция
+						<small>
+							3 занятия
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-8" aria-expanded="false" aria-controls="program-collapse-8">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-8" class="collapse">
+						<p>Тема 23. Возникновение жизни на Земле. Развитие органического мира. Крупнейшие ароморфозы. Доказательства эволюции. </p>
+						<p>Тема 24. Микро и макроэволюция. Основные факторы эволюции, направления эволюции. Вид, критерии вида.</p>
+						<p>Тема 25.  Основные стадии эволюции человека. Современные теории эволюции.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<h3>
+						Экология
+						<small>
+							5 занятий
+						</small>
+					</h3>
+				</div>
+				<div class="col-4 text-right">
+					<h3>
+						<small>
+							<a data-toggle="collapse" href="#program-collapse-9" aria-expanded="false" aria-controls="program-collapse-9">
+							    Все темы ⇲
+						    </a>
+					    </small>
+				    </h3>
+				</div>
+				<div class="col-12">
+					<hr>
+					<div id="program-collapse-9" class="collapse">
+						<p>Тема 26. Основные понятия экологии. Схема действия экологического фактора. Виды экологических факторов. Экология популяций.</p>
+						<p>Тема 27. Микро и макроэволюция. Основные факторы эволюции, направления эволюции. Вид, критерии вида.</p>
+						<p>Тема 28. Роль человека в живой природе. Влияние деятельности человека на природу. Основные экологические проблемы.</p>
+						<p>Тема 29. Человек и его здоровье. Понятие здоровья, факторы на него влияющие. Роль наследственности. Приемы оказания первой помощи.</p>
+						<p>Тема 30. Экзамен</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="price" class="landing-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				{% include "landings/components/price.html" %}
+			</div>
+		</div>
+	</section>
+
+	<section id="other" class="section-orange landing-section">
+		<div class="container">
+			{% include "landings/components/other.html" %}
+		</div>
+	</section>
+{% endblock %}
