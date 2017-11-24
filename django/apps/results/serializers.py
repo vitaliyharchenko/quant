@@ -58,6 +58,13 @@ class FloatBlockResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = FloatBlockResult
         fields = '__all__'
+    # def create(self, validated_data):
+    #     answer = validated_data.pop('answer')
+    #     student_id = validated_data.pop('student')
+    #     block_id = validated_data.pop('block')
+    #     block_result = FloatBlockResult.objects.create(student=student_id, block=block_id)
+    #     if answer == "":
+            
 
 
 class TaskResultSerializer(serializers.ModelSerializer):
