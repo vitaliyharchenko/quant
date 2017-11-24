@@ -58,13 +58,17 @@ class FloatBlockResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = FloatBlockResult
         fields = '__all__'
-    # def create(self, validated_data):
-    #     answer = validated_data.pop('answer')
-    #     student_id = validated_data.pop('student')
-    #     block_id = validated_data.pop('block')
-    #     block_result = FloatBlockResult.objects.create(student=student_id, block=block_id)
-    #     if answer == "":
-            
+    def create(self, validated_data):
+        answer = validated_data.pop('answer')
+        student_id = validated_data.pop('student')
+        block_id = validated_data.pop('block')
+        block_result = FloatBlockResult.objects.create(student=student_id, block=block_id)
+        if answer == "":
+            block_result.answer = None
+        else:
+            block_result.answer = answer
+        return block_result
+
 
 
 class TaskResultSerializer(serializers.ModelSerializer):
@@ -98,7 +102,7 @@ class TaskResultSerializer(serializers.ModelSerializer):
             block_data = blocks_data[block_id]
             block = Block.objects.get(pk=block_id)
             serializer = BlockResultSerializer().get_serializer(block.polymorphic_ctype.model)
-            block_result = serializer.create(dict(student=student_id, block=block, answer=block_data.pop("answer")))
+            block_result = serializer.create(dict(student=student_id, block=block, answer=block_data.pop('answer')))
             block_result.set_score()
             TaskResultBlockResultRelation.objects.create(task_result=task_result, block_result=block_result)
         task_result.set_score()
