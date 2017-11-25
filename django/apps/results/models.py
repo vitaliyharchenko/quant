@@ -10,8 +10,8 @@ from apps.blocks.models import Block, ChoiceBlockOption
 class Result(PolymorphicModel):
     student = models.ForeignKey(User, verbose_name=u'Ученик')
     date = models.DateTimeField(default=timezone.now)
-    score = models.IntegerField(blank=True, default=0)
-    max_score = models.IntegerField(blank=True, default=0)
+    score = models.IntegerField(default=0)
+    max_score = models.IntegerField(default=0)
 
     class Meta:
         verbose_name = 'результат'
@@ -100,7 +100,7 @@ class ChoiceBlockResult(BlockResult):
         self.save()
 
 class FloatBlockResult(BlockResult):
-    answer = models.FloatField('Ответ', null=True)
+    answer = models.FloatField('Ответ', null=True, default=None)
 
     class Meta:
         verbose_name = 'результат ответа на задачу'
@@ -113,7 +113,9 @@ class FloatBlockResult(BlockResult):
             if cur_score <= self.max_score:
                 self.score = cur_score
         else:
-            if float(self.answer) == correct_answer:
+            if self.answer is None or self.answer == "":
+                self.score = 0
+            elif float(self.answer) == correct_answer:
                 self.score = self.max_score
         self.save()
 
