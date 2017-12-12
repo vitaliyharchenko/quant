@@ -32,6 +32,7 @@ class BlockResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BlockResult
+        depth = 5
 
 
 class TextBlockResultSerializer(serializers.ModelSerializer):
@@ -87,6 +88,9 @@ class TaskResultSerializer(serializers.ModelSerializer):
             block_results[relation.block_result.pk] = BlockResultSerializer(relation.block_result).to_representation(relation.block_result)
         return {
             'student': obj.student.pk,
+            'email': obj.student.email,
+            'first_name': obj.student.first_name,
+            'last_name': obj.student.last_name,
             'date': obj.date,
             'score': obj.score,
             'max_score': obj.max_score,
