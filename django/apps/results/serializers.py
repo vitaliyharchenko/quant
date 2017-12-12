@@ -77,6 +77,7 @@ class TaskResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = TaskResult
         fields = ('task', 'student', 'blocks')
+        depth = 2
 
     def to_representation(self, obj):
     # return dict

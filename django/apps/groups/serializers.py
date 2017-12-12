@@ -14,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id',)
+        fields = ('id', 'email', 'first_name', 'last_name')
 
 class StudentGroupSerializer(serializers.ModelSerializer):
     students = UserSerializer(source='students_of_group', many=True)
