@@ -1,4 +1,4 @@
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db import models
 from polymorphic.models import PolymorphicModel
 from django_markdown.models import MarkdownField
