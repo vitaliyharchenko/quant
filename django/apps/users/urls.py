@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.contrib.auth.views import login as login_view
+import django.contrib.auth.views as auth_views
 from . import views
 
 urlpatterns = [
@@ -10,7 +10,7 @@ urlpatterns = [
 
     url(r'^signup/$', views.signup, name='signup'),
 
-    url(r'^login/$', login_view, kwargs={'template_name': 'users/login.html'}, name='login'),
+    url(r'^login/$', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
 
     url(r'^social_auth/(?P<backend>[^/]+)$', views.social_auth, name='social_auth_begin'),
     url(r'^social_auth_complete/(?P<backend>[^/]+)$', views.social_auth_complete, name='social_auth_complete'),
