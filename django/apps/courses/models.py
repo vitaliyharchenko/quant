@@ -8,8 +8,8 @@ def sortByOrder(rel):
 
 class Course(models.Model):
     title = models.CharField('Название курса', max_length=300)
-    subject_tag = models.ForeignKey(SubjectTag)
-    teacher = models.ForeignKey('auth.User', related_name='course_teacher')
+    subject_tag = models.ForeignKey(SubjectTag, on_delete=models.CASCADE)
+    teacher = models.ForeignKey('auth.User', related_name='course_teacher', on_delete=models.CASCADE)
     about = models.TextField('Описание курса')
     
 
@@ -32,8 +32,8 @@ class Course(models.Model):
 
 
 class CourseLessonRelation(models.Model):
-    course = models.ForeignKey(Course)
-    lesson = models.ForeignKey(Lesson)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     order = models.IntegerField('Порядковый номер урока в курсе', default=0)
 
     class Meta:
