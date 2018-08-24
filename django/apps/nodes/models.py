@@ -21,7 +21,7 @@ class Node(models.Model):
     )
 
     title = models.CharField('Название объекта', max_length=300)
-    subject_tag = models.ForeignKey(SubjectTag)
+    subject_tag = models.ForeignKey(SubjectTag, on_delete=models.CASCADE)
     node_type = models.CharField(u'Тип узла', max_length=2, choices=NODE_TYPE_CHOICES, default=DEFINITION)
 
     class Meta:
