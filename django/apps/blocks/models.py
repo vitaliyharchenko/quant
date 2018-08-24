@@ -90,7 +90,7 @@ class TextAnswerBlock(Block):
 
 # Включение блоков в урок
 class NodeBlockRelation(models.Model):
-    node = models.ForeignKey('nodes.Node')
+    node = models.ForeignKey('nodes.Node', on_delete=models.CASCADE)
     block = models.ForeignKey(Block)
     order = models.IntegerField('Порядковый номер блока внутри узла', default=0)
     # TODO
