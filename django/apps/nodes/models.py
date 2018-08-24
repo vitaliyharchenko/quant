@@ -53,8 +53,8 @@ class NodeRelation(models.Model):
         (WEAK, 'Слабая'),
     )
 
-    parent = models.ForeignKey(Node, verbose_name=u'Parent', related_name=u'parent_in_node_relation')
-    child = models.ForeignKey(Node, verbose_name=u'Child', related_name=u'child_in_node_relation')
+    parent = models.ForeignKey(Node, verbose_name=u'Parent', related_name=u'parent_in_node_relation', on_delete=models.CASCADE)
+    child = models.ForeignKey(Node, verbose_name=u'Child', related_name=u'child_in_node_relation', on_delete=models.CASCADE)
     relation_type = models.CharField(u'Тип связи', max_length=2, choices=RELATIONS_TYPE_CHOICES, default=WEAK)
 
     class Meta:
