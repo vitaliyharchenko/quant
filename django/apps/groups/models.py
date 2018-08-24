@@ -38,8 +38,8 @@ class StudentGroup(models.Model):
 
 
 class TeacherGroupRelation(models.Model):
-    teacher = models.ForeignKey('auth.User', related_name='group_teacher') # куратор группы 
-    group = models.ForeignKey(StudentGroup)
+    teacher = models.ForeignKey('auth.User', related_name='group_teacher', on_delete=models.CASCADE) # куратор группы 
+    group = models.ForeignKey(StudentGroup, on_delete=models.CASCADE)
     class Meta:
         verbose_name = 'связь учителя или курастора с группой'
         verbose_name_plural = 'связи учителя или куратора с группой'
@@ -50,8 +50,8 @@ class TeacherGroupRelation(models.Model):
 
 
 class StudentGroupRelation(models.Model):
-    student = models.ForeignKey('auth.User', related_name='student')
-    group = models.ForeignKey(StudentGroup)
+    student = models.ForeignKey('auth.User', related_name='student', on_delete=models.CASCADE)
+    group = models.ForeignKey(StudentGroup, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'связь ученика с группой'
@@ -61,8 +61,8 @@ class StudentGroupRelation(models.Model):
         return u'Student {} in group {}'.format(self.student, self.group)
 
 class CourseGroupRelation(models.Model):
-    course = models.ForeignKey(Course)
-    group = models.ForeignKey(StudentGroup)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    group = models.ForeignKey(StudentGroup, on_delete=models.CASCADE)
     start_time = models.DateTimeField(null=True, blank=True)
     finish_time = models.DateTimeField(null=True, blank=True)
     is_finished = models.BooleanField('Закончили?', default=False)
