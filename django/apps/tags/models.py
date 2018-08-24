@@ -1,6 +1,6 @@
 from django.db import models
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db import models
 
 # Nodes - nodes of learning graph
