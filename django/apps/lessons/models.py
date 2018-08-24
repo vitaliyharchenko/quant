@@ -8,7 +8,7 @@ def sortByOrder(rel):
 
 class Lesson(models.Model):
     title = models.CharField('Название урока', max_length=300)
-    subject_tag = models.ForeignKey(SubjectTag)
+    subject_tag = models.ForeignKey(SubjectTag, on_delete=models.CASCADE)
     about = models.TextField('Описание урока')
     time = models.PositiveSmallIntegerField('Время на урок', default=20) # нужно подумать над этим
 
@@ -31,8 +31,8 @@ class Lesson(models.Model):
 
 
 class LessonNodeRelation(models.Model):
-    lesson = models.ForeignKey(Lesson)
-    node = models.ForeignKey(Node)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    node = models.ForeignKey(Node, on_delete=models.CASCADE)
     order = models.IntegerField('Порядковый номер узла внутри урока', default=0)
 
     class Meta:
