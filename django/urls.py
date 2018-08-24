@@ -23,12 +23,12 @@ from rest_framework.authtoken import views as authtoken_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^users/', include('apps.users.urls', namespace='users')),
+    url(r'^users/', include(('apps.users.urls', 'users'), namespace='users')),
     # url(r'^tasks/', include('apps.tasks.urls', namespace='tasks')),
-    url(r'^app/', include('apps.react.urls', namespace='react')),
-    url(r'^landings/', include('apps.landings.urls', namespace='landings')),
-    url(r'^api/', include('apps.api.urls', namespace='api')),
-    url(r'^markdown/', include( 'django_markdown.urls')),
+    url(r'^app/', include(('apps.react.urls', 'react'), namespace='react')),
+    url(r'^landings/', include(('apps.landings.urls', 'landings'), namespace='landings')),
+    url(r'^api/', include(('apps.api.urls', 'api'), namespace='api')),
+    url(r'^markdown/', include('django_markdown.urls')),
     url(r'^$', RedirectView.as_view(pattern_name='landings:main', permanent=False), name='index'),
 ]
 
