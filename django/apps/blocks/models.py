@@ -91,7 +91,7 @@ class TextAnswerBlock(Block):
 # Включение блоков в урок
 class NodeBlockRelation(models.Model):
     node = models.ForeignKey('nodes.Node', on_delete=models.CASCADE)
-    block = models.ForeignKey(Block)
+    block = models.ForeignKey(Block, on_delete=models.CASCADE)
     order = models.IntegerField('Порядковый номер блока внутри узла', default=0)
     # TODO
     # подумать про order. Когда будет много вершин, порядок не выгоден, 
