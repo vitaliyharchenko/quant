@@ -8,7 +8,7 @@ from apps.blocks.models import Block, ChoiceBlockOption
 
 
 class Result(PolymorphicModel):
-    student = models.ForeignKey(User, verbose_name=u'Ученик')
+    student = models.ForeignKey(User, verbose_name=u'Ученик', on_delete=models.CASCADE)
     date = models.DateTimeField(default=timezone.now)
     score = models.IntegerField(default=0)
     max_score = models.IntegerField(default=0)
@@ -19,7 +19,7 @@ class Result(PolymorphicModel):
 
 
 class TaskResult(Result):
-    task = models.ForeignKey(Task, verbose_name=u'Урок')
+    task = models.ForeignKey(Task, verbose_name=u'Урок', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'результат задания'
@@ -45,7 +45,7 @@ class TaskResult(Result):
 # Results of blocks
 # =================
 class BlockResult(Result):
-    block = models.ForeignKey(Block)
+    block = models.ForeignKey(Block, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'результат ответа на блок'
@@ -141,8 +141,8 @@ class TextAnswerBlockResult(BlockResult):
 # Relation between results
 # ========================
 class TaskResultBlockResultRelation(models.Model):
-    task_result = models.ForeignKey(TaskResult)
-    block_result = models.ForeignKey(BlockResult)
+    task_result = models.ForeignKey(TaskResult, on_delete=models.CASCADE)
+    block_result = models.ForeignKey(BlockResult, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'связь результата задания с результатом блока'
