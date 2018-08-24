@@ -7,9 +7,9 @@ class Task(models.Model):
     """
 		Задание для конкретного ученика, связаное с уроком
 	"""
-    student = models.ForeignKey('auth.User', related_name='task_student')
-    teacher = models.ForeignKey('auth.User', related_name='task_teacher')
-    lesson = models.ForeignKey(Lesson)
+    student = models.ForeignKey('auth.User', related_name='task_student', on_delete=models.CASCADE)
+    teacher = models.ForeignKey('auth.User', related_name='task_teacher', on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     start_time = models.DateTimeField(null=True, blank=True)
     finish_time = models.DateTimeField(null=True, blank=True)
     is_finished = models.BooleanField('Закончил?', default=False)
